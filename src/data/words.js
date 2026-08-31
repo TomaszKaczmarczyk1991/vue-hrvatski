@@ -5998,5 +5998,144 @@ export const words = [
     "hr": "žig",
     "pl": "znamię / pieczęć",
     "category": "anatomia_ludzka"
+  },
+  // KRAJE
+  {
+    id: 1001,
+    hr: "Hrvatska",
+    pl: "Chorwacja",
+    category: "kraje"
+  },
+  {
+    id: 1002,
+    hr: "Njemačka",
+    pl: "Niemcy",
+    category: "kraje"
+  },
+  {
+    id: 1003,
+    hr: "Poljska",
+    pl: "Polska",
+    category: "kraje"
+  },
+  {
+    id: 1004,
+    hr: "Italija",
+    pl: "Włochy",
+    category: "kraje"
+  },
+  {
+    id: 1005,
+    hr: "Francuska",
+    pl: "Francja",
+    category: "kraje"
+  },
+
+  // MIESZKAŃCY
+  {
+    id: 1101,
+    hr: "Hrvat",
+    pl: "Chorwat",
+    category: "mieszkancy"
+  },
+  {
+    id: 1102,
+    hr: "Nijemac",
+    pl: "Niemiec",
+    category: "mieszkancy"
+  },
+  {
+    id: 1103,
+    hr: "Poljak",
+    pl: "Polak",
+    category: "mieszkancy"
+  },
+  {
+    id: 1104,
+    hr: "Talijan",
+    pl: "Włoch",
+    category: "mieszkancy"
+  },
+  {
+    id: 1105,
+    hr: "Francuz",
+    pl: "Francuz",
+    category: "mieszkancy"
+  },
+
+  // PRZYMIOTNIKI
+  {
+    id: 1201,
+    hr: "hrvatski",
+    pl: "chorwacki",
+    category: "przymiotniki"
+  },
+  {
+    id: 1202,
+    hr: "njemački",
+    pl: "niemiecki",
+    category: "przymiotniki"
+  },
+  {
+    id: 1203,
+    hr: "poljski",
+    pl: "polski",
+    category: "przymiotniki"
+  },
+  {
+    id: 1204,
+    hr: "talijanski",
+    pl: "włoski",
+    category: "przymiotniki"
+  },
+  {
+    id: 1205,
+    hr: "francuski",
+    pl: "francuski",
+    category: "przymiotniki"
+  },
+
+  // KONTYNENTY
+  {
+    id: 1301,
+    hr: "Europa",
+    pl: "Europa",
+    category: "kontynenty"
+  },
+  {
+    id: 1302,
+    hr: "Azija",
+    pl: "Azja",
+    category: "kontynenty"
+  },
+  {
+    id: 1303,
+    hr: "Afrika",
+    pl: "Afryka",
+    category: "kontynenty"
+  },
+  {
+    id: 1304,
+    hr: "Sjeverna Amerika",
+    pl: "Ameryka Północna",
+    category: "kontynenty"
+  },
+  {
+    id: 1305,
+    hr: "Južna Amerika",
+    pl: "Ameryka Południowa",
+    category: "kontynenty"
+  },
+  {
+    id: 1306,
+    hr: "Australija i Oceanija",
+    pl: "Australia i Oceania",
+    category: "kontynenty"
+  },
+  {
+    id: 1307,
+    hr: "Antarktika",
+    pl: "Antarktyda",
+    category: "kontynenty"
   }
 ]
