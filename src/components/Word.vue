@@ -1,9 +1,12 @@
 <template>
-  <div class="word-wrapper">
+  <div
+    class="word-wrapper"
+    @pointerdown="handlePointerDown"
+    @pointerup="handlePointerUp"
+  >
     <div
       class="card"
-      @pointerdown="handlePointerDown"
-      @pointerup="handlePointerUp"
+      @click="handleCardClick"
     >
       <div class="category">
         {{ randomWord.category }}
@@ -15,10 +18,7 @@
 
       <div class="divider"></div>
 
-      <div
-        class="translation-area"
-        @click="showTranslation = true"
-      >
+      <div class="translation-area">
         <div
           class="translation"
           :class="{ visible: showTranslation }"
@@ -34,17 +34,57 @@
       </div>
     </div>
 
-    <button
-      class="next-button"
-      @click="getNextWord"
-    >
-      Następne
-    </button>
+    <!-- Mobile -->
+    <div class="interaction-hints">
+      <div class="hint">
+        <ArrowUp
+          :size="15"
+          :stroke-width="1.8"
+        />
+        <span>Swipe up — następne słowo</span>
+      </div>
+
+      <div class="hint">
+        <MousePointerClick
+          :size="15"
+          :stroke-width="1.8"
+        />
+        <span>Kliknij kartę — pokaż tłumaczenie</span>
+      </div>
+    </div>
+
+    <!-- Desktop -->
+    <div class="keyboard-hints">
+      <div class="keyboard-title">
+        <Keyboard
+          :size="14"
+          :stroke-width="1.8"
+        />
+        <span>Skróty klawiszowe</span>
+      </div>
+
+      <div class="keyboard-shortcuts">
+        <div class="shortcut">
+          <kbd>→</kbd>
+          <span>Następne</span>
+        </div>
+
+        <div class="shortcut">
+          <kbd>Enter</kbd>
+          <span>Tłumaczenie</span>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
+import {
+  ArrowUp,
+  Keyboard,
+  MousePointerClick
+} from 'lucide-vue-next'
 import { words } from '../data/words.js'
 
 function shuffle(array) {
@@ -67,11 +107,11 @@ const showTranslation = ref(false)
 
 let pointerStartY = 0
 let pointerStartX = 0
+let pointerMoved = false
 
 function getNextWord() {
   currentIndex++
 
-  // Koniec talii → tasujemy ponownie
   if (currentIndex >= deck.length) {
     const lastWord = randomWord.value
 
@@ -92,27 +132,71 @@ function getNextWord() {
 function handlePointerDown(event) {
   pointerStartY = event.clientY
   pointerStartX = event.clientX
+  pointerMoved = false
 }
 
 function handlePointerUp(event) {
-  const pointerEndY = event.clientY
-  const pointerEndX = event.clientX
+  const deltaY = pointerStartY - event.clientY
+  const deltaX = Math.abs(pointerStartX - event.clientX)
 
-  const deltaY = pointerStartY - pointerEndY
-  const deltaX = Math.abs(pointerStartX - pointerEndX)
+  if (Math.abs(deltaY) > 10 || deltaX > 10) {
+    pointerMoved = true
+  }
 
+  // Swipe up
   if (deltaY > 70 && deltaY > deltaX) {
     getNextWord()
   }
 }
+
+function handleCardClick() {
+  // Nie pokazuj tłumaczenia po wykonaniu swipe
+  if (pointerMoved) {
+    pointerMoved = false
+    return
+  }
+
+  showTranslation.value = true
+}
+
+function handleKeydown(event) {
+  if (event.key === 'ArrowRight') {
+    event.preventDefault()
+    getNextWord()
+  }
+
+  if (event.key === 'Enter') {
+    event.preventDefault()
+    showTranslation.value = true
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('pointerdown', handlePointerDown)
+  window.addEventListener('pointerup', handlePointerUp)
+  window.addEventListener('keydown', handleKeydown)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('pointerdown', handlePointerDown)
+  window.removeEventListener('pointerup', handlePointerUp)
+  window.removeEventListener('keydown', handleKeydown)
+})
 </script>
 
 <style scoped>
 .word-wrapper {
+  width: 100%;
+  min-height: 100vh;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+
   gap: 24px;
+
+  touch-action: none;
 }
 
 .card {
@@ -133,12 +217,7 @@ function handlePointerUp(event) {
 
   text-align: center;
   user-select: none;
-  touch-action: none;
-  cursor: grab;
-}
-
-.card:active {
-  cursor: grabbing;
+  cursor: pointer;
 }
 
 .category {
@@ -174,15 +253,13 @@ function handlePointerUp(event) {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  cursor: pointer;
 }
 
 .translation {
-  font-size: 20px;
-  color: #b8b8c2;
+  font-size: 14px;
+  color: #666672;
 
-  opacity: 0.25;
+  opacity: 0.7;
   transform: translateY(3px);
 
   transition:
@@ -191,47 +268,92 @@ function handlePointerUp(event) {
 }
 
 .translation.visible {
+  font-size: 20px;
+  color: #b8b8c2;
+
   opacity: 1;
   transform: translateY(0);
-}
-
-.translation:not(.visible) {
-  font-size: 14px;
-  color: #666672;
 }
 
 .translation span {
   display: block;
 }
 
-.next-button {
-  padding: 12px 28px;
+/* Mobile hints */
+.interaction-hints {
+  display: none;
+}
 
-  border: 1px solid #34343e;
-  border-radius: 12px;
+/* Desktop keyboard hints */
+.keyboard-hints {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: -8px;
+
+  color: #666672;
+}
+
+.keyboard-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+
+  opacity: 0.7;
+}
+
+.keyboard-shortcuts {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.shortcut {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  font-size: 12px;
+  color: #6f6f7b;
+}
+
+kbd {
+  min-width: 26px;
+  height: 24px;
+  padding: 0 7px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
   background: #24242c;
-  color: #f5f5f7;
+  border: 1px solid #383842;
+  border-bottom-color: #454550;
+  border-radius: 6px;
 
-  font-size: 15px;
+  box-shadow: 0 2px 0 #15151a;
+
+  color: #b8b8c2;
+
+  font-family: inherit;
+  font-size: 11px;
   font-weight: 600;
-
-  cursor: pointer;
-
-  transition:
-    background 0.2s ease,
-    transform 0.15s ease;
-}
-
-.next-button:hover {
-  background: #2d2d37;
-}
-
-.next-button:active {
-  transform: scale(0.96);
 }
 
 @media (max-width: 500px) {
+  .word-wrapper {
+    min-height: 100dvh;
+    padding: 16px;
+  }
+
   .card {
     width: calc(100vw - 32px);
     min-height: 220px;
@@ -244,6 +366,32 @@ function handlePointerUp(event) {
 
   .translation-area {
     width: 260px;
+  }
+
+  .keyboard-hints {
+    display: none;
+  }
+
+  .interaction-hints {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: -8px;
+
+    color: #666672;
+  }
+
+  .hint {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    font-size: 11px;
+    white-space: nowrap;
+
+    opacity: 0.75;
   }
 }
 </style>
