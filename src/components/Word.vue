@@ -36,7 +36,7 @@
 
     <button
       class="next-button"
-      @click="getRandomWord"
+      @click="getNextWord"
     >
       Następne
     </button>
@@ -47,26 +47,45 @@
 import { ref } from 'vue'
 import { words } from '../data/words.js'
 
-const randomWord = ref(
-  words[Math.floor(Math.random() * words.length)]
-)
+function shuffle(array) {
+  const shuffled = [...array]
 
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+
+    ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+  }
+
+  return shuffled
+}
+
+let deck = shuffle(words)
+let currentIndex = 0
+
+const randomWord = ref(deck[currentIndex])
 const showTranslation = ref(false)
 
 let pointerStartY = 0
 let pointerStartX = 0
 
-function getRandomWord() {
-  let newWord
+function getNextWord() {
+  currentIndex++
 
-  do {
-    newWord = words[Math.floor(Math.random() * words.length)]
-  } while (
-    words.length > 1 &&
-    newWord.id === randomWord.value.id
-  )
+  // Koniec talii → tasujemy ponownie
+  if (currentIndex >= deck.length) {
+    const lastWord = randomWord.value
 
-  randomWord.value = newWord
+    do {
+      deck = shuffle(words)
+    } while (
+      deck.length > 1 &&
+      deck[0].id === lastWord.id
+    )
+
+    currentIndex = 0
+  }
+
+  randomWord.value = deck[currentIndex]
   showTranslation.value = false
 }
 
@@ -82,10 +101,8 @@ function handlePointerUp(event) {
   const deltaY = pointerStartY - pointerEndY
   const deltaX = Math.abs(pointerStartX - pointerEndX)
 
-  // Swipe w górę:
-  // minimum 70px i bardziej pionowo niż poziomo
   if (deltaY > 70 && deltaY > deltaX) {
-    getRandomWord()
+    getNextWord()
   }
 }
 </script>
@@ -116,10 +133,7 @@ function handlePointerUp(event) {
 
   text-align: center;
   user-select: none;
-
-  /* pozwala nam obsługiwać własne gesty */
   touch-action: none;
-
   cursor: grab;
 }
 

@@ -2462,7 +2462,7 @@ export const words = [
   {
     "id": 411,
     "hr": "čist",
-    "pl": "czстый",
+    "pl": "czysty",
     "category": "przymiotniki"
   },
   {
