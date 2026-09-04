@@ -13,7 +13,7 @@
       </div>
 
       <div class="word">
-        {{ randomWord.hr }}
+        {{ props.mode === 'hr-pl' ? randomWord.hr : randomWord.pl }}
       </div>
 
       <div class="divider"></div>
@@ -24,7 +24,7 @@
           :class="{ visible: showTranslation }"
         >
           <span v-if="showTranslation">
-            {{ randomWord.pl }}
+            {{ props.mode === 'hr-pl' ? randomWord.pl : randomWord.hr }}
           </span>
 
           <span v-else>
@@ -73,6 +73,11 @@
           <kbd>Enter</kbd>
           <span>Tłumaczenie</span>
         </div>
+
+        <div class="shortcut">
+          <kbd>Esc</kbd>
+          <span>Menu</span>
+        </div>
       </div>
     </div>
   </div>
@@ -86,6 +91,15 @@ import {
   MousePointerClick
 } from 'lucide-vue-next'
 import { words } from '../data/words.js'
+
+const emit = defineEmits(['back'])
+
+const props = defineProps({
+  mode: {
+    type: String,
+    required: true
+  }
+})
 
 function shuffle(array) {
   const shuffled = [...array]
@@ -160,14 +174,22 @@ function handleCardClick() {
 }
 
 function handleKeydown(event) {
+  // Następne słowo
   if (event.key === 'ArrowRight') {
     event.preventDefault()
     getNextWord()
   }
 
+  // Tłumaczenie
   if (event.key === 'Enter') {
     event.preventDefault()
     showTranslation.value = true
+  }
+
+  // Powrót do menu
+  if (event.key === 'Escape') {
+    event.preventDefault()
+    emit('back')
   }
 }
 
@@ -218,6 +240,10 @@ onUnmounted(() => {
   text-align: center;
   user-select: none;
   cursor: pointer;
+
+  opacity: 0;
+  animation: card-in 0.8s ease-out forwards;
+  animation-delay: 0.15s;
 }
 
 .category {
@@ -348,6 +374,18 @@ kbd {
   font-weight: 600;
 }
 
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 @media (max-width: 500px) {
   .word-wrapper {
     min-height: 100dvh;
@@ -368,10 +406,12 @@ kbd {
     width: 260px;
   }
 
+  /* Ukryj legendę klawiatury na mobile */
   .keyboard-hints {
     display: none;
   }
 
+  /* Mobilne podpowiedzi */
   .interaction-hints {
     display: flex;
     flex-direction: column;

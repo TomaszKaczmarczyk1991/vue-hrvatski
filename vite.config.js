@@ -1,8 +1,17 @@
-import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import fs from 'node:fs'
 
-// https://vite.dev/config/
+const packageJson = JSON.parse(
+  fs.readFileSync('./package.json', 'utf-8')
+)
+
 export default defineConfig({
   plugins: [vue()],
-  base: '/vue-hrvatski/',
+
+  define: {
+    'import.meta.env.VITE_APP_VERSION': JSON.stringify(
+      packageJson.version
+    )
+  }
 })

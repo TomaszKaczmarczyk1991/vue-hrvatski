@@ -1837,98 +1837,98 @@ export const words = [
   },
   {
     "id": 307,
-    "hr": "čiji",
-    "pl": "czyj",
+    "hr": "čiji?",
+    "pl": "czyj?",
     "category": "pytania"
   },
   {
     "id": 308,
-    "hr": "odakle",
-    "pl": "skąd",
+    "hr": "odakle?",
+    "pl": "skąd?",
     "category": "pytania"
   },
   {
     "id": 309,
-    "hr": "kamo",
-    "pl": "dokąd",
+    "hr": "kamo?",
+    "pl": "dokąd?",
     "category": "pytania"
   },
   {
     "id": 310,
-    "hr": "kuda",
-    "pl": "którędy",
+    "hr": "kuda?",
+    "pl": "którędy?",
     "category": "pytania"
   },
   {
     "id": 311,
-    "hr": "s kim",
-    "pl": "z kim",
+    "hr": "s kim?",
+    "pl": "z kim?",
     "category": "pytania"
   },
   {
     "id": 312,
-    "hr": "o čemu",
-    "pl": "o czym",
+    "hr": "o čemu?",
+    "pl": "o czym?",
     "category": "pytania"
   },
   {
     "id": 313,
-    "hr": "u koliko sati",
-    "pl": "o której godzinie",
+    "hr": "u koliko sati?",
+    "pl": "o której godzinie?",
     "category": "pytania"
   },
   {
     "id": 314,
-    "hr": "koliko dugo",
-    "pl": "jak długo",
+    "hr": "koliko dugo?",
+    "pl": "jak długo?",
     "category": "pytania"
   },
   {
     "id": 315,
-    "hr": "koliko košta",
-    "pl": "ile kosztuje",
+    "hr": "koliko košta?",
+    "pl": "ile kosztuje?",
     "category": "pytania"
   },
   {
     "id": 316,
-    "hr": "što ima",
-    "pl": "co słychać / co tam",
+    "hr": "što ima?",
+    "pl": "co słychać? / co tam?",
     "category": "pytania"
   },
   {
     "id": 317,
-    "hr": "što se dogodilo",
-    "pl": "co się stało",
+    "hr": "što se dogodilo?",
+    "pl": "co się stało?",
     "category": "pytania"
   },
   {
     "id": 318,
-    "hr": "ima li",
-    "pl": "czy jest / czy są",
+    "hr": "ima li?",
+    "pl": "czy jest / czy są?",
     "category": "pytania"
   },
   {
     "id": 319,
-    "hr": "može li",
-    "pl": "czy można / czy da radę",
+    "hr": "može li?",
+    "pl": "czy można? / czy da radę?",
     "category": "pytania"
   },
   {
     "id": 320,
-    "hr": "gdje se nalazi",
-    "pl": "gdzie znajduje się",
+    "hr": "gdje se nalazi?",
+    "pl": "gdzie się znajduje?",
     "category": "pytania"
   },
   {
     "id": 321,
-    "hr": "tko je to",
-    "pl": "kto to jest",
+    "hr": "tko je to?",
+    "pl": "kto to jest?",
     "category": "pytania"
   },
   {
     "id": 322,
-    "hr": "što to znači",
-    "pl": "co to znaczy",
+    "hr": "što to znači?",
+    "pl": "co to znaczy?",
     "category": "pytania"
   },
   {
@@ -3697,7 +3697,7 @@ export const words = [
   },
   {
     "id": 617,
-    "hr": "rent-a-car",
+    "hr": "najam automobila",
     "pl": "wypożyczalnia samochodów",
     "category": "transport"
   },
@@ -6137,5 +6137,36 @@ export const words = [
     hr: "Antarktika",
     pl: "Antarktyda",
     category: "kontynenty"
-  }
+  },
+  {
+    "id": 1308,
+    "hr": "duboko",
+    "pl": "głęboko",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1309,
+    "hr": "pravi",
+    "pl": "prawdziwy",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1310,
+    "hr": "falsificiran",
+    "pl": "fałszywy",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1311,
+    "hr": "prvi",
+    "pl": "pierwszy",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1312,
+    "hr": "posljednji",
+    "pl": "ostatni",
+    "category": "przymiotniki"
+  },
+
 ]
