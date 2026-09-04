@@ -1,5 +1,7 @@
 import { defineConfig } from 'vite'
+
 import vue from '@vitejs/plugin-vue'
+
 import fs from 'node:fs'
 
 const packageJson = JSON.parse(
@@ -7,6 +9,8 @@ const packageJson = JSON.parse(
 )
 
 export default defineConfig({
+  base: '/vue-hrvatski/',
+
   plugins: [vue()],
 
   define: {
