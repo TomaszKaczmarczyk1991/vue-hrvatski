@@ -1767,7 +1767,7 @@ export const words = [
     "id": 295,
     "hr": "dvorac",
     "pl": "zamek",
-    "category": "podroz"
+    "category": "miejsca_i_budynki"
   },
   {
     "id": 296,
@@ -6222,6 +6222,61 @@ export const words = [
     "pl": "promenada",
     "category": "miejsca_i_budynki"
   },
+  {
+    "id": 1037,
+    "hr": "avenija",
+    "pl": "aleja",
+    "category": "miejsca_i_budynki"
+  },
+  {
+    "id": 1038,
+    "hr": "most",
+    "pl": "most",
+    "category": "miejsca_i_budynki"
+  },
+  {
+    "id": 1039,
+    "hr": "sveučilište",
+    "pl": "uniwersytet",
+    "category": "miejsca_i_budynki"
+  },
+  {
+    "id": 1040,
+    "hr": "knjižnica",
+    "pl": "biblioteka",
+    "category": "miejsca_i_budynki"
+  },
+  {
+    "id": 1041,
+    "hr": "katedrala",
+    "pl": "katedra",
+    "category": "miejsca_i_budynki"
+  },
+  {
+    "id": 1042,
+    "hr": "samostan",
+    "pl": "klasztor",
+    "category": "miejsca_i_budynki"
+  },
+  {
+    "id": 1043,
+    "hr": "kapelica",
+    "pl": "kaplica",
+    "category": "miejsca_i_budynki"
+  },
+  {
+    "id": 1044,
+    "hr": "groblje",
+    "pl": "cmentarz",
+    "category": "miejsca_i_budynki"
+  },
+  {
+    "id": 1045,
+    "hr": "stanica",
+    "pl": "przystanek",
+    "category": "miejsca_i_budynki"
+  },
+
 
   
 

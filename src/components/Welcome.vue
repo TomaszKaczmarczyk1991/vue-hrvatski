@@ -2,7 +2,7 @@
   <div class="welcome">
     <div class="brand">
       <p class="intro">
-        Bok! Dobrodošao u
+        Bok! Dobrodošli u
       </p>
 
       <h1>
@@ -51,8 +51,8 @@ const version = import.meta.env.VITE_APP_VERSION
 
 .intro {
   margin: 0 0 2px;
-
-  font-size: 16px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
   font-weight: 500;
 }
 
@@ -60,15 +60,15 @@ h1 {
   margin: 0;
   color: #eeeeee;
   font-family: "Brush Script MT", "Segoe Script", cursive;
-  font-size: 70px;
+  font-size: 64px;
   font-weight: 600;
   line-height: 1.05;
   letter-spacing: 0;
 }
 
 .version {
-  margin-top: -18px;
-
+  margin-top: 2px;
+  font-family: "JetBrains Mono", monospace;
   font-size: 13px;
   font-weight: 600;
   color: #eeeeee;
@@ -76,8 +76,8 @@ h1 {
 
 .description {
   margin: 22px 0 0;
-
-  font-size: 14px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
   line-height: 1.5;
   color: #eeeeee;
 }
