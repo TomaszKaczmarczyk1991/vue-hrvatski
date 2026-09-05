@@ -62,7 +62,7 @@ const version = import.meta.env.VITE_APP_VERSION
 
 h1 {
   margin: 0;
-
+  color: #eeeeee;
   font-family: "Brush Script MT", "Segoe Script", cursive;
   font-size: 82px;
   font-weight: 600;

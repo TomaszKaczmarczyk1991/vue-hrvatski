@@ -34,6 +34,9 @@
       </div>
     </div>
 
+    <!-- Licznik słówek -->
+    <WordCounter />
+
     <!-- Mobile -->
     <div class="interaction-hints">
       <div class="hint">
@@ -90,7 +93,10 @@ import {
   Keyboard,
   MousePointerClick
 } from 'lucide-vue-next'
+
 import { words } from '../data/words.js'
+
+import WordCounter from './WordCounter.vue'
 
 const emit = defineEmits(['back'])
 

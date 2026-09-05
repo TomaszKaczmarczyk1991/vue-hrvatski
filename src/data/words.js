@@ -963,7 +963,7 @@ export const words = [
     "id": 161,
     "hr": "tržnica",
     "pl": "targ / bazar",
-    "category": "jedzenie"
+    "category": "miejsca_i_budynki"
   },
   {
     "id": 162,
@@ -1509,7 +1509,7 @@ export const words = [
     "id": 252,
     "hr": "plaža",
     "pl": "plaża",
-    "category": "podroz"
+    "category": "miejsca_i_budynki"
   },
   {
     "id": 253,
@@ -1545,7 +1545,7 @@ export const words = [
     "id": 258,
     "hr": "kolodvor",
     "pl": "dworzec",
-    "category": "podroz"
+    "category": "miejsca_i_budynki"
   },
   {
     "id": 259,
@@ -1623,7 +1623,7 @@ export const words = [
     "id": 271,
     "hr": "zračna luka",
     "pl": "lotnisko",
-    "category": "podroz"
+    "category": "miejsca_i_budynki"
   },
   {
     "id": 272,
@@ -1647,13 +1647,13 @@ export const words = [
     "id": 275,
     "hr": "trg",
     "pl": "rynek / plac",
-    "category": "podroz"
+    "category": "miejsca_i_budynki"
   },
   {
     "id": 276,
     "hr": "restoran",
     "pl": "restauracja",
-    "category": "podroz"
+    "category": "miejsca_i_budynki"
   },
   {
     "id": 277,
@@ -1755,13 +1755,13 @@ export const words = [
     "id": 293,
     "hr": "muzej",
     "pl": "muzeum",
-    "category": "podroz"
+    "category": "miejsca_i_budynki"
   },
   {
     "id": 294,
     "hr": "crkva",
     "pl": "kościół",
-    "category": "podroz"
+    "category": "miejsca_i_budynki"
   },
   {
     "id": 295,
@@ -1779,7 +1779,7 @@ export const words = [
     "id": 297,
     "hr": "uvala",
     "pl": "zatoka",
-    "category": "podroz"
+    "category": "miejsca_i_budynki"
   },
   {
     "id": 298,
@@ -2727,13 +2727,13 @@ export const words = [
     "id": 455,
     "hr": "kuća",
     "pl": "dom",
-    "category": "ludzie_dom"
+    "category": "miejsca_i_budynki"
   },
   {
     "id": 456,
     "hr": "soba",
     "pl": "pokój",
-    "category": "ludzie_dom"
+    "category": "miejsca_i_budynki"
   },
   {
     "id": 457,
@@ -2829,31 +2829,31 @@ export const words = [
     "id": 472,
     "hr": "stan",
     "pl": "mieszkanie / apartament",
-    "category": "ludzie_dom"
+    "category": "miejsca_i_budynki"
   },
   {
     "id": 473,
     "hr": "kuhinja",
     "pl": "kuchnia",
-    "category": "ludzie_dom"
+    "category": "miejsca_i_budynki"
   },
   {
     "id": 474,
     "hr": "kupaonica",
     "pl": "łazienka",
-    "category": "ludzie_dom"
+    "category": "miejsca_i_budynki"
   },
   {
     "id": 475,
     "hr": "spavaća soba",
     "pl": "sypialnia",
-    "category": "ludzie_dom"
+    "category": "miejsca_i_budynki"
   },
   {
     "id": 476,
     "hr": "balkan",
     "pl": "balkon",
-    "category": "ludzie_dom"
+    "category": "miejsca_i_budynki"
   },
   {
     "id": 477,
@@ -3501,7 +3501,7 @@ export const words = [
     "id": 584,
     "hr": "ljekarna",
     "pl": "apteka",
-    "category": "podroz"
+    "category": "miejsca_i_budynki"
   },
   {
     "id": 585,
@@ -4197,7 +4197,7 @@ export const words = [
     "id": 700,
     "hr": "bolnica",
     "pl": "szpital",
-    "category": "zdrowie_bezpieczenstwo"
+    "category": "miejsca_i_budynki"
   },
   {
     "id": 701,
@@ -4497,7 +4497,7 @@ export const words = [
     "id": 750,
     "hr": "trgovina / dućan",
     "pl": "sklep",
-    "category": "jedzenie"
+    "category": "miejsca_i_budynki"
   },
   {
     "id": 751,
@@ -4515,7 +4515,7 @@ export const words = [
     "id": 753,
     "hr": "pošta",
     "pl": "poczta",
-    "category": "podroz"
+    "category": "miejsca_i_budynki"
   },
   {
     "id": 754,
@@ -6033,31 +6033,31 @@ export const words = [
 
   // MIESZKAŃCY
   {
-    id: 1101,
+    id: 1006,
     hr: "Hrvat",
     pl: "Chorwat",
     category: "mieszkancy"
   },
   {
-    id: 1102,
+    id: 1007,
     hr: "Nijemac",
     pl: "Niemiec",
     category: "mieszkancy"
   },
   {
-    id: 1103,
+    id: 1008,
     hr: "Poljak",
     pl: "Polak",
     category: "mieszkancy"
   },
   {
-    id: 1104,
+    id: 1009,
     hr: "Talijan",
     pl: "Włoch",
     category: "mieszkancy"
   },
   {
-    id: 1105,
+    id: 1010,
     hr: "Francuz",
     pl: "Francuz",
     category: "mieszkancy"
@@ -6065,31 +6065,31 @@ export const words = [
 
   // PRZYMIOTNIKI
   {
-    id: 1201,
+    id: 1011,
     hr: "hrvatski",
     pl: "chorwacki",
     category: "przymiotniki"
   },
   {
-    id: 1202,
+    id: 1012,
     hr: "njemački",
     pl: "niemiecki",
     category: "przymiotniki"
   },
   {
-    id: 1203,
+    id: 1013,
     hr: "poljski",
     pl: "polski",
     category: "przymiotniki"
   },
   {
-    id: 1204,
+    id: 1014,
     hr: "talijanski",
     pl: "włoski",
     category: "przymiotniki"
   },
   {
-    id: 1205,
+    id: 1015,
     hr: "francuski",
     pl: "francuski",
     category: "przymiotniki"
@@ -6097,76 +6097,135 @@ export const words = [
 
   // KONTYNENTY
   {
-    id: 1301,
+    id: 1016,
     hr: "Europa",
     pl: "Europa",
     category: "kontynenty"
   },
   {
-    id: 1302,
+    id: 1017,
     hr: "Azija",
     pl: "Azja",
     category: "kontynenty"
   },
   {
-    id: 1303,
+    id: 1018,
     hr: "Afrika",
     pl: "Afryka",
     category: "kontynenty"
   },
   {
-    id: 1304,
+    id: 1019,
     hr: "Sjeverna Amerika",
     pl: "Ameryka Północna",
     category: "kontynenty"
   },
   {
-    id: 1305,
+    id: 1020,
     hr: "Južna Amerika",
     pl: "Ameryka Południowa",
     category: "kontynenty"
   },
   {
-    id: 1306,
+    id: 1021,
     hr: "Australija i Oceanija",
     pl: "Australia i Oceania",
     category: "kontynenty"
   },
   {
-    id: 1307,
+    id: 1022,
     hr: "Antarktika",
     pl: "Antarktyda",
     category: "kontynenty"
   },
   {
-    "id": 1308,
+    "id": 1023,
     "hr": "duboko",
     "pl": "głęboko",
     "category": "przymiotniki"
   },
   {
-    "id": 1309,
+    "id": 1024,
     "hr": "pravi",
     "pl": "prawdziwy",
     "category": "przymiotniki"
   },
   {
-    "id": 1310,
+    "id": 1025,
     "hr": "falsificiran",
     "pl": "fałszywy",
     "category": "przymiotniki"
   },
   {
-    "id": 1311,
+    "id": 1026,
     "hr": "prvi",
     "pl": "pierwszy",
     "category": "przymiotniki"
   },
   {
-    "id": 1312,
+    "id": 1027,
     "hr": "posljednji",
     "pl": "ostatni",
     "category": "przymiotniki"
   },
+  {
+    "id": 1028,
+    "hr": "zgrada",
+    "pl": "budynek",
+    "category": "miejsca_i_budynki"
+  },
+  {
+    "id": 1029,
+    "hr": "škola",
+    "pl": "szkoła",
+    "category": "miejsca_i_budynki"
+  },
+  {
+    "id": 1030,
+    "hr": "kazalište",
+    "pl": "teatr",
+    "category": "miejsca_i_budynki"
+  },
+  {
+    "id": 1031,
+    "hr": "banka",
+    "pl": "bank",
+    "category": "miejsca_i_budynki"
+  },
+  {
+    "id": 1032,
+    "hr": "policijska postaja",
+    "pl": "posterunek policji",
+    "category": "miejsca_i_budynki"
+  },
+  {
+    "id": 1033,
+    "hr": "apartman",
+    "pl": "apartament",
+    "category": "miejsca_i_budynki"
+  },
+  {
+    "id": 1034,
+    "hr": "svjetionik",
+    "pl": "latarnia morska",
+    "category": "miejsca_i_budynki"
+  },
+  {
+    "id": 1035,
+    "hr": "vidikovac",
+    "pl": "punkt widokowy",
+    "category": "miejsca_i_budynki"
+  },
+  {
+    "id": 1036,
+    "hr": "šetnica",
+    "pl": "promenada",
+    "category": "miejsca_i_budynki"
+  },
+
+  
+
+
+  
 
 ]
