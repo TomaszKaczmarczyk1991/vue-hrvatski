@@ -1,12 +1,8 @@
 <template>
   <div class="welcome">
-    <p class="hello">
-      Bok!
-    </p>
-
     <div class="brand">
       <p class="intro">
-        Dobrodošao u
+        Bok! Dobrodošao u
       </p>
 
       <h1>
@@ -20,7 +16,7 @@
 
     <p class="description">
       <span>Opusti se, uči nove riječi</span>
-      <span>i polako upoznaj hrvatski. 🇭🇷</span>
+      <span>i polako upoznaj hrvatski!</span>
     </p>
   </div>
 </template>
@@ -64,14 +60,14 @@ h1 {
   margin: 0;
   color: #eeeeee;
   font-family: "Brush Script MT", "Segoe Script", cursive;
-  font-size: 82px;
+  font-size: 70px;
   font-weight: 600;
   line-height: 1.05;
   letter-spacing: 0;
 }
 
 .version {
-  margin-top: 1px;
+  margin-top: -18px;
 
   font-size: 13px;
   font-weight: 600;

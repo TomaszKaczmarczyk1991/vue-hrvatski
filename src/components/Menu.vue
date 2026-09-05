@@ -2,25 +2,30 @@
   <div class="menu">
     <MainImage />
 
-    <div class="content">
-      <Welcome />
+<div class="content">
+  <Welcome />
 
-      <div class="options">
-        <button
-          class="option-button"
-          @click="$emit('select', 'hr-pl')"
-        >
-          HR → PL
-        </button>
+  <div class="options">
+    <button
+      class="option-button"
+      @click="$emit('select', 'hr-pl')"
+    >
+      <span>🇭🇷</span>
+      <span>HR → PL</span>
+      <span>🇵🇱</span>
+    </button>
 
-        <button
-          class="option-button"
-          @click="$emit('select', 'pl-hr')"
-        >
-          PL → HR
-        </button>
-      </div>
-    </div>
+    <button
+      class="option-button"
+      @click="$emit('select', 'pl-hr')"
+    >
+      <span>🇵🇱</span>
+      <span>PL → HR</span>
+      <span>🇭🇷</span>
+    </button>
+  </div>
+</div>
+
   </div>
 </template>
 
@@ -34,7 +39,6 @@ defineEmits(['select'])
 <style scoped>
 .menu {
   position: relative;
-
   width: min(680px, calc(100vw - 32px));
   min-height: 560px;
 
@@ -43,7 +47,6 @@ defineEmits(['select'])
   justify-content: center;
 
   overflow: hidden;
-
   border-radius: 24px;
 }
 
@@ -69,7 +72,6 @@ defineEmits(['select'])
   gap: 12px;
 
   opacity: 0;
-
   animation: options-in 0.7s ease forwards;
   animation-delay: 3.2s;
 }
@@ -78,17 +80,23 @@ defineEmits(['select'])
   width: 240px;
   height: 52px;
 
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 14px;
 
-  background: rgba(20, 20, 24, 0.72);
+  background: rgba(20, 20, 24, 0.45);
   backdrop-filter: blur(8px);
 
-  color: #ffffff;
+  color: #fff;
 
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 600;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
 
   cursor: pointer;
 
@@ -99,8 +107,8 @@ defineEmits(['select'])
 }
 
 .option-button:hover {
-  background: rgba(30, 30, 36, 0.86);
-  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(30, 30, 36, 0.65);
+  border-color: rgba(255, 255, 255, 0.3);
 
   transform: translateY(-2px);
 }
@@ -125,13 +133,18 @@ defineEmits(['select'])
   .menu {
     width: calc(100vw - 24px);
     min-height: 540px;
-
     border-radius: 20px;
   }
 
   .content {
     min-height: 540px;
     padding: 40px 20px;
+  }
+
+  .option-button {
+    width: 230px;
+    height: 50px;
+    font-size: 14px;
   }
 }
 </style>
