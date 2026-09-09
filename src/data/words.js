@@ -6276,11 +6276,551 @@ export const words = [
     "pl": "przystanek",
     "category": "miejsca_i_budynki"
   },
-
-
-  
-
-
-  
+  {
+    "id": 1046,
+    "hr": "adekvatan",
+    "pl": "adekwatny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1047,
+    "hr": "adaptacija",
+    "pl": "adaptacja",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1048,
+    "hr": "abmormalan",
+    "pl": "anormalny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1049,
+    "hr": "administracija",
+    "pl": "administracja",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1050,
+    "hr": "adrenalin",
+    "pl": "adrenalina",
+    "category": "rzeczowniki"
+  },
+  {
+  "id": 1049,
+  "hr": "administracija",
+  "pl": "administracja",
+  "category": "rzeczowniki"
+  },
+  {
+  "id": 1050,
+  "hr": "adrenalin",
+  "pl": "adrenalina",
+  "category": "rzeczowniki"
+  },
+  {
+  "id": 1051,
+  "hr": "adresa",
+  "pl": "adres",
+  "category": "rzeczowniki"
+  },
+  {
+  "id": 1052,
+  "hr": "adresat",
+  "pl": "adresat",
+  "category": "rzeczowniki"
+  },
+  {
+  "id": 1053,
+  "hr": "adresirati",
+  "pl": "zaadresować",
+  "category": "czasowniki"
+  },
+  {
+  "id": 1054,
+  "hr": "advokat",
+  "pl": "adwokat",
+  "category": "rzeczowniki"
+  },
+  {
+  "id": 1055,
+  "hr": "aerodinamika",
+  "pl": "aerodynamika",
+  "category": "rzeczowniki"
+  },
+    {
+    "id": 1056,
+    "hr": "afrodizijak",
+    "pl": "afrodyzjak",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1057,
+    "hr": "afunkcija",
+    "pl": "niewydolność",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1058,
+    "hr": "agencija",
+    "pl": "agencja",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1059,
+    "hr": "agonija",
+    "pl": "agonia",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1060,
+    "hr": "agresija",
+    "pl": "agresja",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1061,
+    "hr": "agresor",
+    "pl": "agresor",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1062,
+    "hr": "akademija",
+    "pl": "akademia",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1063,
+    "hr": "akcija",
+    "pl": "akcja",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1064,
+    "hr": "akcijski",
+    "pl": "promocyjny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1065,
+    "hr": "akrobacija",
+    "pl": "akrobacja",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1066,
+    "hr": "aktiva",
+    "pl": "aktywa",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1067,
+    "hr": "aktivan",
+    "pl": "aktywny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1068,
+    "hr": "akustičan",
+    "pl": "akustyczny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1069,
+    "hr": "akustičnost",
+    "pl": "akustyczność",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1070,
+    "hr": "akustičan",
+    "pl": "akustyczny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1071,
+    "hr": "akvarij",
+    "pl": "akwarium",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1072,
+    "hr": "alat",
+    "pl": "narzędzie",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1073,
+    "hr": "alergičar",
+    "pl": "alergik",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1074,
+    "hr": "ali",
+    "pl": "ale",
+    "category": "spójniki"
+  },
+  {
+    "id": 1075,
+    "hr": "alkoholičar",
+    "pl": "alkoholik",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1076,
+    "hr": "alternativa",
+    "pl": "alternatywa",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1077,
+    "hr": "amater",
+    "pl": "amator",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1078,
+    "hr": "ambicija",
+    "pl": "ambicja",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1079,
+    "hr": "ambulanta",
+    "pl": "przychodnia",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1080,
+    "hr": "aminokiselina",
+    "pl": "aminokwas",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1081,
+    "hr": "anarhija",
+    "pl": "anarchia",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1082,
+    "hr": "anđeo",
+    "pl": "anioł",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1083,
+    "hr": "animiran",
+    "pl": "animowany",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1084,
+    "hr": "anketa",
+    "pl": "ankieta",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1085,
+    "hr": "anomalija",
+    "pl": "anomalia",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1086,
+    "hr": "ansambl",
+    "pl": "zespół",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1087,
+    "hr": "antisemit",
+    "pl": "antysemita",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1088,
+    "hr": "anulirati",
+    "pl": "anulować",
+    "category": "czasowniki"
+  },
+    {
+    "id": 1089,
+    "hr": "apetit",
+    "pl": "apetyt",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1090,
+    "hr": "aplikacija",
+    "pl": "aplikacja",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1091,
+    "hr": "apoteka",
+    "pl": "apteka",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1092,
+    "hr": "aprobacija",
+    "pl": "aprobacja",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1093,
+    "hr": "apsolutno",
+    "pl": "absolutnie",
+    "category": "przysłówki"
+  },
+  {
+    "id": 1094,
+    "hr": "aprobacija",
+    "pl": "aprobacja",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1095,
+    "hr": "apstinent",
+    "pl": "abstynent",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1096,
+    "hr": "apsurd",
+    "pl": "absurd",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1097,
+    "hr": "arak",
+    "pl": "arak",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1098,
+    "hr": "aranžman",
+    "pl": "aranżacja",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1099,
+    "hr": "arhiv",
+    "pl": "archiwum",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1100,
+    "hr": "armija",
+    "pl": "armia",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1101,
+    "hr": "arogantan",
+    "pl": "arogancki",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1102,
+    "hr": "artikl",
+    "pl": "artykuł",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1103,
+    "hr": "artist",
+    "pl": "artysta",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1104,
+    "hr": "asekuriranje",
+    "pl": "asekuracja",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1105,
+    "hr": "asocijalan",
+    "pl": "asocjalny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1106,
+    "hr": "asocirati",
+    "pl": "kojarzyć",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1107,
+    "hr": "aspiracija",
+    "pl": "aspiracja",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1108,
+    "hr": "astmatik",
+    "pl": "astmatyk",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1109,
+    "hr": "astronaut",
+    "pl": "astronauta",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1110,
+    "hr": "atakirati",
+    "pl": "atakować",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1111,
+    "hr": "ateist",
+    "pl": "ateista",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1112,
+    "hr": "atentat",
+    "pl": "zamach",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1113,
+    "hr": "atentator",
+    "pl": "zamachowiec",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1114,
+    "hr": "atlet",
+    "pl": "atleta",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1115,
+    "hr": "atletski",
+    "pl": "atletyczny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1116,
+    "hr": "atmosfera",
+    "pl": "atmosfera",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1117,
+    "hr": "atom",
+    "pl": "atom",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1118,
+    "hr": "atomski",
+    "pl": "atomowy",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1119,
+    "hr": "atrakcija",
+    "pl": "atrakcja",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1120,
+    "hr": "atraktivan",
+    "pl": "atrakcyjny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1121,
+    "hr": "atrapa",
+    "pl": "atrapa",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1122,
+    "hr": "atribut",
+    "pl": "atrybut",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1123,
+    "hr": "audijencija",
+    "pl": "audiencja",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1124,
+    "hr": "aukcija",
+    "pl": "aukcja",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1125,
+    "hr": "autentičan",
+    "pl": "autentyczny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1126,
+    "hr": "autizam",
+    "pl": "autyzm",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1127,
+    "hr": "autocesta",
+    "pl": "autostrada",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1128,
+    "hr": "autogram",
+    "pl": "autograf",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1129,
+    "hr": "autor",
+    "pl": "autor",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1130,
+    "hr": "avangarda",
+    "pl": "awangarda",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1131,
+    "hr": "avans",
+    "pl": "awans",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1132,
+    "hr": "avion",
+    "pl": "samolot",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1133,
+    "hr": "aviza",
+    "pl": "awizo",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1134,
+    "hr": "azil",
+    "pl": "azyl",
+    "category": "rzeczowniki"
+  }
 
 ]
