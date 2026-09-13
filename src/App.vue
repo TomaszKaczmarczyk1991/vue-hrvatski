@@ -5,6 +5,12 @@
       @select="selectMode"
     />
 
+    <SentenceExercise
+      v-else-if="isSentenceMode"
+      :mode="direction"
+      @back="goBack"
+    />
+
     <Word
       v-else
       :mode="selectedMode"
@@ -19,13 +25,17 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 
 import Menu from './components/Menu.vue'
 import Word from './components/Word.vue'
+import SentenceExercise from './components/SentenceExercise.vue'
 import BackButton from './components/BackButton.vue'
 
 const selectedMode = ref(null)
+
+const isSentenceMode = computed(() => selectedMode.value?.startsWith('sentence-'))
+const direction = computed(() => selectedMode.value?.replace('sentence-', ''))
 
 function selectMode(mode) {
   selectedMode.value = mode

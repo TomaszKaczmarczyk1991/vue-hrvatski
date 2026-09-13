@@ -1,41 +1,79 @@
 <template>
-  <div class="menu">
+  <div
+    class="menu"
+    :class="{ 'skip-intro': skipIntro }"
+    @click="skipIntro = true"
+  >
     <MainImage />
 
-<div class="content">
-  <Welcome />
+    <div class="content">
+      <Welcome />
 
-  <div class="options">
-    <button
-      class="option-button"
-      aria-label="Tłumacz z chorwackiego na polski"
-      @click="$emit('select', 'hr-pl')"
-    >
-      <span>🇭🇷</span>
-      <span>HR → PL</span>
-      <span>🇵🇱</span>
-    </button>
+      <div class="category-tabs">
+        <button
+          class="tab-button"
+          :class="{ active: category === 'flashcards' }"
+          @click="category = 'flashcards'"
+        >
+          Fiszki
+        </button>
 
-    <button
-      class="option-button"
-      aria-label="Tłumacz z polskiego na chorwacki"
-      @click="$emit('select', 'pl-hr')"
-    >
-      <span>🇵🇱</span>
-      <span>PL → HR</span>
-      <span>🇭🇷</span>
-    </button>
-  </div>
-</div>
+        <button
+          class="tab-button"
+          :class="{ active: category === 'sentences' }"
+          @click="category = 'sentences'"
+        >
+          Zdania
+        </button>
+      </div>
 
+      <div class="options">
+        <button
+          class="option-button"
+          :aria-label="ariaLabel('hr-pl')"
+          @click="choose('hr-pl')"
+        >
+          <span>🇭🇷</span>
+          <span>HR → PL</span>
+          <span>🇵🇱</span>
+        </button>
+
+        <button
+          class="option-button"
+          :aria-label="ariaLabel('pl-hr')"
+          @click="choose('pl-hr')"
+        >
+          <span>🇵🇱</span>
+          <span>PL → HR</span>
+          <span>🇭🇷</span>
+        </button>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue'
+
 import Welcome from './Welcome.vue'
 import MainImage from './MainImage.vue'
 
-defineEmits(['select'])
+const emit = defineEmits(['select'])
+
+const category = ref('flashcards')
+const skipIntro = ref(false)
+
+function choose(direction) {
+  const prefix = category.value === 'sentences' ? 'sentence-' : ''
+  emit('select', `${prefix}${direction}`)
+}
+
+function ariaLabel(direction) {
+  const action = category.value === 'sentences' ? 'Ćwicz zdania' : 'Tłumacz'
+  return direction === 'hr-pl'
+    ? `${action} z chorwackiego na polski`
+    : `${action} z polskiego na chorwacki`
+}
 </script>
 
 <style scoped>
@@ -50,6 +88,8 @@ defineEmits(['select'])
 
   overflow: hidden;
   border-radius: 24px;
+
+  cursor: pointer;
 }
 
 .content {
@@ -65,7 +105,49 @@ defineEmits(['select'])
   align-items: center;
   justify-content: center;
 
-  gap: 28px;
+  gap: 20px;
+
+  cursor: default;
+}
+
+.category-tabs {
+  display: flex;
+  gap: 8px;
+
+  opacity: 0;
+  animation: options-in 0.7s ease forwards;
+  animation-delay: 2.9s;
+}
+
+.tab-button {
+  padding: 8px 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+
+  background: transparent;
+  color: #aaaab4;
+
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.tab-button.active {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.tab-button:hover {
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .options {
@@ -129,6 +211,24 @@ defineEmits(['select'])
     opacity: 1;
     transform: translateY(0) scale(1);
   }
+}
+
+/* Pomiń intro — pokaż wszystko od razu, bez animacji */
+.menu.skip-intro :deep(.welcome),
+.menu.skip-intro :deep(.intro),
+.menu.skip-intro :deep(h1),
+.menu.skip-intro :deep(.version),
+.menu.skip-intro :deep(.description),
+.menu.skip-intro .category-tabs,
+.menu.skip-intro .options {
+  opacity: 1 !important;
+  animation: none !important;
+  transform: none !important;
+}
+
+.menu.skip-intro :deep(.main-image) {
+  opacity: 1 !important;
+  animation: none !important;
 }
 
 @media (max-width: 500px) {

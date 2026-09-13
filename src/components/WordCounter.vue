@@ -1,17 +1,30 @@
 <template>
   <div class="word-counter">
     <span class="count">
-      [ {{ words.length }}
+      [ {{ displayCount }}
     </span>
 
     <span class="count">
-      słówek w bazie danych ]
+      {{ label }} ]
     </span>
   </div>
 </template>
 
 <script setup>
 import { words } from '../data/words.js'
+
+const props = defineProps({
+  count: {
+    type: Number,
+    default: null
+  },
+  label: {
+    type: String,
+    default: 'słówek w bazie danych'
+  }
+})
+
+const displayCount = props.count ?? words.length
 </script>
 
 <style scoped>
