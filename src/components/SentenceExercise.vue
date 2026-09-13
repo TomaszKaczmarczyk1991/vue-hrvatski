@@ -27,7 +27,11 @@
             ref="inputEl"
             v-model="userAnswer"
             class="blank-input"
-            :class="{ correct: checked && isCorrect, incorrect: checked && !isCorrect }"
+            :class="{
+              correct: gradeState === 'correct',
+              incorrect: gradeState === 'incorrect'
+            }"
+            :style="{ width: inputWidth }"
             :disabled="checked"
             type="text"
             autocomplete="off"
@@ -53,11 +57,11 @@
       </div>
 
       <div
-        v-if="checked"
+        v-if="gradeState"
         class="feedback"
-        :class="{ correct: isCorrect, incorrect: !isCorrect }"
+        :class="gradeState"
       >
-        <span v-if="isCorrect">✓ Poprawnie!</span>
+        <span v-if="gradeState === 'correct'">✓ Poprawnie!</span>
         <span v-else>✗ Poprawna odpowiedź: {{ correctAnswer }}</span>
       </div>
 
@@ -229,6 +233,18 @@ const allLettersRevealed = computed(() =>
   revealedCount.value >= correctAnswer.value.length
 )
 
+const gradeState = computed(() => {
+  if (!checked.value) return null
+  return isCorrect.value ? 'correct' : 'incorrect'
+})
+
+// Szerokość pola rośnie wraz z wpisywanym tekstem (w jednostkach ch),
+// więc dłuższe słowa nie są ucinane
+const inputWidth = computed(() => {
+  const length = Math.max(userAnswer.value.length, 4)
+  return `${length + 2}ch`
+})
+
 function toggleTooltip(index) {
   activeTooltip.value = activeTooltip.value === index ? null : index
 }
@@ -242,6 +258,14 @@ function revealLetter() {
 
   revealedCount.value++
   userAnswer.value = correctAnswer.value.slice(0, revealedCount.value)
+
+  // Jeśli właśnie odsłoniliśmy ostatnią literę, słowo jest już
+  // ze 100% pewnością poprawne — nie ma sensu prosić o "Sprawdź",
+  // od razu zaliczamy i pokazujemy "Dalej"
+  if (allLettersRevealed.value) {
+    checked.value = true
+    return
+  }
 
   focusInput()
 }
@@ -348,6 +372,8 @@ onUnmounted(() => {
   justify-content: center;
 
   gap: 24px;
+
+  touch-action: none;
 }
 
 .card {
@@ -481,7 +507,8 @@ onUnmounted(() => {
 }
 
 .blank-input {
-  width: 130px;
+  min-width: 60px;
+  max-width: 100%;
   padding: 4px 10px;
   margin: 0 2px;
 
@@ -498,7 +525,7 @@ onUnmounted(() => {
 
   outline: none;
 
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, width 0.15s ease;
 }
 
 .blank-input:focus {
@@ -707,7 +734,7 @@ kbd {
   }
 
   .blank-input {
-    width: 100px;
+    min-width: 50px;
     font-size: 17px;
   }
 
