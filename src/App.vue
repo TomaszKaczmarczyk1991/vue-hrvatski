@@ -5,6 +5,11 @@
       @select="selectMode"
     />
 
+    <Dictionary
+      v-else-if="selectedMode === 'dictionary'"
+      @back="goBack"
+    />
+
     <SentenceExercise
       v-else-if="isSentenceMode"
       :mode="direction"
@@ -30,6 +35,7 @@ import { computed, ref } from 'vue'
 import Menu from './components/Menu.vue'
 import Word from './components/Word.vue'
 import SentenceExercise from './components/SentenceExercise.vue'
+import Dictionary from './components/Dictionary.vue'
 import BackButton from './components/BackButton.vue'
 
 const selectedMode = ref(null)

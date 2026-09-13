@@ -25,9 +25,34 @@
         >
           Zdania
         </button>
+
+        <button
+          class="tab-button"
+          :class="{ active: category === 'dictionary' }"
+          @click="category = 'dictionary'"
+        >
+          Słownik
+        </button>
       </div>
 
-      <div class="options">
+      <div
+        v-if="category === 'dictionary'"
+        class="options"
+      >
+        <button
+          class="option-button"
+          aria-label="Otwórz słownik"
+          @click="choose()"
+        >
+          <span>📖</span>
+          <span>Otwórz słownik</span>
+        </button>
+      </div>
+
+      <div
+        v-else
+        class="options"
+      >
         <button
           class="option-button"
           :aria-label="ariaLabel('hr-pl')"
@@ -64,6 +89,11 @@ const category = ref('flashcards')
 const skipIntro = ref(false)
 
 function choose(direction) {
+  if (category.value === 'dictionary') {
+    emit('select', 'dictionary')
+    return
+  }
+
   const prefix = category.value === 'sentences' ? 'sentence-' : ''
   emit('select', `${prefix}${direction}`)
 }
@@ -120,7 +150,7 @@ function ariaLabel(direction) {
 }
 
 .tab-button {
-  padding: 8px 20px;
+  padding: 8px 18px;
 
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 20px;
@@ -241,6 +271,11 @@ function ariaLabel(direction) {
   .content {
     min-height: 540px;
     padding: 40px 20px;
+  }
+
+  .tab-button {
+    padding: 7px 14px;
+    font-size: 12px;
   }
 
   .option-button {

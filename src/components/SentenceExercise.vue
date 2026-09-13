@@ -1,5 +1,10 @@
 <template>
-  <div class="sentence-wrapper">
+  <div
+    class="sentence-wrapper"
+    @click="closeTooltip"
+    @pointerdown="handlePointerDown"
+    @pointerup="handlePointerUp"
+  >
     <div class="card">
       <div class="category">
         {{ current.category }}
@@ -32,8 +37,18 @@
           <span
             v-else
             class="word"
-            :title="item.token[hintLang]"
-          >{{ item.token[promptLang] }}</span>
+            :class="{ 'tooltip-active': activeTooltip === i }"
+            @click.stop="toggleTooltip(i, item.token[hintLang])"
+          >
+            {{ item.token[promptLang] }}
+
+            <span
+              v-if="activeTooltip === i"
+              class="word-tooltip"
+            >
+              {{ item.token[hintLang] }}
+            </span>
+          </span>
         </template>
       </div>
 
@@ -56,11 +71,31 @@
         </button>
 
         <button
+          v-if="!checked"
+          class="action-button hint-button"
+          :disabled="allLettersRevealed"
+          @click="revealLetter"
+        >
+          💡 Podpowiedz literę
+        </button>
+
+        <button
           class="action-button"
           @click="checked ? nextSentence() : checkAnswer()"
         >
           {{ checked ? 'Dalej →' : 'Sprawdź' }}
         </button>
+      </div>
+
+      <div
+        v-if="checked"
+        class="swipe-hint"
+      >
+        <ArrowUp
+          :size="13"
+          :stroke-width="2"
+        />
+        <span>Swipe up — następne zdanie</span>
       </div>
     </div>
 
@@ -95,7 +130,7 @@
 
 <script setup>
 import { computed, nextTick, onMounted, onUnmounted, ref } from 'vue'
-import { Keyboard } from 'lucide-vue-next'
+import { ArrowUp, Keyboard } from 'lucide-vue-next'
 
 import { sentences } from '../data/sentences.js'
 
@@ -134,6 +169,11 @@ const current = ref(deck[currentIndex])
 const userAnswer = ref('')
 const checked = ref(false)
 const inputEl = ref(null)
+const revealedCount = ref(0)
+const activeTooltip = ref(null)
+
+let pointerStartY = 0
+let pointerStartX = 0
 
 function joinTokens(tokens, lang) {
   return tokens.reduce((acc, token, i) => {
@@ -185,10 +225,35 @@ const isCorrect = computed(() =>
   normalize(userAnswer.value) === normalize(correctAnswer.value)
 )
 
+const allLettersRevealed = computed(() =>
+  revealedCount.value >= correctAnswer.value.length
+)
+
+function toggleTooltip(index) {
+  activeTooltip.value = activeTooltip.value === index ? null : index
+}
+
+function closeTooltip() {
+  activeTooltip.value = null
+}
+
+function revealLetter() {
+  if (allLettersRevealed.value) return
+
+  revealedCount.value++
+  userAnswer.value = correctAnswer.value.slice(0, revealedCount.value)
+
+  focusInput()
+}
+
 function focusInput() {
   nextTick(() => {
     const el = Array.isArray(inputEl.value) ? inputEl.value[0] : inputEl.value
     el?.focus()
+
+    // kursor na koniec wpisanego tekstu, a nie na początek
+    const len = el?.value?.length ?? 0
+    el?.setSelectionRange?.(len, len)
   })
 }
 
@@ -216,12 +281,33 @@ function nextSentence() {
   current.value = deck[currentIndex]
   userAnswer.value = ''
   checked.value = false
+  revealedCount.value = 0
+  activeTooltip.value = null
 
   focusInput()
 }
 
 function skipSentence() {
   nextSentence()
+}
+
+function handlePointerDown(event) {
+  pointerStartY = event.clientY
+  pointerStartX = event.clientX
+}
+
+function handlePointerUp(event) {
+  // Swipe działa tylko po sprawdzeniu odpowiedzi —
+  // wcześniej użytkownik może dotykać ekranu, żeby edytować input
+  if (!checked.value) return
+
+  const deltaY = pointerStartY - event.clientY
+  const deltaX = Math.abs(pointerStartX - event.clientX)
+
+  // Swipe up
+  if (deltaY > 70 && deltaY > deltaX) {
+    nextSentence()
+  }
 }
 
 function handleKeydown(event) {
@@ -325,15 +411,73 @@ onUnmounted(() => {
 }
 
 .word {
+  position: relative;
+
   border-bottom: 1px dotted #55555f;
   cursor: help;
 
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-.word:hover {
+.word:hover,
+.word.tooltip-active {
   color: #b8b8ff;
   border-color: #b8b8ff;
+}
+
+.word-tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding: 6px 12px;
+
+  background: #2c2c34;
+  border: 1px solid #44444f;
+  border-radius: 8px;
+
+  color: #f5f5f7;
+
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+
+  z-index: 10;
+
+  animation: tooltip-in 0.15s ease-out;
+}
+
+.word-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  border: 5px solid transparent;
+  border-top-color: #44444f;
+}
+
+@keyframes tooltip-in {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Na desktopie hover pokazuje tooltip bez potrzeby klikania */
+@media (hover: hover) and (pointer: fine) {
+  .word:hover .word-tooltip {
+    display: block;
+  }
 }
 
 .blank-input {
@@ -388,6 +532,9 @@ onUnmounted(() => {
 
 .actions {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   gap: 12px;
   margin-top: 24px;
 }
@@ -427,8 +574,44 @@ onUnmounted(() => {
   color: #8f8f9d;
 }
 
-.keyboard-hints {
+.action-button.hint-button {
+  background: transparent;
+  border-color: #3a3a44;
+  color: #c9a84c;
+}
+
+.action-button.hint-button:hover {
+  background: rgba(201, 168, 76, 0.08);
+  border-color: #c9a84c;
+}
+
+.action-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.action-button:disabled:hover {
+  background: transparent;
+  border-color: #3a3a44;
+}
+
+.swipe-hint {
   display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+
+  color: #666672;
+
+  font-size: 11px;
+
+  opacity: 0.75;
+}
+
+.keyboard-hints {
+  display: none;
+
   flex-direction: column;
   align-items: center;
   gap: 8px;
@@ -488,6 +671,19 @@ kbd {
   font-weight: 600;
 }
 
+/* Legenda klawiszowa pokazuje się TYLKO, gdy jest prawdziwa mysz —
+   nie zależy to od szerokości ekranu, więc działa poprawnie też
+   na tabletach/telefonach w orientacji poziomej */
+@media (hover: hover) and (pointer: fine) {
+  .keyboard-hints {
+    display: flex;
+  }
+
+  .swipe-hint {
+    display: none;
+  }
+}
+
 @keyframes card-in {
   from {
     opacity: 0;
@@ -515,8 +711,9 @@ kbd {
     font-size: 17px;
   }
 
-  .keyboard-hints {
-    display: none;
+  .action-button {
+    padding: 9px 18px;
+    font-size: 13px;
   }
 }
 </style>

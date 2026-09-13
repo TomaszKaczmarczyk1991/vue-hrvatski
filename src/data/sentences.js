@@ -1,3 +1,6 @@
+// UWAGA: treść chorwacka wymaga weryfikacji przez native speakera
+// przed użyciem produkcyjnym — zobacz komentarz w rozmowie z Claude.
+
 export const sentences = [
   // --- Powitania ---
   {
@@ -476,6 +479,423 @@ export const sentences = [
       { hr: 'moramo', pl: 'musimy' },
       { hr: 'završiti', pl: 'skończyć', blank: true },
       { hr: 'do petka.', pl: 'do piątku.' }
+    ]
+  },
+
+  // --- Pytania podstawowe ---
+  {
+    id: 51,
+    category: 'pytania',
+    tokens: [
+      { hr: 'Gdje je', pl: 'Gdzie jest', blank: true },
+      { hr: 'WC?', pl: 'WC?' }
+    ]
+  },
+  {
+    id: 52,
+    category: 'pytania',
+    tokens: [
+      { hr: 'Kako se', pl: 'Jak to się' },
+      { hr: 'kaže', pl: 'mówi', blank: true },
+      { hr: 'ovo?', pl: 'to?' }
+    ]
+  },
+  {
+    id: 53,
+    category: 'pytania',
+    tokens: [
+      { hr: 'Govorite li', pl: 'Czy mówi pan/pani', blank: true },
+      { hr: 'engleski?', pl: 'po angielsku?' }
+    ]
+  },
+  {
+    id: 54,
+    category: 'pytania',
+    tokens: [
+      { hr: 'Zašto', pl: 'Dlaczego', blank: true },
+      { hr: 'ne dolaziš?', pl: 'nie przychodzisz?' }
+    ]
+  },
+  {
+    id: 55,
+    category: 'pytania',
+    tokens: [
+      { hr: 'Tko je', pl: 'Kto jest', blank: true },
+      { hr: 'ovo?', pl: 'to?' }
+    ]
+  },
+
+  // --- Liczby i ilość ---
+  {
+    id: 56,
+    category: 'liczby',
+    tokens: [
+      { hr: 'Trebam', pl: 'Potrzebuję', blank: true },
+      { hr: 'dva kilograma.', pl: 'dwóch kilogramów.' }
+    ]
+  },
+  {
+    id: 57,
+    category: 'liczby',
+    tokens: [
+      { hr: 'Imam', pl: 'Mam' },
+      { hr: 'samo', pl: 'tylko', blank: true },
+      { hr: 'pet minuta.', pl: 'pięć minut.' }
+    ]
+  },
+  {
+    id: 58,
+    category: 'liczby',
+    tokens: [
+      { hr: 'To je', pl: 'To jest' },
+      { hr: 'previše', pl: 'za dużo', blank: true },
+      { hr: 'novca.', pl: 'pieniędzy.' }
+    ]
+  },
+  {
+    id: 59,
+    category: 'liczby',
+    tokens: [
+      { hr: 'Trebam', pl: 'Potrzebuję' },
+      { hr: 'malo', pl: 'trochę', blank: true },
+      { hr: 'vremena.', pl: 'czasu.' }
+    ]
+  },
+  {
+    id: 60,
+    category: 'liczby',
+    tokens: [
+      { hr: 'Nemam', pl: 'Nie mam', blank: true },
+      { hr: 'više', pl: 'już' },
+      { hr: 'novca.', pl: 'pieniędzy.' }
+    ]
+  },
+
+  // --- Kierunki ---
+  {
+    id: 61,
+    category: 'kierunki',
+    tokens: [
+      { hr: 'Idi', pl: 'Idź' },
+      { hr: 'ravno', pl: 'prosto', blank: true },
+      { hr: 'naprijed.', pl: 'przed siebie.' }
+    ]
+  },
+  {
+    id: 62,
+    category: 'kierunki',
+    tokens: [
+      { hr: 'Skreni', pl: 'Skręć' },
+      { hr: 'lijevo', pl: 'w lewo', blank: true },
+      { hr: 'ovdje.', pl: 'tutaj.' }
+    ]
+  },
+  {
+    id: 63,
+    category: 'kierunki',
+    tokens: [
+      { hr: 'To je', pl: 'To jest' },
+      { hr: 'blizu', pl: 'blisko', blank: true },
+      { hr: 'odavde.', pl: 'stąd.' }
+    ]
+  },
+  {
+    id: 64,
+    category: 'kierunki',
+    tokens: [
+      { hr: 'To je', pl: 'To jest' },
+      { hr: 'jako', pl: 'bardzo' },
+      { hr: 'daleko.', pl: 'daleko.', blank: true }
+    ]
+  },
+  {
+    id: 65,
+    category: 'kierunki',
+    tokens: [
+      { hr: 'Ja sam', pl: 'Jestem' },
+      { hr: 'izgubljen.', pl: 'zgubiony.', blank: true }
+    ]
+  },
+
+  // --- Zdrowie ---
+  {
+    id: 66,
+    category: 'zdrowie',
+    tokens: [
+      { hr: 'Boli me', pl: 'Boli mnie', blank: true },
+      { hr: 'glava.', pl: 'głowa.' }
+    ]
+  },
+  {
+    id: 67,
+    category: 'zdrowie',
+    tokens: [
+      { hr: 'Trebam', pl: 'Potrzebuję' },
+      { hr: 'liječnika.', pl: 'lekarza.', blank: true }
+    ]
+  },
+  {
+    id: 68,
+    category: 'zdrowie',
+    tokens: [
+      { hr: 'Osjećam se', pl: 'Czuję się' },
+      { hr: 'loše.', pl: 'źle.', blank: true }
+    ]
+  },
+  {
+    id: 69,
+    category: 'zdrowie',
+    tokens: [
+      { hr: 'Gdje je', pl: 'Gdzie jest' },
+      { hr: 'ljekarna?', pl: 'apteka?', blank: true }
+    ]
+  },
+  {
+    id: 70,
+    category: 'zdrowie',
+    tokens: [
+      { hr: 'Trebam', pl: 'Potrzebuję', blank: true },
+      { hr: 'pomoć.', pl: 'pomocy.' }
+    ]
+  },
+
+  // --- Jedzenie ---
+  {
+    id: 71,
+    category: 'jedzenie',
+    tokens: [
+      { hr: 'Ja sam', pl: 'Jestem' },
+      { hr: 'gladan.', pl: 'głodny.', blank: true }
+    ]
+  },
+  {
+    id: 72,
+    category: 'jedzenie',
+    tokens: [
+      { hr: 'Ja sam', pl: 'Jestem' },
+      { hr: 'žedan.', pl: 'spragniony.', blank: true }
+    ]
+  },
+  {
+    id: 73,
+    category: 'jedzenie',
+    tokens: [
+      { hr: 'Volim', pl: 'Lubię', blank: true },
+      { hr: 'ovo jelo.', pl: 'to danie.' }
+    ]
+  },
+  {
+    id: 74,
+    category: 'jedzenie',
+    tokens: [
+      { hr: 'Ne jedem', pl: 'Nie jem' },
+      { hr: 'meso.', pl: 'mięsa.', blank: true }
+    ]
+  },
+  {
+    id: 75,
+    category: 'jedzenie',
+    tokens: [
+      { hr: 'Voda', pl: 'Woda' },
+      { hr: 'bez', pl: 'bez' },
+      { hr: 'plina, molim.', pl: 'gazu, proszę.', blank: true }
+    ]
+  },
+
+  // --- Dom ---
+  {
+    id: 76,
+    category: 'dom',
+    tokens: [
+      { hr: 'Gdje', pl: 'Gdzie' },
+      { hr: 'živiš?', pl: 'mieszkasz?', blank: true }
+    ]
+  },
+  {
+    id: 77,
+    category: 'dom',
+    tokens: [
+      { hr: 'Moj stan', pl: 'Moje mieszkanie' },
+      { hr: 'je', pl: 'jest' },
+      { hr: 'malen.', pl: 'małe.', blank: true }
+    ]
+  },
+  {
+    id: 78,
+    category: 'dom',
+    tokens: [
+      { hr: 'Zatvori', pl: 'Zamknij', blank: true },
+      { hr: 'vrata, molim.', pl: 'drzwi, proszę.' }
+    ]
+  },
+  {
+    id: 79,
+    category: 'dom',
+    tokens: [
+      { hr: 'Otvori', pl: 'Otwórz' },
+      { hr: 'prozor.', pl: 'okno.', blank: true }
+    ]
+  },
+  {
+    id: 80,
+    category: 'dom',
+    tokens: [
+      { hr: 'Ovo je', pl: 'To jest' },
+      { hr: 'moja soba.', pl: 'mój pokój.', blank: true }
+    ]
+  },
+
+  // --- Transport ---
+  {
+    id: 81,
+    category: 'transport',
+    tokens: [
+      { hr: 'Kamo', pl: 'Dokąd', blank: true },
+      { hr: 'ideš?', pl: 'idziesz?' }
+    ]
+  },
+  {
+    id: 82,
+    category: 'transport',
+    tokens: [
+      { hr: 'Autobus', pl: 'Autobus' },
+      { hr: 'kasni.', pl: 'się spóźnia.', blank: true }
+    ]
+  },
+  {
+    id: 83,
+    category: 'transport',
+    tokens: [
+      { hr: 'Idem', pl: 'Idę / jadę', blank: true },
+      { hr: 'kući.', pl: 'do domu.' }
+    ]
+  },
+  {
+    id: 84,
+    category: 'transport',
+    tokens: [
+      { hr: 'Trebam', pl: 'Potrzebuję' },
+      { hr: 'taksi.', pl: 'taksówki.', blank: true }
+    ]
+  },
+  {
+    id: 85,
+    category: 'transport',
+    tokens: [
+      { hr: 'Koliko', pl: 'Ile', blank: true },
+      { hr: 'traje put?', pl: 'trwa podróż?' }
+    ]
+  },
+
+  // --- Codzienne zwroty ---
+  {
+    id: 86,
+    category: 'codzienne',
+    tokens: [
+      { hr: 'Nema problema.', pl: 'Nie ma problemu.', blank: true }
+    ]
+  },
+  {
+    id: 87,
+    category: 'codzienne',
+    tokens: [
+      { hr: 'Naravno!', pl: 'Oczywiście!', blank: true }
+    ]
+  },
+  {
+    id: 88,
+    category: 'codzienne',
+    tokens: [
+      { hr: 'Nisam', pl: 'Nie jestem', blank: true },
+      { hr: 'siguran.', pl: 'pewien.' }
+    ]
+  },
+  {
+    id: 89,
+    category: 'codzienne',
+    tokens: [
+      { hr: 'To je', pl: 'To jest' },
+      { hr: 'dobra ideja.', pl: 'dobry pomysł.', blank: true }
+    ]
+  },
+  {
+    id: 90,
+    category: 'codzienne',
+    tokens: [
+      { hr: 'Nemoj', pl: 'Nie', blank: true },
+      { hr: 'brinuti.', pl: 'martw się.' }
+    ]
+  },
+  {
+    id: 91,
+    category: 'codzienne',
+    tokens: [
+      { hr: 'Šteta.', pl: 'Szkoda.', blank: true }
+    ]
+  },
+  {
+    id: 92,
+    category: 'codzienne',
+    tokens: [
+      { hr: 'Sve je', pl: 'Wszystko jest' },
+      { hr: 'u redu.', pl: 'w porządku.', blank: true }
+    ]
+  },
+  {
+    id: 93,
+    category: 'codzienne',
+    tokens: [
+      { hr: 'Nema na čemu.', pl: 'Nie ma za co.', blank: true }
+    ]
+  },
+  {
+    id: 94,
+    category: 'towarzyskie',
+    tokens: [
+      { hr: 'Sretan rođendan!', pl: 'Wszystkiego najlepszego!', blank: true }
+    ]
+  },
+  {
+    id: 95,
+    category: 'towarzyskie',
+    tokens: [
+      { hr: 'Živjeli!', pl: 'Na zdrowie!', blank: true }
+    ]
+  },
+  {
+    id: 96,
+    category: 'towarzyskie',
+    tokens: [
+      { hr: 'Dobar tek!', pl: 'Smacznego!', blank: true }
+    ]
+  },
+  {
+    id: 97,
+    category: 'towarzyskie',
+    tokens: [
+      { hr: 'Sretan put!', pl: 'Szczęśliwej podróży!', blank: true }
+    ]
+  },
+  {
+    id: 98,
+    category: 'uczucia',
+    tokens: [
+      { hr: 'Nedostaješ mi.', pl: 'Tęsknię za tobą.', blank: true }
+    ]
+  },
+  {
+    id: 99,
+    category: 'uczucia',
+    tokens: [
+      { hr: 'Volim te.', pl: 'Kocham cię.', blank: true }
+    ]
+  },
+  {
+    id: 100,
+    category: 'codzienne',
+    tokens: [
+      { hr: 'Vidimo se', pl: 'Do zobaczenia', blank: true },
+      { hr: 'uskoro.', pl: 'wkrótce.' }
     ]
   }
 ]
