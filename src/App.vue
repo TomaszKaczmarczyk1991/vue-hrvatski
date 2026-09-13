@@ -15,10 +15,6 @@
       v-if="selectedMode"
       @back="goBack"
     />
-
-    <WordCounter
-      v-if="selectedMode"
-    />
   </main>
 </template>
 
@@ -28,7 +24,6 @@ import { ref } from 'vue'
 import Menu from './components/Menu.vue'
 import Word from './components/Word.vue'
 import BackButton from './components/BackButton.vue'
-import WordCounter from './components/WordCounter.vue'
 
 const selectedMode = ref(null)
 

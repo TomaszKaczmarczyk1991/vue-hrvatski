@@ -8,6 +8,7 @@
   <div class="options">
     <button
       class="option-button"
+      aria-label="Tłumacz z chorwackiego na polski"
       @click="$emit('select', 'hr-pl')"
     >
       <span>🇭🇷</span>
@@ -17,6 +18,7 @@
 
     <button
       class="option-button"
+      aria-label="Tłumacz z polskiego na chorwacki"
       @click="$emit('select', 'pl-hr')"
     >
       <span>🇵🇱</span>

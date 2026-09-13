@@ -22,7 +22,7 @@
 </template>
 
 <script setup>
-const version = import.meta.env.VITE_APP_VERSION
+const version = import.meta.env.VITE_APP_VERSION ?? '—'
 </script>
 
 <style scoped>
@@ -33,14 +33,6 @@ const version = import.meta.env.VITE_APP_VERSION
   color: #ffffff;
 
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
-}
-
-.hello {
-  margin: 0 0 32px;
-
-  font-size: 26px;
-  font-weight: 800;
-  letter-spacing: -0.5px;
 }
 
 .brand {
@@ -86,17 +78,12 @@ h1 {
   display: block;
 }
 
-.hello,
 .intro,
 h1,
 .version,
 .description {
   opacity: 0;
   animation: fade-in 1.1s ease forwards;
-}
-
-.hello {
-  animation-delay: 0.2s;
 }
 
 .intro {
@@ -131,11 +118,6 @@ h1 {
   .welcome {
     width: 100%;
     max-width: 340px;
-  }
-
-  .hello {
-    margin-bottom: 24px;
-    font-size: 22px;
   }
 
   .intro {

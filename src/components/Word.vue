@@ -9,11 +9,11 @@
       @click="handleCardClick"
     >
       <div class="category">
-        {{ randomWord.category }}
+        {{ currentWord.category }}
       </div>
 
       <div class="word">
-        {{ props.mode === 'hr-pl' ? randomWord.hr : randomWord.pl }}
+        {{ props.mode === 'hr-pl' ? currentWord.hr : currentWord.pl }}
       </div>
 
       <div class="divider"></div>
@@ -24,7 +24,7 @@
           :class="{ visible: showTranslation }"
         >
           <span v-if="showTranslation">
-            {{ props.mode === 'hr-pl' ? randomWord.pl : randomWord.hr }}
+            {{ props.mode === 'hr-pl' ? currentWord.pl : currentWord.hr }}
           </span>
 
           <span v-else>
@@ -122,7 +122,7 @@ function shuffle(array) {
 let deck = shuffle(words)
 let currentIndex = 0
 
-const randomWord = ref(deck[currentIndex])
+const currentWord = ref(deck[currentIndex])
 const showTranslation = ref(false)
 
 let pointerStartY = 0
@@ -133,7 +133,7 @@ function getNextWord() {
   currentIndex++
 
   if (currentIndex >= deck.length) {
-    const lastWord = randomWord.value
+    const lastWord = currentWord.value
 
     do {
       deck = shuffle(words)
@@ -145,7 +145,7 @@ function getNextWord() {
     currentIndex = 0
   }
 
-  randomWord.value = deck[currentIndex]
+  currentWord.value = deck[currentIndex]
   showTranslation.value = false
 }
 
@@ -200,14 +200,10 @@ function handleKeydown(event) {
 }
 
 onMounted(() => {
-  window.addEventListener('pointerdown', handlePointerDown)
-  window.addEventListener('pointerup', handlePointerUp)
   window.addEventListener('keydown', handleKeydown)
 })
 
 onUnmounted(() => {
-  window.removeEventListener('pointerdown', handlePointerDown)
-  window.removeEventListener('pointerup', handlePointerUp)
   window.removeEventListener('keydown', handleKeydown)
 })
 </script>

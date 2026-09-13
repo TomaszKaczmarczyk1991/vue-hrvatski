@@ -13,6 +13,7 @@ const backgroundImage = `url(${mainImage})`
 <style scoped>
 .main-image {
   position: absolute;
+  z-index: 0;
 
   width: 80%;
   height: 80%;
