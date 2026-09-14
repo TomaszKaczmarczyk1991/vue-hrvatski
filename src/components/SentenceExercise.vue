@@ -8,6 +8,7 @@
     <div class="card">
       <div class="category">
         {{ current.category }}
+        <span class="mode-badge">{{ exerciseType === 'full' ? 'całe zdanie' : 'luka' }}</span>
       </div>
 
       <div class="hint">
@@ -16,7 +17,11 @@
 
       <div class="divider"></div>
 
-      <div class="prompt">
+      <!-- Tryb: uzupełnij lukę -->
+      <div
+        v-if="exerciseType === 'gaps'"
+        class="prompt"
+      >
         <template v-for="(item, i) in promptItems" :key="i">
           <span
             v-if="item.type === 'space'"
@@ -42,7 +47,7 @@
             v-else
             class="word"
             :class="{ 'tooltip-active': activeTooltip === i }"
-            @click.stop="toggleTooltip(i, item.token[hintLang])"
+            @click.stop="toggleTooltip(i)"
           >
             {{ item.token[promptLang] }}
 
@@ -54,6 +59,27 @@
             </span>
           </span>
         </template>
+      </div>
+
+      <!-- Tryb: całe zdanie od zera -->
+      <div
+        v-else
+        class="prompt full-mode"
+      >
+        <textarea
+          ref="inputEl"
+          v-model="userAnswer"
+          class="full-input"
+          :class="{
+            correct: gradeState === 'correct',
+            incorrect: gradeState === 'incorrect'
+          }"
+          :disabled="checked"
+          rows="2"
+          placeholder="Napisz całe zdanie..."
+          autocomplete="off"
+          spellcheck="false"
+        ></textarea>
       </div>
 
       <div
@@ -146,6 +172,10 @@ const props = defineProps({
   mode: {
     type: String,
     required: true
+  },
+  exerciseType: {
+    type: String,
+    default: 'gaps' // 'gaps' | 'full'
   }
 })
 
@@ -199,14 +229,22 @@ const blankToken = computed(() =>
   current.value.tokens.find((t) => t.blank)
 )
 
-const correctAnswer = computed(() => blankToken.value[promptLang.value])
+// W trybie 'gaps' poprawna odpowiedź to tylko brakujące słowo.
+// W trybie 'full' poprawna odpowiedź to całe zdanie sklejone z tokenów.
+const correctAnswer = computed(() => {
+  if (props.exerciseType === 'full') {
+    return joinTokens(current.value.tokens, promptLang.value)
+  }
+  return blankToken.value[promptLang.value]
+})
 
 const hintText = computed(() =>
   joinTokens(current.value.tokens, hintLang.value)
 )
 
 // buduje listę elementów do renderu z odpowiednim odstępem
-// (bez spacji przed tokenami interpunkcyjnymi)
+// (bez spacji przed tokenami interpunkcyjnymi) — używane tylko
+// w trybie 'gaps'
 const promptItems = computed(() => {
   const items = []
 
@@ -238,8 +276,8 @@ const gradeState = computed(() => {
   return isCorrect.value ? 'correct' : 'incorrect'
 })
 
-// Szerokość pola rośnie wraz z wpisywanym tekstem (w jednostkach ch),
-// więc dłuższe słowa nie są ucinane
+// Szerokość pola (tryb 'gaps') rośnie wraz z wpisywanym tekstem,
+// żeby dłuższe słowa nie były ucinane
 const inputWidth = computed(() => {
   const length = Math.max(userAnswer.value.length, 4)
   return `${length + 2}ch`
@@ -259,9 +297,8 @@ function revealLetter() {
   revealedCount.value++
   userAnswer.value = correctAnswer.value.slice(0, revealedCount.value)
 
-  // Jeśli właśnie odsłoniliśmy ostatnią literę, słowo jest już
-  // ze 100% pewnością poprawne — nie ma sensu prosić o "Sprawdź",
-  // od razu zaliczamy i pokazujemy "Dalej"
+  // Jeśli właśnie odsłoniliśmy ostatnią literę, odpowiedź jest już
+  // ze 100% pewnością poprawna — nie ma sensu prosić o "Sprawdź"
   if (allLettersRevealed.value) {
     checked.value = true
     return
@@ -275,7 +312,6 @@ function focusInput() {
     const el = Array.isArray(inputEl.value) ? inputEl.value[0] : inputEl.value
     el?.focus()
 
-    // kursor na koniec wpisanego tekstu, a nie na początek
     const len = el?.value?.length ?? 0
     el?.setSelectionRange?.(len, len)
   })
@@ -402,12 +438,32 @@ onUnmounted(() => {
 .category {
   margin-bottom: 20px;
 
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
   font-size: 12px;
   font-weight: 600;
   color: #8f8f9d;
 
   text-transform: uppercase;
   letter-spacing: 1.5px;
+}
+
+.mode-badge {
+  padding: 2px 8px;
+
+  border: 1px solid #383842;
+  border-radius: 10px;
+
+  background: #24242c;
+  color: #83838d;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+  text-transform: none;
 }
 
 .hint {
@@ -434,6 +490,10 @@ onUnmounted(() => {
   font-weight: 600;
   color: #f5f5f7;
   line-height: 1.6;
+}
+
+.prompt.full-mode {
+  width: 100%;
 }
 
 .word {
@@ -539,6 +599,47 @@ onUnmounted(() => {
 
 .blank-input.incorrect {
   border-bottom-color: #f87171;
+  color: #f87171;
+}
+
+.full-input {
+  width: 100%;
+  padding: 12px 16px;
+
+  background: #24242c;
+  border: 2px solid #383842;
+  border-radius: 12px;
+
+  color: #f5f5f7;
+
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.5;
+
+  resize: none;
+  outline: none;
+
+  transition: border-color 0.2s ease;
+}
+
+.full-input::placeholder {
+  color: #55555f;
+  font-weight: 500;
+}
+
+.full-input:focus {
+  border-color: #8f8f9d;
+}
+
+.full-input.correct {
+  border-color: #4ade80;
+  color: #4ade80;
+}
+
+.full-input.incorrect {
+  border-color: #f87171;
   color: #f87171;
 }
 
@@ -698,9 +799,6 @@ kbd {
   font-weight: 600;
 }
 
-/* Legenda klawiszowa pokazuje się TYLKO, gdy jest prawdziwa mysz —
-   nie zależy to od szerokości ekranu, więc działa poprawnie też
-   na tabletach/telefonach w orientacji poziomej */
 @media (hover: hover) and (pointer: fine) {
   .keyboard-hints {
     display: flex;
@@ -736,6 +834,10 @@ kbd {
   .blank-input {
     min-width: 50px;
     font-size: 17px;
+  }
+
+  .full-input {
+    font-size: 15px;
   }
 
   .action-button {

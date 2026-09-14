@@ -36,6 +36,27 @@
       </div>
 
       <div
+        v-if="category === 'sentences'"
+        class="exercise-type-tabs"
+      >
+        <button
+          class="exercise-type-button"
+          :class="{ active: exerciseType === 'gaps' }"
+          @click="exerciseType = 'gaps'"
+        >
+          Uzupełnij lukę
+        </button>
+
+        <button
+          class="exercise-type-button"
+          :class="{ active: exerciseType === 'full' }"
+          @click="exerciseType = 'full'"
+        >
+          Całe zdanie
+        </button>
+      </div>
+
+      <div
         v-if="category === 'dictionary'"
         class="options"
       >
@@ -86,20 +107,34 @@ import MainImage from './MainImage.vue'
 const emit = defineEmits(['select'])
 
 const category = ref('flashcards')
+const exerciseType = ref('gaps')
 const skipIntro = ref(false)
 
 function choose(direction) {
   if (category.value === 'dictionary') {
-    emit('select', 'dictionary')
+    emit('select', { type: 'dictionary' })
     return
   }
 
-  const prefix = category.value === 'sentences' ? 'sentence-' : ''
-  emit('select', `${prefix}${direction}`)
+  if (category.value === 'sentences') {
+    emit('select', {
+      type: 'sentences',
+      direction,
+      exerciseType: exerciseType.value
+    })
+    return
+  }
+
+  emit('select', { type: 'flashcards', direction })
 }
 
 function ariaLabel(direction) {
-  const action = category.value === 'sentences' ? 'Ćwicz zdania' : 'Tłumacz'
+  let action = 'Tłumacz'
+
+  if (category.value === 'sentences') {
+    action = exerciseType.value === 'full' ? 'Napisz zdanie' : 'Uzupełnij lukę'
+  }
+
   return direction === 'hr-pl'
     ? `${action} z chorwackiego na polski`
     : `${action} z polskiego na chorwacki`
@@ -135,7 +170,7 @@ function ariaLabel(direction) {
   align-items: center;
   justify-content: center;
 
-  gap: 20px;
+  gap: 16px;
 
   cursor: default;
 }
@@ -178,6 +213,46 @@ function ariaLabel(direction) {
 
 .tab-button:hover {
   border-color: rgba(255, 255, 255, 0.3);
+}
+
+.exercise-type-tabs {
+  display: flex;
+  gap: 6px;
+
+  opacity: 0;
+  animation: options-in 0.7s ease forwards;
+  animation-delay: 3.05s;
+}
+
+.exercise-type-button {
+  padding: 5px 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+
+  background: transparent;
+  color: #83838d;
+
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.exercise-type-button.active {
+  background: rgba(184, 184, 255, 0.12);
+  border-color: rgba(184, 184, 255, 0.4);
+  color: #d4d4ff;
+}
+
+.exercise-type-button:hover {
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
 .options {
@@ -250,6 +325,7 @@ function ariaLabel(direction) {
 .menu.skip-intro :deep(.version),
 .menu.skip-intro :deep(.description),
 .menu.skip-intro .category-tabs,
+.menu.skip-intro .exercise-type-tabs,
 .menu.skip-intro .options {
   opacity: 1 !important;
   animation: none !important;

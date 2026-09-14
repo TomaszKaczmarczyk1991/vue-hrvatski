@@ -1,36 +1,37 @@
 <template>
   <main class="app">
     <Menu
-      v-if="!selectedMode"
+      v-if="!selection"
       @select="selectMode"
     />
 
     <Dictionary
-      v-else-if="selectedMode === 'dictionary'"
+      v-else-if="selection.type === 'dictionary'"
       @back="goBack"
     />
 
     <SentenceExercise
-      v-else-if="isSentenceMode"
-      :mode="direction"
+      v-else-if="selection.type === 'sentences'"
+      :mode="selection.direction"
+      :exercise-type="selection.exerciseType"
       @back="goBack"
     />
 
     <Word
       v-else
-      :mode="selectedMode"
+      :mode="selection.direction"
       @back="goBack"
     />
 
     <BackButton
-      v-if="selectedMode"
+      v-if="selection"
       @back="goBack"
     />
   </main>
 </template>
 
 <script setup>
-import { computed, ref } from 'vue'
+import { ref } from 'vue'
 
 import Menu from './components/Menu.vue'
 import Word from './components/Word.vue'
@@ -38,17 +39,14 @@ import SentenceExercise from './components/SentenceExercise.vue'
 import Dictionary from './components/Dictionary.vue'
 import BackButton from './components/BackButton.vue'
 
-const selectedMode = ref(null)
+const selection = ref(null)
 
-const isSentenceMode = computed(() => selectedMode.value?.startsWith('sentence-'))
-const direction = computed(() => selectedMode.value?.replace('sentence-', ''))
-
-function selectMode(mode) {
-  selectedMode.value = mode
+function selectMode(payload) {
+  selection.value = payload
 }
 
 function goBack() {
-  selectedMode.value = null
+  selection.value = null
 }
 </script>
 
