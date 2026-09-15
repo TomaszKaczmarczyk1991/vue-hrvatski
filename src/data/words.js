@@ -6821,6 +6821,732 @@ export const words = [
     "hr": "azil",
     "pl": "azyl",
     "category": "rzeczowniki"
-  }
+  },
+  {
+    "id": 1135,
+    "hr": "bacanje",
+    "pl": "rzut (np. dyskiem)",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1136,
+    "hr": "bacati",
+    "pl": "rzucać",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1137,
+    "hr": "baciti",
+    "pl": "rzucić",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1138,
+    "hr": "bačva",
+    "pl": "beczka",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1139,
+    "hr": "badava",
+    "pl": "darmo",
+    "category": "przysłówki"
+  },
+  {
+    "id": 1140,
+    "hr": "bager",
+    "pl": "koparka",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1141,
+    "hr": "baget(a)",
+    "pl": "bagietka",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1142,
+    "hr": "bajka",
+    "pl": "bajka",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1143,
+    "hr": "bakar",
+    "pl": "miedź",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1144,
+    "hr": "baklja",
+    "pl": "pochodnia",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1145,
+    "hr": "bakren",
+    "pl": "miedziany",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1146,
+    "hr": "bakterija",
+    "pl": "bakteria",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1147,
+    "hr": "bal",
+    "pl": "bal",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1148,
+    "hr": "balancan",
+    "pl": "bakłażan",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1149,
+    "hr": "balansirati",
+    "pl": "balansować",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1150,
+    "hr": "balast",
+    "pl": "balast",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1151,
+    "hr": "balet",
+    "pl": "balet",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1152,
+    "hr": "balkanski",
+    "pl": "bałkański",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1153,
+    "hr": "balkon",
+    "pl": "balkon",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1154,
+    "hr": "baltički",
+    "pl": "bałtycki",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1155,
+    "hr": "balzam",
+    "pl": "balsam",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1156,
+    "hr": "bambus",
+    "pl": "bambus",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1157,
+    "hr": "banalan",
+    "pl": "banalny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1158,
+    "hr": "banalnost",
+    "pl": "banal",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1159,
+    "hr": "banda",
+    "pl": "banda, gang",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1160,
+    "hr": "bandit",
+    "pl": "bandyta",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1161,
+    "hr": "banditski",
+    "pl": "bandycki",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1162,
+    "hr": "banka",
+    "pl": "bank",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1163,
+    "hr": "banknota",
+    "pl": "banknot",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1164,
+    "hr": "bankomat",
+    "pl": "bankomat",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1165,
+    "hr": "bankovan",
+    "pl": "bankowy",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1166,
+    "hr": "bankrot",
+    "pl": "bankrut, bankructwo",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1167,
+    "hr": "bankrotirati",
+    "pl": "zbankrutować",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1168,
+    "hr": "bar",
+    "pl": "bar",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1169,
+    "hr": "baraka",
+    "pl": "barak",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1170,
+    "hr": "barbar",
+    "pl": "barbarzyńca",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1171,
+    "hr": "barem",
+    "pl": "przynajmniej",
+    "category": "przysłówki"
+  },
+  {
+    "id": 1172,
+    "hr": "barijera",
+    "pl": "bariera",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1173,
+    "hr": "barikada",
+    "pl": "barykada",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1174,
+    "hr": "baril",
+    "pl": "baryłka",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1175,
+    "hr": "bariton",
+    "pl": "baryton",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1176,
+    "hr": "barka",
+    "pl": "barka",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1177,
+    "hr": "barok",
+    "pl": "barok",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1178,
+    "hr": "baršun",
+    "pl": "aksamit",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1179,
+    "hr": "barun",
+    "pl": "baron",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1180,
+    "hr": "barut",
+    "pl": "proch",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1181,
+    "hr": "bas",
+    "pl": "bas",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1182,
+    "hr": "basist",
+    "pl": "basista",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1183,
+    "hr": "baš",
+    "pl": "właśnie",
+    "category": "przysłówki"
+  },
+  {
+    "id": 1184,
+    "hr": "baterija",
+    "pl": "bateria",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1185,
+    "hr": "batina",
+    "pl": "bat",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1186,
+    "hr": "baviti se",
+    "pl": "zajmować się, interesować się",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1187,
+    "hr": "baza",
+    "pl": "baza",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1188,
+    "hr": "bazga",
+    "pl": "czarny bez",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1189,
+    "hr": "bazilika",
+    "pl": "bazylika",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1190,
+    "hr": "bazirati",
+    "pl": "bazować",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1191,
+    "hr": "bečki",
+    "pl": "wiedeński",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1192,
+    "hr": "bedem",
+    "pl": "skarpa",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1193,
+    "hr": "benzin",
+    "pl": "benzyna",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1194,
+    "hr": "bereta",
+    "pl": "beret",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1195,
+    "hr": "bescarinski",
+    "pl": "bezclowy",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1196,
+    "hr": "besciljan",
+    "pl": "bezcelowy",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1197,
+    "hr": "bescjenje",
+    "pl": "bezcen",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1198,
+    "hr": "beskoristan",
+    "pl": "bezużyteczny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1199,
+    "hr": "beskraj",
+    "pl": "bezkres",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1200,
+    "hr": "besmisao",
+    "pl": "bezsens",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1201,
+    "hr": "besmislen",
+    "pl": "bezmyślny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1202,
+    "hr": "besmrtan",
+    "pl": "nieśmiertelny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1203,
+    "hr": "besplatan",
+    "pl": "bezpłatny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1204,
+    "hr": "bespolan",
+    "pl": "bezpłciowy",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1205,
+    "hr": "bespomoćan",
+    "pl": "bezsilny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1206,
+    "hr": "bespomoćno",
+    "pl": "bezradnie",
+    "category": "przysłówki"
+  },
+  {
+    "id": 1207,
+    "hr": "bespomoćnost",
+    "pl": "bezradność",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1208,
+    "hr": "bespravnost",
+    "pl": "bezprawie",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1209,
+    "hr": "besprijekoran",
+    "pl": "bezbłędny, nienaganny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1210,
+    "hr": "bestidan",
+    "pl": "bezwstydny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1211,
+    "hr": "bestijalan",
+    "pl": "bestialski",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1212,
+    "hr": "bestijalnost",
+    "pl": "bestialstwo",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1213,
+    "hr": "beštia",
+    "pl": "bestia",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1214,
+    "hr": "bešuman",
+    "pl": "bezszelestny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1215,
+    "hr": "beton",
+    "pl": "beton",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1216,
+    "hr": "bez",
+    "pl": "bez",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1217,
+    "hr": "bez djece",
+    "pl": "bezdzietny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1218,
+    "hr": "bez dna",
+    "pl": "bezdenny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1219,
+    "hr": "bez dovoda",
+    "pl": "bezprzewodowy",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1220,
+    "hr": "bez konflikata",
+    "pl": "bezkonfliktowy",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1221,
+    "hr": "bez kraja i konca",
+    "pl": "niekończący się",
+    "category": "wyrażenia"
+  },
+  {
+    "id": 1222,
+    "hr": "bez kuće/doma",
+    "pl": "bezdomny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1223,
+    "hr": "bez masti",
+    "pl": "beztłuszczowy",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1224,
+    "hr": "bez milosti",
+    "pl": "bez litości",
+    "category": "wyrażenia"
+  },
+  {
+    "id": 1225,
+    "hr": "bez njihanja",
+    "pl": "bez wahania",
+    "category": "wyrażenia"
+  },
+  {
+    "id": 1226,
+    "hr": "bez oblaka",
+    "pl": "bezchmurny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1227,
+    "hr": "bez obveze",
+    "pl": "bez zobowiązań",
+    "category": "wyrażenia"
+  },
+  {
+    "id": 1228,
+    "hr": "bez obzira na",
+    "pl": "bez względu na",
+    "category": "wyrażenia"
+  },
+  {
+    "id": 1229,
+    "hr": "bez posade",
+    "pl": "bezzałogowy",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1230,
+    "hr": "bez prekida",
+    "pl": "bezustannie",
+    "category": "przysłówki"
+  },
+  {
+    "id": 1231,
+    "hr": "bez presedana",
+    "pl": "bezprecedensowy",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1232,
+    "hr": "bez primjedbe",
+    "pl": "bez zarzutu",
+    "category": "wyrażenia"
+  },
+  {
+    "id": 1233,
+    "hr": "bez razlike",
+    "pl": "bez różnicy",
+    "category": "wyrażenia"
+  },
+  {
+    "id": 1234,
+    "hr": "bez razmišljanja",
+    "pl": "bez zastanowienia",
+    "category": "wyrażenia"
+  },
+  {
+    "id": 1235,
+    "hr": "bez termina",
+    "pl": "bezterminowy",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1236,
+    "hr": "bez veze",
+    "pl": "bez sensu",
+    "category": "wyrażenia"
+  },
+  {
+    "id": 1237,
+    "hr": "bez vlasnika",
+    "pl": "bezpański, bez właściciela",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1238,
+    "hr": "bezalkoholni",
+    "pl": "bezalkoholowy",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1239,
+    "hr": "bezbojan",
+    "pl": "bezbarwny, bezbolesny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1240,
+    "hr": "bezbrižan",
+    "pl": "beztroski",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1241,
+    "hr": "bezbrižnost",
+    "pl": "beztroska",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1242,
+    "hr": "bezdušan",
+    "pl": "bezduszny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1243,
+    "hr": "bezgotovinski",
+    "pl": "bezgotówkowy",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1244,
+    "hr": "bezgraničan",
+    "pl": "bezgraniczny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1245,
+    "hr": "bezgrješan",
+    "pl": "bezgrzeszny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1246,
+    "hr": "bezinteresno",
+    "pl": "bezinteresownie",
+    "category": "przysłówki"
+  },
+  {
+    "id": 1247,
+    "hr": "bezizlazan",
+    "pl": "bez wyjścia",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1248,
+    "hr": "bezkazne",
+    "pl": "bezkarnie",
+    "category": "przysłówki"
+  },
+  {
+    "id": 1249,
+    "hr": "bezkonkurencije",
+    "pl": "bezkonkurencyjny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1250,
+    "hr": "bezmasan",
+    "pl": "bezmięsny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1251,
+    "hr": "beznačajan",
+    "pl": "błahy",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1252,
+    "hr": "beznačajnost",
+    "pl": "błahostka",
+    "category": "rzeczowniki"
+  },
+  {
+    "id": 1253,
+    "hr": "beznadan",
+    "pl": "beznadziejny",
+    "category": "przymiotniki"
+  },
+  {
+    "id": 1254,
+    "hr": "beznadno",
+    "pl": "beznadziejnie",
+    "category": "przysłówki"
+  },
+  {
+    "id": 1255,
+    "hr": "beznadnost",
+    "pl": "beznadzieja",
+    "category": "rzeczowniki"
+  },
 
 ]
