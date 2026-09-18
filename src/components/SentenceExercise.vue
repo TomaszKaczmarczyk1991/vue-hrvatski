@@ -41,6 +41,7 @@
             type="text"
             autocomplete="off"
             spellcheck="false"
+            @focus="handleInputFocus"
           />
 
           <span
@@ -79,6 +80,7 @@
           placeholder="Napisz całe zdanie..."
           autocomplete="off"
           spellcheck="false"
+          @focus="handleInputFocus"
         ></textarea>
       </div>
 
@@ -314,7 +316,19 @@ function focusInput() {
 
     const len = el?.value?.length ?? 0
     el?.setSelectionRange?.(len, len)
+
+    // Na mobile klawiatura ekranowa potrafi przysłonić input —
+    // wymuszamy przewinięcie tak, by pole zostało widoczne nad nią
+    el?.scrollIntoView?.({ block: 'center', behavior: 'smooth' })
   })
+}
+
+function handleInputFocus(event) {
+  // Czekamy krótko, aż klawiatura ekranowa faktycznie się otworzy
+  // i zmniejszy viewport, zanim przewiniemy widok
+  setTimeout(() => {
+    event.target.scrollIntoView({ block: 'center', behavior: 'smooth' })
+  }, 300)
 }
 
 function checkAnswer() {
@@ -822,6 +836,12 @@ kbd {
 }
 
 @media (max-width: 500px) {
+  .sentence-wrapper {
+    min-height: 100dvh;
+    align-items: flex-start;
+    padding-top: 40px;
+  }
+
   .card {
     width: calc(100vw - 32px);
     padding: 28px 20px;
