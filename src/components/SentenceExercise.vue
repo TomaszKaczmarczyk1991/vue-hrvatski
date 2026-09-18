@@ -85,6 +85,17 @@
       </div>
 
       <div
+        v-if="checked"
+        class="swipe-hint"
+      >
+        <ArrowUp
+          :size="13"
+          :stroke-width="2"
+        />
+        <span>Swipe up — następne zdanie</span>
+      </div>
+
+      <div
         v-if="gradeState"
         class="feedback"
         :class="gradeState"
@@ -117,17 +128,6 @@
         >
           {{ checked ? 'Dalej →' : 'Sprawdź' }}
         </button>
-      </div>
-
-      <div
-        v-if="checked"
-        class="swipe-hint"
-      >
-        <ArrowUp
-          :size="13"
-          :stroke-width="2"
-        />
-        <span>Swipe up — następne zdanie</span>
       </div>
     </div>
 
@@ -658,6 +658,19 @@ onUnmounted(() => {
   color: #f87171;
 }
 
+.swipe-hint {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+
+  color: #666672;
+
+  font-size: 11px;
+
+  opacity: 0.75;
+}
+
 .feedback {
   margin-top: 18px;
 
@@ -737,19 +750,6 @@ onUnmounted(() => {
 .action-button:disabled:hover {
   background: transparent;
   border-color: #3a3a44;
-}
-
-.swipe-hint {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 16px;
-
-  color: #666672;
-
-  font-size: 11px;
-
-  opacity: 0.75;
 }
 
 .keyboard-hints {
