@@ -84,14 +84,6 @@
         ></textarea>
       </div>
 
-      <div class="swipe-hint">
-        <ArrowUp
-          :size="13"
-          :stroke-width="2"
-        />
-        <span>Swipe up — następne zdanie</span>
-      </div>
-
       <div
         v-if="gradeState"
         class="feedback"
@@ -132,6 +124,14 @@
       :count="sentences.length"
       label="zdań w bazie danych"
     />
+
+    <div class="swipe-hint">
+      <ArrowUp
+        :size="13"
+        :stroke-width="2"
+      />
+      <span>Swipe up — następne zdanie</span>
+    </div>
 
     <div class="keyboard-hints">
       <div class="keyboard-title">
@@ -653,19 +653,6 @@ onUnmounted(() => {
   color: #f87171;
 }
 
-.swipe-hint {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 14px;
-
-  color: #666672;
-
-  font-size: 11px;
-
-  opacity: 0.75;
-}
-
 .feedback {
   margin-top: 18px;
 
@@ -745,6 +732,18 @@ onUnmounted(() => {
 .action-button:disabled:hover {
   background: transparent;
   border-color: #3a3a44;
+}
+
+.swipe-hint {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #666672;
+
+  font-size: 11px;
+
+  opacity: 0.75;
 }
 
 .keyboard-hints {
