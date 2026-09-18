@@ -424,6 +424,7 @@ onUnmounted(() => {
   gap: 24px;
 
   touch-action: none;
+  overflow-x: hidden;
 }
 
 .card {
@@ -843,7 +844,7 @@ kbd {
   }
 
   .card {
-    width: calc(100vw - 32px);
+    width: calc(100% - 32px);
     padding: 28px 20px;
   }
 
