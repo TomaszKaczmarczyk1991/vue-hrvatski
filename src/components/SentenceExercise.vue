@@ -84,10 +84,7 @@
         ></textarea>
       </div>
 
-      <div
-        v-if="checked"
-        class="swipe-hint"
-      >
+      <div class="swipe-hint">
         <ArrowUp
           :size="13"
           :stroke-width="2"
@@ -371,10 +368,8 @@ function handlePointerDown(event) {
 }
 
 function handlePointerUp(event) {
-  // Swipe działa tylko po sprawdzeniu odpowiedzi —
-  // wcześniej użytkownik może dotykać ekranu, żeby edytować input
-  if (!checked.value) return
-
+  // Swipe działa zawsze — jeśli odpowiedź nie została jeszcze
+  // sprawdzona, po prostu pomijamy zdanie (tak jak przycisk "Pomiń")
   const deltaY = pointerStartY - event.clientY
   const deltaX = Math.abs(pointerStartX - event.clientX)
 
