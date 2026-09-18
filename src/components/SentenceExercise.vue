@@ -838,7 +838,7 @@ kbd {
 @media (max-width: 500px) {
   .sentence-wrapper {
     min-height: 100dvh;
-    align-items: flex-start;
+    justify-content: flex-start;
     padding-top: 40px;
   }
 
