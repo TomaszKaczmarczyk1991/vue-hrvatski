@@ -1,10 +1,3 @@
-// UWAGA: treść chorwacka wymaga weryfikacji przez native speakera
-// przed użyciem produkcyjnym.
-//
-// Uwaga: 94-99 to krótkie idiomy/wykrzykniki — podział na tokeny
-// jest częściowo sztuczny, bo tłumaczenia PL są idiomatyczne, nie
-// dosłowne (np. 'Živjeli' = jedno słowo, 'Na zdrowie' = idiom).
-
 export const sentences = [
   { id: 1, category: 'powitania', tokens: [
     { hr: 'Bok', pl: 'Cześć' },
@@ -1827,5 +1820,429 @@ export const sentences = [
     { hr: 'Sljedeće godine', pl: 'W przyszłym roku' },
     { hr: 'idemo', pl: 'jedziemy', blank: true },
     { hr: 'negdje drugdje.', pl: 'gdzieś indziej.' }
+  ]},
+  { id: 401, category: 'samochod', tokens: [
+    { hr: 'Auto mi se', pl: 'Samochód mi się' },
+    { hr: 'pokvario', pl: 'zepsuł', blank: true },
+    { hr: 'na cesti.', pl: 'na drodze.' }
+  ]},
+  { id: 402, category: 'samochod', tokens: [
+    { hr: 'Moram', pl: 'Muszę', blank: true },
+    { hr: 'napuniti gorivo.', pl: 'zatankować.' }
+  ]},
+  { id: 403, category: 'samochod', tokens: [
+    { hr: 'Guma mi je', pl: 'Pękła mi' },
+    { hr: 'pukla.', pl: 'opona.', blank: true }
+  ]},
+  { id: 404, category: 'samochod', tokens: [
+    { hr: 'Parkirao sam', pl: 'Zaparkowałem', blank: true },
+    { hr: 'ispred zgrade.', pl: 'przed budynkiem.' }
+  ]},
+  { id: 405, category: 'samochod', tokens: [
+    { hr: 'Nema', pl: 'Nie ma', blank: true },
+    { hr: 'mjesta za parkiranje.', pl: 'miejsca do parkowania.' }
+  ]},
+  { id: 406, category: 'samochod', tokens: [
+    { hr: 'Vozi', pl: 'Jedź', blank: true },
+    { hr: 'oprezno, cesta je skliska.', pl: 'ostrożnie, droga jest śliska.' }
+  ]},
+  { id: 407, category: 'samochod', tokens: [
+    { hr: 'Auto mi treba', pl: 'Samochód potrzebuje', blank: true },
+    { hr: 'servis.', pl: 'przeglądu.' }
+  ]},
+  { id: 408, category: 'samochod', tokens: [
+    { hr: 'Zaboravio sam', pl: 'Zapomniałem', blank: true },
+    { hr: 'ključeve u autu.', pl: 'kluczyków w samochodzie.' }
+  ]},
+  { id: 409, category: 'samochod', tokens: [
+    { hr: 'Kupujem', pl: 'Kupuję', blank: true },
+    { hr: 'novi auto sljedeći mjesec.', pl: 'nowy samochód w przyszłym miesiącu.' }
+  ]},
+  { id: 410, category: 'samochod', tokens: [
+    { hr: 'U prometnoj smo', pl: 'Utknęliśmy', blank: true },
+    { hr: 'gužvi.', pl: 'w korku.' }
+  ]},
+  { id: 411, category: 'randki', tokens: [
+    { hr: 'Idem', pl: 'Idę' },
+    { hr: 'na spoj', pl: 'na randkę', blank: true },
+    { hr: 'večeras.', pl: 'dziś wieczorem.' }
+  ]},
+  { id: 412, category: 'randki', tokens: [
+    { hr: 'Baš mi se', pl: 'Naprawdę mi się', blank: true },
+    { hr: 'sviđaš.', pl: 'podobasz.' }
+  ]},
+  { id: 413, category: 'randki', tokens: [
+    { hr: 'Hoćeš li', pl: 'Chcesz się' },
+    { hr: 'izaći', pl: 'spotkać', blank: true },
+    { hr: 'sa mnom?', pl: 'ze mną?' }
+  ]},
+  { id: 414, category: 'randki', tokens: [
+    { hr: 'Prvi spoj je bio', pl: 'Pierwsza randka była' },
+    { hr: 'pomalo', pl: 'trochę', blank: true },
+    { hr: 'neugodan.', pl: 'niezręczna.' }
+  ]},
+  { id: 415, category: 'randki', tokens: [
+    { hr: 'Zajedno smo', pl: 'Jesteśmy razem' },
+    { hr: 'već', pl: 'już', blank: true },
+    { hr: 'dvije godine.', pl: 'dwa lata.' }
+  ]},
+  { id: 416, category: 'randki', tokens: [
+    { hr: 'Prekinuli smo', pl: 'Rozstaliśmy się', blank: true },
+    { hr: 'prošli mjesec.', pl: 'w zeszłym miesiącu.' }
+  ]},
+  { id: 417, category: 'randki', tokens: [
+    { hr: 'On mi je', pl: 'On jest mi' },
+    { hr: 'zapravo jako', pl: 'naprawdę' },
+    { hr: 'drag.', pl: 'bliski.', blank: true }
+  ]},
+  { id: 418, category: 'randki', tokens: [
+    { hr: 'Upoznali smo se', pl: 'Poznaliśmy się', blank: true },
+    { hr: 'preko prijatelja.', pl: 'przez znajomych.' }
+  ]},
+  { id: 419, category: 'randki', tokens: [
+    { hr: 'Dogovorili smo se', pl: 'Umówiliśmy się', blank: true },
+    { hr: 'za kavu.', pl: 'na kawę.' }
+  ]},
+  { id: 420, category: 'randki', tokens: [
+    { hr: 'Nemoj mi', pl: 'Nie', blank: true },
+    { hr: 'slomiti srce.', pl: 'złam mi serca.' }
+  ]},
+  { id: 421, category: 'ubrania', tokens: [
+    { hr: 'Ova majica mi je', pl: 'Ta koszulka jest na mnie' },
+    { hr: 'premala.', pl: 'za mała.', blank: true }
+  ]},
+  { id: 422, category: 'ubrania', tokens: [
+    { hr: 'Trebam', pl: 'Potrzebuję', blank: true },
+    { hr: 'nove cipele za zimu.', pl: 'nowych butów na zimę.' }
+  ]},
+  { id: 423, category: 'ubrania', tokens: [
+    { hr: 'Obuci', pl: 'Ubierz', blank: true },
+    { hr: 'nešto toplije.', pl: 'coś cieplejszego.' }
+  ]},
+  { id: 424, category: 'ubrania', tokens: [
+    { hr: 'Ova boja ti', pl: 'Ten kolor' },
+    { hr: 'baš', pl: 'bardzo' },
+    { hr: 'pristaje.', pl: 'ci pasuje.', blank: true }
+  ]},
+  { id: 425, category: 'ubrania', tokens: [
+    { hr: 'Skinuo sam', pl: 'Zdjąłem', blank: true },
+    { hr: 'jaknu, prevruće mi je.', pl: 'kurtkę, jest mi za gorąco.' }
+  ]},
+  { id: 426, category: 'ubrania', tokens: [
+    { hr: 'Poderao sam', pl: 'Podarłem', blank: true },
+    { hr: 'hlače.', pl: 'spodnie.' }
+  ]},
+  { id: 427, category: 'ubrania', tokens: [
+    { hr: 'Peremo', pl: 'Pierzemy', blank: true },
+    { hr: 'veš danas poslijepodne.', pl: 'pranie dziś po południu.' }
+  ]},
+  { id: 428, category: 'ubrania', tokens: [
+    { hr: 'Ova jakna je', pl: 'Ta kurtka jest' },
+    { hr: 'iz prošle sezone.', pl: 'z zeszłego sezonu.', blank: true }
+  ]},
+  { id: 429, category: 'ubrania', tokens: [
+    { hr: 'Kupila sam', pl: 'Kupiłam', blank: true },
+    { hr: 'novu haljinu za zabavu.', pl: 'nową sukienkę na imprezę.' }
+  ]},
+  { id: 430, category: 'ubrania', tokens: [
+    { hr: 'Nemam se', pl: 'Nie mam się', blank: true },
+    { hr: 'što obući.', pl: 'w co ubrać.' }
+  ]},
+  { id: 431, category: 'ksiazki', tokens: [
+    { hr: 'Čitam', pl: 'Czytam', blank: true },
+    { hr: 'novu knjigu ovaj tjedan.', pl: 'nową książkę w tym tygodniu.' }
+  ]},
+  { id: 432, category: 'ksiazki', tokens: [
+    { hr: 'Ova knjiga je', pl: 'Ta książka jest' },
+    { hr: 'stvarno', pl: 'naprawdę' },
+    { hr: 'napeta.', pl: 'wciągająca.', blank: true }
+  ]},
+  { id: 433, category: 'ksiazki', tokens: [
+    { hr: 'Još nisam', pl: 'Jeszcze nie', blank: true },
+    { hr: 'pročitao kraj.', pl: 'przeczytałem zakończenia.' }
+  ]},
+  { id: 434, category: 'ksiazki', tokens: [
+    { hr: 'Posudi mi', pl: 'Pożycz mi', blank: true },
+    { hr: 'tu knjigu kad završiš.', pl: 'tę książkę, jak skończysz.' }
+  ]},
+  { id: 435, category: 'ksiazki', tokens: [
+    { hr: 'Ne volim', pl: 'Nie lubię', blank: true },
+    { hr: 'knjige bez sretnog kraja.', pl: 'książek bez szczęśliwego zakończenia.' }
+  ]},
+  { id: 436, category: 'ksiazki', tokens: [
+    { hr: 'Vratio sam', pl: 'Oddałem', blank: true },
+    { hr: 'knjigu u knjižnicu.', pl: 'książkę do biblioteki.' }
+  ]},
+  { id: 437, category: 'ksiazki', tokens: [
+    { hr: 'Ova priča me', pl: 'Ta historia' },
+    { hr: 'rasplakala.', pl: 'doprowadziła mnie do łez.', blank: true }
+  ]},
+  { id: 438, category: 'ksiazki', tokens: [
+    { hr: 'Preporučuješ li mi', pl: 'Polecasz mi', blank: true },
+    { hr: 'ovu knjigu?', pl: 'tę książkę?' }
+  ]},
+  { id: 439, category: 'ksiazki', tokens: [
+    { hr: 'Volim', pl: 'Lubię', blank: true },
+    { hr: 'čitati prije spavanja.', pl: 'czytać przed snem.' }
+  ]},
+  { id: 440, category: 'ksiazki', tokens: [
+    { hr: 'Kupila sam', pl: 'Kupiłam', blank: true },
+    { hr: 'tri nove knjige.', pl: 'trzy nowe książki.' }
+  ]},
+  { id: 441, category: 'gry', tokens: [
+    { hr: 'Igram', pl: 'Gram', blank: true },
+    { hr: 'tu igru svaki dan.', pl: 'w tę grę codziennie.' }
+  ]},
+  { id: 442, category: 'gry', tokens: [
+    { hr: 'Nemoj', pl: 'Nie', blank: true },
+    { hr: 'varati u igri.', pl: 'oszukuj w grze.' }
+  ]},
+  { id: 443, category: 'gry', tokens: [
+    { hr: 'Zapeo sam', pl: 'Utknąłem', blank: true },
+    { hr: 'na ovoj razini.', pl: 'na tym poziomie.' }
+  ]},
+  { id: 444, category: 'gry', tokens: [
+    { hr: 'Konzola mi se', pl: 'Konsola mi się' },
+    { hr: 'zamrznula.', pl: 'zawiesiła.', blank: true }
+  ]},
+  { id: 445, category: 'gry', tokens: [
+    { hr: 'Igramo', pl: 'Gramy', blank: true },
+    { hr: 'online zajedno.', pl: 'razem online.' }
+  ]},
+  { id: 446, category: 'gry', tokens: [
+    { hr: 'Ova igra ima', pl: 'Ta gra ma' },
+    { hr: 'odličnu', pl: 'świetną', blank: true },
+    { hr: 'grafiku.', pl: 'grafikę.' }
+  ]},
+  { id: 447, category: 'gry', tokens: [
+    { hr: 'Pobijedio sam', pl: 'Wygrałem', blank: true },
+    { hr: 'na kraju.', pl: 'na koniec.' }
+  ]},
+  { id: 448, category: 'gry', tokens: [
+    { hr: 'Igra', pl: 'Gra' },
+    { hr: 'izlazi', pl: 'wychodzi', blank: true },
+    { hr: 'iduće godine.', pl: 'w przyszłym roku.' }
+  ]},
+  { id: 449, category: 'gry', tokens: [
+    { hr: 'Preuzeo sam', pl: 'Ściągnąłem', blank: true },
+    { hr: 'novu igru.', pl: 'nową grę.' }
+  ]},
+  { id: 450, category: 'gry', tokens: [
+    { hr: 'Igraš li', pl: 'Grasz' },
+    { hr: 'konzolu', pl: 'na konsoli', blank: true },
+    { hr: 'ili računalo?', pl: 'czy na komputerze?' }
+  ]},
+  { id: 451, category: 'kariera', tokens: [
+    { hr: 'Tražim', pl: 'Szukam', blank: true },
+    { hr: 'posao već mjesecima.', pl: 'pracy od miesięcy.' }
+  ]},
+  { id: 452, category: 'kariera', tokens: [
+    { hr: 'Poslao sam', pl: 'Wysłałem', blank: true },
+    { hr: 'prijavu jučer.', pl: 'zgłoszenie wczoraj.' }
+  ]},
+  { id: 453, category: 'kariera', tokens: [
+    { hr: 'Imam', pl: 'Mam' },
+    { hr: 'razgovor za posao', pl: 'rozmowę o pracę', blank: true },
+    { hr: 'sutra.', pl: 'jutro.' }
+  ]},
+  { id: 454, category: 'kariera', tokens: [
+    { hr: 'Dobio sam', pl: 'Dostałem', blank: true },
+    { hr: 'otkaz prošli tjedan.', pl: 'wypowiedzenie w zeszłym tygodniu.' }
+  ]},
+  { id: 455, category: 'kariera', tokens: [
+    { hr: 'Napredovao sam', pl: 'Awansowałem', blank: true },
+    { hr: 'na poslu.', pl: 'w pracy.' }
+  ]},
+  { id: 456, category: 'kariera', tokens: [
+    { hr: 'Radim', pl: 'Pracuję', blank: true },
+    { hr: 'prekovremeno ovaj tjedan.', pl: 'w nadgodzinach w tym tygodniu.' }
+  ]},
+  { id: 457, category: 'kariera', tokens: [
+    { hr: 'Šef me', pl: 'Szef mnie' },
+    { hr: 'pohvalio', pl: 'pochwalił', blank: true },
+    { hr: 'danas.', pl: 'dzisiaj.' }
+  ]},
+  { id: 458, category: 'kariera', tokens: [
+    { hr: 'Dajem', pl: 'Składam', blank: true },
+    { hr: 'otkaz sljedeći mjesec.', pl: 'wypowiedzenie w przyszłym miesiącu.' }
+  ]},
+  { id: 459, category: 'kariera', tokens: [
+    { hr: 'Volim', pl: 'Lubię', blank: true },
+    { hr: 'svoj posao.', pl: 'swoją pracę.' }
+  ]},
+  { id: 460, category: 'kariera', tokens: [
+    { hr: 'Kolega mi je dao', pl: 'Kolega dał mi', blank: true },
+    { hr: 'dobar savjet.', pl: 'dobrą radę.' }
+  ]},
+  { id: 461, category: 'lotnisko', tokens: [
+    { hr: 'Let nam', pl: 'Nasz lot' },
+    { hr: 'kasni', pl: 'ma', blank: true },
+    { hr: 'sat vremena.', pl: 'godzinę opóźnienia.' }
+  ]},
+  { id: 462, category: 'lotnisko', tokens: [
+    { hr: 'Moramo se', pl: 'Musimy się' },
+    { hr: 'prijaviti', pl: 'zameldować', blank: true },
+    { hr: 'na let.', pl: 'na lot.' }
+  ]},
+  { id: 463, category: 'lotnisko', tokens: [
+    { hr: 'Gdje je', pl: 'Gdzie jest' },
+    { hr: 'izlaz za ukrcaj?', pl: 'wyjście do odprawy?', blank: true }
+  ]},
+  { id: 464, category: 'lotnisko', tokens: [
+    { hr: 'Prtljaga mi je', pl: 'Mój bagaż' },
+    { hr: 'izgubljena.', pl: 'zaginął.', blank: true }
+  ]},
+  { id: 465, category: 'lotnisko', tokens: [
+    { hr: 'Imam', pl: 'Mam' },
+    { hr: 'samo', pl: 'tylko', blank: true },
+    { hr: 'ručnu prtljagu.', pl: 'bagaż podręczny.' }
+  ]},
+  { id: 466, category: 'lotnisko', tokens: [
+    { hr: 'Sigurnosna provjera', pl: 'Kontrola bezpieczeństwa' },
+    { hr: 'traje', pl: 'trwa', blank: true },
+    { hr: 'dugo.', pl: 'długo.' }
+  ]},
+  { id: 467, category: 'lotnisko', tokens: [
+    { hr: 'Ukrcaj', pl: 'Boarding' },
+    { hr: 'počinje', pl: 'zaczyna się', blank: true },
+    { hr: 'za deset minuta.', pl: 'za dziesięć minut.' }
+  ]},
+  { id: 468, category: 'lotnisko', tokens: [
+    { hr: 'Zaboravio sam', pl: 'Zapomniałem', blank: true },
+    { hr: 'iskaznicu kod kuće.', pl: 'dowodu w domu.' }
+  ]},
+  { id: 469, category: 'lotnisko', tokens: [
+    { hr: 'Slijećemo', pl: 'Lądujemy', blank: true },
+    { hr: 'za pola sata.', pl: 'za pół godziny.' }
+  ]},
+  { id: 470, category: 'lotnisko', tokens: [
+    { hr: 'Ovo je moj prvi', pl: 'To mój pierwszy' },
+    { hr: 'let', pl: 'lot', blank: true },
+    { hr: 'ikad.', pl: 'w życiu.' }
+  ]},
+  { id: 471, category: 'komplementy', tokens: [
+    { hr: 'Baš dobro', pl: 'Naprawdę dobrze', blank: true },
+    { hr: 'izgledaš danas.', pl: 'dziś wyglądasz.' }
+  ]},
+  { id: 472, category: 'komplementy', tokens: [
+    { hr: 'Sviđa mi se', pl: 'Podoba mi się', blank: true },
+    { hr: 'tvoja frizura.', pl: 'twoja fryzura.' }
+  ]},
+  { id: 473, category: 'komplementy', tokens: [
+    { hr: 'Ti si stvarno', pl: 'Jesteś naprawdę' },
+    { hr: 'pametna', pl: 'mądrą', blank: true },
+    { hr: 'osoba.', pl: 'osobą.' }
+  ]},
+  { id: 474, category: 'komplementy', tokens: [
+    { hr: 'Odlično si', pl: 'Świetnie', blank: true },
+    { hr: 'to obavio.', pl: 'to zrobiłeś.' }
+  ]},
+  { id: 475, category: 'komplementy', tokens: [
+    { hr: 'Baš imaš', pl: 'Masz naprawdę' },
+    { hr: 'lijep', pl: 'piękny', blank: true },
+    { hr: 'osmijeh.', pl: 'uśmiech.' }
+  ]},
+  { id: 476, category: 'komplementy', tokens: [
+    { hr: 'Jako si mi', pl: 'Bardzo mi' },
+    { hr: 'pomogao.', pl: 'pomogłeś.', blank: true }
+  ]},
+  { id: 477, category: 'komplementy', tokens: [
+    { hr: 'Ponosim se', pl: 'Jestem z ciebie', blank: true },
+    { hr: 'tobom.', pl: 'dumny.' }
+  ]},
+  { id: 478, category: 'komplementy', tokens: [
+    { hr: 'Ti si', pl: 'Jesteś' },
+    { hr: 'najbolji', pl: 'najlepszym', blank: true },
+    { hr: 'prijatelj.', pl: 'przyjacielem.' }
+  ]},
+  { id: 479, category: 'komplementy', tokens: [
+    { hr: 'Stvarno imaš', pl: 'Naprawdę masz', blank: true },
+    { hr: 'talent za to.', pl: 'do tego talent.' }
+  ]},
+  { id: 480, category: 'komplementy', tokens: [
+    { hr: 'Hvala ti', pl: 'Dziękuję', blank: true },
+    { hr: 'što si takav kakav jesi.', pl: 'że jesteś taki, jaki jesteś.' }
+  ]},
+  { id: 481, category: 'stres', tokens: [
+    { hr: 'Malo sam', pl: 'Jestem trochę', blank: true },
+    { hr: 'pod stresom zadnjih dana.', pl: 'zestresowany ostatnimi dniami.' }
+  ]},
+  { id: 482, category: 'stres', tokens: [
+    { hr: 'Trebam', pl: 'Potrzebuję', blank: true },
+    { hr: 'predah od svega.', pl: 'odpoczynku od wszystkiego.' }
+  ]},
+  { id: 483, category: 'stres', tokens: [
+    { hr: 'Previše toga', pl: 'Zbyt wiele' },
+    { hr: 'imam', pl: 'mam', blank: true },
+    { hr: 'na glavi.', pl: 'na głowie.' }
+  ]},
+  { id: 484, category: 'stres', tokens: [
+    { hr: 'Duboko', pl: 'Weź głęboki', blank: true },
+    { hr: 'udahni i smiri se.', pl: 'oddech i się uspokój.' }
+  ]},
+  { id: 485, category: 'stres', tokens: [
+    { hr: 'Ne stignem', pl: 'Nie zdążę', blank: true },
+    { hr: 'sve obaviti.', pl: 'wszystkiego zrobić.' }
+  ]},
+  { id: 486, category: 'stres', tokens: [
+    { hr: 'Trebam', pl: 'Potrzebuję', blank: true },
+    { hr: 'malo vremena za sebe.', pl: 'trochę czasu dla siebie.' }
+  ]},
+  { id: 487, category: 'stres', tokens: [
+    { hr: 'Osjećam se', pl: 'Czuję się', blank: true },
+    { hr: 'preopterećeno poslom.', pl: 'przytłoczony pracą.' }
+  ]},
+  { id: 488, category: 'stres', tokens: [
+    { hr: 'Moram', pl: 'Muszę', blank: true },
+    { hr: 'usporiti malo.', pl: 'trochę zwolnić.' }
+  ]},
+  { id: 489, category: 'stres', tokens: [
+    { hr: 'Sve će biti', pl: 'Jutro wszystko będzie', blank: true },
+    { hr: 'lakše sutra.', pl: 'łatwiejsze.' }
+  ]},
+  { id: 490, category: 'stres', tokens: [
+    { hr: 'Ne brini se', pl: 'Nie martw się', blank: true },
+    { hr: 'toliko.', pl: 'tak bardzo.' }
+  ]},
+  { id: 491, category: 'hobby', tokens: [
+    { hr: 'Slikam', pl: 'Maluję', blank: true },
+    { hr: 'u slobodno vrijeme.', pl: 'w wolnym czasie.' }
+  ]},
+  { id: 492, category: 'hobby', tokens: [
+    { hr: 'Volim', pl: 'Lubię', blank: true },
+    { hr: 'vrtlariti vikendom.', pl: 'uprawiać ogród w weekendy.' }
+  ]},
+  { id: 493, category: 'hobby', tokens: [
+    { hr: 'Pletem', pl: 'Robię na drutach', blank: true },
+    { hr: 'šalove zimi.', pl: 'szaliki zimą.' }
+  ]},
+  { id: 494, category: 'hobby', tokens: [
+    { hr: 'Fotografiram', pl: 'Fotografuję', blank: true },
+    { hr: 'prirodu.', pl: 'przyrodę.' }
+  ]},
+  { id: 495, category: 'hobby', tokens: [
+    { hr: 'Skupljam', pl: 'Zbieram', blank: true },
+    { hr: 'stare razglednice.', pl: 'stare pocztówki.' }
+  ]},
+  { id: 496, category: 'hobby', tokens: [
+    { hr: 'Pecam', pl: 'Łowię', blank: true },
+    { hr: 'ribu svake subote.', pl: 'ryby w każdą sobotę.' }
+  ]},
+  { id: 497, category: 'hobby', tokens: [
+    { hr: 'Peče', pl: 'Piecze', blank: true },
+    { hr: 'kruh svaki tjedan.', pl: 'chleb co tydzień.' }
+  ]},
+  { id: 498, category: 'hobby', tokens: [
+    { hr: 'Sviram', pl: 'Gram', blank: true },
+    { hr: 'klavir već pet godina.', pl: 'na pianinie już pięć lat.' }
+  ]},
+  { id: 499, category: 'hobby', tokens: [
+    { hr: 'Volim', pl: 'Lubię', blank: true },
+    { hr: 'rješavati križaljke.', pl: 'rozwiązywać krzyżówki.' }
+  ]},
+  { id: 500, category: 'hobby', tokens: [
+    { hr: 'Ovaj hobi me', pl: 'To hobby' },
+    { hr: 'stvarno', pl: 'naprawdę' },
+    { hr: 'opušta.', pl: 'mnie relaksuje.', blank: true }
   ]}
 ]
