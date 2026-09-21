@@ -2244,5 +2244,415 @@ export const sentences = [
     { hr: 'Ovaj hobi me', pl: 'To hobby' },
     { hr: 'stvarno', pl: 'naprawdę' },
     { hr: 'opušta.', pl: 'mnie relaksuje.', blank: true }
+  ]},
+  { id: 501, category: 'rozmowa', tokens: [
+    { hr: 'Odgovara mi', pl: 'Pasuje mi', blank: true },
+    { hr: 'bilo koji dan.', pl: 'każdy dzień.' }
+  ]},
+  { id: 502, category: 'rozmowa', tokens: [
+    { hr: 'Tako', pl: 'Na to', blank: true },
+    { hr: 'izgleda.', pl: 'wygląda.' }
+  ]},
+  { id: 503, category: 'rozmowa', tokens: [
+    { hr: 'Lijepo se', pl: 'Miło się', blank: true },
+    { hr: 'provedi!', pl: 'baw!' }
+  ]},
+  { id: 504, category: 'rozmowa', tokens: [
+    { hr: 'Lakše je', pl: 'Łatwiej', blank: true },
+    { hr: 'reći nego učiniti.', pl: 'powiedzieć niż zrobić.' }
+  ]},
+  { id: 505, category: 'rozmowa', tokens: [
+    { hr: 'Žao mi je', pl: 'Przepraszam', blank: true },
+    { hr: 'što kasnim.', pl: 'za spóźnienie.' }
+  ]},
+  { id: 506, category: 'rozmowa', tokens: [
+    { hr: 'I', pl: 'Najwyższy' },
+    { hr: 'vrijeme je!', pl: 'czas!', blank: true }
+  ]},
+  { id: 507, category: 'rozmowa', tokens: [
+    { hr: 'Sami smo', pl: 'Jesteśmy tu', blank: true },
+    { hr: 'ovdje.', pl: 'sami.' }
+  ]},
+  { id: 508, category: 'rozmowa', tokens: [
+    { hr: 'Kužim', pl: 'Kapuję', blank: true },
+    { hr: '.', pl: '.', punct: true }
+  ]},
+  { id: 509, category: 'rozmowa', tokens: [
+    { hr: 'Ne kužim', pl: 'Nie bardzo', blank: true },
+    { hr: 'baš.', pl: 'kapuję.' }
+  ]},
+  { id: 510, category: 'rozmowa', tokens: [
+    { hr: 'Nema', pl: 'Nie ma', blank: true },
+    { hr: 'frke.', pl: 'sprawy.' }
+  ]},
+  { id: 511, category: 'rozmowa', tokens: [
+    { hr: 'Kako', pl: 'Jak', blank: true },
+    { hr: 'ide?', pl: 'leci?' }
+  ]},
+  { id: 512, category: 'rozmowa', tokens: [
+    { hr: 'Jesi', pl: 'Żyjesz', blank: true },
+    { hr: 'živ?', pl: 'jeszcze?' }
+  ]},
+  { id: 513, category: 'podroze', tokens: [
+    { hr: 'Izgubio sam', pl: 'Zgubiłem', blank: true },
+    { hr: 'putovnicu!', pl: 'paszport!' }
+  ]},
+  { id: 514, category: 'zakupy', tokens: [
+    { hr: 'Gdje je', pl: 'Gdzie jest' },
+    { hr: 'trgovina?', pl: 'sklep?', blank: true }
+  ]},
+  { id: 515, category: 'rozmowa', tokens: [
+    { hr: 'Daj mi', pl: 'Daj mi', blank: true },
+    { hr: 'minutu.', pl: 'chwilę.' }
+  ]},
+  { id: 516, category: 'rozmowa', tokens: [
+    { hr: 'Samo', pl: 'Tylko', blank: true },
+    { hr: 'trenutak.', pl: 'chwileczkę.' }
+  ]},
+  { id: 517, category: 'rozmowa', tokens: [
+    { hr: 'Nemam', pl: 'Nie mam', blank: true },
+    { hr: 'pojma.', pl: 'pojęcia.' }
+  ]},
+  { id: 518, category: 'rozmowa', tokens: [
+    { hr: 'To mi nikako', pl: 'To mi w ogóle' },
+    { hr: 'ne ide.', pl: 'nie wychodzi.', blank: true }
+  ]},
+  { id: 519, category: 'rozmowa', tokens: [
+    { hr: 'Nije', pl: 'Nieźle', blank: true },
+    { hr: 'loše.', pl: '.' }
+  ]},
+  { id: 520, category: 'rozmowa', tokens: [
+    { hr: 'Moglo bi biti', pl: 'Mogłoby być', blank: true },
+    { hr: 'i gore.', pl: 'gorzej.' }
+  ]},
+  { id: 521, category: 'rozmowa', tokens: [
+    { hr: 'Nemoj mi', pl: 'Nie rób mi', blank: true },
+    { hr: 'to raditi.', pl: 'tego.' }
+  ]},
+  { id: 522, category: 'rozmowa', tokens: [
+    { hr: 'Pusti me', pl: 'Zostaw mnie', blank: true },
+    { hr: 'na miru.', pl: 'w spokoju.' }
+  ]},
+  { id: 523, category: 'rozmowa', tokens: [
+    { hr: 'Ma', pl: 'Daj', blank: true },
+    { hr: 'pusti.', pl: 'spokój.' }
+  ]},
+  { id: 524, category: 'rozmowa', tokens: [
+    { hr: 'Dosta mi je', pl: 'Mam tego', blank: true },
+    { hr: 'ovoga.', pl: 'dość.' }
+  ]},
+  { id: 525, category: 'rozmowa', tokens: [
+    { hr: 'Idemo', pl: 'Idźmy', blank: true },
+    { hr: 'dalje.', pl: 'dalej.' }
+  ]},
+  { id: 526, category: 'rozmowa', tokens: [
+    { hr: 'Nema', pl: 'Nie', blank: true },
+    { hr: 'veze.', pl: 'szkodzi.' }
+  ]},
+  { id: 527, category: 'rozmowa', tokens: [
+    { hr: 'To mi se', pl: 'To mi się', blank: true },
+    { hr: 'ne sviđa.', pl: 'nie podoba.' }
+  ]},
+  { id: 528, category: 'rozmowa', tokens: [
+    { hr: 'Kako to', pl: 'Co masz na', blank: true },
+    { hr: 'misliš?', pl: 'myśli?' }
+  ]},
+  { id: 529, category: 'rozmowa', tokens: [
+    { hr: 'Reci mi', pl: 'Powiedz mi', blank: true },
+    { hr: 'nešto više.', pl: 'coś więcej.' }
+  ]},
+  { id: 530, category: 'rozmowa', tokens: [
+    { hr: 'Ma', pl: 'Co ty', blank: true },
+    { hr: 'nemoj!', pl: 'nie powiesz!' }
+  ]},
+  { id: 531, category: 'rozmowa', tokens: [
+    { hr: 'Šalim', pl: 'Żartuję', blank: true },
+    { hr: 'se.', pl: '.' }
+  ]},
+  { id: 532, category: 'rozmowa', tokens: [
+    { hr: 'Ne', pl: 'Nie', blank: true },
+    { hr: 'šalim se.', pl: 'żartuję.' }
+  ]},
+  { id: 533, category: 'rozmowa', tokens: [
+    { hr: 'To je', pl: 'To' },
+    { hr: 'druga priča.', pl: 'inna sprawa.', blank: true }
+  ]},
+  { id: 534, category: 'rozmowa', tokens: [
+    { hr: 'Bolje ikad', pl: 'Lepiej późno', blank: true },
+    { hr: 'nego nikad.', pl: 'niż wcale.' }
+  ]},
+  { id: 535, category: 'rozmowa', tokens: [
+    { hr: 'Sve u svoje', pl: 'Wszystko w swoim', blank: true },
+    { hr: 'vrijeme.', pl: 'czasie.' }
+  ]},
+  { id: 536, category: 'rozmowa', tokens: [
+    { hr: 'Nije to', pl: 'To nic' },
+    { hr: 'ništa strašno.', pl: 'strasznego.', blank: true }
+  ]},
+  { id: 537, category: 'rozmowa', tokens: [
+    { hr: 'Polako', pl: 'Powoli', blank: true },
+    { hr: ',', pl: ',', punct: true },
+    { hr: 'stižemo.', pl: 'już dojeżdżamy.' }
+  ]},
+  { id: 538, category: 'rozmowa', tokens: [
+    { hr: 'Samo', pl: 'Śmiało', blank: true },
+    { hr: 'naprijed!', pl: '!' }
+  ]},
+  { id: 539, category: 'rozmowa', tokens: [
+    { hr: 'Drži', pl: 'Trzymaj', blank: true },
+    { hr: 'se!', pl: 'się!' }
+  ]},
+  { id: 540, category: 'rozmowa', tokens: [
+    { hr: 'Nije', pl: 'Nie ma się', blank: true },
+    { hr: 'za brigu.', pl: 'co martwić.' }
+  ]},
+  { id: 541, category: 'rozmowa', tokens: [
+    { hr: 'Sve je', pl: 'Wszystko jest' },
+    { hr: 'pod kontrolom.', pl: 'pod kontrolą.', blank: true }
+  ]},
+  { id: 542, category: 'rozmowa', tokens: [
+    { hr: 'To mi zvuči', pl: 'To brzmi dla mnie', blank: true },
+    { hr: 'dobro.', pl: 'dobrze.' }
+  ]},
+  { id: 543, category: 'rozmowa', tokens: [
+    { hr: 'Nemoj se', pl: 'Nie', blank: true },
+    { hr: 'zavaravati.', pl: 'oszukuj się.' }
+  ]},
+  { id: 544, category: 'rozmowa', tokens: [
+    { hr: 'Kako god', pl: 'Jak', blank: true },
+    { hr: 'ti kažeš.', pl: 'sobie chcesz.' }
+  ]},
+  { id: 545, category: 'rozmowa', tokens: [
+    { hr: 'Meni je', pl: 'Mi jest', blank: true },
+    { hr: 'svejedno.', pl: 'wszystko jedno.' }
+  ]},
+  { id: 546, category: 'rozmowa', tokens: [
+    { hr: 'To', pl: 'To', blank: true },
+    { hr: 'ovisi.', pl: 'zależy.' }
+  ]},
+  { id: 547, category: 'rozmowa', tokens: [
+    { hr: 'To ćemo', pl: 'To jeszcze', blank: true },
+    { hr: 'tek vidjeti.', pl: 'zobaczymy.' }
+  ]},
+  { id: 548, category: 'rozmowa', tokens: [
+    { hr: 'Dogovoreno', pl: 'Zgoda', blank: true },
+    { hr: '!', pl: '!', punct: true }
+  ]},
+  { id: 549, category: 'rozmowa', tokens: [
+    { hr: 'Važi', pl: 'Zgoda', blank: true },
+    { hr: '!', pl: '!', punct: true }
+  ]},
+  { id: 550, category: 'rozmowa', tokens: [
+    { hr: 'Daj da', pl: 'Daj, niech', blank: true },
+    { hr: 'vidim.', pl: 'zobaczę.' }
+  ]},
+  { id: 551, category: 'rozmowa', tokens: [
+    { hr: 'Pusti me da', pl: 'Daj mi', blank: true },
+    { hr: 'razmislim.', pl: 'pomyśleć.' }
+  ]},
+  { id: 552, category: 'rozmowa', tokens: [
+    { hr: 'Nisam sad', pl: 'Nie mam teraz', blank: true },
+    { hr: 'za to raspoložen.', pl: 'na to nastroju.' }
+  ]},
+  { id: 553, category: 'rozmowa', tokens: [
+    { hr: 'To me', pl: 'Wcale mnie to', blank: true },
+    { hr: 'nimalo ne čudi.', pl: 'nie dziwi.' }
+  ]},
+  { id: 554, category: 'rozmowa', tokens: [
+    { hr: 'Baš si me', pl: 'Naprawdę mnie', blank: true },
+    { hr: 'nasmijao.', pl: 'rozśmieszyłeś.' }
+  ]},
+  { id: 555, category: 'rozmowa', tokens: [
+    { hr: 'Ajmo', pl: 'No dalej', blank: true },
+    { hr: ',', pl: ',', punct: true },
+    { hr: 'kreni!', pl: 'ruszaj!' }
+  ]},
+  { id: 556, category: 'zycie', tokens: [
+    { hr: 'Eto', pl: 'No', blank: true },
+    { hr: 'vidiš, uvijek je tako.', pl: 'widzisz, zawsze tak jest.' }
+  ]},
+  { id: 557, category: 'zycie', tokens: [
+    { hr: 'Znaš', pl: 'Wiesz', blank: true },
+    { hr: 'kako je to.', pl: 'jak to jest.' }
+  ]},
+  { id: 558, category: 'zycie', tokens: [
+    { hr: 'Iskreno', pl: 'Szczerze' },
+    { hr: ',', pl: ',', punct: true },
+    { hr: 'nisam', pl: 'nie', blank: true },
+    { hr: 'očekivao ovo.', pl: 'spodziewałem się tego.' }
+  ]},
+  { id: 559, category: 'zycie', tokens: [
+    { hr: 'Baš sam se', pl: 'Naprawdę się', blank: true },
+    { hr: 'iznenadio.', pl: 'zdziwiłem.' }
+  ]},
+  { id: 560, category: 'zycie', tokens: [
+    { hr: 'Nisi ni', pl: 'Nie zdajesz sobie', blank: true },
+    { hr: 'svjestan koliko mi ovo znači.', pl: 'sprawy, ile to dla mnie znaczy.' }
+  ]},
+  { id: 561, category: 'zycie', tokens: [
+    { hr: 'To se meni', pl: 'Mnie by się to' },
+    { hr: 'nikad', pl: 'nigdy', blank: true },
+    { hr: 'ne bi dogodilo.', pl: 'nie przydarzyło.' }
+  ]},
+  { id: 562, category: 'zycie', tokens: [
+    { hr: 'Uvijek je tako', pl: 'Zawsze tak jest' },
+    { hr: 'kad', pl: 'kiedy', blank: true },
+    { hr: 'najmanje očekuješ.', pl: 'najmniej się spodziewasz.' }
+  ]},
+  { id: 563, category: 'zycie', tokens: [
+    { hr: 'Nemoj mi', pl: 'Nie miej mi', blank: true },
+    { hr: 'zamjeriti.', pl: 'za złe.' }
+  ]},
+  { id: 564, category: 'zycie', tokens: [
+    { hr: 'Ne uzimaj', pl: 'Nie bierz', blank: true },
+    { hr: 'to k srcu.', pl: 'tego do serca.' }
+  ]},
+  { id: 565, category: 'zycie', tokens: [
+    { hr: 'Nemoj', pl: 'Nie', blank: true },
+    { hr: 'odmah suditi.', pl: 'oceniaj od razu.' }
+  ]},
+  { id: 566, category: 'zycie', tokens: [
+    { hr: 'To se', pl: 'Łatwo tak', blank: true },
+    { hr: 'lako kaže.', pl: 'powiedzieć.' }
+  ]},
+  { id: 567, category: 'zycie', tokens: [
+    { hr: 'Znam', pl: 'Wiem', blank: true },
+    { hr: 'da zvuči čudno.', pl: 'że to brzmi dziwnie.' }
+  ]},
+  { id: 568, category: 'zycie', tokens: [
+    { hr: 'Vrijeme će', pl: 'Czas', blank: true },
+    { hr: 'sve pokazati.', pl: 'wszystko pokaże.' }
+  ]},
+  { id: 569, category: 'zycie', tokens: [
+    { hr: 'Nema tu', pl: 'Nie ma tu', blank: true },
+    { hr: 'puno za razmišljati.', pl: 'wiele do myślenia.' }
+  ]},
+  { id: 570, category: 'zycie', tokens: [
+    { hr: 'To nikoga ne', pl: 'To nikogo nie', blank: true },
+    { hr: 'iznenađuje.', pl: 'dziwi.' }
+  ]},
+  { id: 571, category: 'zycie', tokens: [
+    { hr: 'Uvijek nešto', pl: 'Zawsze coś', blank: true },
+    { hr: 'iskrsne u zadnji čas.', pl: 'wypada w ostatniej chwili.' }
+  ]},
+  { id: 572, category: 'zycie', tokens: [
+    { hr: 'Ionako', pl: 'I tak', blank: true },
+    { hr: 'nisam imao izbora.', pl: 'nie miałem wyboru.' }
+  ]},
+  { id: 573, category: 'zycie', tokens: [
+    { hr: 'Bolje', pl: 'Lepiej', blank: true },
+    { hr: 'spriječiti nego liječiti.', pl: 'zapobiegać niż leczyć.' }
+  ]},
+  { id: 574, category: 'zycie', tokens: [
+    { hr: 'Tko rano', pl: 'Kto rano', blank: true },
+    { hr: 'rani, dvije sreće grabi.', pl: 'wstaje, temu Pan Bóg daje.' }
+  ]},
+  { id: 575, category: 'zycie', tokens: [
+    { hr: 'Svaka čast', pl: 'Szacunek', blank: true },
+    { hr: 'na trudu.', pl: 'za wysiłek.' }
+  ]},
+  { id: 576, category: 'zycie', tokens: [
+    { hr: 'To mi je bilo', pl: 'To było dla mnie' },
+    { hr: 'previše', pl: 'za dużo', blank: true },
+    { hr: 'za jedan dan.', pl: 'na jeden dzień.' }
+  ]},
+  { id: 577, category: 'zycie', tokens: [
+    { hr: 'Nadam se', pl: 'Mam nadzieję', blank: true },
+    { hr: 'da sam u pravu.', pl: 'że mam rację.' }
+  ]},
+  { id: 578, category: 'zycie', tokens: [
+    { hr: 'Zapravo', pl: 'Właściwie', blank: true },
+    { hr: 'i nije loša ideja.', pl: 'to niezły pomysł.' }
+  ]},
+  { id: 579, category: 'zycie', tokens: [
+    { hr: 'Nisam na to ni', pl: 'Nawet o tym nie', blank: true },
+    { hr: 'pomislio.', pl: 'pomyślałem.' }
+  ]},
+  { id: 580, category: 'zycie', tokens: [
+    { hr: 'Katkad je', pl: 'Czasami', blank: true },
+    { hr: 'bolje šutjeti.', pl: 'lepiej milczeć.' }
+  ]},
+  { id: 581, category: 'zycie', tokens: [
+    { hr: 'Uvijek gledaj', pl: 'Zawsze patrz', blank: true },
+    { hr: 'na svijetlu stranu.', pl: 'na jasną stronę.' }
+  ]},
+  { id: 582, category: 'zycie', tokens: [
+    { hr: 'Nemoj se', pl: 'Nie', blank: true },
+    { hr: 'predati tako brzo.', pl: 'poddawaj się tak szybko.' }
+  ]},
+  { id: 583, category: 'zycie', tokens: [
+    { hr: 'Sve dolazi', pl: 'Wszystko się', blank: true },
+    { hr: 'na svoje mjesto.', pl: 'układa.' }
+  ]},
+  { id: 584, category: 'zycie', tokens: [
+    { hr: 'Nikad nije', pl: 'Nigdy nie jest', blank: true },
+    { hr: 'kasno za promjenu.', pl: 'za późno na zmianę.' }
+  ]},
+  { id: 585, category: 'zycie', tokens: [
+    { hr: 'To me', pl: 'To mi', blank: true },
+    { hr: 'podsjeća na nešto.', pl: 'coś przypomina.' }
+  ]},
+  { id: 586, category: 'zycie', tokens: [
+    { hr: 'Iskreno govoreći', pl: 'Szczerze mówiąc', blank: true },
+    { hr: ',', pl: ',', punct: true },
+    { hr: 'umoran sam.', pl: 'jestem zmęczony.' }
+  ]},
+  { id: 587, category: 'zycie', tokens: [
+    { hr: 'Nemoj se', pl: 'Nie', blank: true },
+    { hr: 'obazirati na njih.', pl: 'zwracaj na nich uwagi.' }
+  ]},
+  { id: 588, category: 'zycie', tokens: [
+    { hr: 'To nije', pl: 'To nie', blank: true },
+    { hr: 'moj posao.', pl: 'moja sprawa.' }
+  ]},
+  { id: 589, category: 'zycie', tokens: [
+    { hr: 'Neka bude', pl: 'Niech będzie', blank: true },
+    { hr: 'kako želiš.', pl: 'jak chcesz.' }
+  ]},
+  { id: 590, category: 'zycie', tokens: [
+    { hr: 'Ne moraš mi', pl: 'Nie musisz mi', blank: true },
+    { hr: 'ništa objašnjavati.', pl: 'niczego tłumaczyć.' }
+  ]},
+  { id: 591, category: 'zycie', tokens: [
+    { hr: 'Uvijek imaš', pl: 'Zawsze masz', blank: true },
+    { hr: 'izgovor za sve.', pl: 'wymówkę na wszystko.' }
+  ]},
+  { id: 592, category: 'zycie', tokens: [
+    { hr: 'To se', pl: 'To jest', blank: true },
+    { hr: 'samo po sebi razumije.', pl: 'oczywiste samo przez się.' }
+  ]},
+  { id: 593, category: 'zycie', tokens: [
+    { hr: 'Nisam', pl: 'Nie jestem', blank: true },
+    { hr: 'navikao na ovakve stvari.', pl: 'przyzwyczajony do takich rzeczy.' }
+  ]},
+  { id: 594, category: 'zycie', tokens: [
+    { hr: 'Katkad je najbolje', pl: 'Czasami najlepiej', blank: true },
+    { hr: 'ne reagirati.', pl: 'nie reagować.' }
+  ]},
+  { id: 595, category: 'zycie', tokens: [
+    { hr: 'To baš i nije', pl: 'To wcale nie był', blank: true },
+    { hr: 'bila moja namjera.', pl: 'mój zamiar.' }
+  ]},
+  { id: 596, category: 'zycie', tokens: [
+    { hr: 'Ne mogu vjerovati', pl: 'Nie mogę uwierzyć', blank: true },
+    { hr: ',', pl: ',', punct: true },
+    { hr: 'koliko je vrijeme brzo prošlo.', pl: 'jak szybko minął czas.' }
+  ]},
+  { id: 597, category: 'zycie', tokens: [
+    { hr: 'Nadam se da', pl: 'Mam nadzieję, że' },
+    { hr: 'nisam', pl: 'nie', blank: true },
+    { hr: 'pretjerao.', pl: 'przesadziłem.' }
+  ]},
+  { id: 598, category: 'zycie', tokens: [
+    { hr: 'Uskoro će', pl: 'Wkrótce', blank: true },
+    { hr: 'sve biti gotovo.', pl: 'wszystko będzie skończone.' }
+  ]},
+  { id: 599, category: 'zycie', tokens: [
+    { hr: 'Hvala Bogu', pl: 'Dzięki Bogu', blank: true },
+    { hr: 'da je gotovo.', pl: 'że już koniec.' }
+  ]},
+  { id: 600, category: 'zycie', tokens: [
+    { hr: 'To je samo', pl: 'To tylko', blank: true },
+    { hr: 'pitanje vremena.', pl: 'kwestia czasu.' }
   ]}
 ]
