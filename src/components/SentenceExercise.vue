@@ -118,20 +118,23 @@
           {{ checked ? 'Dalej →' : 'Sprawdź' }}
         </button>
       </div>
+
+      <div
+        v-if="checked"
+        class="swipe-hint"
+      >
+        <ArrowUp
+          :size="13"
+          :stroke-width="2"
+        />
+        <span>Swipe up — następne zdanie</span>
+      </div>
     </div>
 
     <WordCounter
       :count="sentences.length"
       label="zdań w bazie danych"
     />
-
-    <div class="swipe-hint">
-      <ArrowUp
-        :size="13"
-        :stroke-width="2"
-      />
-      <span>Swipe up — następne zdanie</span>
-    </div>
 
     <div class="keyboard-hints">
       <div class="keyboard-title">
@@ -144,13 +147,26 @@
 
       <div class="keyboard-shortcuts">
         <div class="shortcut">
-          <kbd>Enter</kbd>
-          <span>Sprawdź / Dalej</span>
+          <div class="shortcut-keys">
+            <kbd>Enter</kbd>
+          </div>
+          <span class="shortcut-label">Sprawdź / Dalej</span>
         </div>
 
         <div class="shortcut">
-          <kbd>Esc</kbd>
-          <span>Menu</span>
+          <div class="shortcut-keys">
+            <kbd>⌘</kbd>
+            <span class="key-sep">/</span>
+            <kbd>Ctrl</kbd>
+          </div>
+          <span class="shortcut-label">Podpowiedz literę</span>
+        </div>
+
+        <div class="shortcut">
+          <div class="shortcut-keys">
+            <kbd>Esc</kbd>
+          </div>
+          <span class="shortcut-label">Menu</span>
         </div>
       </div>
     </div>
@@ -291,7 +307,7 @@ function closeTooltip() {
 }
 
 function revealLetter() {
-  if (allLettersRevealed.value) return
+  if (checked.value || allLettersRevealed.value) return
 
   revealedCount.value++
   userAnswer.value = correctAnswer.value.slice(0, revealedCount.value)
@@ -388,11 +404,19 @@ function handleKeydown(event) {
     } else {
       checkAnswer()
     }
+    return
   }
 
   if (event.key === 'Escape') {
     event.preventDefault()
     emit('back')
+    return
+  }
+
+  // Cmd (Mac) / Ctrl (Windows) — Podpowiedz literę
+  if (event.key === 'Meta' || event.key === 'Control') {
+    event.preventDefault()
+    revealLetter()
   }
 }
 
@@ -738,6 +762,7 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   gap: 6px;
+  margin-top: 16px;
 
   color: #666672;
 
@@ -751,7 +776,7 @@ onUnmounted(() => {
 
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
 
   color: #666672;
 }
@@ -771,18 +796,35 @@ onUnmounted(() => {
 }
 
 .keyboard-shortcuts {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 14px;
+  row-gap: 8px;
+
   align-items: center;
-  gap: 16px;
 }
 
 .shortcut {
+  display: contents;
+}
+
+.shortcut-keys {
   display: flex;
   align-items: center;
-  gap: 7px;
+  justify-content: flex-end;
+  gap: 4px;
+}
 
+.shortcut-label {
   font-size: 12px;
-  color: #6f6f7b;
+  color: #8f8f9d;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.key-sep {
+  color: #4a4a54;
+  font-size: 11px;
 }
 
 kbd {
@@ -831,12 +873,6 @@ kbd {
 }
 
 @media (max-width: 500px) {
-  .sentence-wrapper {
-    min-height: 100dvh;
-    justify-content: flex-start;
-    padding-top: 40px;
-  }
-
   .card {
     width: calc(100% - 32px);
     padding: 28px 20px;
