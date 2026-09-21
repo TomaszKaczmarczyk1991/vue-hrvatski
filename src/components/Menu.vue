@@ -99,7 +99,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 
 import Welcome from './Welcome.vue'
 import MainImage from './MainImage.vue'
@@ -139,6 +139,20 @@ function ariaLabel(direction) {
     ? `${action} z chorwackiego na polski`
     : `${action} z polskiego na chorwacki`
 }
+
+function handleKeydown(event) {
+  if (event.key === 'Enter') {
+    skipIntro.value = true
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('keydown', handleKeydown)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('keydown', handleKeydown)
+})
 </script>
 
 <style scoped>
