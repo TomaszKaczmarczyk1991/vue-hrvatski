@@ -132,8 +132,8 @@
     </div>
 
     <WordCounter
-      :count="sentences.length"
-      label="zdań w bazie danych"
+      :count="pool.length"
+      label="zdań"
     />
 
     <div class="keyboard-hints">
@@ -191,6 +191,10 @@ const props = defineProps({
   exerciseType: {
     type: String,
     default: 'gaps' // 'gaps' | 'full'
+  },
+  categories: {
+    type: Array,
+    default: null
   }
 })
 
@@ -211,7 +215,16 @@ function shuffle(array) {
 const promptLang = computed(() => (props.mode === 'hr-pl' ? 'hr' : 'pl'))
 const hintLang = computed(() => (props.mode === 'hr-pl' ? 'pl' : 'hr'))
 
-let deck = shuffle(sentences)
+// Filtrujemy zdania po wybranych kategoriach (jeśli podano).
+// Jeśli lista kategorii jest pusta/nie podano, używamy całej bazy
+// jako zabezpieczenia, żeby ćwiczenie nigdy nie zostało bez danych.
+const pool = props.categories && props.categories.length
+  ? sentences.filter((s) => props.categories.includes(s.category))
+  : sentences
+
+const activeSentences = pool.length ? pool : sentences
+
+let deck = shuffle(activeSentences)
 let currentIndex = 0
 
 const current = ref(deck[currentIndex])
@@ -356,7 +369,7 @@ function nextSentence() {
     const last = current.value
 
     do {
-      deck = shuffle(sentences)
+      deck = shuffle(activeSentences)
     } while (
       deck.length > 1 &&
       deck[0].id === last.id

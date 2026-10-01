@@ -1,31 +1,40 @@
 <template>
   <main class="app">
     <Menu
-      v-if="!selection"
+      v-if="stage === 'menu'"
       @select="selectMode"
     />
 
     <Dictionary
-      v-else-if="selection.type === 'dictionary'"
-      @back="goBack"
+      v-else-if="stage === 'dictionary'"
+      @back="goBackToMenu"
+    />
+
+    <CategoryPicker
+      v-else-if="stage === 'categories'"
+      :kind="directionInfo.type"
+      @start="startExercise"
+      @back="goBackToMenu"
     />
 
     <SentenceExercise
-      v-else-if="selection.type === 'sentences'"
-      :mode="selection.direction"
-      :exercise-type="selection.exerciseType"
-      @back="goBack"
+      v-else-if="stage === 'exercise' && directionInfo.type === 'sentences'"
+      :mode="directionInfo.direction"
+      :exercise-type="directionInfo.exerciseType"
+      :categories="categories"
+      @back="goBackToMenu"
     />
 
     <Word
-      v-else
-      :mode="selection.direction"
-      @back="goBack"
+      v-else-if="stage === 'exercise'"
+      :mode="directionInfo.direction"
+      :categories="categories"
+      @back="goBackToMenu"
     />
 
     <BackButton
-      v-if="selection"
-      @back="goBack"
+      v-if="stage !== 'menu'"
+      @back="goBackToMenu"
     />
   </main>
 </template>
@@ -37,16 +46,32 @@ import Menu from './components/Menu.vue'
 import Word from './components/Word.vue'
 import SentenceExercise from './components/SentenceExercise.vue'
 import Dictionary from './components/Dictionary.vue'
+import CategoryPicker from './components/CategoryPicker.vue'
 import BackButton from './components/BackButton.vue'
 
-const selection = ref(null)
+const stage = ref('menu') // 'menu' | 'dictionary' | 'categories' | 'exercise'
+const directionInfo = ref(null) // { type, direction, exerciseType? }
+const categories = ref(null)
 
 function selectMode(payload) {
-  selection.value = payload
+  if (payload.type === 'dictionary') {
+    stage.value = 'dictionary'
+    return
+  }
+
+  directionInfo.value = payload
+  stage.value = 'categories'
 }
 
-function goBack() {
-  selection.value = null
+function startExercise(selectedCategories) {
+  categories.value = selectedCategories
+  stage.value = 'exercise'
+}
+
+function goBackToMenu() {
+  stage.value = 'menu'
+  directionInfo.value = null
+  categories.value = null
 }
 </script>
 

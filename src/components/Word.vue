@@ -35,7 +35,7 @@
     </div>
 
     <!-- Licznik słówek -->
-    <WordCounter />
+    <WordCounter :count="pool.length" />
 
     <!-- Mobile -->
     <div class="interaction-hints">
@@ -104,6 +104,10 @@ const props = defineProps({
   mode: {
     type: String,
     required: true
+  },
+  categories: {
+    type: Array,
+    default: null
   }
 })
 
@@ -119,7 +123,16 @@ function shuffle(array) {
   return shuffled
 }
 
-let deck = shuffle(words)
+// Filtrujemy słówka po wybranych kategoriach (jeśli podano).
+// Jeśli lista kategorii jest pusta/nie podano, używamy całej bazy
+// jako zabezpieczenia, żeby ćwiczenie nigdy nie zostało bez danych.
+const pool = props.categories && props.categories.length
+  ? words.filter((w) => props.categories.includes(w.category))
+  : words
+
+const activeWords = pool.length ? pool : words
+
+let deck = shuffle(activeWords)
 let currentIndex = 0
 
 const currentWord = ref(deck[currentIndex])
@@ -136,7 +149,7 @@ function getNextWord() {
     const lastWord = currentWord.value
 
     do {
-      deck = shuffle(words)
+      deck = shuffle(activeWords)
     } while (
       deck.length > 1 &&
       deck[0].id === lastWord.id

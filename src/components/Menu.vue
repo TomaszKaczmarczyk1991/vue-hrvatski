@@ -184,7 +184,7 @@ onUnmounted(() => {
   align-items: center;
   justify-content: center;
 
-  gap: 16px;
+  gap: 20px;
 
   cursor: default;
 }
@@ -374,4 +374,4 @@ onUnmounted(() => {
     font-size: 14px;
   }
 }
-</style>
+</style>  

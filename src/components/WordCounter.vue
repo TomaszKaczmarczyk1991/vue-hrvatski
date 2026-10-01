@@ -1,12 +1,8 @@
 <template>
   <div class="word-counter">
-    <span class="count">
-      [ {{ displayCount }}
-    </span>
-
-    <span class="count">
-      {{ label }} ]
-    </span>
+    <span class="prefix">Załadowano</span>
+    <span class="count">{{ displayCount }}</span>
+    <span class="suffix">{{ label }} do sesji ćwiczeniowej</span>
   </div>
 </template>
 
@@ -20,7 +16,7 @@ const props = defineProps({
   },
   label: {
     type: String,
-    default: 'słówek w bazie danych'
+    default: 'słówek'
   }
 })
 
@@ -52,7 +48,8 @@ const displayCount = props.count ?? words.length
 }
 
 .count {
-  font-weight: 500;
+  font-weight: 700;
+  color: #b8b8ff;
 }
 
 @media (max-width: 500px) {
