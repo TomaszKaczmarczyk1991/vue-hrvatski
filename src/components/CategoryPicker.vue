@@ -10,11 +10,11 @@
       @click.stop
     >
       <div class="title">
-        {{ kind === 'sentences' ? 'Wybierz kategorie zdań' : 'Wybierz kategorie słówek' }}
+        {{ title }}
       </div>
 
       <div class="subtitle">
-        Zaznaczone kategorie trafią do sesji ćwiczenia
+        {{ subtitle }}
       </div>
 
       <div class="picker-actions-row">
@@ -74,15 +74,31 @@ import { sentences } from '../data/sentences.js'
 const props = defineProps({
   kind: {
     type: String,
-    required: true // 'flashcards' | 'sentences'
+    required: true // 'flashcards' | 'sentences' | 'dictionary'
   }
 })
 
 const emit = defineEmits(['start', 'back'])
 
+// Słownik i fiszki czerpią kategorie z tej samej bazy (words.js)
 const categoryList = props.kind === 'sentences'
   ? [...new Set(sentences.map((s) => s.category))]
   : [...new Set(words.map((w) => w.category))]
+
+const titles = {
+  sentences: 'Wybierz kategorie zdań',
+  dictionary: 'Wybierz kategorie do słownika',
+  flashcards: 'Wybierz kategorie słówek'
+}
+
+const subtitles = {
+  sentences: 'Zaznaczone kategorie trafią do sesji ćwiczenia',
+  dictionary: 'Słownik pokaże tylko słówka z zaznaczonych kategorii',
+  flashcards: 'Zaznaczone kategorie trafią do sesji ćwiczenia'
+}
+
+const title = titles[props.kind] ?? titles.flashcards
+const subtitle = subtitles[props.kind] ?? subtitles.flashcards
 
 // Domyślnie wszystko odznaczone — użytkownik świadomie wybiera
 const state = reactive(

@@ -50,7 +50,7 @@ import CategoryPicker from './components/CategoryPicker.vue'
 import BackButton from './components/BackButton.vue'
 
 const stage = ref('menu') // 'menu' | 'dictionary' | 'categories' | 'exercise'
-const directionInfo = ref(null) // { type, direction, exerciseType? }
+const directionInfo = ref(null) // { type: 'flashcards'|'sentences', direction, exerciseType? }
 const categories = ref(null)
 
 function selectMode(payload) {

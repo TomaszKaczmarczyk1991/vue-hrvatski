@@ -37,7 +37,7 @@
 
     <WordCounter
       :count="words.length"
-      label="słówek w słowniku"
+      label="słówek"
     />
   </div>
 </template>
@@ -61,9 +61,6 @@ const matchedWord = computed(() => {
   const q = normalizedQuery.value
   if (!q) return null
 
-  const matchesLang = (word) =>
-    word.hr.toLowerCase().includes(q) || word.pl.toLowerCase().includes(q)
-
   // 1. dokładne trafienie
   let found = words.find(
     (w) => w.hr.toLowerCase() === q || w.pl.toLowerCase() === q
@@ -77,7 +74,9 @@ const matchedWord = computed(() => {
   if (found) return found
 
   // 3. zawiera wpisany tekst gdziekolwiek
-  found = words.find(matchesLang)
+  found = words.find(
+    (w) => w.hr.toLowerCase().includes(q) || w.pl.toLowerCase().includes(q)
+  )
   return found || null
 })
 
