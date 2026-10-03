@@ -10,6 +10,11 @@
       @back="goBackToMenu"
     />
 
+    <Grammar
+      v-else-if="stage === 'grammar'"
+      @back="goBackToMenu"
+    />
+
     <CategoryPicker
       v-else-if="stage === 'categories'"
       :kind="directionInfo.type"
@@ -46,16 +51,22 @@ import Menu from './components/Menu.vue'
 import Word from './components/Word.vue'
 import SentenceExercise from './components/SentenceExercise.vue'
 import Dictionary from './components/Dictionary.vue'
+import Grammar from './components/Grammar.vue'
 import CategoryPicker from './components/CategoryPicker.vue'
 import BackButton from './components/BackButton.vue'
 
-const stage = ref('menu') // 'menu' | 'dictionary' | 'categories' | 'exercise'
+const stage = ref('menu') // 'menu' | 'dictionary' | 'grammar' | 'categories' | 'exercise'
 const directionInfo = ref(null) // { type: 'flashcards'|'sentences', direction, exerciseType? }
 const categories = ref(null)
 
 function selectMode(payload) {
   if (payload.type === 'dictionary') {
     stage.value = 'dictionary'
+    return
+  }
+
+  if (payload.type === 'grammar') {
+    stage.value = 'grammar'
     return
   }
 

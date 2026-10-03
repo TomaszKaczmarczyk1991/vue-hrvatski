@@ -33,6 +33,14 @@
         >
           Słownik
         </button>
+
+        <button
+          class="tab-button"
+          :class="{ active: category === 'grammar' }"
+          @click="category = 'grammar'"
+        >
+          Gramatyka
+        </button>
       </div>
 
       <div
@@ -67,6 +75,20 @@
         >
           <span>📖</span>
           <span>Otwórz słownik</span>
+        </button>
+      </div>
+
+      <div
+        v-else-if="category === 'grammar'"
+        class="options"
+      >
+        <button
+          class="option-button"
+          aria-label="Otwórz gramatykę"
+          @click="choose()"
+        >
+          <span>📚</span>
+          <span>Otwórz gramatykę</span>
         </button>
       </div>
 
@@ -113,6 +135,11 @@ const skipIntro = ref(false)
 function choose(direction) {
   if (category.value === 'dictionary') {
     emit('select', { type: 'dictionary' })
+    return
+  }
+
+  if (category.value === 'grammar') {
+    emit('select', { type: 'grammar' })
     return
   }
 
@@ -191,6 +218,8 @@ onUnmounted(() => {
 
 .category-tabs {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 8px;
 
   opacity: 0;
@@ -199,7 +228,7 @@ onUnmounted(() => {
 }
 
 .tab-button {
-  padding: 8px 18px;
+  padding: 8px 16px;
 
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 20px;
@@ -374,4 +403,4 @@ onUnmounted(() => {
     font-size: 14px;
   }
 }
-</style>  
+</style>
