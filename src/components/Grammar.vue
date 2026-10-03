@@ -33,7 +33,7 @@
 
         <template
           v-for="(block, i) in activeTopic.blocks"
-          :key="i"
+          :key="blockKey(i)"
         >
           <p
             v-if="block.type === 'text'"
@@ -112,6 +112,35 @@
               </div>
             </div>
           </div>
+
+          <div
+            v-else-if="block.type === 'examples'"
+            class="block-examples"
+          >
+            <button
+              class="examples-toggle"
+              @click="toggleExamples(blockKey(i))"
+            >
+              <span class="examples-icon">{{ isOpen(blockKey(i)) ? '▾' : '▸' }}</span>
+              <span>
+                {{ isOpen(blockKey(i)) ? 'Ukryj przykłady' : `Pokaż przykłady (${block.items.length})` }}
+              </span>
+            </button>
+
+            <div
+              v-if="isOpen(blockKey(i))"
+              class="examples-list"
+            >
+              <div
+                v-for="(ex, j) in block.items"
+                :key="j"
+                class="example-row"
+              >
+                <span class="example-hr">{{ ex.hr }}</span>
+                <span class="example-pl">{{ ex.pl }}</span>
+              </div>
+            </div>
+          </div>
         </template>
       </div>
     </div>
@@ -119,7 +148,7 @@
 </template>
 
 <script setup>
-import { computed, onMounted, onUnmounted, ref } from 'vue'
+import { computed, onMounted, onUnmounted, reactive, ref, watch } from 'vue'
 
 import { grammarSections } from '../data/grammar.js'
 
@@ -136,6 +165,22 @@ const activeTopic = computed(() =>
   activeSection.value.topics.find((t) => t.id === activeTopicId.value)
   ?? activeSection.value.topics[0]
 )
+
+// Stan rozwinięcia bloków "examples", osobny dla każdej kombinacji
+// sekcja+temat+index bloku, żeby przełączanie tematów nie mieszało stanów
+const openExamples = reactive({})
+
+function blockKey(index) {
+  return `${activeSectionId.value}:${activeTopicId.value}:${index}`
+}
+
+function isOpen(key) {
+  return !!openExamples[key]
+}
+
+function toggleExamples(key) {
+  openExamples[key] = !openExamples[key]
+}
 
 function selectSection(id) {
   activeSectionId.value = id
@@ -172,10 +217,10 @@ onUnmounted(() => {
 }
 
 .card {
-  width: 560px;
+  width: 580px;
   max-width: calc(100vw - 32px);
   height: 78vh;
-  max-height: 700px;
+  max-height: 720px;
   padding: 28px;
 
   display: flex;
@@ -374,6 +419,8 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   gap: 4px;
+
+  margin-bottom: 14px;
 }
 
 .pair-row {
@@ -411,6 +458,90 @@ onUnmounted(() => {
   font-style: italic;
 }
 
+.block-examples {
+  margin: 0 0 14px;
+}
+
+.examples-toggle {
+  width: 100%;
+  padding: 10px 14px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  border: 1px solid #383842;
+  border-radius: 10px;
+
+  background: #24242c;
+  color: #b8b8ff;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.examples-toggle:hover {
+  background: #2a2a32;
+  border-color: #44444f;
+}
+
+.examples-icon {
+  font-size: 11px;
+  color: #8f8f9d;
+}
+
+.examples-list {
+  margin-top: 8px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  animation: examples-in 0.2s ease-out;
+}
+
+.example-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px 12px;
+
+  padding: 8px 12px;
+
+  border-radius: 8px;
+}
+
+.example-row:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.example-hr {
+  font-size: 13px;
+  font-weight: 600;
+  color: #f5f5f7;
+}
+
+.example-pl {
+  font-size: 13px;
+  color: #9a9aa5;
+}
+
+@keyframes examples-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes card-in {
   from {
     opacity: 0;
@@ -429,7 +560,8 @@ onUnmounted(() => {
     height: 80vh;
   }
 
-  .pair-row {
+  .pair-row,
+  .example-row {
     grid-template-columns: 1fr;
   }
 

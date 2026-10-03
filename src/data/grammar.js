@@ -23,6 +23,21 @@ export const grammarSections = [
           {
             type: 'warning',
             text: 'Prezent czasowników dokonanych często wyraża przyszłość (tzw. futurski prezent) — np. "Sutra putujem u Zagreb" = "Jutro jadę do Zagrzebia", mimo że forma jest teraźniejsza.'
+          },
+          {
+            type: 'examples',
+            items: [
+              { hr: 'Radim svaki dan.', pl: 'Pracuję codziennie.' },
+              { hr: 'Čitaš li knjigu?', pl: 'Czytasz książkę?' },
+              { hr: 'Pijemo kavu ujutro.', pl: 'Pijemy kawę rano.' },
+              { hr: 'On živi u Splitu.', pl: 'On mieszka w Splicie.' },
+              { hr: 'Mi putujemo sutra.', pl: 'My podróżujemy jutro.' },
+              { hr: 'Vi govorite hrvatski.', pl: 'Wy mówicie po chorwacku.' },
+              { hr: 'Oni rade u gradu.', pl: 'Oni pracują w mieście.' },
+              { hr: 'Ja ne razumijem.', pl: 'Ja nie rozumiem.' },
+              { hr: 'Ona peče kruh.', pl: 'Ona piecze chleb.' },
+              { hr: 'Djeca se igraju vani.', pl: 'Dzieci bawią się na dworze.' }
+            ]
           }
         ]
       },
@@ -48,15 +63,23 @@ export const grammarSections = [
             ]
           },
           {
-            type: 'list',
-            items: [
-              'Przykład: Jučer sam radio. — Wczoraj pracowałem.',
-              'Czasownik "biti": Bio sam u Zagrebu. — Byłem w Zagrzebiu.'
-            ]
-          },
-          {
             type: 'warning',
             text: 'W mowie potocznej "je" w 3. osobie bywa pomijane (tzw. krnji perfekt) — często w nagłówkach, np. "Učenici posjetili zoo" zamiast "su posjetili".'
+          },
+          {
+            type: 'examples',
+            items: [
+              { hr: 'Jučer sam radio.', pl: 'Wczoraj pracowałem.' },
+              { hr: 'Bio sam u Zagrebu.', pl: 'Byłem w Zagrzebiu.' },
+              { hr: 'Ona je kupila kruh.', pl: 'Ona kupiła chleb.' },
+              { hr: 'Mi smo gledali film.', pl: 'My oglądaliśmy film.' },
+              { hr: 'Jesi li spavao dobro?', pl: 'Spałeś dobrze?' },
+              { hr: 'Oni su došli kasno.', pl: 'Oni przyszli późno.' },
+              { hr: 'Nisam znao odgovor.', pl: 'Nie znałem odpowiedzi.' },
+              { hr: 'Vi ste nam pomogli.', pl: 'Wy nam pomogliście.' },
+              { hr: 'Pročitala sam tu knjigu.', pl: 'Przeczytałam tę książkę.' },
+              { hr: 'Zaboravio sam ključeve.', pl: 'Zapomniałem kluczy.' }
+            ]
           }
         ]
       },
@@ -75,6 +98,21 @@ export const grammarSections = [
           {
             type: 'warning',
             text: 'Pułapka pisowniowa: gdy bezokolicznik kończy się na -ti, "ti" znika i reszta łączy się z końcówką w jedno słowo: gledati + ću → gledat ću, raditi + ću → radit ću.'
+          },
+          {
+            type: 'examples',
+            items: [
+              { hr: 'Sutra ću putovati.', pl: 'Jutro będę podróżować.' },
+              { hr: 'Hoćeš li doći?', pl: 'Przyjdziesz?' },
+              { hr: 'Mi ćemo kuhati večeru.', pl: 'My będziemy gotować kolację.' },
+              { hr: 'Oni će stići kasno.', pl: 'Oni dotrą późno.' },
+              { hr: 'Ja neću zaboraviti.', pl: 'Ja nie zapomnę.' },
+              { hr: 'Vi ćete naučiti brzo.', pl: 'Wy nauczycie się szybko.' },
+              { hr: 'Ona će nazvati sutra.', pl: 'Ona zadzwoni jutro.' },
+              { hr: 'Radit ćemo zajedno.', pl: 'Będziemy pracować razem.' },
+              { hr: 'Hoće li padati kiša?', pl: 'Czy będzie padać deszcz?' },
+              { hr: 'Vidjet ćeš razliku.', pl: 'Zobaczysz różnicę.' }
+            ]
           }
         ]
       },
@@ -99,46 +137,228 @@ export const grammarSections = [
     ]
   },
   {
-    id: 'przymiotniki',
-    title: 'Przymiotniki',
+    id: 'przypadki',
+    title: 'Przypadki',
     topics: [
       {
-        id: 'stopniowanie',
-        title: 'Stopniowanie',
+        id: 'siedem-przypadkow',
+        title: 'Siedem przypadków',
         blocks: [
           {
             type: 'text',
-            text: 'Chorwacki ma trzy stopnie przymiotnika: pozitiv (podstawowy), komparativ (wyższy) i superlativ (najwyższy).'
+            text: 'To najważniejszy temat w całej gramatyce chorwackiej — bez niego nie da się poprawnie budować zdań. Dobra wiadomość: chorwacki ma dokładnie te same 7 przypadków co polski, w niemal tej samej roli. To nie jest obca koncepcja — to głównie kwestia nauczenia się nowych końcówek.'
           },
           {
             type: 'table',
-            headers: ['Pozitiv', 'Komparativ', 'Zasada'],
+            headers: ['Przypadek', 'Pytanie', 'Funkcja', 'Przykład'],
             rows: [
-              ['zanimljiv (ciekawy)', 'zanimljiviji', 'najczęstsza końcówka -iji'],
-              ['jak (silny)', 'jači', 'k + j → č (jotacja)'],
-              ['lijep (ładny)', 'ljepši', 'nieregularna końcówka -ši']
+              ['Nominativ', 'tko? što?', 'podmiot zdania', 'Mačka spava.'],
+              ['Genitiv', 'koga? čega?', 'przynależność, przeczenie, liczby', 'Nema mačke.'],
+              ['Dativ', 'komu? čemu?', 'adresat czynności', 'Dajem hranu mački.'],
+              ['Akuzativ', 'koga? što?', 'dopełnienie bliższe, kierunek', 'Vidim mačku.'],
+              ['Vokativ', '— (zwrot)', 'zwracanie się do kogoś', 'Mačko, dođi!'],
+              ['Lokativ', 'o kome? o čemu? gdje?', 'miejsce, temat rozmowy', 'Pričam o mački.'],
+              ['Instrumental', 's kim? s čim? kako?', 'towarzystwo, narzędzie, sposób', 'Idem s mačkom.']
+            ]
+          },
+          {
+            type: 'warning',
+            text: 'Dobry sposób na zapamiętanie kolejności: N-G-D-A-V-L-I. Tak uczy się tego w chorwackich szkołach.'
+          },
+          {
+            type: 'examples',
+            items: [
+              { hr: 'Pas trči.', pl: 'Pies biegnie. (nominativ)' },
+              { hr: 'Nema kruha.', pl: 'Nie ma chleba. (genitiv)' },
+              { hr: 'Dajem knjigu bratu.', pl: 'Daję książkę bratu. (dativ)' },
+              { hr: 'Vidim grad.', pl: 'Widzę miasto. (akuzativ)' },
+              { hr: 'Ivane, dođi ovamo!', pl: 'Iwan, chodź tutaj! (vokativ)' },
+              { hr: 'Mislim o tebi.', pl: 'Myślę o tobie. (lokativ)' },
+              { hr: 'Pišem olovkom.', pl: 'Piszę ołówkiem. (instrumental)' },
+              { hr: 'Idem s prijateljem.', pl: 'Idę z przyjacielem. (instrumental)' },
+              { hr: 'To je kuća moje sestre.', pl: 'To dom mojej siostry. (genitiv)' },
+              { hr: 'Čekam na autobus.', pl: 'Czekam na autobus. (akuzativ)' }
+            ]
+          }
+        ]
+      },
+      {
+        id: 'deklinacja',
+        title: 'Odmiana przykładowa',
+        blocks: [
+          {
+            type: 'text',
+            text: 'Zobaczmy odmianę na konkretnym rzeczowniku rodzaju męskiego — "grad" (miasto).'
+          },
+          {
+            type: 'table',
+            headers: ['Przypadek', 'Liczba pojedyncza', 'Liczba mnoga'],
+            rows: [
+              ['Nominativ', 'grad', 'gradovi'],
+              ['Genitiv', 'grada', 'gradova'],
+              ['Dativ', 'gradu', 'gradovima'],
+              ['Akuzativ', 'grad', 'gradove'],
+              ['Vokativ', 'grade', 'gradovi'],
+              ['Lokativ', 'gradu', 'gradovima'],
+              ['Instrumental', 'gradom', 'gradovima']
             ]
           },
           {
             type: 'text',
-            text: 'Jotacja przy tworzeniu komparatywu: t+j=ć, d+j=đ, z+j=ž, k+j=č, g+j=ž, n+j=nj. Przykład: mlad → mlađi (młodszy), brz → brži (szybszy).'
-          },
-          {
-            type: 'warning',
-            text: 'Superlativ tworzy się przez dodanie przedrostka "naj-" do komparatywu: zanimljiviji → najzanimljiviji. Jeśli komparativ zaczyna się na "j", w superlatywie piszemy podwójne "j": jači → najjači.'
-          },
-          {
-            type: 'text',
-            text: 'Cztery przymiotniki są całkowicie nieregularne — identyczny mechanizm jak w polskim (dobry–lepszy–najlepszy):'
+            text: 'A teraz rodzaj żeński — "knjiga" (książka).'
           },
           {
             type: 'table',
-            headers: ['Pozitiv', 'Komparativ', 'Superlativ'],
+            headers: ['Przypadek', 'Liczba pojedyncza', 'Liczba mnoga'],
             rows: [
-              ['dobar (dobry)', 'bolji', 'najbolji'],
-              ['malen (mały)', 'manji', 'najmanji'],
-              ['velik (duży)', 'veći', 'najveći'],
-              ['zao (zły)', 'gori', 'najgori']
+              ['Nominativ', 'knjiga', 'knjige'],
+              ['Genitiv', 'knjige', 'knjiga'],
+              ['Dativ', 'knjizi', 'knjigama'],
+              ['Akuzativ', 'knjigu', 'knjige'],
+              ['Vokativ', 'knjigo', 'knjige'],
+              ['Lokativ', 'knjizi', 'knjigama'],
+              ['Instrumental', 'knjigom', 'knjigama']
+            ]
+          },
+          {
+            type: 'warning',
+            text: 'Zauważ: w rodzaju żeńskim genitiv liczby mnogiej ("knjiga") wygląda identycznie jak nominativ liczby pojedynczej ("knjiga") — to częsta pułapka, rozróżnia je tylko kontekst zdania.'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'skladnia',
+    title: 'Szyk i pytania',
+    topics: [
+      {
+        id: 'enklityki',
+        title: 'Enklityki',
+        blocks: [
+          {
+            type: 'text',
+            text: 'Enklityki to krótkie, nieakcentowane słówka: sam/si/je/smo/ste/su (perfekt), ću/ćeš/će (futur), oraz se, mu, ga, ju, mi, ti itp. Mają one niemal sztywną regułę pozycji: stoją na drugim miejscu w zdaniu — zaraz po pierwszym akcentowanym słowie lub frazie — niezależnie od tego, gdzie "logicznie" powinny stać.'
+          },
+          {
+            type: 'warning',
+            text: 'To jest coś, czego nie ma w polskim, i to właśnie zdradza nie-native speakera najszybciej. Poprawnie: "Ja sam mu to dao." Niepoprawnie: "Ja mu to dao sam."'
+          },
+          {
+            type: 'examples',
+            items: [
+              { hr: 'Marko je došao kasno.', pl: 'Marko przyszedł późno.' },
+              { hr: 'Ja sam joj to rekao.', pl: 'Ja jej to powiedziałem.' },
+              { hr: 'Ona mu se javila.', pl: 'Ona się do niego odezwała.' },
+              { hr: 'Mi smo im pomogli.', pl: 'My im pomogliśmy.' },
+              { hr: 'Danas ću ti donijeti knjigu.', pl: 'Dzisiaj przyniosę ci książkę.' },
+              { hr: 'Vidio sam ga jučer.', pl: 'Widziałem go wczoraj.' },
+              { hr: 'Oni su se vratili kući.', pl: 'Oni wrócili do domu.' },
+              { hr: 'Brzo ću se vratiti.', pl: 'Szybko wrócę.' },
+              { hr: 'Ti si mi najbolji prijatelj.', pl: 'Ty jesteś moim najlepszym przyjacielem.' },
+              { hr: 'Sutra ćemo mu reći.', pl: 'Jutro mu powiemy.' }
+            ]
+          }
+        ]
+      },
+      {
+        id: 'przeczenie',
+        title: 'Przeczenie i dopełniacz',
+        blocks: [
+          {
+            type: 'text',
+            text: 'Chorwacki ma ciekawą zależność między przeczeniem a przypadkiem: po zaprzeczonym "imati" (nemati) oraz w konstrukcjach typu "nema" (nie ma), dopełnienie stoi w dopełniaczu (genitiv), a nie w bierniku jak w zdaniu twierdzącym.'
+          },
+          {
+            type: 'text',
+            text: 'Porównaj: "Imam vremena" (mam czas → genitiv, bo "ilość") vs "Nemam vremena" (nie mam czasu → genitiv przy przeczeniu).'
+          },
+          {
+            type: 'examples',
+            items: [
+              { hr: 'Nemam vremena.', pl: 'Nie mam czasu.' },
+              { hr: 'Nema kruha u kući.', pl: 'Nie ma chleba w domu.' },
+              { hr: 'Nemam novca.', pl: 'Nie mam pieniędzy.' },
+              { hr: 'Nema nikoga doma.', pl: 'Nie ma nikogo w domu.' },
+              { hr: 'Ne volim kavu.', pl: 'Nie lubię kawy.' },
+              { hr: 'Nemam pojma.', pl: 'Nie mam pojęcia.' },
+              { hr: 'Nema sumnje.', pl: 'Nie ma wątpliwości.' },
+              { hr: 'Nemam vremena za to.', pl: 'Nie mam na to czasu.' },
+              { hr: 'Nema problema.', pl: 'Nie ma problemu.' },
+              { hr: 'Ne znam odgovora.', pl: 'Nie znam odpowiedzi.' }
+            ]
+          }
+        ]
+      },
+      {
+        id: 'pytania-li',
+        title: 'Pytania z "li"',
+        blocks: [
+          {
+            type: 'text',
+            text: 'Pytania typu tak/nie tworzy się najczęściej przez dodanie cząstki "li" zaraz po czasowniku (a nie np. samą intonacją, jak czasem bywa w polskim).'
+          },
+          {
+            type: 'text',
+            text: 'Wzór: Czasownik + li + reszta zdania?'
+          },
+          {
+            type: 'examples',
+            items: [
+              { hr: 'Govoriš li engleski?', pl: 'Mówisz po angielsku?' },
+              { hr: 'Jesi li gladan?', pl: 'Jesteś głodny?' },
+              { hr: 'Možeš li mi pomoći?', pl: 'Możesz mi pomóc?' },
+              { hr: 'Dolaziš li sutra?', pl: 'Przychodzisz jutro?' },
+              { hr: 'Imaš li vremena?', pl: 'Masz czas?' },
+              { hr: 'Voliš li kavu?', pl: 'Lubisz kawę?' },
+              { hr: 'Razumiješ li me?', pl: 'Rozumiesz mnie?' },
+              { hr: 'Hoćeš li doći?', pl: 'Przyjdziesz?' },
+              { hr: 'Znaš li gdje je to?', pl: 'Wiesz, gdzie to jest?' },
+              { hr: 'Sviđa li ti se?', pl: 'Podoba ci się?' }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'liczebniki',
+    title: 'Liczebniki',
+    topics: [
+      {
+        id: 'liczebniki-przypadki',
+        title: 'Liczebniki i przypadki',
+        blocks: [
+          {
+            type: 'text',
+            text: 'Liczebniki wpływają na przypadek rzeczownika — i mechanizm jest niemal identyczny jak w polskim ("dwa psy" vs "pięciu psów"), więc Polakom powinno być to intuicyjne.'
+          },
+          {
+            type: 'table',
+            headers: ['Liczba', 'Forma rzeczownika', 'Przykład'],
+            rows: [
+              ['1', 'mianownik l. poj.', 'jedan grad'],
+              ['2, 3, 4', 'dopełniacz l. poj.', 'dva grada, tri grada, četiri grada'],
+              ['5 i więcej', 'dopełniacz l. mn.', 'pet gradova, sto gradova']
+            ]
+          },
+          {
+            type: 'warning',
+            text: 'Ta sama zasada dotyczy osób: "dva čovjeka" (dwóch ludzi), ale "pet ljudi" (pięciu ludzi) — z nieregularną liczbą mnogą "ljudi".'
+          },
+          {
+            type: 'examples',
+            items: [
+              { hr: 'Imam jedan auto.', pl: 'Mam jeden samochód.' },
+              { hr: 'Imam dva brata.', pl: 'Mam dwóch braci.' },
+              { hr: 'Kupio sam tri knjige.', pl: 'Kupiłem trzy książki.' },
+              { hr: 'Čekamo četiri sata.', pl: 'Czekamy cztery godziny.' },
+              { hr: 'Ima pet stolova.', pl: 'Jest pięć stołów.' },
+              { hr: 'Bilo je deset ljudi.', pl: 'Było dziesięciu ludzi.' },
+              { hr: 'Trebam dvije minute.', pl: 'Potrzebuję dwóch minut.' },
+              { hr: 'Imamo sto eura.', pl: 'Mamy sto euro.' },
+              { hr: 'Vidio sam dva psa.', pl: 'Widziałem dwa psy.' },
+              { hr: 'Čeka nas šest sati puta.', pl: 'Czeka nas sześć godzin drogi.' }
             ]
           }
         ]
