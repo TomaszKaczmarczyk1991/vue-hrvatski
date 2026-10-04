@@ -141,6 +141,69 @@
               </div>
             </div>
           </div>
+
+          <div
+            v-else-if="block.type === 'verb-groups'"
+            class="block-verb-groups"
+          >
+            <div class="vg-tabs">
+              <button
+                v-for="group in block.groups"
+                :key="group.id"
+                class="vg-tab"
+                :class="{ active: selectedGroup(blockKey(i), block) === group.id }"
+                @click="setGroup(blockKey(i), group.id)"
+              >
+                <span class="vg-tab-label">{{ group.label }}</span>
+                <span class="vg-tab-subtitle">{{ group.subtitle }}</span>
+              </button>
+            </div>
+
+            <template
+              v-for="group in block.groups"
+              :key="group.id"
+            >
+              <div
+                v-if="selectedGroup(blockKey(i), block) === group.id"
+                class="vg-content"
+              >
+                <p class="vg-description">{{ group.description }}</p>
+
+                <div class="vg-table-wrap">
+                  <table class="vg-table">
+                    <thead>
+                      <tr>
+                        <th>Osoba</th>
+                        <th>Końcówka</th>
+                        <th>{{ group.example.infinitive }}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        v-for="(end, j) in group.endings"
+                        :key="j"
+                      >
+                        <td>{{ end.person }}</td>
+                        <td class="vg-ending">{{ end.ending }}</td>
+                        <td class="vg-form">{{ group.example.forms[j] }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="vg-sentences">
+                  <div
+                    v-for="(s, j) in group.sentences"
+                    :key="j"
+                    class="example-row"
+                  >
+                    <span class="example-hr">{{ s.hr }}</span>
+                    <span class="example-pl">{{ s.pl }}</span>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </div>
         </template>
       </div>
     </div>
@@ -148,7 +211,7 @@
 </template>
 
 <script setup>
-import { computed, onMounted, onUnmounted, reactive, ref, watch } from 'vue'
+import { computed, onMounted, onUnmounted, reactive, ref } from 'vue'
 
 import { grammarSections } from '../data/grammar.js'
 
@@ -170,6 +233,10 @@ const activeTopic = computed(() =>
 // sekcja+temat+index bloku, żeby przełączanie tematów nie mieszało stanów
 const openExamples = reactive({})
 
+// Stan wybranej grupy czasowników dla bloków "verb-groups",
+// również osobny per blok
+const selectedGroups = reactive({})
+
 function blockKey(index) {
   return `${activeSectionId.value}:${activeTopicId.value}:${index}`
 }
@@ -180,6 +247,14 @@ function isOpen(key) {
 
 function toggleExamples(key) {
   openExamples[key] = !openExamples[key]
+}
+
+function selectedGroup(key, block) {
+  return selectedGroups[key] ?? block.groups[0].id
+}
+
+function setGroup(key, groupId) {
+  selectedGroups[key] = groupId
 }
 
 function selectSection(id) {
@@ -530,6 +605,138 @@ onUnmounted(() => {
   color: #9a9aa5;
 }
 
+.block-verb-groups {
+  margin: 0 0 14px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.vg-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.vg-tab {
+  padding: 10px 8px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+
+  border: 1px solid #383842;
+  border-radius: 12px;
+
+  background: #24242c;
+  color: #83838d;
+
+  font-family: inherit;
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.vg-tab.active {
+  background: rgba(184, 184, 255, 0.15);
+  border-color: rgba(184, 184, 255, 0.5);
+  color: #fff;
+}
+
+.vg-tab:hover {
+  border-color: #55555f;
+}
+
+.vg-tab-label {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.vg-tab-subtitle {
+  font-size: 10px;
+  font-weight: 500;
+  opacity: 0.75;
+}
+
+.vg-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  animation: examples-in 0.2s ease-out;
+}
+
+.vg-description {
+  margin: 0;
+
+  color: #c8c8d0;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.vg-table-wrap {
+  overflow-x: auto;
+}
+
+.vg-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  font-size: 13px;
+}
+
+.vg-table th {
+  padding: 8px 10px;
+
+  background: #24242c;
+  color: #8f8f9d;
+
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  border-bottom: 1px solid #383842;
+  white-space: nowrap;
+}
+
+.vg-table td {
+  padding: 8px 10px;
+
+  color: #e0e0e4;
+  border-bottom: 1px solid #2a2a30;
+}
+
+.vg-table tr:last-child td {
+  border-bottom: none;
+}
+
+.vg-ending {
+  color: #a8f0c0;
+  font-weight: 700;
+}
+
+.vg-form {
+  color: #b8b8ff;
+  font-weight: 600;
+}
+
+.vg-sentences {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  padding-top: 4px;
+  border-top: 1px solid #2a2a30;
+}
+
 @keyframes examples-in {
   from {
     opacity: 0;
@@ -567,6 +774,15 @@ onUnmounted(() => {
 
   .topic-title {
     font-size: 16px;
+  }
+
+  .vg-tabs {
+    grid-template-columns: 1fr;
+  }
+
+  .vg-tab {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 </style>

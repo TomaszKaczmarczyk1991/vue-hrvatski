@@ -9,67 +9,112 @@ export const grammarSections = [
         blocks: [
           {
             type: 'text',
-            text: 'Chorwackie czasowniki w czasie teraźniejszym dzielą się na grupy (koniugacje) w zależności od końcówki 1. osoby liczby pojedynczej. To właśnie ta końcówka — nie bezokolicznik — decyduje o grupie. W praktyce wystarczy znać 4 grupy, żeby poprawnie odmieniać większość czasowników.'
+            text: 'Chorwackie czasowniki w czasie teraźniejszym dzielą się na 3 grupy (koniugacje), w zależności od samogłoski tematycznej w prezencie. Kliknij przycisk grupy poniżej, żeby zobaczyć jej końcówki, przykładową odmianę i zdania.'
           },
           {
-            type: 'table',
-            headers: ['Grupa', 'Końcówki (ja, ty, on/ona...)', 'Typowy bezokolicznik', 'Przykład'],
-            rows: [
-              ['-am', '-am, -aš, -a, -amo, -ate, -aju', 'najczęściej -ati', 'gledati → gledam'],
-              ['-em', '-em, -eš, -e, -emo, -ete, -u', '-ti po spółgłosce, -sti, -ći', 'pisati → pišem, peći → pečem'],
-              ['-im', '-im, -iš, -i, -imo, -ite, -e', '-iti, -jeti, część -ati', 'nositi → nosim, voljeti → volim'],
-              ['-jem', '-jem, -ješ, -je, -jemo, -jete, -ju', '-ti po samogłosce', 'piti → pijem, čuti → čujem']
+            type: 'verb-groups',
+            groups: [
+              {
+                id: 'a',
+                label: 'Grupa A',
+                subtitle: '-ati → -am',
+                description: 'Najliczniejsza grupa. Temat prezentu kończy się na -a-. Większość czasowników z bezokolicznikiem na -ati należy właśnie tutaj.',
+                endings: [
+                  { person: 'Ja', ending: '-am' },
+                  { person: 'Ti', ending: '-aš' },
+                  { person: 'On / Ona / Ono', ending: '-a' },
+                  { person: 'Mi', ending: '-amo' },
+                  { person: 'Vi', ending: '-ate' },
+                  { person: 'Oni / One / Ona', ending: '-aju' }
+                ],
+                example: {
+                  infinitive: 'gledati (patrzeć, oglądać)',
+                  forms: ['gledam', 'gledaš', 'gleda', 'gledamo', 'gledate', 'gledaju']
+                },
+                sentences: [
+                  { hr: 'Gledam film.', pl: 'Oglądam film.' },
+                  { hr: 'Čekam prijatelja.', pl: 'Czekam na przyjaciela.' },
+                  { hr: 'Pitam učitelja.', pl: 'Pytam nauczyciela.' },
+                  { hr: 'Imam psa.', pl: 'Mam psa.' },
+                  { hr: 'Igram tenis.', pl: 'Gram w tenisa.' },
+                  { hr: 'Pjevam pjesmu.', pl: 'Śpiewam piosenkę.' },
+                  { hr: 'Slušam radio.', pl: 'Słucham radia.' },
+                  { hr: 'Ona gleda televiziju.', pl: 'Ona ogląda telewizję.' },
+                  { hr: 'Mi čekamo autobus.', pl: 'My czekamy na autobus.' },
+                  { hr: 'Vi pitate puno.', pl: 'Wy pytacie dużo.' },
+                  { hr: 'Oni igraju nogomet.', pl: 'Oni grają w piłkę.' },
+                  { hr: 'Djeca pjevaju glasno.', pl: 'Dzieci śpiewają głośno.' }
+                ]
+              },
+              {
+                id: 'e',
+                label: 'Grupa E',
+                subtitle: '-ti → -em / -jem',
+                description: 'Temat prezentu kończy się na spółgłoskę (pisati → pišem) albo na -j- (piti → pijem, čuti → čujem). Końcówki osobowe są identyczne w obu przypadkach — różni się tylko sam temat.',
+                endings: [
+                  { person: 'Ja', ending: '-em' },
+                  { person: 'Ti', ending: '-eš' },
+                  { person: 'On / Ona / Ono', ending: '-e' },
+                  { person: 'Mi', ending: '-emo' },
+                  { person: 'Vi', ending: '-ete' },
+                  { person: 'Oni / One / Ona', ending: '-u (lub -ju)' }
+                ],
+                example: {
+                  infinitive: 'pisati (pisać)',
+                  forms: ['pišem', 'pišeš', 'piše', 'pišemo', 'pišete', 'pišu']
+                },
+                sentences: [
+                  { hr: 'Pišem pismo.', pl: 'Piszę list.' },
+                  { hr: 'Pišeš li mi?', pl: 'Piszesz do mnie?' },
+                  { hr: 'On piše knjigu.', pl: 'On pisze książkę.' },
+                  { hr: 'Mi pišemo zadaću.', pl: 'My piszemy zadanie.' },
+                  { hr: 'Vi pišete sporo.', pl: 'Wy piszecie wolno.' },
+                  { hr: 'Oni pišu testove.', pl: 'Oni piszą testy.' },
+                  { hr: 'Pijem vodu.', pl: 'Piję wodę.' },
+                  { hr: 'Piješ kavu ujutro.', pl: 'Pijesz kawę rano.' },
+                  { hr: 'Ona pije čaj.', pl: 'Ona pije herbatę.' },
+                  { hr: 'Mi pijemo sok.', pl: 'My pijemy sok.' },
+                  { hr: 'Čujem te dobro.', pl: 'Słyszę cię dobrze.' },
+                  { hr: 'Djeca piju mlijeko.', pl: 'Dzieci piją mleko.' }
+                ]
+              },
+              {
+                id: 'i',
+                label: 'Grupa I',
+                subtitle: '-iti / -jeti → -im',
+                description: 'Temat prezentu kończy się na -i-. Należą tu czasowniki na -iti (nositi → nosim) oraz większość na -jeti (voljeti → volim).',
+                endings: [
+                  { person: 'Ja', ending: '-im' },
+                  { person: 'Ti', ending: '-iš' },
+                  { person: 'On / Ona / Ono', ending: '-i' },
+                  { person: 'Mi', ending: '-imo' },
+                  { person: 'Vi', ending: '-ite' },
+                  { person: 'Oni / One / Ona', ending: '-e' }
+                ],
+                example: {
+                  infinitive: 'nositi (nosić)',
+                  forms: ['nosim', 'nosiš', 'nosi', 'nosimo', 'nosite', 'nose']
+                },
+                sentences: [
+                  { hr: 'Nosim torbu.', pl: 'Noszę torbę.' },
+                  { hr: 'Voliš li more?', pl: 'Lubisz morze?' },
+                  { hr: 'On govori hrvatski.', pl: 'On mówi po chorwacku.' },
+                  { hr: 'Mi volimo glazbu.', pl: 'My lubimy muzykę.' },
+                  { hr: 'Vi živite ovdje.', pl: 'Wy mieszkacie tutaj.' },
+                  { hr: 'Oni uče jezik.', pl: 'Oni uczą się języka.' },
+                  { hr: 'Vidim kuću.', pl: 'Widzę dom.' },
+                  { hr: 'Spavaš li dobro?', pl: 'Śpisz dobrze?' },
+                  { hr: 'Ona radi u uredu.', pl: 'Ona pracuje w biurze.' },
+                  { hr: 'Mi trčimo ujutro.', pl: 'My biegamy rano.' },
+                  { hr: 'Vi mislite brzo.', pl: 'Wy myślicie szybko.' },
+                  { hr: 'Djeca uče slova.', pl: 'Dzieci uczą się liter.' }
+                ]
+              }
             ]
           },
           {
             type: 'warning',
-            text: 'Osobna, bardzo częsta rodzina czasowników: te kończące się na -ovati, -evati, -ivati (np. kupovati, putovati, organizirati) w prezencie zamieniają tę końcówkę na -uje-: kupovati → kupujem, putovati → putujem. To wciąż "rodzina -jem" (bo -ujem kończy się na -jem), tylko z inną podstawą.'
-          },
-          {
-            type: 'text',
-            text: 'Pełna odmiana po jednym czasowniku z każdej grupy:'
-          },
-          {
-            type: 'table',
-            headers: ['Osoba', 'gledati (-am)', 'pisati (-em)', 'nositi (-im)', 'piti (-jem)'],
-            rows: [
-              ['ja', 'gledam', 'pišem', 'nosim', 'pijem'],
-              ['ti', 'gledaš', 'pišeš', 'nosiš', 'piješ'],
-              ['on/ona', 'gleda', 'piše', 'nosi', 'pije'],
-              ['mi', 'gledamo', 'pišemo', 'nosimo', 'pijemo'],
-              ['vi', 'gledate', 'pišete', 'nosite', 'pijete'],
-              ['oni', 'gledaju', 'pišu', 'nose', 'piju']
-            ]
-          },
-          {
-            type: 'examples',
-            items: [
-              { hr: 'Gledam televiziju.', pl: 'Oglądam telewizję.' },
-              { hr: 'Pišem pismo.', pl: 'Piszę list.' },
-              { hr: 'Nosim tešku torbu.', pl: 'Noszę ciężką torbę.' },
-              { hr: 'Pijem čaj.', pl: 'Piję herbatę.' },
-              { hr: 'Kupujem voće na tržnici.', pl: 'Kupuję owoce na targu.' },
-              { hr: 'Slušam glazbu.', pl: 'Słucham muzyki.' },
-              { hr: 'Pečem kolače.', pl: 'Piekę ciasta.' },
-              { hr: 'Učim jezike.', pl: 'Uczę się języków.' },
-              { hr: 'Živim u Zagrebu.', pl: 'Mieszkam w Zagrzebiu.' },
-              { hr: 'Čujem glasove.', pl: 'Słyszę głosy.' },
-              { hr: 'Igram nogomet.', pl: 'Gram w piłkę.' },
-              { hr: 'Tresem glavom.', pl: 'Potrząsam głową.' },
-              { hr: 'Volim more.', pl: 'Kocham morze.' },
-              { hr: 'Putujem vlakom.', pl: 'Podróżuję pociągiem.' },
-              { hr: 'Spavam dugo.', pl: 'Śpię długo.' },
-              { hr: 'Rastem svaki dan.', pl: 'Rosnę każdego dnia.' },
-              { hr: 'Govorim polako.', pl: 'Mówię powoli.' },
-              { hr: 'Smijem se glasno.', pl: 'Śmieję się głośno.' },
-              { hr: 'Čekam autobus.', pl: 'Czekam na autobus.' },
-              { hr: 'Vežem čvor.', pl: 'Wiążę węzeł.' },
-              { hr: 'Mislim na tebe.', pl: 'Myślę o tobie.' },
-              { hr: 'Kujem planove.', pl: 'Knuję plany.' },
-              { hr: 'Pokazujem put.', pl: 'Pokazuję drogę.' },
-              { hr: 'Hodam polako.', pl: 'Idę powoli.' },
-              { hr: 'Trčim brzo.', pl: 'Biegnę szybko.' }
-            ]
+            text: 'Częsta rodzina czasowników spoza tego prostego podziału: te na -ovati, -evati, -ivati (kupovati, putovati, organizirati) w prezencie zamieniają końcówkę na -uje-: kupovati → kupujem. To wciąż "rodzina E" (bo -ujem kończy się na -em), tylko z inną podstawą.'
           }
         ]
       },
