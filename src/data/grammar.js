@@ -4,12 +4,82 @@ export const grammarSections = [
     title: 'Czasy',
     topics: [
       {
+        id: 'grupy-czasownikow',
+        title: 'Grupy czasowników',
+        blocks: [
+          {
+            type: 'text',
+            text: 'Chorwackie czasowniki w czasie teraźniejszym dzielą się na grupy (koniugacje) w zależności od końcówki 1. osoby liczby pojedynczej. To właśnie ta końcówka — nie bezokolicznik — decyduje o grupie. W praktyce wystarczy znać 4 grupy, żeby poprawnie odmieniać większość czasowników.'
+          },
+          {
+            type: 'table',
+            headers: ['Grupa', 'Końcówki (ja, ty, on/ona...)', 'Typowy bezokolicznik', 'Przykład'],
+            rows: [
+              ['-am', '-am, -aš, -a, -amo, -ate, -aju', 'najczęściej -ati', 'gledati → gledam'],
+              ['-em', '-em, -eš, -e, -emo, -ete, -u', '-ti po spółgłosce, -sti, -ći', 'pisati → pišem, peći → pečem'],
+              ['-im', '-im, -iš, -i, -imo, -ite, -e', '-iti, -jeti, część -ati', 'nositi → nosim, voljeti → volim'],
+              ['-jem', '-jem, -ješ, -je, -jemo, -jete, -ju', '-ti po samogłosce', 'piti → pijem, čuti → čujem']
+            ]
+          },
+          {
+            type: 'warning',
+            text: 'Osobna, bardzo częsta rodzina czasowników: te kończące się na -ovati, -evati, -ivati (np. kupovati, putovati, organizirati) w prezencie zamieniają tę końcówkę na -uje-: kupovati → kupujem, putovati → putujem. To wciąż "rodzina -jem" (bo -ujem kończy się na -jem), tylko z inną podstawą.'
+          },
+          {
+            type: 'text',
+            text: 'Pełna odmiana po jednym czasowniku z każdej grupy:'
+          },
+          {
+            type: 'table',
+            headers: ['Osoba', 'gledati (-am)', 'pisati (-em)', 'nositi (-im)', 'piti (-jem)'],
+            rows: [
+              ['ja', 'gledam', 'pišem', 'nosim', 'pijem'],
+              ['ti', 'gledaš', 'pišeš', 'nosiš', 'piješ'],
+              ['on/ona', 'gleda', 'piše', 'nosi', 'pije'],
+              ['mi', 'gledamo', 'pišemo', 'nosimo', 'pijemo'],
+              ['vi', 'gledate', 'pišete', 'nosite', 'pijete'],
+              ['oni', 'gledaju', 'pišu', 'nose', 'piju']
+            ]
+          },
+          {
+            type: 'examples',
+            items: [
+              { hr: 'Gledam televiziju.', pl: 'Oglądam telewizję.' },
+              { hr: 'Pišem pismo.', pl: 'Piszę list.' },
+              { hr: 'Nosim tešku torbu.', pl: 'Noszę ciężką torbę.' },
+              { hr: 'Pijem čaj.', pl: 'Piję herbatę.' },
+              { hr: 'Kupujem voće na tržnici.', pl: 'Kupuję owoce na targu.' },
+              { hr: 'Slušam glazbu.', pl: 'Słucham muzyki.' },
+              { hr: 'Pečem kolače.', pl: 'Piekę ciasta.' },
+              { hr: 'Učim jezike.', pl: 'Uczę się języków.' },
+              { hr: 'Živim u Zagrebu.', pl: 'Mieszkam w Zagrzebiu.' },
+              { hr: 'Čujem glasove.', pl: 'Słyszę głosy.' },
+              { hr: 'Igram nogomet.', pl: 'Gram w piłkę.' },
+              { hr: 'Tresem glavom.', pl: 'Potrząsam głową.' },
+              { hr: 'Volim more.', pl: 'Kocham morze.' },
+              { hr: 'Putujem vlakom.', pl: 'Podróżuję pociągiem.' },
+              { hr: 'Spavam dugo.', pl: 'Śpię długo.' },
+              { hr: 'Rastem svaki dan.', pl: 'Rosnę każdego dnia.' },
+              { hr: 'Govorim polako.', pl: 'Mówię powoli.' },
+              { hr: 'Smijem se glasno.', pl: 'Śmieję się głośno.' },
+              { hr: 'Čekam autobus.', pl: 'Czekam na autobus.' },
+              { hr: 'Vežem čvor.', pl: 'Wiążę węzeł.' },
+              { hr: 'Mislim na tebe.', pl: 'Myślę o tobie.' },
+              { hr: 'Kujem planove.', pl: 'Knuję plany.' },
+              { hr: 'Pokazujem put.', pl: 'Pokazuję drogę.' },
+              { hr: 'Hodam polako.', pl: 'Idę powoli.' },
+              { hr: 'Trčim brzo.', pl: 'Biegnę szybko.' }
+            ]
+          }
+        ]
+      },
+      {
         id: 'prezent',
         title: 'Prezent',
         blocks: [
           {
             type: 'text',
-            text: 'Prezent to czas teraźniejszy — najprostszy w budowie. Tworzy się go od tematu czasownika z końcówką -am, -em, -im lub -jem.'
+            text: 'Prezent to czas teraźniejszy — najprostszy w budowie. Tworzy się go od tematu czasownika z końcówką -am, -em, -im lub -jem (patrz zakładka "Grupy czasowników" obok).'
           },
           {
             type: 'table',
@@ -36,7 +106,22 @@ export const grammarSections = [
               { hr: 'Oni rade u gradu.', pl: 'Oni pracują w mieście.' },
               { hr: 'Ja ne razumijem.', pl: 'Ja nie rozumiem.' },
               { hr: 'Ona peče kruh.', pl: 'Ona piecze chleb.' },
-              { hr: 'Djeca se igraju vani.', pl: 'Dzieci bawią się na dworze.' }
+              { hr: 'Djeca se igraju vani.', pl: 'Dzieci bawią się na dworze.' },
+              { hr: 'Kuham ručak svaki dan.', pl: 'Gotuję obiad codziennie.' },
+              { hr: 'Učim hrvatski jezik.', pl: 'Uczę się chorwackiego.' },
+              { hr: 'Spavam osam sati.', pl: 'Śpię osiem godzin.' },
+              { hr: 'Ona piše pismo.', pl: 'Ona pisze list.' },
+              { hr: 'Mi slušamo glazbu.', pl: 'My słuchamy muzyki.' },
+              { hr: 'Ti voziš auto.', pl: 'Ty prowadzisz samochód.' },
+              { hr: 'On trči svako jutro.', pl: 'On biega co rano.' },
+              { hr: 'Mi se smijemo zajedno.', pl: 'My śmiejemy się razem.' },
+              { hr: 'Ona radi u bolnici.', pl: 'Ona pracuje w szpitalu.' },
+              { hr: 'Djeca spavaju mirno.', pl: 'Dzieci śpią spokojnie.' },
+              { hr: 'Ja kupujem kruh.', pl: 'Ja kupuję chleb.' },
+              { hr: 'Mi razumijemo pitanje.', pl: 'My rozumiemy pytanie.' },
+              { hr: 'Ti pišeš domaću zadaću.', pl: 'Ty piszesz pracę domową.' },
+              { hr: 'Oni putuju vlakom.', pl: 'Oni podróżują pociągiem.' },
+              { hr: 'Ona pliva u moru.', pl: 'Ona pływa w morzu.' }
             ]
           }
         ]
@@ -78,7 +163,22 @@ export const grammarSections = [
               { hr: 'Nisam znao odgovor.', pl: 'Nie znałem odpowiedzi.' },
               { hr: 'Vi ste nam pomogli.', pl: 'Wy nam pomogliście.' },
               { hr: 'Pročitala sam tu knjigu.', pl: 'Przeczytałam tę książkę.' },
-              { hr: 'Zaboravio sam ključeve.', pl: 'Zapomniałem kluczy.' }
+              { hr: 'Zaboravio sam ključeve.', pl: 'Zapomniałem kluczy.' },
+              { hr: 'Naučio sam puno danas.', pl: 'Nauczyłem się dziś dużo.' },
+              { hr: 'Ona je otišla rano.', pl: 'Ona wyszła wcześnie.' },
+              { hr: 'Mi smo kuhali večeru.', pl: 'My gotowaliśmy kolację.' },
+              { hr: 'Jesi li vidio taj film?', pl: 'Widziałeś ten film?' },
+              { hr: 'Oni su kupili kuću.', pl: 'Oni kupili dom.' },
+              { hr: 'Nisam čuo buku.', pl: 'Nie słyszałem hałasu.' },
+              { hr: 'Vi ste napisali pismo.', pl: 'Wy napisaliście list.' },
+              { hr: 'Popila sam čašu vode.', pl: 'Wypiłam szklankę wody.' },
+              { hr: 'Zaspao sam kasno.', pl: 'Zasnąłem późno.' },
+              { hr: 'Oni su se posvađali.', pl: 'Oni się pokłócili.' },
+              { hr: 'Ona je plakala cijelu noć.', pl: 'Ona płakała całą noc.' },
+              { hr: 'Mi smo izgubili put.', pl: 'My zgubiliśmy drogę.' },
+              { hr: 'Jesi li platio račun?', pl: 'Zapłaciłeś rachunek?' },
+              { hr: 'On je stigao na vrijeme.', pl: 'On dotarł na czas.' },
+              { hr: 'Zaboravila sam ime.', pl: 'Zapomniałam imienia.' }
             ]
           }
         ]
@@ -111,7 +211,22 @@ export const grammarSections = [
               { hr: 'Ona će nazvati sutra.', pl: 'Ona zadzwoni jutro.' },
               { hr: 'Radit ćemo zajedno.', pl: 'Będziemy pracować razem.' },
               { hr: 'Hoće li padati kiša?', pl: 'Czy będzie padać deszcz?' },
-              { hr: 'Vidjet ćeš razliku.', pl: 'Zobaczysz różnicę.' }
+              { hr: 'Vidjet ćeš razliku.', pl: 'Zobaczysz różnicę.' },
+              { hr: 'Kupit ću novi telefon.', pl: 'Kupię nowy telefon.' },
+              { hr: 'Mi ćemo se vratiti navečer.', pl: 'My wrócimy wieczorem.' },
+              { hr: 'Oni će nam pisati.', pl: 'Oni będą do nas pisać.' },
+              { hr: 'Ona neće doći sutra.', pl: 'Ona nie przyjdzie jutro.' },
+              { hr: 'Vi ćete razumjeti kasnije.', pl: 'Wy zrozumiecie później.' },
+              { hr: 'Hoćemo li uspjeti?', pl: 'Czy nam się uda?' },
+              { hr: 'Ja ću te čekati vani.', pl: 'Będę na ciebie czekał na zewnątrz.' },
+              { hr: 'On će pročitati knjigu.', pl: 'On przeczyta książkę.' },
+              { hr: 'Mi ćemo pitati učitelja.', pl: 'My zapytamy nauczyciela.' },
+              { hr: 'Sutra ćemo imati sastanak.', pl: 'Jutro będziemy mieć spotkanie.' },
+              { hr: 'Hoćeš li mi pomoći?', pl: 'Pomożesz mi?' },
+              { hr: 'Oni će se preseliti idući mjesec.', pl: 'Oni przeprowadzą się w przyszłym miesiącu.' },
+              { hr: 'Neću zakasniti.', pl: 'Nie spóźnię się.' },
+              { hr: 'Vi ćete dobiti odgovor.', pl: 'Wy dostaniecie odpowiedź.' },
+              { hr: 'Ona će naučiti voziti.', pl: 'Ona nauczy się prowadzić.' }
             ]
           }
         ]
@@ -177,7 +292,22 @@ export const grammarSections = [
               { hr: 'Pišem olovkom.', pl: 'Piszę ołówkiem. (instrumental)' },
               { hr: 'Idem s prijateljem.', pl: 'Idę z przyjacielem. (instrumental)' },
               { hr: 'To je kuća moje sestre.', pl: 'To dom mojej siostry. (genitiv)' },
-              { hr: 'Čekam na autobus.', pl: 'Czekam na autobus. (akuzativ)' }
+              { hr: 'Čekam na autobus.', pl: 'Czekam na autobus. (akuzativ)' },
+              { hr: 'Dijete se smije.', pl: 'Dziecko się śmieje. (nominativ)' },
+              { hr: 'Nema vremena za to.', pl: 'Nie ma na to czasu. (genitiv)' },
+              { hr: 'Šaljem poklon majci.', pl: 'Wysyłam prezent mamie. (dativ)' },
+              { hr: 'Čitam zanimljivu knjigu.', pl: 'Czytam ciekawą książkę. (akuzativ)' },
+              { hr: 'Draga Ana, hvala ti!', pl: 'Droga Ano, dziękuję ci! (vokativ)' },
+              { hr: 'Razgovaramo o poslu.', pl: 'Rozmawiamy o pracy. (lokativ)' },
+              { hr: 'Putujemo autom.', pl: 'Podróżujemy samochodem. (instrumental)' },
+              { hr: 'Ovo je torba moje mame.', pl: 'To torba mojej mamy. (genitiv)' },
+              { hr: 'Dajem savjet prijatelju.', pl: 'Daję radę przyjacielowi. (dativ)' },
+              { hr: 'Vidim veliku kuću.', pl: 'Widzę duży dom. (akuzativ)' },
+              { hr: 'Učitelju, imam pitanje!', pl: 'Nauczycielu, mam pytanie! (vokativ)' },
+              { hr: 'Spavam u hotelu.', pl: 'Śpię w hotelu. (lokativ)' },
+              { hr: 'Pišem olovkom na papiru.', pl: 'Piszę ołówkiem na papierze. (instrumental)' },
+              { hr: 'Grad nema parkinga.', pl: 'Miasto nie ma parkingu. (genitiv)' },
+              { hr: 'Zovem sestru svaki dan.', pl: 'Dzwonię do siostry codziennie. (akuzativ)' }
             ]
           }
         ]
@@ -256,7 +386,22 @@ export const grammarSections = [
               { hr: 'Oni su se vratili kući.', pl: 'Oni wrócili do domu.' },
               { hr: 'Brzo ću se vratiti.', pl: 'Szybko wrócę.' },
               { hr: 'Ti si mi najbolji prijatelj.', pl: 'Ty jesteś moim najlepszym przyjacielem.' },
-              { hr: 'Sutra ćemo mu reći.', pl: 'Jutro mu powiemy.' }
+              { hr: 'Sutra ćemo mu reći.', pl: 'Jutro mu powiemy.' },
+              { hr: 'Ana mi je dala knjigu.', pl: 'Ana dała mi książkę.' },
+              { hr: 'Mi smo ga vidjeli jučer.', pl: 'My widzieliśmy go wczoraj.' },
+              { hr: 'Oni su nam rekli istinu.', pl: 'Oni powiedzieli nam prawdę.' },
+              { hr: 'Ti ćeš mu objasniti.', pl: 'Ty mu wytłumaczysz.' },
+              { hr: 'Ona se ne sjeća toga.', pl: 'Ona tego nie pamięta.' },
+              { hr: 'Ja sam im već javio.', pl: 'Ja już im dałem znać.' },
+              { hr: 'Mi ćemo se naći u sedam.', pl: 'My spotkamy się o siódmej.' },
+              { hr: 'Vi ste je vidjeli?', pl: 'Widzieliście ją?' },
+              { hr: 'On joj je kupio cvijeće.', pl: 'On kupił jej kwiaty.' },
+              { hr: 'Mi smo se upoznali davno.', pl: 'Poznaliśmy się dawno temu.' },
+              { hr: 'Hoćeš li mu reći?', pl: 'Powiesz mu?' },
+              { hr: 'Ona ga je nazvala sinoć.', pl: 'Ona zadzwoniła do niego wczoraj wieczorem.' },
+              { hr: 'Mi ćemo im pisati.', pl: 'My będziemy do nich pisać.' },
+              { hr: 'Ti si ih vidio?', pl: 'Widziałeś ich?' },
+              { hr: 'On se nije sjetio.', pl: 'On sobie nie przypomniał.' }
             ]
           }
         ]
@@ -285,7 +430,22 @@ export const grammarSections = [
               { hr: 'Nema sumnje.', pl: 'Nie ma wątpliwości.' },
               { hr: 'Nemam vremena za to.', pl: 'Nie mam na to czasu.' },
               { hr: 'Nema problema.', pl: 'Nie ma problemu.' },
-              { hr: 'Ne znam odgovora.', pl: 'Nie znam odpowiedzi.' }
+              { hr: 'Ne znam odgovora.', pl: 'Nie znam odpowiedzi.' },
+              { hr: 'Nema mjesta u autu.', pl: 'Nie ma miejsca w samochodzie.' },
+              { hr: 'Nemam snage za to.', pl: 'Nie mam na to siły.' },
+              { hr: 'Nema vode u boci.', pl: 'Nie ma wody w butelce.' },
+              { hr: 'Nemam iskustva.', pl: 'Nie mam doświadczenia.' },
+              { hr: 'Nema odgovora na pitanje.', pl: 'Nie ma odpowiedzi na pytanie.' },
+              { hr: 'Nemam vremena za odmor.', pl: 'Nie mam czasu na odpoczynek.' },
+              { hr: 'Nema razloga za brigu.', pl: 'Nie ma powodu do zmartwienia.' },
+              { hr: 'Nemam ključa od stana.', pl: 'Nie mam klucza do mieszkania.' },
+              { hr: 'Nema struje u zgradi.', pl: 'Nie ma prądu w budynku.' },
+              { hr: 'Nemam pojma o tome.', pl: 'Nie mam o tym pojęcia.' },
+              { hr: 'Nema šanse za pobjedu.', pl: 'Nie ma szans na wygraną.' },
+              { hr: 'Nemam hrane u frižideru.', pl: 'Nie mam jedzenia w lodówce.' },
+              { hr: 'Nema nikoga na ulici.', pl: 'Nie ma nikogo na ulicy.' },
+              { hr: 'Nemam vremena za igru.', pl: 'Nie mam czasu na zabawę.' },
+              { hr: 'Nema kraja ovom poslu.', pl: 'Nie ma końca tej pracy.' }
             ]
           }
         ]
@@ -314,7 +474,22 @@ export const grammarSections = [
               { hr: 'Razumiješ li me?', pl: 'Rozumiesz mnie?' },
               { hr: 'Hoćeš li doći?', pl: 'Przyjdziesz?' },
               { hr: 'Znaš li gdje je to?', pl: 'Wiesz, gdzie to jest?' },
-              { hr: 'Sviđa li ti se?', pl: 'Podoba ci się?' }
+              { hr: 'Sviđa li ti se?', pl: 'Podoba ci się?' },
+              { hr: 'Ideš li sa mnom?', pl: 'Idziesz ze mną?' },
+              { hr: 'Jesi li spreman?', pl: 'Jesteś gotowy?' },
+              { hr: 'Čuješ li me dobro?', pl: 'Słyszysz mnie dobrze?' },
+              { hr: 'Trebaš li pomoć?', pl: 'Potrzebujesz pomocy?' },
+              { hr: 'Pamtiš li njeno ime?', pl: 'Pamiętasz jej imię?' },
+              { hr: 'Živiš li ovdje?', pl: 'Mieszkasz tutaj?' },
+              { hr: 'Radiš li sutra?', pl: 'Pracujesz jutro?' },
+              { hr: 'Želiš li još kave?', pl: 'Chcesz jeszcze kawy?' },
+              { hr: 'Znaš li plivati?', pl: 'Umiesz pływać?' },
+              { hr: 'Jeste li vidjeli Anu?', pl: 'Widzieliście Anę?' },
+              { hr: 'Možemo li razgovarati?', pl: 'Możemy porozmawiać?' },
+              { hr: 'Hoće li biti vremena?', pl: 'Będzie czas?' },
+              { hr: 'Igraš li nogomet?', pl: 'Grasz w piłkę nożną?' },
+              { hr: 'Vjeruješ li mi?', pl: 'Wierzysz mi?' },
+              { hr: 'Slažeš li se sa mnom?', pl: 'Zgadzasz się ze mną?' }
             ]
           }
         ]
@@ -358,7 +533,22 @@ export const grammarSections = [
               { hr: 'Trebam dvije minute.', pl: 'Potrzebuję dwóch minut.' },
               { hr: 'Imamo sto eura.', pl: 'Mamy sto euro.' },
               { hr: 'Vidio sam dva psa.', pl: 'Widziałem dwa psy.' },
-              { hr: 'Čeka nas šest sati puta.', pl: 'Czeka nas sześć godzin drogi.' }
+              { hr: 'Čeka nas šest sati puta.', pl: 'Czeka nas sześć godzin drogi.' },
+              { hr: 'Imam sedam olovaka.', pl: 'Mam siedem ołówków.' },
+              { hr: 'Kupili smo osam jabuka.', pl: 'Kupiliśmy osiem jabłek.' },
+              { hr: 'Ima devet stolica.', pl: 'Jest dziewięć krzeseł.' },
+              { hr: 'Čekali smo dvadeset minuta.', pl: 'Czekaliśmy dwadzieścia minut.' },
+              { hr: 'Imam dvije sestre.', pl: 'Mam dwie siostry.' },
+              { hr: 'Vidio sam tri mačke.', pl: 'Widziałem trzy koty.' },
+              { hr: 'Ima tisuću ljudi na trgu.', pl: 'Jest tysiąc ludzi na placu.' },
+              { hr: 'Trebamo pet jaja.', pl: 'Potrzebujemy pięciu jajek.' },
+              { hr: 'Imamo dvadeset eura.', pl: 'Mamy dwadzieścia euro.' },
+              { hr: 'Bio sam tamo dva puta.', pl: 'Byłem tam dwa razy.' },
+              { hr: 'Kupio sam četiri karte.', pl: 'Kupiłem cztery bilety.' },
+              { hr: 'Ima šest soba u kući.', pl: 'Jest sześć pokoi w domu.' },
+              { hr: 'Čekamo još deset minuta.', pl: 'Czekamy jeszcze dziesięć minut.' },
+              { hr: 'Imam jednog brata i dvije sestre.', pl: 'Mam jednego brata i dwie siostry.' },
+              { hr: 'Prošli smo sto kilometara.', pl: 'Przejechaliśmy sto kilometrów.' }
             ]
           }
         ]
