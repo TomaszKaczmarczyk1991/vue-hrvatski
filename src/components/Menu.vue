@@ -84,11 +84,20 @@
       >
         <button
           class="option-button"
-          aria-label="Otwórz gramatykę"
-          @click="choose()"
+          aria-label="Otwórz zasady gramatyczne"
+          @click="chooseGrammar()"
         >
           <span>📚</span>
-          <span>Otwórz gramatykę</span>
+          <span>Zasady</span>
+        </button>
+
+        <button
+          class="option-button"
+          aria-label="Ćwicz odmianę czasowników"
+          @click="chooseConjugation()"
+        >
+          <span>✍️</span>
+          <span>Odmiana czasowników</span>
         </button>
       </div>
 
@@ -138,11 +147,6 @@ function choose(direction) {
     return
   }
 
-  if (category.value === 'grammar') {
-    emit('select', { type: 'grammar' })
-    return
-  }
-
   if (category.value === 'sentences') {
     emit('select', {
       type: 'sentences',
@@ -153,6 +157,14 @@ function choose(direction) {
   }
 
   emit('select', { type: 'flashcards', direction })
+}
+
+function chooseGrammar() {
+  emit('select', { type: 'grammar' })
+}
+
+function chooseConjugation() {
+  emit('select', { type: 'conjugation' })
 }
 
 function ariaLabel(direction) {
