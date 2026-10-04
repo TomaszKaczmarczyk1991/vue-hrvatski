@@ -88,7 +88,7 @@
           @click="chooseGrammar()"
         >
           <span>📚</span>
-          <span>Zasady</span>
+          <span>Zasady gramatyki</span>
         </button>
 
         <button
@@ -97,7 +97,7 @@
           @click="chooseConjugation()"
         >
           <span>✍️</span>
-          <span>Odmiana czasowników</span>
+          <span>Odmień czasowniki</span>
         </button>
       </div>
 
