@@ -2,7 +2,7 @@
   <div class="welcome">
     <div class="brand">
       <p class="intro">
-        Bok! Dobrodošli u
+        Dobrodošli u
       </p>
 
       <h1>
