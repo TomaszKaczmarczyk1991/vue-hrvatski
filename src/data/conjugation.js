@@ -5,1073 +5,1006 @@
 // regułą drugiej pozycji enklityk.
 
 export const conjugationExercises = [
-  // ===== PREZENT =====
-
-  // raditi (pracować)
   { id: 1, tense: 'prezent', infinitive: 'raditi (pracować)', pl: 'Pracuję codziennie.', before: 'Ja', after: 'svaki dan.', answer: 'radim' },
   { id: 2, tense: 'prezent', infinitive: 'raditi (pracować)', pl: 'Pracujesz codziennie.', before: 'Ti', after: 'svaki dan.', answer: 'radiš' },
   { id: 3, tense: 'prezent', infinitive: 'raditi (pracować)', pl: 'On pracuje codziennie.', before: 'On', after: 'svaki dan.', answer: 'radi' },
   { id: 4, tense: 'prezent', infinitive: 'raditi (pracować)', pl: 'Pracujemy codziennie.', before: 'Mi', after: 'svaki dan.', answer: 'radimo' },
   { id: 5, tense: 'prezent', infinitive: 'raditi (pracować)', pl: 'Pracujecie codziennie.', before: 'Vi', after: 'svaki dan.', answer: 'radite' },
   { id: 6, tense: 'prezent', infinitive: 'raditi (pracować)', pl: 'Oni pracują codziennie.', before: 'Oni', after: 'svaki dan.', answer: 'rade' },
-
-  // pisati (pisać)
   { id: 7, tense: 'prezent', infinitive: 'pisati (pisać)', pl: 'Piszę list.', before: 'Ja', after: 'pismo.', answer: 'pišem' },
   { id: 8, tense: 'prezent', infinitive: 'pisati (pisać)', pl: 'Piszesz list.', before: 'Ti', after: 'pismo.', answer: 'pišeš' },
   { id: 9, tense: 'prezent', infinitive: 'pisati (pisać)', pl: 'Ona pisze list.', before: 'Ona', after: 'pismo.', answer: 'piše' },
   { id: 10, tense: 'prezent', infinitive: 'pisati (pisać)', pl: 'Piszemy list.', before: 'Mi', after: 'pismo.', answer: 'pišemo' },
   { id: 11, tense: 'prezent', infinitive: 'pisati (pisać)', pl: 'Piszecie list.', before: 'Vi', after: 'pismo.', answer: 'pišete' },
   { id: 12, tense: 'prezent', infinitive: 'pisati (pisać)', pl: 'Oni piszą list.', before: 'Oni', after: 'pismo.', answer: 'pišu' },
-
-  // piti (pić)
   { id: 13, tense: 'prezent', infinitive: 'piti (pić)', pl: 'Piję wodę.', before: 'Ja', after: 'vodu.', answer: 'pijem' },
   { id: 14, tense: 'prezent', infinitive: 'piti (pić)', pl: 'Pijesz wodę.', before: 'Ti', after: 'vodu.', answer: 'piješ' },
   { id: 15, tense: 'prezent', infinitive: 'piti (pić)', pl: 'On pije wodę.', before: 'On', after: 'vodu.', answer: 'pije' },
   { id: 16, tense: 'prezent', infinitive: 'piti (pić)', pl: 'Pijemy wodę.', before: 'Mi', after: 'vodu.', answer: 'pijemo' },
   { id: 17, tense: 'prezent', infinitive: 'piti (pić)', pl: 'Pijecie wodę.', before: 'Vi', after: 'vodu.', answer: 'pijete' },
   { id: 18, tense: 'prezent', infinitive: 'piti (pić)', pl: 'Oni piją wodę.', before: 'Oni', after: 'vodu.', answer: 'piju' },
-
-  // nositi (nosić)
   { id: 19, tense: 'prezent', infinitive: 'nositi (nosić)', pl: 'Noszę torbę.', before: 'Ja', after: 'torbu.', answer: 'nosim' },
   { id: 20, tense: 'prezent', infinitive: 'nositi (nosić)', pl: 'Nosisz torbę.', before: 'Ti', after: 'torbu.', answer: 'nosiš' },
   { id: 21, tense: 'prezent', infinitive: 'nositi (nosić)', pl: 'Ona nosi torbę.', before: 'Ona', after: 'torbu.', answer: 'nosi' },
   { id: 22, tense: 'prezent', infinitive: 'nositi (nosić)', pl: 'Nosimy torbę.', before: 'Mi', after: 'torbu.', answer: 'nosimo' },
   { id: 23, tense: 'prezent', infinitive: 'nositi (nosić)', pl: 'Nosicie torbę.', before: 'Vi', after: 'torbu.', answer: 'nosite' },
   { id: 24, tense: 'prezent', infinitive: 'nositi (nosić)', pl: 'Oni noszą torbę.', before: 'Oni', after: 'torbu.', answer: 'nose' },
-
-  // voljeti (kochać / lubić)
   { id: 25, tense: 'prezent', infinitive: 'voljeti (kochać)', pl: 'Kocham morze.', before: 'Ja', after: 'more.', answer: 'volim' },
   { id: 26, tense: 'prezent', infinitive: 'voljeti (kochać)', pl: 'Kochasz morze.', before: 'Ti', after: 'more.', answer: 'voliš' },
   { id: 27, tense: 'prezent', infinitive: 'voljeti (kochać)', pl: 'On kocha morze.', before: 'On', after: 'more.', answer: 'voli' },
   { id: 28, tense: 'prezent', infinitive: 'voljeti (kochać)', pl: 'Kochamy morze.', before: 'Mi', after: 'more.', answer: 'volimo' },
   { id: 29, tense: 'prezent', infinitive: 'voljeti (kochać)', pl: 'Kochacie morze.', before: 'Vi', after: 'more.', answer: 'volite' },
   { id: 30, tense: 'prezent', infinitive: 'voljeti (kochać)', pl: 'Oni kochają morze.', before: 'Oni', after: 'more.', answer: 'vole' },
-
-  // čekati (czekać)
   { id: 31, tense: 'prezent', infinitive: 'čekati (czekać)', pl: 'Czekam na autobus.', before: 'Ja', after: 'autobus.', answer: 'čekam' },
   { id: 32, tense: 'prezent', infinitive: 'čekati (czekać)', pl: 'Czekasz na autobus.', before: 'Ti', after: 'autobus.', answer: 'čekaš' },
   { id: 33, tense: 'prezent', infinitive: 'čekati (czekać)', pl: 'Ona czeka na autobus.', before: 'Ona', after: 'autobus.', answer: 'čeka' },
   { id: 34, tense: 'prezent', infinitive: 'čekati (czekać)', pl: 'Czekamy na autobus.', before: 'Mi', after: 'autobus.', answer: 'čekamo' },
   { id: 35, tense: 'prezent', infinitive: 'čekati (czekać)', pl: 'Czekacie na autobus.', before: 'Vi', after: 'autobus.', answer: 'čekate' },
   { id: 36, tense: 'prezent', infinitive: 'čekati (czekać)', pl: 'Oni czekają na autobus.', before: 'Oni', after: 'autobus.', answer: 'čekaju' },
-
-  // živjeti (mieszkać)
   { id: 37, tense: 'prezent', infinitive: 'živjeti (mieszkać)', pl: 'Mieszkam w Zagrzebiu.', before: 'Ja', after: 'u Zagrebu.', answer: 'živim' },
   { id: 38, tense: 'prezent', infinitive: 'živjeti (mieszkać)', pl: 'Mieszkasz w Zagrzebiu.', before: 'Ti', after: 'u Zagrebu.', answer: 'živiš' },
   { id: 39, tense: 'prezent', infinitive: 'živjeti (mieszkać)', pl: 'On mieszka w Zagrzebiu.', before: 'On', after: 'u Zagrebu.', answer: 'živi' },
   { id: 40, tense: 'prezent', infinitive: 'živjeti (mieszkać)', pl: 'Mieszkamy w Zagrzebiu.', before: 'Mi', after: 'u Zagrebu.', answer: 'živimo' },
   { id: 41, tense: 'prezent', infinitive: 'živjeti (mieszkać)', pl: 'Mieszkacie w Zagrzebiu.', before: 'Vi', after: 'u Zagrebu.', answer: 'živite' },
   { id: 42, tense: 'prezent', infinitive: 'živjeti (mieszkać)', pl: 'Oni mieszkają w Zagrzebiu.', before: 'Oni', after: 'u Zagrebu.', answer: 'žive' },
-
-  // učiti (uczyć się)
   { id: 43, tense: 'prezent', infinitive: 'učiti (uczyć się)', pl: 'Uczę się chorwackiego.', before: 'Ja', after: 'hrvatski.', answer: 'učim' },
   { id: 44, tense: 'prezent', infinitive: 'učiti (uczyć się)', pl: 'Uczysz się chorwackiego.', before: 'Ti', after: 'hrvatski.', answer: 'učiš' },
   { id: 45, tense: 'prezent', infinitive: 'učiti (uczyć się)', pl: 'Ona uczy się chorwackiego.', before: 'Ona', after: 'hrvatski.', answer: 'uči' },
   { id: 46, tense: 'prezent', infinitive: 'učiti (uczyć się)', pl: 'Uczymy się chorwackiego.', before: 'Mi', after: 'hrvatski.', answer: 'učimo' },
   { id: 47, tense: 'prezent', infinitive: 'učiti (uczyć się)', pl: 'Uczycie się chorwackiego.', before: 'Vi', after: 'hrvatski.', answer: 'učite' },
   { id: 48, tense: 'prezent', infinitive: 'učiti (uczyć się)', pl: 'Oni uczą się chorwackiego.', before: 'Oni', after: 'hrvatski.', answer: 'uče' },
-
-  // kupovati (kupować)
   { id: 49, tense: 'prezent', infinitive: 'kupovati (kupować)', pl: 'Kupuję chleb.', before: 'Ja', after: 'kruh.', answer: 'kupujem' },
   { id: 50, tense: 'prezent', infinitive: 'kupovati (kupować)', pl: 'Kupujesz chleb.', before: 'Ti', after: 'kruh.', answer: 'kupuješ' },
   { id: 51, tense: 'prezent', infinitive: 'kupovati (kupować)', pl: 'On kupuje chleb.', before: 'On', after: 'kruh.', answer: 'kupuje' },
   { id: 52, tense: 'prezent', infinitive: 'kupovati (kupować)', pl: 'Kupujemy chleb.', before: 'Mi', after: 'kruh.', answer: 'kupujemo' },
   { id: 53, tense: 'prezent', infinitive: 'kupovati (kupować)', pl: 'Kupujecie chleb.', before: 'Vi', after: 'kruh.', answer: 'kupujete' },
   { id: 54, tense: 'prezent', infinitive: 'kupovati (kupować)', pl: 'Oni kupują chleb.', before: 'Oni', after: 'kruh.', answer: 'kupuju' },
-
-  // igrati (grać)
   { id: 55, tense: 'prezent', infinitive: 'igrati (grać)', pl: 'Gram w piłkę nożną.', before: 'Ja', after: 'nogomet.', answer: 'igram' },
   { id: 56, tense: 'prezent', infinitive: 'igrati (grać)', pl: 'Grasz w piłkę nożną.', before: 'Ti', after: 'nogomet.', answer: 'igraš' },
   { id: 57, tense: 'prezent', infinitive: 'igrati (grać)', pl: 'On gra w piłkę nożną.', before: 'On', after: 'nogomet.', answer: 'igra' },
   { id: 58, tense: 'prezent', infinitive: 'igrati (grać)', pl: 'Gramy w piłkę nożną.', before: 'Mi', after: 'nogomet.', answer: 'igramo' },
   { id: 59, tense: 'prezent', infinitive: 'igrati (grać)', pl: 'Gracie w piłkę nożną.', before: 'Vi', after: 'nogomet.', answer: 'igrate' },
   { id: 60, tense: 'prezent', infinitive: 'igrati (grać)', pl: 'Oni grają w piłkę nożną.', before: 'Oni', after: 'nogomet.', answer: 'igraju' },
-
-  // spavati (spać)
   { id: 61, tense: 'prezent', infinitive: 'spavati (spać)', pl: 'Śpię dobrze.', before: 'Ja', after: 'dobro.', answer: 'spavam' },
   { id: 62, tense: 'prezent', infinitive: 'spavati (spać)', pl: 'Śpisz dobrze.', before: 'Ti', after: 'dobro.', answer: 'spavaš' },
   { id: 63, tense: 'prezent', infinitive: 'spavati (spać)', pl: 'Ona śpi dobrze.', before: 'Ona', after: 'dobro.', answer: 'spava' },
   { id: 64, tense: 'prezent', infinitive: 'spavati (spać)', pl: 'Śpimy dobrze.', before: 'Mi', after: 'dobro.', answer: 'spavamo' },
   { id: 65, tense: 'prezent', infinitive: 'spavati (spać)', pl: 'Śpicie dobrze.', before: 'Vi', after: 'dobro.', answer: 'spavate' },
   { id: 66, tense: 'prezent', infinitive: 'spavati (spać)', pl: 'Oni śpią dobrze.', before: 'Oni', after: 'dobro.', answer: 'spavaju' },
-
-  // gledati (oglądać)
   { id: 67, tense: 'prezent', infinitive: 'gledati (oglądać)', pl: 'Oglądam film.', before: 'Ja', after: 'film.', answer: 'gledam' },
   { id: 68, tense: 'prezent', infinitive: 'gledati (oglądać)', pl: 'Oglądasz film.', before: 'Ti', after: 'film.', answer: 'gledaš' },
   { id: 69, tense: 'prezent', infinitive: 'gledati (oglądać)', pl: 'On ogląda film.', before: 'On', after: 'film.', answer: 'gleda' },
   { id: 70, tense: 'prezent', infinitive: 'gledati (oglądać)', pl: 'Oglądamy film.', before: 'Mi', after: 'film.', answer: 'gledamo' },
   { id: 71, tense: 'prezent', infinitive: 'gledati (oglądać)', pl: 'Oglądacie film.', before: 'Vi', after: 'film.', answer: 'gledate' },
   { id: 72, tense: 'prezent', infinitive: 'gledati (oglądać)', pl: 'Oni oglądają film.', before: 'Oni', after: 'film.', answer: 'gledaju' },
-
-  // govoriti (mówić)
   { id: 73, tense: 'prezent', infinitive: 'govoriti (mówić)', pl: 'Mówię po angielsku.', before: 'Ja', after: 'engleski.', answer: 'govorim' },
   { id: 74, tense: 'prezent', infinitive: 'govoriti (mówić)', pl: 'Mówisz po angielsku.', before: 'Ti', after: 'engleski.', answer: 'govoriš' },
   { id: 75, tense: 'prezent', infinitive: 'govoriti (mówić)', pl: 'Ona mówi po angielsku.', before: 'Ona', after: 'engleski.', answer: 'govori' },
   { id: 76, tense: 'prezent', infinitive: 'govoriti (mówić)', pl: 'Mówimy po angielsku.', before: 'Mi', after: 'engleski.', answer: 'govorimo' },
   { id: 77, tense: 'prezent', infinitive: 'govoriti (mówić)', pl: 'Mówicie po angielsku.', before: 'Vi', after: 'engleski.', answer: 'govorite' },
   { id: 78, tense: 'prezent', infinitive: 'govoriti (mówić)', pl: 'Oni mówią po angielsku.', before: 'Oni', after: 'engleski.', answer: 'govore' },
-
-  // jesti (jeść)
   { id: 79, tense: 'prezent', infinitive: 'jesti (jeść)', pl: 'Jem owoce.', before: 'Ja', after: 'voće.', answer: 'jedem' },
   { id: 80, tense: 'prezent', infinitive: 'jesti (jeść)', pl: 'Jesz owoce.', before: 'Ti', after: 'voće.', answer: 'jedeš' },
   { id: 81, tense: 'prezent', infinitive: 'jesti (jeść)', pl: 'On je owoce.', before: 'On', after: 'voće.', answer: 'jede' },
   { id: 82, tense: 'prezent', infinitive: 'jesti (jeść)', pl: 'Jemy owoce.', before: 'Mi', after: 'voće.', answer: 'jedemo' },
   { id: 83, tense: 'prezent', infinitive: 'jesti (jeść)', pl: 'Jecie owoce.', before: 'Vi', after: 'voće.', answer: 'jedete' },
   { id: 84, tense: 'prezent', infinitive: 'jesti (jeść)', pl: 'Oni jedzą owoce.', before: 'Oni', after: 'voće.', answer: 'jedu' },
-
-  // ići (iść)
   { id: 85, tense: 'prezent', infinitive: 'ići (iść)', pl: 'Idę do domu.', before: 'Ja', after: 'kući.', answer: 'idem' },
   { id: 86, tense: 'prezent', infinitive: 'ići (iść)', pl: 'Idziesz do domu.', before: 'Ti', after: 'kući.', answer: 'ideš' },
   { id: 87, tense: 'prezent', infinitive: 'ići (iść)', pl: 'On idzie do domu.', before: 'On', after: 'kući.', answer: 'ide' },
   { id: 88, tense: 'prezent', infinitive: 'ići (iść)', pl: 'Idziemy do domu.', before: 'Mi', after: 'kući.', answer: 'idemo' },
   { id: 89, tense: 'prezent', infinitive: 'ići (iść)', pl: 'Idziecie do domu.', before: 'Vi', after: 'kući.', answer: 'idete' },
   { id: 90, tense: 'prezent', infinitive: 'ići (iść)', pl: 'Oni idą do domu.', before: 'Oni', after: 'kući.', answer: 'idu' },
-
-  // željeti (chcieć)
   { id: 211, tense: 'prezent', infinitive: 'željeti (chcieć)', pl: 'Chcę kawę.', before: 'Ja', after: 'kavu.', answer: 'želim' },
   { id: 212, tense: 'prezent', infinitive: 'željeti (chcieć)', pl: 'Chcesz kawę.', before: 'Ti', after: 'kavu.', answer: 'želiš' },
   { id: 213, tense: 'prezent', infinitive: 'željeti (chcieć)', pl: 'Ona chce kawę.', before: 'Ona', after: 'kavu.', answer: 'želi' },
   { id: 214, tense: 'prezent', infinitive: 'željeti (chcieć)', pl: 'Chcemy kawę.', before: 'Mi', after: 'kavu.', answer: 'želimo' },
   { id: 215, tense: 'prezent', infinitive: 'željeti (chcieć)', pl: 'Chcecie kawę.', before: 'Vi', after: 'kavu.', answer: 'želite' },
   { id: 216, tense: 'prezent', infinitive: 'željeti (chcieć)', pl: 'Oni chcą kawę.', before: 'Oni', after: 'kavu.', answer: 'žele' },
-
-  // moći (móc)
   { id: 217, tense: 'prezent', infinitive: 'moći (móc)', pl: 'Mogę pomóc.', before: 'Ja', after: 'pomoći.', answer: 'mogu' },
   { id: 218, tense: 'prezent', infinitive: 'moći (móc)', pl: 'Możesz pomóc.', before: 'Ti', after: 'pomoći.', answer: 'možeš' },
   { id: 219, tense: 'prezent', infinitive: 'moći (móc)', pl: 'On może pomóc.', before: 'On', after: 'pomoći.', answer: 'može' },
   { id: 220, tense: 'prezent', infinitive: 'moći (móc)', pl: 'Możemy pomóc.', before: 'Mi', after: 'pomoći.', answer: 'možemo' },
   { id: 221, tense: 'prezent', infinitive: 'moći (móc)', pl: 'Możecie pomóc.', before: 'Vi', after: 'pomoći.', answer: 'možete' },
   { id: 222, tense: 'prezent', infinitive: 'moći (móc)', pl: 'Oni mogą pomóc.', before: 'Oni', after: 'pomoći.', answer: 'mogu' },
-
-  // znati (znać / wiedzieć)
   { id: 223, tense: 'prezent', infinitive: 'znati (wiedzieć)', pl: 'Znam odpowiedź.', before: 'Ja', after: 'odgovor.', answer: 'znam' },
   { id: 224, tense: 'prezent', infinitive: 'znati (wiedzieć)', pl: 'Znasz odpowiedź.', before: 'Ti', after: 'odgovor.', answer: 'znaš' },
   { id: 225, tense: 'prezent', infinitive: 'znati (wiedzieć)', pl: 'Ona zna odpowiedź.', before: 'Ona', after: 'odgovor.', answer: 'zna' },
   { id: 226, tense: 'prezent', infinitive: 'znati (wiedzieć)', pl: 'Znamy odpowiedź.', before: 'Mi', after: 'odgovor.', answer: 'znamo' },
   { id: 227, tense: 'prezent', infinitive: 'znati (wiedzieć)', pl: 'Znacie odpowiedź.', before: 'Vi', after: 'odgovor.', answer: 'znate' },
   { id: 228, tense: 'prezent', infinitive: 'znati (wiedzieć)', pl: 'Oni znają odpowiedź.', before: 'Oni', after: 'odgovor.', answer: 'znaju' },
-
-  // misliti (myśleć)
   { id: 229, tense: 'prezent', infinitive: 'misliti (myśleć)', pl: 'Myślę o tym.', before: 'Ja', after: 'o tome.', answer: 'mislim' },
   { id: 230, tense: 'prezent', infinitive: 'misliti (myśleć)', pl: 'Myślisz o tym.', before: 'Ti', after: 'o tome.', answer: 'misliš' },
   { id: 231, tense: 'prezent', infinitive: 'misliti (myśleć)', pl: 'Ona myśli o tym.', before: 'Ona', after: 'o tome.', answer: 'misli' },
   { id: 232, tense: 'prezent', infinitive: 'misliti (myśleć)', pl: 'Myślimy o tym.', before: 'Mi', after: 'o tome.', answer: 'mislimo' },
   { id: 233, tense: 'prezent', infinitive: 'misliti (myśleć)', pl: 'Myślicie o tym.', before: 'Vi', after: 'o tome.', answer: 'mislite' },
   { id: 234, tense: 'prezent', infinitive: 'misliti (myśleć)', pl: 'Oni myślą o tym.', before: 'Oni', after: 'o tome.', answer: 'misle' },
-
-  // trebati (potrzebować)
   { id: 235, tense: 'prezent', infinitive: 'trebati (potrzebować)', pl: 'Potrzebuję pomocy.', before: 'Ja', after: 'pomoć.', answer: 'trebam' },
   { id: 236, tense: 'prezent', infinitive: 'trebati (potrzebować)', pl: 'Potrzebujesz pomocy.', before: 'Ti', after: 'pomoć.', answer: 'trebaš' },
   { id: 237, tense: 'prezent', infinitive: 'trebati (potrzebować)', pl: 'On potrzebuje pomocy.', before: 'On', after: 'pomoć.', answer: 'treba' },
   { id: 238, tense: 'prezent', infinitive: 'trebati (potrzebować)', pl: 'Potrzebujemy pomocy.', before: 'Mi', after: 'pomoć.', answer: 'trebamo' },
   { id: 239, tense: 'prezent', infinitive: 'trebati (potrzebować)', pl: 'Potrzebujecie pomocy.', before: 'Vi', after: 'pomoć.', answer: 'trebate' },
   { id: 240, tense: 'prezent', infinitive: 'trebati (potrzebować)', pl: 'Oni potrzebują pomocy.', before: 'Oni', after: 'pomoć.', answer: 'trebaju' },
-
-  // slušati (słuchać)
   { id: 241, tense: 'prezent', infinitive: 'slušati (słuchać)', pl: 'Słucham muzyki.', before: 'Ja', after: 'glazbu.', answer: 'slušam' },
   { id: 242, tense: 'prezent', infinitive: 'slušati (słuchać)', pl: 'Słuchasz muzyki.', before: 'Ti', after: 'glazbu.', answer: 'slušaš' },
   { id: 243, tense: 'prezent', infinitive: 'slušati (słuchać)', pl: 'Ona słucha muzyki.', before: 'Ona', after: 'glazbu.', answer: 'sluša' },
   { id: 244, tense: 'prezent', infinitive: 'slušati (słuchać)', pl: 'Słuchamy muzyki.', before: 'Mi', after: 'glazbu.', answer: 'slušamo' },
   { id: 245, tense: 'prezent', infinitive: 'slušati (słuchać)', pl: 'Słuchacie muzyki.', before: 'Vi', after: 'glazbu.', answer: 'slušate' },
   { id: 246, tense: 'prezent', infinitive: 'slušati (słuchać)', pl: 'Oni słuchają muzyki.', before: 'Oni', after: 'glazbu.', answer: 'slušaju' },
-
-  // vidjeti (widzieć)
   { id: 247, tense: 'prezent', infinitive: 'vidjeti (widzieć)', pl: 'Widzę dom.', before: 'Ja', after: 'kuću.', answer: 'vidim' },
   { id: 248, tense: 'prezent', infinitive: 'vidjeti (widzieć)', pl: 'Widzisz dom.', before: 'Ti', after: 'kuću.', answer: 'vidiš' },
   { id: 249, tense: 'prezent', infinitive: 'vidjeti (widzieć)', pl: 'On widzi dom.', before: 'On', after: 'kuću.', answer: 'vidi' },
   { id: 250, tense: 'prezent', infinitive: 'vidjeti (widzieć)', pl: 'Widzimy dom.', before: 'Mi', after: 'kuću.', answer: 'vidimo' },
   { id: 251, tense: 'prezent', infinitive: 'vidjeti (widzieć)', pl: 'Widzicie dom.', before: 'Vi', after: 'kuću.', answer: 'vidite' },
   { id: 252, tense: 'prezent', infinitive: 'vidjeti (widzieć)', pl: 'Oni widzą dom.', before: 'Oni', after: 'kuću.', answer: 'vide' },
-
-  // trčati (biegać)
   { id: 253, tense: 'prezent', infinitive: 'trčati (biegać)', pl: 'Biegam rano.', before: 'Ja', after: 'ujutro.', answer: 'trčim' },
   { id: 254, tense: 'prezent', infinitive: 'trčati (biegać)', pl: 'Biegasz rano.', before: 'Ti', after: 'ujutro.', answer: 'trčiš' },
   { id: 255, tense: 'prezent', infinitive: 'trčati (biegać)', pl: 'Ona biega rano.', before: 'Ona', after: 'ujutro.', answer: 'trči' },
   { id: 256, tense: 'prezent', infinitive: 'trčati (biegać)', pl: 'Biegamy rano.', before: 'Mi', after: 'ujutro.', answer: 'trčimo' },
   { id: 257, tense: 'prezent', infinitive: 'trčati (biegać)', pl: 'Biegacie rano.', before: 'Vi', after: 'ujutro.', answer: 'trčite' },
   { id: 258, tense: 'prezent', infinitive: 'trčati (biegać)', pl: 'Oni biegają rano.', before: 'Oni', after: 'ujutro.', answer: 'trče' },
-
-  // voziti (prowadzić / jechać)
   { id: 259, tense: 'prezent', infinitive: 'voziti (prowadzić)', pl: 'Prowadzę samochód.', before: 'Ja', after: 'auto.', answer: 'vozim' },
   { id: 260, tense: 'prezent', infinitive: 'voziti (prowadzić)', pl: 'Prowadzisz samochód.', before: 'Ti', after: 'auto.', answer: 'voziš' },
   { id: 261, tense: 'prezent', infinitive: 'voziti (prowadzić)', pl: 'On prowadzi samochód.', before: 'On', after: 'auto.', answer: 'vozi' },
   { id: 262, tense: 'prezent', infinitive: 'voziti (prowadzić)', pl: 'Prowadzimy samochód.', before: 'Mi', after: 'auto.', answer: 'vozimo' },
   { id: 263, tense: 'prezent', infinitive: 'voziti (prowadzić)', pl: 'Prowadzicie samochód.', before: 'Vi', after: 'auto.', answer: 'vozite' },
   { id: 264, tense: 'prezent', infinitive: 'voziti (prowadzić)', pl: 'Oni prowadzą samochód.', before: 'Oni', after: 'auto.', answer: 'voze' },
-
-  // plivati (pływać)
   { id: 265, tense: 'prezent', infinitive: 'plivati (pływać)', pl: 'Pływam w morzu.', before: 'Ja', after: 'u moru.', answer: 'plivam' },
   { id: 266, tense: 'prezent', infinitive: 'plivati (pływać)', pl: 'Pływasz w morzu.', before: 'Ti', after: 'u moru.', answer: 'plivaš' },
   { id: 267, tense: 'prezent', infinitive: 'plivati (pływać)', pl: 'Ona pływa w morzu.', before: 'Ona', after: 'u moru.', answer: 'pliva' },
   { id: 268, tense: 'prezent', infinitive: 'plivati (pływać)', pl: 'Pływamy w morzu.', before: 'Mi', after: 'u moru.', answer: 'plivamo' },
   { id: 269, tense: 'prezent', infinitive: 'plivati (pływać)', pl: 'Pływacie w morzu.', before: 'Vi', after: 'u moru.', answer: 'plivate' },
   { id: 270, tense: 'prezent', infinitive: 'plivati (pływać)', pl: 'Oni pływają w morzu.', before: 'Oni', after: 'u moru.', answer: 'plivaju' },
-
-  // pjevati (śpiewać)
   { id: 271, tense: 'prezent', infinitive: 'pjevati (śpiewać)', pl: 'Śpiewam piosenkę.', before: 'Ja', after: 'pjesmu.', answer: 'pjevam' },
   { id: 272, tense: 'prezent', infinitive: 'pjevati (śpiewać)', pl: 'Śpiewasz piosenkę.', before: 'Ti', after: 'pjesmu.', answer: 'pjevaš' },
   { id: 273, tense: 'prezent', infinitive: 'pjevati (śpiewać)', pl: 'On śpiewa piosenkę.', before: 'On', after: 'pjesmu.', answer: 'pjeva' },
   { id: 274, tense: 'prezent', infinitive: 'pjevati (śpiewać)', pl: 'Śpiewamy piosenkę.', before: 'Mi', after: 'pjesmu.', answer: 'pjevamo' },
   { id: 275, tense: 'prezent', infinitive: 'pjevati (śpiewać)', pl: 'Śpiewacie piosenkę.', before: 'Vi', after: 'pjesmu.', answer: 'pjevate' },
   { id: 276, tense: 'prezent', infinitive: 'pjevati (śpiewać)', pl: 'Oni śpiewają piosenkę.', before: 'Oni', after: 'pjesmu.', answer: 'pjevaju' },
-
-  // slati (wysyłać)
   { id: 277, tense: 'prezent', infinitive: 'slati (wysyłać)', pl: 'Wysyłam wiadomość.', before: 'Ja', after: 'poruku.', answer: 'šaljem' },
   { id: 278, tense: 'prezent', infinitive: 'slati (wysyłać)', pl: 'Wysyłasz wiadomość.', before: 'Ti', after: 'poruku.', answer: 'šalješ' },
   { id: 279, tense: 'prezent', infinitive: 'slati (wysyłać)', pl: 'Ona wysyła wiadomość.', before: 'Ona', after: 'poruku.', answer: 'šalje' },
   { id: 280, tense: 'prezent', infinitive: 'slati (wysyłać)', pl: 'Wysyłamy wiadomość.', before: 'Mi', after: 'poruku.', answer: 'šaljemo' },
   { id: 281, tense: 'prezent', infinitive: 'slati (wysyłać)', pl: 'Wysyłacie wiadomość.', before: 'Vi', after: 'poruku.', answer: 'šaljete' },
   { id: 282, tense: 'prezent', infinitive: 'slati (wysyłać)', pl: 'Oni wysyłają wiadomość.', before: 'Oni', after: 'poruku.', answer: 'šalju' },
-
-  // čuti (słyszeć)
   { id: 283, tense: 'prezent', infinitive: 'čuti (słyszeć)', pl: 'Słyszę cię.', before: 'Ja te', after: '.', answer: 'čujem' },
   { id: 284, tense: 'prezent', infinitive: 'čuti (słyszeć)', pl: 'Słyszysz mnie.', before: 'Ti me', after: '.', answer: 'čuješ' },
   { id: 285, tense: 'prezent', infinitive: 'čuti (słyszeć)', pl: 'On słyszy nas.', before: 'On nas', after: '.', answer: 'čuje' },
   { id: 286, tense: 'prezent', infinitive: 'čuti (słyszeć)', pl: 'Słyszymy ich.', before: 'Mi ih', after: '.', answer: 'čujemo' },
   { id: 287, tense: 'prezent', infinitive: 'čuti (słyszeć)', pl: 'Słyszycie go.', before: 'Vi ga', after: '.', answer: 'čujete' },
   { id: 288, tense: 'prezent', infinitive: 'čuti (słyszeć)', pl: 'Oni słyszą ją.', before: 'Oni ju', after: '.', answer: 'čuju' },
-
-  // smijati se (śmiać się)
   { id: 289, tense: 'prezent', infinitive: 'smijati se (śmiać się)', pl: 'Śmieję się głośno.', before: 'Ja se', after: 'glasno.', answer: 'smijem' },
   { id: 290, tense: 'prezent', infinitive: 'smijati se (śmiać się)', pl: 'Śmiejesz się głośno.', before: 'Ti se', after: 'glasno.', answer: 'smiješ' },
   { id: 291, tense: 'prezent', infinitive: 'smijati se (śmiać się)', pl: 'Ona śmieje się głośno.', before: 'Ona se', after: 'glasno.', answer: 'smije' },
   { id: 292, tense: 'prezent', infinitive: 'smijati se (śmiać się)', pl: 'Śmiejemy się głośno.', before: 'Mi se', after: 'glasno.', answer: 'smijemo' },
   { id: 293, tense: 'prezent', infinitive: 'smijati se (śmiać się)', pl: 'Śmiejecie się głośno.', before: 'Vi se', after: 'glasno.', answer: 'smijete' },
   { id: 294, tense: 'prezent', infinitive: 'smijati se (śmiać się)', pl: 'Oni śmieją się głośno.', before: 'Oni se', after: 'glasno.', answer: 'smiju' },
-
-  // osjećati se (czuć się)
   { id: 295, tense: 'prezent', infinitive: 'osjećati se (czuć się)', pl: 'Czuję się dobrze.', before: 'Ja se', after: 'dobro.', answer: 'osjećam' },
   { id: 296, tense: 'prezent', infinitive: 'osjećati se (czuć się)', pl: 'Czujesz się dobrze.', before: 'Ti se', after: 'dobro.', answer: 'osjećaš' },
   { id: 297, tense: 'prezent', infinitive: 'osjećati se (czuć się)', pl: 'Ona czuje się dobrze.', before: 'Ona se', after: 'dobro.', answer: 'osjeća' },
   { id: 298, tense: 'prezent', infinitive: 'osjećati se (czuć się)', pl: 'Czujemy się dobrze.', before: 'Mi se', after: 'dobro.', answer: 'osjećamo' },
   { id: 299, tense: 'prezent', infinitive: 'osjećati se (czuć się)', pl: 'Czujecie się dobrze.', before: 'Vi se', after: 'dobro.', answer: 'osjećate' },
   { id: 300, tense: 'prezent', infinitive: 'osjećati se (czuć się)', pl: 'Oni czują się dobrze.', before: 'Oni se', after: 'dobro.', answer: 'osjećaju' },
-
-  // dolaziti (przychodzić)
   { id: 421, tense: 'prezent', infinitive: 'dolaziti (przychodzić)', pl: 'Przychodzę na czas.', before: 'Ja', after: 'na vrijeme.', answer: 'dolazim' },
   { id: 422, tense: 'prezent', infinitive: 'dolaziti (przychodzić)', pl: 'Przychodzisz na czas.', before: 'Ti', after: 'na vrijeme.', answer: 'dolaziš' },
   { id: 423, tense: 'prezent', infinitive: 'dolaziti (przychodzić)', pl: 'Ona przychodzi na czas.', before: 'Ona', after: 'na vrijeme.', answer: 'dolazi' },
   { id: 424, tense: 'prezent', infinitive: 'dolaziti (przychodzić)', pl: 'Przychodzimy na czas.', before: 'Mi', after: 'na vrijeme.', answer: 'dolazimo' },
   { id: 425, tense: 'prezent', infinitive: 'dolaziti (przychodzić)', pl: 'Przychodzicie na czas.', before: 'Vi', after: 'na vrijeme.', answer: 'dolazite' },
   { id: 426, tense: 'prezent', infinitive: 'dolaziti (przychodzić)', pl: 'Oni przychodzą na czas.', before: 'Oni', after: 'na vrijeme.', answer: 'dolaze' },
-
-  // odlaziti (wychodzić, odjeżdżać)
   { id: 427, tense: 'prezent', infinitive: 'odlaziti (wychodzić)', pl: 'Wychodzę o ósmej.', before: 'Ja', after: 'u osam.', answer: 'odlazim' },
   { id: 428, tense: 'prezent', infinitive: 'odlaziti (wychodzić)', pl: 'Wychodzisz o ósmej.', before: 'Ti', after: 'u osam.', answer: 'odlaziš' },
   { id: 429, tense: 'prezent', infinitive: 'odlaziti (wychodzić)', pl: 'On wychodzi o ósmej.', before: 'On', after: 'u osam.', answer: 'odlazi' },
   { id: 430, tense: 'prezent', infinitive: 'odlaziti (wychodzić)', pl: 'Wychodzimy o ósmej.', before: 'Mi', after: 'u osam.', answer: 'odlazimo' },
   { id: 431, tense: 'prezent', infinitive: 'odlaziti (wychodzić)', pl: 'Wychodzicie o ósmej.', before: 'Vi', after: 'u osam.', answer: 'odlazite' },
   { id: 432, tense: 'prezent', infinitive: 'odlaziti (wychodzić)', pl: 'Oni wychodzą o ósmej.', before: 'Oni', after: 'u osam.', answer: 'odlaze' },
-
-  // stanovati (mieszkać)
   { id: 433, tense: 'prezent', infinitive: 'stanovati (mieszkać)', pl: 'Mieszkam blisko centrum.', before: 'Ja', after: 'blizu centra.', answer: 'stanujem' },
   { id: 434, tense: 'prezent', infinitive: 'stanovati (mieszkać)', pl: 'Mieszkasz blisko centrum.', before: 'Ti', after: 'blizu centra.', answer: 'stanuješ' },
   { id: 435, tense: 'prezent', infinitive: 'stanovati (mieszkać)', pl: 'Ona mieszka blisko centrum.', before: 'Ona', after: 'blizu centra.', answer: 'stanuje' },
   { id: 436, tense: 'prezent', infinitive: 'stanovati (mieszkać)', pl: 'Mieszkamy blisko centrum.', before: 'Mi', after: 'blizu centra.', answer: 'stanujemo' },
   { id: 437, tense: 'prezent', infinitive: 'stanovati (mieszkać)', pl: 'Mieszkacie blisko centrum.', before: 'Vi', after: 'blizu centra.', answer: 'stanujete' },
   { id: 438, tense: 'prezent', infinitive: 'stanovati (mieszkać)', pl: 'Oni mieszkają blisko centrum.', before: 'Oni', after: 'blizu centra.', answer: 'stanuju' },
-
-  // pamtiti (pamiętać)
   { id: 439, tense: 'prezent', infinitive: 'pamtiti (pamiętać)', pl: 'Pamiętam twoje imię.', before: 'Ja', after: 'tvoje ime.', answer: 'pamtim' },
   { id: 440, tense: 'prezent', infinitive: 'pamtiti (pamiętać)', pl: 'Pamiętasz moje imię.', before: 'Ti', after: 'moje ime.', answer: 'pamtiš' },
   { id: 441, tense: 'prezent', infinitive: 'pamtiti (pamiętać)', pl: 'Ona pamięta to miejsce.', before: 'Ona', after: 'to mjesto.', answer: 'pamti' },
   { id: 442, tense: 'prezent', infinitive: 'pamtiti (pamiętać)', pl: 'Pamiętamy tę chwilę.', before: 'Mi', after: 'taj trenutak.', answer: 'pamtimo' },
   { id: 443, tense: 'prezent', infinitive: 'pamtiti (pamiętać)', pl: 'Pamiętacie ten dzień.', before: 'Vi', after: 'taj dan.', answer: 'pamtite' },
   { id: 444, tense: 'prezent', infinitive: 'pamtiti (pamiętać)', pl: 'Oni pamiętają wszystko.', before: 'Oni', after: 'sve.', answer: 'pamte' },
-
-  // vjerovati (wierzyć)
   { id: 445, tense: 'prezent', infinitive: 'vjerovati (wierzyć)', pl: 'Wierzę ci.', before: 'Ja ti', after: '.', answer: 'vjerujem' },
   { id: 446, tense: 'prezent', infinitive: 'vjerovati (wierzyć)', pl: 'Wierzysz mi.', before: 'Ti mi', after: '.', answer: 'vjeruješ' },
   { id: 447, tense: 'prezent', infinitive: 'vjerovati (wierzyć)', pl: 'Ona wierzy w to.', before: 'Ona', after: 'u to.', answer: 'vjeruje' },
   { id: 448, tense: 'prezent', infinitive: 'vjerovati (wierzyć)', pl: 'Wierzymy w siebie.', before: 'Mi', after: 'u sebe.', answer: 'vjerujemo' },
   { id: 449, tense: 'prezent', infinitive: 'vjerovati (wierzyć)', pl: 'Wierzycie w to.', before: 'Vi', after: 'u to.', answer: 'vjerujete' },
   { id: 450, tense: 'prezent', infinitive: 'vjerovati (wierzyć)', pl: 'Oni wierzą w Boga.', before: 'Oni', after: 'u Boga.', answer: 'vjeruju' },
-
-  // sumnjati (wątpić)
   { id: 451, tense: 'prezent', infinitive: 'sumnjati (wątpić)', pl: 'Wątpię w to.', before: 'Ja', after: 'u to.', answer: 'sumnjam' },
   { id: 452, tense: 'prezent', infinitive: 'sumnjati (wątpić)', pl: 'Wątpisz w to.', before: 'Ti', after: 'u to.', answer: 'sumnjaš' },
   { id: 453, tense: 'prezent', infinitive: 'sumnjati (wątpić)', pl: 'Ona wątpi w to.', before: 'Ona', after: 'u to.', answer: 'sumnja' },
   { id: 454, tense: 'prezent', infinitive: 'sumnjati (wątpić)', pl: 'Wątpimy w to.', before: 'Mi', after: 'u to.', answer: 'sumnjamo' },
   { id: 455, tense: 'prezent', infinitive: 'sumnjati (wątpić)', pl: 'Wątpicie w to.', before: 'Vi', after: 'u to.', answer: 'sumnjate' },
   { id: 456, tense: 'prezent', infinitive: 'sumnjati (wątpić)', pl: 'Oni wątpią w to.', before: 'Oni', after: 'u to.', answer: 'sumnjaju' },
-
-  // brinuti se (martwić się)
   { id: 457, tense: 'prezent', infinitive: 'brinuti se (martwić się)', pl: 'Martwię się o ciebie.', before: 'Ja se', after: 'za tebe.', answer: 'brinem' },
   { id: 458, tense: 'prezent', infinitive: 'brinuti se (martwić się)', pl: 'Martwisz się o mnie.', before: 'Ti se', after: 'za mene.', answer: 'brineš' },
   { id: 459, tense: 'prezent', infinitive: 'brinuti se (martwić się)', pl: 'Ona martwi się o dzieci.', before: 'Ona se', after: 'za djecu.', answer: 'brine' },
   { id: 460, tense: 'prezent', infinitive: 'brinuti se (martwić się)', pl: 'Martwimy się o przyszłość.', before: 'Mi se', after: 'za budućnost.', answer: 'brinemo' },
   { id: 461, tense: 'prezent', infinitive: 'brinuti se (martwić się)', pl: 'Martwicie się za bardzo.', before: 'Vi se', after: 'previše.', answer: 'brinete' },
   { id: 462, tense: 'prezent', infinitive: 'brinuti se (martwić się)', pl: 'Oni martwią się codziennie.', before: 'Oni se', after: 'svaki dan.', answer: 'brinu' },
-
-  // nadati se (mieć nadzieję)
   { id: 463, tense: 'prezent', infinitive: 'nadati se (mieć nadzieję)', pl: 'Mam nadzieję na najlepsze.', before: 'Ja se', after: 'najboljem.', answer: 'nadam' },
   { id: 464, tense: 'prezent', infinitive: 'nadati se (mieć nadzieję)', pl: 'Masz nadzieję na sukces.', before: 'Ti se', after: 'uspjehu.', answer: 'nadaš' },
   { id: 465, tense: 'prezent', infinitive: 'nadati se (mieć nadzieję)', pl: 'Ona ma nadzieję na zmianę.', before: 'Ona se', after: 'promjeni.', answer: 'nada' },
   { id: 466, tense: 'prezent', infinitive: 'nadati se (mieć nadzieję)', pl: 'Mamy nadzieję na pokój.', before: 'Mi se', after: 'miru.', answer: 'nadamo' },
   { id: 467, tense: 'prezent', infinitive: 'nadati se (mieć nadzieję)', pl: 'Macie nadzieję na lepsze jutro.', before: 'Vi se', after: 'boljem sutra.', answer: 'nadate' },
   { id: 468, tense: 'prezent', infinitive: 'nadati se (mieć nadzieję)', pl: 'Oni mają nadzieję na pomoc.', before: 'Oni se', after: 'pomoći.', answer: 'nadaju' },
-
-  // kuhati (gotować)
   { id: 469, tense: 'prezent', infinitive: 'kuhati (gotować)', pl: 'Gotuję obiad.', before: 'Ja', after: 'ručak.', answer: 'kuham' },
   { id: 470, tense: 'prezent', infinitive: 'kuhati (gotować)', pl: 'Gotujesz obiad.', before: 'Ti', after: 'ručak.', answer: 'kuhaš' },
   { id: 471, tense: 'prezent', infinitive: 'kuhati (gotować)', pl: 'Ona gotuje obiad.', before: 'Ona', after: 'ručak.', answer: 'kuha' },
   { id: 472, tense: 'prezent', infinitive: 'kuhati (gotować)', pl: 'Gotujemy obiad.', before: 'Mi', after: 'ručak.', answer: 'kuhamo' },
   { id: 473, tense: 'prezent', infinitive: 'kuhati (gotować)', pl: 'Gotujecie obiad.', before: 'Vi', after: 'ručak.', answer: 'kuhate' },
   { id: 474, tense: 'prezent', infinitive: 'kuhati (gotować)', pl: 'Oni gotują obiad.', before: 'Oni', after: 'ručak.', answer: 'kuhaju' },
-
-  // plaćati (płacić)
   { id: 475, tense: 'prezent', infinitive: 'plaćati (płacić)', pl: 'Płacę kartą.', before: 'Ja', after: 'karticom.', answer: 'plaćam' },
   { id: 476, tense: 'prezent', infinitive: 'plaćati (płacić)', pl: 'Płacisz gotówką.', before: 'Ti', after: 'gotovinom.', answer: 'plaćaš' },
   { id: 477, tense: 'prezent', infinitive: 'plaćati (płacić)', pl: 'Ona płaci rachunki.', before: 'Ona', after: 'račune.', answer: 'plaća' },
   { id: 478, tense: 'prezent', infinitive: 'plaćati (płacić)', pl: 'Płacimy za wszystko.', before: 'Mi', after: 'sve.', answer: 'plaćamo' },
   { id: 479, tense: 'prezent', infinitive: 'plaćati (płacić)', pl: 'Płacicie za mało.', before: 'Vi', after: 'premalo.', answer: 'plaćate' },
   { id: 480, tense: 'prezent', infinitive: 'plaćati (płacić)', pl: 'Oni płacą dużo.', before: 'Oni', after: 'puno.', answer: 'plaćaju' },
-
-  // čistiti (sprzątać)
   { id: 481, tense: 'prezent', infinitive: 'čistiti (sprzątać)', pl: 'Sprzątam dom.', before: 'Ja', after: 'kuću.', answer: 'čistim' },
   { id: 482, tense: 'prezent', infinitive: 'čistiti (sprzątać)', pl: 'Sprzątasz pokój.', before: 'Ti', after: 'sobu.', answer: 'čistiš' },
   { id: 483, tense: 'prezent', infinitive: 'čistiti (sprzątać)', pl: 'Ona sprząta kuchnię.', before: 'Ona', after: 'kuhinju.', answer: 'čisti' },
   { id: 484, tense: 'prezent', infinitive: 'čistiti (sprzątać)', pl: 'Sprzątamy dvorište.', before: 'Mi', after: 'dvorište.', answer: 'čistimo' },
   { id: 485, tense: 'prezent', infinitive: 'čistiti (sprzątać)', pl: 'Sprzątacie biuro.', before: 'Vi', after: 'ured.', answer: 'čistite' },
   { id: 486, tense: 'prezent', infinitive: 'čistiti (sprzątać)', pl: 'Oni sprzątają szkołę.', before: 'Oni', after: 'školu.', answer: 'čiste' },
-
-  // prati (prać / myć)
   { id: 487, tense: 'prezent', infinitive: 'prati (prać / myć)', pl: 'Piorę ubrania.', before: 'Ja', after: 'odjeću.', answer: 'perem' },
   { id: 488, tense: 'prezent', infinitive: 'prati (prać / myć)', pl: 'Pierzesz ubrania.', before: 'Ti', after: 'odjeću.', answer: 'pereš' },
   { id: 489, tense: 'prezent', infinitive: 'prati (prać / myć)', pl: 'Ona myje naczynia.', before: 'Ona', after: 'suđe.', answer: 'pere' },
   { id: 490, tense: 'prezent', infinitive: 'prati (prać / myć)', pl: 'Pierzemy zasłony.', before: 'Mi', after: 'zavjese.', answer: 'peremo' },
   { id: 491, tense: 'prezent', infinitive: 'prati (prać / myć)', pl: 'Pierzecie ręcznik.', before: 'Vi', after: 'ručnik.', answer: 'perete' },
   { id: 492, tense: 'prezent', infinitive: 'prati (prać / myć)', pl: 'Oni myją samochód.', before: 'Oni', after: 'auto.', answer: 'peru' },
-
-  // letjeti (latać)
   { id: 493, tense: 'prezent', infinitive: 'letjeti (latać)', pl: 'Lecę samolotem.', before: 'Ja', after: 'avionom.', answer: 'letim' },
   { id: 494, tense: 'prezent', infinitive: 'letjeti (latać)', pl: 'Lecisz do Zagrzebia.', before: 'Ti', after: 'u Zagreb.', answer: 'letiš' },
   { id: 495, tense: 'prezent', infinitive: 'letjeti (latać)', pl: 'Ptak leci wysoko.', before: 'Ptica', after: 'visoko.', answer: 'leti' },
   { id: 496, tense: 'prezent', infinitive: 'letjeti (latać)', pl: 'Lecimy jutro.', before: 'Mi', after: 'sutra.', answer: 'letimo' },
   { id: 497, tense: 'prezent', infinitive: 'letjeti (latać)', pl: 'Lecicie razem.', before: 'Vi', after: 'zajedno.', answer: 'letite' },
   { id: 498, tense: 'prezent', infinitive: 'letjeti (latać)', pl: 'Ptaki lecą na południe.', before: 'Ptice', after: 'na jug.', answer: 'lete' },
-
-  // hodati (chodzić pieszo)
   { id: 499, tense: 'prezent', infinitive: 'hodati (chodzić pieszo)', pl: 'Chodzę do pracy pieszo.', before: 'Ja', after: 'pješice na posao.', answer: 'hodam' },
   { id: 500, tense: 'prezent', infinitive: 'hodati (chodzić pieszo)', pl: 'Chodzisz powoli.', before: 'Ti', after: 'polako.', answer: 'hodaš' },
   { id: 501, tense: 'prezent', infinitive: 'hodati (chodzić pieszo)', pl: 'Ona chodzi szybko.', before: 'Ona', after: 'brzo.', answer: 'hoda' },
   { id: 502, tense: 'prezent', infinitive: 'hodati (chodzić pieszo)', pl: 'Chodzimy po parku.', before: 'Mi', after: 'parkom.', answer: 'hodamo' },
   { id: 503, tense: 'prezent', infinitive: 'hodati (chodzić pieszo)', pl: 'Chodzicie dużo.', before: 'Vi', after: 'puno.', answer: 'hodate' },
   { id: 504, tense: 'prezent', infinitive: 'hodati (chodzić pieszo)', pl: 'Oni chodzą codziennie.', before: 'Oni', after: 'svaki dan.', answer: 'hodaju' },
-
-  // pomagati (pomagać)
   { id: 505, tense: 'prezent', infinitive: 'pomagati (pomagać)', pl: 'Pomagam rodzicom.', before: 'Ja', after: 'roditeljima.', answer: 'pomažem' },
   { id: 506, tense: 'prezent', infinitive: 'pomagati (pomagać)', pl: 'Pomagasz sąsiadowi.', before: 'Ti', after: 'susjedu.', answer: 'pomažeš' },
   { id: 507, tense: 'prezent', infinitive: 'pomagati (pomagać)', pl: 'Ona pomaga przyjaciołom.', before: 'Ona', after: 'prijateljima.', answer: 'pomaže' },
   { id: 508, tense: 'prezent', infinitive: 'pomagati (pomagać)', pl: 'Pomagamy sobie nawzajem.', before: 'Mi', after: 'jedni drugima.', answer: 'pomažemo' },
   { id: 509, tense: 'prezent', infinitive: 'pomagati (pomagać)', pl: 'Pomagacie dzieciom.', before: 'Vi', after: 'djeci.', answer: 'pomažete' },
   { id: 510, tense: 'prezent', infinitive: 'pomagati (pomagać)', pl: 'Oni pomagają wszystkim.', before: 'Oni', after: 'svima.', answer: 'pomažu' },
-
-  // čitati (czytać)
   { id: 601, tense: 'prezent', infinitive: 'čitati (czytać)', pl: 'Czytam gazetę.', before: 'Ja', after: 'novine.', answer: 'čitam' },
   { id: 602, tense: 'prezent', infinitive: 'čitati (czytać)', pl: 'Czytasz gazetę.', before: 'Ti', after: 'novine.', answer: 'čitaš' },
   { id: 603, tense: 'prezent', infinitive: 'čitati (czytać)', pl: 'Ona czyta gazetę.', before: 'Ona', after: 'novine.', answer: 'čita' },
   { id: 604, tense: 'prezent', infinitive: 'čitati (czytać)', pl: 'Czytamy gazetę.', before: 'Mi', after: 'novine.', answer: 'čitamo' },
   { id: 605, tense: 'prezent', infinitive: 'čitati (czytać)', pl: 'Czytacie gazetę.', before: 'Vi', after: 'novine.', answer: 'čitate' },
   { id: 606, tense: 'prezent', infinitive: 'čitati (czytać)', pl: 'Oni czytają gazetę.', before: 'Oni', after: 'novine.', answer: 'čitaju' },
-
-  // tražiti (szukać)
   { id: 607, tense: 'prezent', infinitive: 'tražiti (szukać)', pl: 'Szukam pracy.', before: 'Ja', after: 'posao.', answer: 'tražim' },
   { id: 608, tense: 'prezent', infinitive: 'tražiti (szukać)', pl: 'Szukasz pracy.', before: 'Ti', after: 'posao.', answer: 'tražiš' },
   { id: 609, tense: 'prezent', infinitive: 'tražiti (szukać)', pl: 'On szuka pracy.', before: 'On', after: 'posao.', answer: 'traži' },
   { id: 610, tense: 'prezent', infinitive: 'tražiti (szukać)', pl: 'Szukamy pracy.', before: 'Mi', after: 'posao.', answer: 'tražimo' },
   { id: 611, tense: 'prezent', infinitive: 'tražiti (szukać)', pl: 'Szukacie pracy.', before: 'Vi', after: 'posao.', answer: 'tražite' },
   { id: 612, tense: 'prezent', infinitive: 'tražiti (szukać)', pl: 'Oni szukają pracy.', before: 'Oni', after: 'posao.', answer: 'traže' },
-
-  // odgovarati (odpowiadać)
   { id: 613, tense: 'prezent', infinitive: 'odgovarati (odpowiadać)', pl: 'Odpowiadam na pytanie.', before: 'Ja', after: 'na pitanje.', answer: 'odgovaram' },
   { id: 614, tense: 'prezent', infinitive: 'odgovarati (odpowiadać)', pl: 'Odpowiadasz na pytanie.', before: 'Ti', after: 'na pitanje.', answer: 'odgovaraš' },
   { id: 615, tense: 'prezent', infinitive: 'odgovarati (odpowiadać)', pl: 'Ona odpowiada na pytanie.', before: 'Ona', after: 'na pitanje.', answer: 'odgovara' },
   { id: 616, tense: 'prezent', infinitive: 'odgovarati (odpowiadać)', pl: 'Odpowiadamy na pytanie.', before: 'Mi', after: 'na pitanje.', answer: 'odgovaramo' },
   { id: 617, tense: 'prezent', infinitive: 'odgovarati (odpowiadać)', pl: 'Odpowiadacie na pytanie.', before: 'Vi', after: 'na pitanje.', answer: 'odgovarate' },
   { id: 618, tense: 'prezent', infinitive: 'odgovarati (odpowiadać)', pl: 'Oni odpowiadają na pytanie.', before: 'Oni', after: 'na pitanje.', answer: 'odgovaraju' },
-
-  // mijenjati (zmieniać)
   { id: 619, tense: 'prezent', infinitive: 'mijenjati (zmieniać)', pl: 'Zmieniam zdanie.', before: 'Ja', after: 'mišljenje.', answer: 'mijenjam' },
   { id: 620, tense: 'prezent', infinitive: 'mijenjati (zmieniać)', pl: 'Zmieniasz zdanie.', before: 'Ti', after: 'mišljenje.', answer: 'mijenjaš' },
   { id: 621, tense: 'prezent', infinitive: 'mijenjati (zmieniać)', pl: 'On zmienia zdanie.', before: 'On', after: 'mišljenje.', answer: 'mijenja' },
   { id: 622, tense: 'prezent', infinitive: 'mijenjati (zmieniać)', pl: 'Zmieniamy zdanie.', before: 'Mi', after: 'mišljenje.', answer: 'mijenjamo' },
   { id: 623, tense: 'prezent', infinitive: 'mijenjati (zmieniać)', pl: 'Zmieniacie zdanie.', before: 'Vi', after: 'mišljenje.', answer: 'mijenjate' },
   { id: 624, tense: 'prezent', infinitive: 'mijenjati (zmieniać)', pl: 'Oni zmieniają zdanie.', before: 'Oni', after: 'mišljenje.', answer: 'mijenjaju' },
-
-  // slaviti (świętować)
   { id: 625, tense: 'prezent', infinitive: 'slaviti (świętować)', pl: 'Świętuję urodziny.', before: 'Ja', after: 'rođendan.', answer: 'slavim' },
   { id: 626, tense: 'prezent', infinitive: 'slaviti (świętować)', pl: 'Świętujesz urodziny.', before: 'Ti', after: 'rođendan.', answer: 'slaviš' },
   { id: 627, tense: 'prezent', infinitive: 'slaviti (świętować)', pl: 'Ona świętuje urodziny.', before: 'Ona', after: 'rođendan.', answer: 'slavi' },
   { id: 628, tense: 'prezent', infinitive: 'slaviti (świętować)', pl: 'Świętujemy urodziny.', before: 'Mi', after: 'rođendan.', answer: 'slavimo' },
   { id: 629, tense: 'prezent', infinitive: 'slaviti (świętować)', pl: 'Świętujecie urodziny.', before: 'Vi', after: 'rođendan.', answer: 'slavite' },
   { id: 630, tense: 'prezent', infinitive: 'slaviti (świętować)', pl: 'Oni świętują urodziny.', before: 'Oni', after: 'rođendan.', answer: 'slave' },
-
-  // plesati (tańczyć)
   { id: 631, tense: 'prezent', infinitive: 'plesati (tańczyć)', pl: 'Tańczę całą noc.', before: 'Ja', after: 'cijelu noć.', answer: 'plešem' },
   { id: 632, tense: 'prezent', infinitive: 'plesati (tańczyć)', pl: 'Tańczysz całą noc.', before: 'Ti', after: 'cijelu noć.', answer: 'plešeš' },
   { id: 633, tense: 'prezent', infinitive: 'plesati (tańczyć)', pl: 'On tańczy całą noc.', before: 'On', after: 'cijelu noć.', answer: 'pleše' },
   { id: 634, tense: 'prezent', infinitive: 'plesati (tańczyć)', pl: 'Tańczymy całą noc.', before: 'Mi', after: 'cijelu noć.', answer: 'plešemo' },
   { id: 635, tense: 'prezent', infinitive: 'plesati (tańczyć)', pl: 'Tańczycie całą noc.', before: 'Vi', after: 'cijelu noć.', answer: 'plešete' },
   { id: 636, tense: 'prezent', infinitive: 'plesati (tańczyć)', pl: 'Oni tańczą całą noc.', before: 'Oni', after: 'cijelu noć.', answer: 'plešu' },
-
-  // gubiti (tracić)
   { id: 637, tense: 'prezent', infinitive: 'gubiti (tracić)', pl: 'Tracę cierpliwość.', before: 'Ja', after: 'strpljenje.', answer: 'gubim' },
   { id: 638, tense: 'prezent', infinitive: 'gubiti (tracić)', pl: 'Tracisz cierpliwość.', before: 'Ti', after: 'strpljenje.', answer: 'gubiš' },
   { id: 639, tense: 'prezent', infinitive: 'gubiti (tracić)', pl: 'Ona traci cierpliwość.', before: 'Ona', after: 'strpljenje.', answer: 'gubi' },
   { id: 640, tense: 'prezent', infinitive: 'gubiti (tracić)', pl: 'Tracimy cierpliwość.', before: 'Mi', after: 'strpljenje.', answer: 'gubimo' },
   { id: 641, tense: 'prezent', infinitive: 'gubiti (tracić)', pl: 'Tracicie cierpliwość.', before: 'Vi', after: 'strpljenje.', answer: 'gubite' },
   { id: 642, tense: 'prezent', infinitive: 'gubiti (tracić)', pl: 'Oni tracą cierpliwość.', before: 'Oni', after: 'strpljenje.', answer: 'gube' },
-
-  // primati (otrzymywać)
   { id: 643, tense: 'prezent', infinitive: 'primati (otrzymywać)', pl: 'Otrzymuję wiadomości.', before: 'Ja', after: 'poruke.', answer: 'primam' },
   { id: 644, tense: 'prezent', infinitive: 'primati (otrzymywać)', pl: 'Otrzymujesz wiadomości.', before: 'Ti', after: 'poruke.', answer: 'primaš' },
   { id: 645, tense: 'prezent', infinitive: 'primati (otrzymywać)', pl: 'On otrzymuje wiadomości.', before: 'On', after: 'poruke.', answer: 'prima' },
   { id: 646, tense: 'prezent', infinitive: 'primati (otrzymywać)', pl: 'Otrzymujemy wiadomości.', before: 'Mi', after: 'poruke.', answer: 'primamo' },
   { id: 647, tense: 'prezent', infinitive: 'primati (otrzymywać)', pl: 'Otrzymujecie wiadomości.', before: 'Vi', after: 'poruke.', answer: 'primate' },
   { id: 648, tense: 'prezent', infinitive: 'primati (otrzymywać)', pl: 'Oni otrzymują wiadomości.', before: 'Oni', after: 'poruke.', answer: 'primaju' },
-
-  // davati (dawać)
   { id: 649, tense: 'prezent', infinitive: 'davati (dawać)', pl: 'Daję radę.', before: 'Ja', after: 'savjet.', answer: 'dajem' },
   { id: 650, tense: 'prezent', infinitive: 'davati (dawać)', pl: 'Dajesz radę.', before: 'Ti', after: 'savjet.', answer: 'daješ' },
   { id: 651, tense: 'prezent', infinitive: 'davati (dawać)', pl: 'Ona daje radę.', before: 'Ona', after: 'savjet.', answer: 'daje' },
   { id: 652, tense: 'prezent', infinitive: 'davati (dawać)', pl: 'Dajemy radę.', before: 'Mi', after: 'savjet.', answer: 'dajemo' },
   { id: 653, tense: 'prezent', infinitive: 'davati (dawać)', pl: 'Dajecie radę.', before: 'Vi', after: 'savjet.', answer: 'dajete' },
   { id: 654, tense: 'prezent', infinitive: 'davati (dawać)', pl: 'Oni dają radę.', before: 'Oni', after: 'savjet.', answer: 'daju' },
-
-  // birati (wybierać)
   { id: 655, tense: 'prezent', infinitive: 'birati (wybierać)', pl: 'Wybieram kolor.', before: 'Ja', after: 'boju.', answer: 'biram' },
   { id: 656, tense: 'prezent', infinitive: 'birati (wybierać)', pl: 'Wybierasz kolor.', before: 'Ti', after: 'boju.', answer: 'biraš' },
   { id: 657, tense: 'prezent', infinitive: 'birati (wybierać)', pl: 'On wybiera kolor.', before: 'On', after: 'boju.', answer: 'bira' },
   { id: 658, tense: 'prezent', infinitive: 'birati (wybierać)', pl: 'Wybieramy kolor.', before: 'Mi', after: 'boju.', answer: 'biramo' },
   { id: 659, tense: 'prezent', infinitive: 'birati (wybierać)', pl: 'Wybieracie kolor.', before: 'Vi', after: 'boju.', answer: 'birate' },
   { id: 660, tense: 'prezent', infinitive: 'birati (wybierać)', pl: 'Oni wybierają kolor.', before: 'Oni', after: 'boju.', answer: 'biraju' },
-
-  // sanjati (śnić / marzyć)
   { id: 661, tense: 'prezent', infinitive: 'sanjati (śnić / marzyć)', pl: 'Śnię o wakacjach.', before: 'Ja', after: 'o odmoru.', answer: 'sanjam' },
   { id: 662, tense: 'prezent', infinitive: 'sanjati (śnić / marzyć)', pl: 'Śnisz o wakacjach.', before: 'Ti', after: 'o odmoru.', answer: 'sanjaš' },
   { id: 663, tense: 'prezent', infinitive: 'sanjati (śnić / marzyć)', pl: 'Ona śni o wakacjach.', before: 'Ona', after: 'o odmoru.', answer: 'sanja' },
   { id: 664, tense: 'prezent', infinitive: 'sanjati (śnić / marzyć)', pl: 'Śnimy o wakacjach.', before: 'Mi', after: 'o odmoru.', answer: 'sanjamo' },
   { id: 665, tense: 'prezent', infinitive: 'sanjati (śnić / marzyć)', pl: 'Śnicie o wakacjach.', before: 'Vi', after: 'o odmoru.', answer: 'sanjate' },
   { id: 666, tense: 'prezent', infinitive: 'sanjati (śnić / marzyć)', pl: 'Oni śnią o wakacjach.', before: 'Oni', after: 'o odmoru.', answer: 'sanjaju' },
-
-  // ===== PERFEKT =====
-
-  // raditi (pracować)
   { id: 91, tense: 'perfekt', infinitive: 'raditi (pracować)', pl: 'Pracowałem cały dzień.', before: 'Ja', after: 'cijeli dan.', answer: 'sam radio' },
   { id: 92, tense: 'perfekt', infinitive: 'raditi (pracować)', pl: 'Pracowałeś cały dzień.', before: 'Ti', after: 'cijeli dan.', answer: 'si radio' },
   { id: 93, tense: 'perfekt', infinitive: 'raditi (pracować)', pl: 'On pracował cały dzień.', before: 'On', after: 'cijeli dan.', answer: 'je radio' },
   { id: 94, tense: 'perfekt', infinitive: 'raditi (pracować)', pl: 'Pracowaliśmy cały dzień.', before: 'Mi', after: 'cijeli dan.', answer: 'smo radili' },
   { id: 95, tense: 'perfekt', infinitive: 'raditi (pracować)', pl: 'Pracowaliście cały dzień.', before: 'Vi', after: 'cijeli dan.', answer: 'ste radili' },
   { id: 96, tense: 'perfekt', infinitive: 'raditi (pracować)', pl: 'Oni pracowali cały dzień.', before: 'Oni', after: 'cijeli dan.', answer: 'su radili' },
-
-  // kupiti (kupić)
   { id: 97, tense: 'perfekt', infinitive: 'kupiti (kupić)', pl: 'Kupiłem chleb.', before: 'Ja', after: 'kruh.', answer: 'sam kupio' },
   { id: 98, tense: 'perfekt', infinitive: 'kupiti (kupić)', pl: 'Kupiłeś chleb.', before: 'Ti', after: 'kruh.', answer: 'si kupio' },
   { id: 99, tense: 'perfekt', infinitive: 'kupiti (kupić)', pl: 'Ona kupiła chleb.', before: 'Ona', after: 'kruh.', answer: 'je kupila' },
   { id: 100, tense: 'perfekt', infinitive: 'kupiti (kupić)', pl: 'Kupiliśmy chleb.', before: 'Mi', after: 'kruh.', answer: 'smo kupili' },
   { id: 101, tense: 'perfekt', infinitive: 'kupiti (kupić)', pl: 'Kupiliście chleb.', before: 'Vi', after: 'kruh.', answer: 'ste kupili' },
   { id: 102, tense: 'perfekt', infinitive: 'kupiti (kupić)', pl: 'Oni kupili chleb.', before: 'Oni', after: 'kruh.', answer: 'su kupili' },
-
-  // gledati (oglądać)
   { id: 103, tense: 'perfekt', infinitive: 'gledati (oglądać)', pl: 'Oglądałem film.', before: 'Ja', after: 'film.', answer: 'sam gledao' },
   { id: 104, tense: 'perfekt', infinitive: 'gledati (oglądać)', pl: 'Oglądałeś film.', before: 'Ti', after: 'film.', answer: 'si gledao' },
   { id: 105, tense: 'perfekt', infinitive: 'gledati (oglądać)', pl: 'Ona oglądała film.', before: 'Ona', after: 'film.', answer: 'je gledala' },
   { id: 106, tense: 'perfekt', infinitive: 'gledati (oglądać)', pl: 'Oglądaliśmy film.', before: 'Mi', after: 'film.', answer: 'smo gledali' },
   { id: 107, tense: 'perfekt', infinitive: 'gledati (oglądać)', pl: 'Oglądaliście film.', before: 'Vi', after: 'film.', answer: 'ste gledali' },
   { id: 108, tense: 'perfekt', infinitive: 'gledati (oglądać)', pl: 'Oni oglądali film.', before: 'Oni', after: 'film.', answer: 'su gledali' },
-
-  // doći (przyjść)
   { id: 109, tense: 'perfekt', infinitive: 'doći (przyjść)', pl: 'Przyszedłem późno.', before: 'Ja', after: 'kasno.', answer: 'sam došao' },
   { id: 110, tense: 'perfekt', infinitive: 'doći (przyjść)', pl: 'Przyszedłeś późno.', before: 'Ti', after: 'kasno.', answer: 'si došao' },
   { id: 111, tense: 'perfekt', infinitive: 'doći (przyjść)', pl: 'Ona przyszła późno.', before: 'Ona', after: 'kasno.', answer: 'je došla' },
   { id: 112, tense: 'perfekt', infinitive: 'doći (przyjść)', pl: 'Przyszliśmy późno.', before: 'Mi', after: 'kasno.', answer: 'smo došli' },
   { id: 113, tense: 'perfekt', infinitive: 'doći (przyjść)', pl: 'Przyszliście późno.', before: 'Vi', after: 'kasno.', answer: 'ste došli' },
   { id: 114, tense: 'perfekt', infinitive: 'doći (przyjść)', pl: 'Oni przyszli późno.', before: 'Oni', after: 'kasno.', answer: 'su došli' },
-
-  // pomoći (pomóc)
   { id: 115, tense: 'perfekt', infinitive: 'pomoći (pomóc)', pl: 'Pomogłem bratu.', before: 'Ja', after: 'bratu.', answer: 'sam pomogao' },
   { id: 116, tense: 'perfekt', infinitive: 'pomoći (pomóc)', pl: 'Pomogłeś bratu.', before: 'Ti', after: 'bratu.', answer: 'si pomogao' },
   { id: 117, tense: 'perfekt', infinitive: 'pomoći (pomóc)', pl: 'Ona pomogła bratu.', before: 'Ona', after: 'bratu.', answer: 'je pomogla' },
   { id: 118, tense: 'perfekt', infinitive: 'pomoći (pomóc)', pl: 'Pomogliśmy bratu.', before: 'Mi', after: 'bratu.', answer: 'smo pomogli' },
   { id: 119, tense: 'perfekt', infinitive: 'pomoći (pomóc)', pl: 'Pomogliście bratu.', before: 'Vi', after: 'bratu.', answer: 'ste pomogli' },
   { id: 120, tense: 'perfekt', infinitive: 'pomoći (pomóc)', pl: 'Oni pomogli bratu.', before: 'Oni', after: 'bratu.', answer: 'su pomogli' },
-
-  // pročitati (przeczytać)
   { id: 121, tense: 'perfekt', infinitive: 'pročitati (przeczytać)', pl: 'Przeczytałem książkę.', before: 'Ja', after: 'knjigu.', answer: 'sam pročitao' },
   { id: 122, tense: 'perfekt', infinitive: 'pročitati (przeczytać)', pl: 'Przeczytałeś książkę.', before: 'Ti', after: 'knjigu.', answer: 'si pročitao' },
   { id: 123, tense: 'perfekt', infinitive: 'pročitati (przeczytać)', pl: 'Ona przeczytała książkę.', before: 'Ona', after: 'knjigu.', answer: 'je pročitala' },
   { id: 124, tense: 'perfekt', infinitive: 'pročitati (przeczytać)', pl: 'Przeczytaliśmy książkę.', before: 'Mi', after: 'knjigu.', answer: 'smo pročitali' },
   { id: 125, tense: 'perfekt', infinitive: 'pročitati (przeczytać)', pl: 'Przeczytaliście książkę.', before: 'Vi', after: 'knjigu.', answer: 'ste pročitali' },
   { id: 126, tense: 'perfekt', infinitive: 'pročitati (przeczytać)', pl: 'Oni przeczytali książkę.', before: 'Oni', after: 'knjigu.', answer: 'su pročitali' },
-
-  // naučiti (nauczyć się)
   { id: 127, tense: 'perfekt', infinitive: 'naučiti (nauczyć się)', pl: 'Nauczyłem się dużo.', before: 'Ja', after: 'puno.', answer: 'sam naučio' },
   { id: 128, tense: 'perfekt', infinitive: 'naučiti (nauczyć się)', pl: 'Nauczyłeś się dużo.', before: 'Ti', after: 'puno.', answer: 'si naučio' },
   { id: 129, tense: 'perfekt', infinitive: 'naučiti (nauczyć się)', pl: 'Ona nauczyła się dużo.', before: 'Ona', after: 'puno.', answer: 'je naučila' },
   { id: 130, tense: 'perfekt', infinitive: 'naučiti (nauczyć się)', pl: 'Nauczyliśmy się dużo.', before: 'Mi', after: 'puno.', answer: 'smo naučili' },
   { id: 131, tense: 'perfekt', infinitive: 'naučiti (nauczyć się)', pl: 'Nauczyliście się dużo.', before: 'Vi', after: 'puno.', answer: 'ste naučili' },
   { id: 132, tense: 'perfekt', infinitive: 'naučiti (nauczyć się)', pl: 'Oni nauczyli się dużo.', before: 'Oni', after: 'puno.', answer: 'su naučili' },
-
-  // kuhati (gotować)
   { id: 133, tense: 'perfekt', infinitive: 'kuhati (gotować)', pl: 'Gotowałem kolację.', before: 'Ja', after: 'večeru.', answer: 'sam kuhao' },
   { id: 134, tense: 'perfekt', infinitive: 'kuhati (gotować)', pl: 'Gotowałeś kolację.', before: 'Ti', after: 'večeru.', answer: 'si kuhao' },
   { id: 135, tense: 'perfekt', infinitive: 'kuhati (gotować)', pl: 'Ona gotowała kolację.', before: 'Ona', after: 'večeru.', answer: 'je kuhala' },
   { id: 136, tense: 'perfekt', infinitive: 'kuhati (gotować)', pl: 'Gotowaliśmy kolację.', before: 'Mi', after: 'večeru.', answer: 'smo kuhali' },
   { id: 137, tense: 'perfekt', infinitive: 'kuhati (gotować)', pl: 'Gotowaliście kolację.', before: 'Vi', after: 'večeru.', answer: 'ste kuhali' },
   { id: 138, tense: 'perfekt', infinitive: 'kuhati (gotować)', pl: 'Oni gotowali kolację.', before: 'Oni', after: 'večeru.', answer: 'su kuhali' },
-
-  // izgubiti (zgubić)
   { id: 139, tense: 'perfekt', infinitive: 'izgubiti (zgubić)', pl: 'Zgubiłem drogę.', before: 'Ja', after: 'put.', answer: 'sam izgubio' },
   { id: 140, tense: 'perfekt', infinitive: 'izgubiti (zgubić)', pl: 'Zgubiłeś drogę.', before: 'Ti', after: 'put.', answer: 'si izgubio' },
   { id: 141, tense: 'perfekt', infinitive: 'izgubiti (zgubić)', pl: 'Ona zgubiła drogę.', before: 'Ona', after: 'put.', answer: 'je izgubila' },
   { id: 142, tense: 'perfekt', infinitive: 'izgubiti (zgubić)', pl: 'Zgubiliśmy drogę.', before: 'Mi', after: 'put.', answer: 'smo izgubili' },
   { id: 143, tense: 'perfekt', infinitive: 'izgubiti (zgubić)', pl: 'Zgubiliście drogę.', before: 'Vi', after: 'put.', answer: 'ste izgubili' },
   { id: 144, tense: 'perfekt', infinitive: 'izgubiti (zgubić)', pl: 'Oni zgubili drogę.', before: 'Oni', after: 'put.', answer: 'su izgubili' },
-
-  // vidjeti (zobaczyć)
   { id: 145, tense: 'perfekt', infinitive: 'vidjeti (zobaczyć)', pl: 'Widziałem przyjaciela.', before: 'Ja', after: 'prijatelja.', answer: 'sam vidio' },
   { id: 146, tense: 'perfekt', infinitive: 'vidjeti (zobaczyć)', pl: 'Widziałeś przyjaciela.', before: 'Ti', after: 'prijatelja.', answer: 'si vidio' },
   { id: 147, tense: 'perfekt', infinitive: 'vidjeti (zobaczyć)', pl: 'Ona widziała przyjaciela.', before: 'Ona', after: 'prijatelja.', answer: 'je vidjela' },
   { id: 148, tense: 'perfekt', infinitive: 'vidjeti (zobaczyć)', pl: 'Widzieliśmy przyjaciela.', before: 'Mi', after: 'prijatelja.', answer: 'smo vidjeli' },
   { id: 149, tense: 'perfekt', infinitive: 'vidjeti (zobaczyć)', pl: 'Widzieliście przyjaciela.', before: 'Vi', after: 'prijatelja.', answer: 'ste vidjeli' },
   { id: 150, tense: 'perfekt', infinitive: 'vidjeti (zobaczyć)', pl: 'Oni widzieli przyjaciela.', before: 'Oni', after: 'prijatelja.', answer: 'su vidjeli' },
-
-  // zaboraviti (zapomnieć)
   { id: 301, tense: 'perfekt', infinitive: 'zaboraviti (zapomnieć)', pl: 'Zapomniałem o spotkaniu.', before: 'Ja', after: 'o sastanku.', answer: 'sam zaboravio' },
   { id: 302, tense: 'perfekt', infinitive: 'zaboraviti (zapomnieć)', pl: 'Zapomniałeś o spotkaniu.', before: 'Ti', after: 'o sastanku.', answer: 'si zaboravio' },
   { id: 303, tense: 'perfekt', infinitive: 'zaboraviti (zapomnieć)', pl: 'Ona zapomniała o spotkaniu.', before: 'Ona', after: 'o sastanku.', answer: 'je zaboravila' },
   { id: 304, tense: 'perfekt', infinitive: 'zaboraviti (zapomnieć)', pl: 'Zapomnieliśmy o spotkaniu.', before: 'Mi', after: 'o sastanku.', answer: 'smo zaboravili' },
   { id: 305, tense: 'perfekt', infinitive: 'zaboraviti (zapomnieć)', pl: 'Zapomnieliście o spotkaniu.', before: 'Vi', after: 'o sastanku.', answer: 'ste zaboravili' },
   { id: 306, tense: 'perfekt', infinitive: 'zaboraviti (zapomnieć)', pl: 'Oni zapomnieli o spotkaniu.', before: 'Oni', after: 'o sastanku.', answer: 'su zaboravili' },
-
-  // otvoriti (otworzyć)
   { id: 307, tense: 'perfekt', infinitive: 'otvoriti (otworzyć)', pl: 'Otworzyłem okno.', before: 'Ja', after: 'prozor.', answer: 'sam otvorio' },
   { id: 308, tense: 'perfekt', infinitive: 'otvoriti (otworzyć)', pl: 'Otworzyłeś okno.', before: 'Ti', after: 'prozor.', answer: 'si otvorio' },
   { id: 309, tense: 'perfekt', infinitive: 'otvoriti (otworzyć)', pl: 'Ona otworzyła okno.', before: 'Ona', after: 'prozor.', answer: 'je otvorila' },
   { id: 310, tense: 'perfekt', infinitive: 'otvoriti (otworzyć)', pl: 'Otworzyliśmy okno.', before: 'Mi', after: 'prozor.', answer: 'smo otvorili' },
   { id: 311, tense: 'perfekt', infinitive: 'otvoriti (otworzyć)', pl: 'Otworzyliście okno.', before: 'Vi', after: 'prozor.', answer: 'ste otvorili' },
   { id: 312, tense: 'perfekt', infinitive: 'otvoriti (otworzyć)', pl: 'Oni otworzyli okno.', before: 'Oni', after: 'prozor.', answer: 'su otvorili' },
-
-  // zatvoriti (zamknąć)
   { id: 313, tense: 'perfekt', infinitive: 'zatvoriti (zamknąć)', pl: 'Zamknąłem drzwi.', before: 'Ja', after: 'vrata.', answer: 'sam zatvorio' },
   { id: 314, tense: 'perfekt', infinitive: 'zatvoriti (zamknąć)', pl: 'Zamknąłeś drzwi.', before: 'Ti', after: 'vrata.', answer: 'si zatvorio' },
   { id: 315, tense: 'perfekt', infinitive: 'zatvoriti (zamknąć)', pl: 'Ona zamknęła drzwi.', before: 'Ona', after: 'vrata.', answer: 'je zatvorila' },
   { id: 316, tense: 'perfekt', infinitive: 'zatvoriti (zamknąć)', pl: 'Zamknęliśmy drzwi.', before: 'Mi', after: 'vrata.', answer: 'smo zatvorili' },
   { id: 317, tense: 'perfekt', infinitive: 'zatvoriti (zamknąć)', pl: 'Zamknęliście drzwi.', before: 'Vi', after: 'vrata.', answer: 'ste zatvorili' },
   { id: 318, tense: 'perfekt', infinitive: 'zatvoriti (zamknąć)', pl: 'Oni zamknęli drzwi.', before: 'Oni', after: 'vrata.', answer: 'su zatvorili' },
-
-  // poslati (wysłać)
   { id: 319, tense: 'perfekt', infinitive: 'poslati (wysłać)', pl: 'Wysłałem paczkę.', before: 'Ja', after: 'paket.', answer: 'sam poslao' },
   { id: 320, tense: 'perfekt', infinitive: 'poslati (wysłać)', pl: 'Wysłałeś paczkę.', before: 'Ti', after: 'paket.', answer: 'si poslao' },
   { id: 321, tense: 'perfekt', infinitive: 'poslati (wysłać)', pl: 'Ona wysłała paczkę.', before: 'Ona', after: 'paket.', answer: 'je poslala' },
   { id: 322, tense: 'perfekt', infinitive: 'poslati (wysłać)', pl: 'Wysłaliśmy paczkę.', before: 'Mi', after: 'paket.', answer: 'smo poslali' },
   { id: 323, tense: 'perfekt', infinitive: 'poslati (wysłać)', pl: 'Wysłaliście paczkę.', before: 'Vi', after: 'paket.', answer: 'ste poslali' },
   { id: 324, tense: 'perfekt', infinitive: 'poslati (wysłać)', pl: 'Oni wysłali paczkę.', before: 'Oni', after: 'paket.', answer: 'su poslali' },
-
-  // reći (powiedzieć)
   { id: 325, tense: 'perfekt', infinitive: 'reći (powiedzieć)', pl: 'Powiedziałem prawdę.', before: 'Ja', after: 'istinu.', answer: 'sam rekao' },
   { id: 326, tense: 'perfekt', infinitive: 'reći (powiedzieć)', pl: 'Powiedziałeś prawdę.', before: 'Ti', after: 'istinu.', answer: 'si rekao' },
   { id: 327, tense: 'perfekt', infinitive: 'reći (powiedzieć)', pl: 'Ona powiedziała prawdę.', before: 'Ona', after: 'istinu.', answer: 'je rekla' },
   { id: 328, tense: 'perfekt', infinitive: 'reći (powiedzieć)', pl: 'Powiedzieliśmy prawdę.', before: 'Mi', after: 'istinu.', answer: 'smo rekli' },
   { id: 329, tense: 'perfekt', infinitive: 'reći (powiedzieć)', pl: 'Powiedzieliście prawdę.', before: 'Vi', after: 'istinu.', answer: 'ste rekli' },
   { id: 330, tense: 'perfekt', infinitive: 'reći (powiedzieć)', pl: 'Oni powiedzieli prawdę.', before: 'Oni', after: 'istinu.', answer: 'su rekli' },
-
-  // popiti (wypić)
   { id: 331, tense: 'perfekt', infinitive: 'popiti (wypić)', pl: 'Wypiłem kawę.', before: 'Ja', after: 'kavu.', answer: 'sam popio' },
   { id: 332, tense: 'perfekt', infinitive: 'popiti (wypić)', pl: 'Wypiłeś kawę.', before: 'Ti', after: 'kavu.', answer: 'si popio' },
   { id: 333, tense: 'perfekt', infinitive: 'popiti (wypić)', pl: 'Ona wypiła kawę.', before: 'Ona', after: 'kavu.', answer: 'je popila' },
   { id: 334, tense: 'perfekt', infinitive: 'popiti (wypić)', pl: 'Wypiliśmy kawę.', before: 'Mi', after: 'kavu.', answer: 'smo popili' },
   { id: 335, tense: 'perfekt', infinitive: 'popiti (wypić)', pl: 'Wypiliście kawę.', before: 'Vi', after: 'kavu.', answer: 'ste popili' },
   { id: 336, tense: 'perfekt', infinitive: 'popiti (wypić)', pl: 'Oni wypili kawę.', before: 'Oni', after: 'kavu.', answer: 'su popili' },
-
-  // pojesti (zjeść)
   { id: 337, tense: 'perfekt', infinitive: 'pojesti (zjeść)', pl: 'Zjadłem śniadanie.', before: 'Ja', after: 'doručak.', answer: 'sam pojeo' },
   { id: 338, tense: 'perfekt', infinitive: 'pojesti (zjeść)', pl: 'Zjadłeś śniadanie.', before: 'Ti', after: 'doručak.', answer: 'si pojeo' },
   { id: 339, tense: 'perfekt', infinitive: 'pojesti (zjeść)', pl: 'Ona zjadła śniadanie.', before: 'Ona', after: 'doručak.', answer: 'je pojela' },
   { id: 340, tense: 'perfekt', infinitive: 'pojesti (zjeść)', pl: 'Zjedliśmy śniadanie.', before: 'Mi', after: 'doručak.', answer: 'smo pojeli' },
   { id: 341, tense: 'perfekt', infinitive: 'pojesti (zjeść)', pl: 'Zjedliście śniadanie.', before: 'Vi', after: 'doručak.', answer: 'ste pojeli' },
   { id: 342, tense: 'perfekt', infinitive: 'pojesti (zjeść)', pl: 'Oni zjedli śniadanie.', before: 'Oni', after: 'doručak.', answer: 'su pojeli' },
-
-  // platiti (zapłacić)
   { id: 343, tense: 'perfekt', infinitive: 'platiti (zapłacić)', pl: 'Zapłaciłem rachunek.', before: 'Ja', after: 'račun.', answer: 'sam platio' },
   { id: 344, tense: 'perfekt', infinitive: 'platiti (zapłacić)', pl: 'Zapłaciłeś rachunek.', before: 'Ti', after: 'račun.', answer: 'si platio' },
   { id: 345, tense: 'perfekt', infinitive: 'platiti (zapłacić)', pl: 'Ona zapłaciła rachunek.', before: 'Ona', after: 'račun.', answer: 'je platila' },
   { id: 346, tense: 'perfekt', infinitive: 'platiti (zapłacić)', pl: 'Zapłaciliśmy rachunek.', before: 'Mi', after: 'račun.', answer: 'smo platili' },
   { id: 347, tense: 'perfekt', infinitive: 'platiti (zapłacić)', pl: 'Zapłaciliście rachunek.', before: 'Vi', after: 'račun.', answer: 'ste platili' },
   { id: 348, tense: 'perfekt', infinitive: 'platiti (zapłacić)', pl: 'Oni zapłacili rachunek.', before: 'Oni', after: 'račun.', answer: 'su platili' },
-
-  // sjesti (usiąść)
   { id: 349, tense: 'perfekt', infinitive: 'sjesti (usiąść)', pl: 'Usiadłem za stołem.', before: 'Ja', after: 'za stol.', answer: 'sam sjeo' },
   { id: 350, tense: 'perfekt', infinitive: 'sjesti (usiąść)', pl: 'Usiadłeś za stołem.', before: 'Ti', after: 'za stol.', answer: 'si sjeo' },
   { id: 351, tense: 'perfekt', infinitive: 'sjesti (usiąść)', pl: 'Ona usiadła za stołem.', before: 'Ona', after: 'za stol.', answer: 'je sjela' },
   { id: 352, tense: 'perfekt', infinitive: 'sjesti (usiąść)', pl: 'Usiedliśmy za stołem.', before: 'Mi', after: 'za stol.', answer: 'smo sjeli' },
   { id: 353, tense: 'perfekt', infinitive: 'sjesti (usiąść)', pl: 'Usiedliście za stołem.', before: 'Vi', after: 'za stol.', answer: 'ste sjeli' },
   { id: 354, tense: 'perfekt', infinitive: 'sjesti (usiąść)', pl: 'Oni usiedli za stołem.', before: 'Oni', after: 'za stol.', answer: 'su sjeli' },
-
-  // vratiti se (wrócić)
   { id: 355, tense: 'perfekt', infinitive: 'vratiti se (wrócić)', pl: 'Wróciłem do domu.', before: 'Ja', after: 'kući.', answer: 'sam se vratio' },
   { id: 356, tense: 'perfekt', infinitive: 'vratiti se (wrócić)', pl: 'Wróciłeś do domu.', before: 'Ti', after: 'kući.', answer: 'si se vratio' },
   { id: 357, tense: 'perfekt', infinitive: 'vratiti se (wrócić)', pl: 'Ona wróciła do domu.', before: 'Ona', after: 'kući.', answer: 'se vratila' },
   { id: 358, tense: 'perfekt', infinitive: 'vratiti se (wrócić)', pl: 'Wróciliśmy do domu.', before: 'Mi', after: 'kući.', answer: 'smo se vratili' },
   { id: 359, tense: 'perfekt', infinitive: 'vratiti se (wrócić)', pl: 'Wróciliście do domu.', before: 'Vi', after: 'kući.', answer: 'ste se vratili' },
   { id: 360, tense: 'perfekt', infinitive: 'vratiti se (wrócić)', pl: 'Oni wrócili do domu.', before: 'Oni', after: 'kući.', answer: 'su se vratili' },
-
-  // otići (wyjechać)
   { id: 511, tense: 'perfekt', infinitive: 'otići (wyjechać)', pl: 'Wyjechałem wcześniej.', before: 'Ja', after: 'ranije.', answer: 'sam otišao' },
   { id: 512, tense: 'perfekt', infinitive: 'otići (wyjechać)', pl: 'Wyjechałeś wcześniej.', before: 'Ti', after: 'ranije.', answer: 'si otišao' },
   { id: 513, tense: 'perfekt', infinitive: 'otići (wyjechać)', pl: 'Ona wyjechała wcześniej.', before: 'Ona', after: 'ranije.', answer: 'je otišla' },
   { id: 514, tense: 'perfekt', infinitive: 'otići (wyjechać)', pl: 'Wyjechaliśmy wcześniej.', before: 'Mi', after: 'ranije.', answer: 'smo otišli' },
   { id: 515, tense: 'perfekt', infinitive: 'otići (wyjechać)', pl: 'Wyjechaliście wcześniej.', before: 'Vi', after: 'ranije.', answer: 'ste otišli' },
   { id: 516, tense: 'perfekt', infinitive: 'otići (wyjechać)', pl: 'Oni wyjechali wcześniej.', before: 'Oni', after: 'ranije.', answer: 'su otišli' },
-
-  // probuditi se (obudzić się)
   { id: 517, tense: 'perfekt', infinitive: 'probuditi se (obudzić się)', pl: 'Obudziłem się wcześnie.', before: 'Ja', after: 'rano.', answer: 'sam se probudio' },
   { id: 518, tense: 'perfekt', infinitive: 'probuditi se (obudzić się)', pl: 'Obudziłeś się wcześnie.', before: 'Ti', after: 'rano.', answer: 'si se probudio' },
   { id: 519, tense: 'perfekt', infinitive: 'probuditi se (obudzić się)', pl: 'Ona obudziła się wcześnie.', before: 'Ona', after: 'rano.', answer: 'se probudila' },
   { id: 520, tense: 'perfekt', infinitive: 'probuditi se (obudzić się)', pl: 'Obudziliśmy się wcześnie.', before: 'Mi', after: 'rano.', answer: 'smo se probudili' },
   { id: 521, tense: 'perfekt', infinitive: 'probuditi se (obudzić się)', pl: 'Obudziliście się wcześnie.', before: 'Vi', after: 'rano.', answer: 'ste se probudili' },
   { id: 522, tense: 'perfekt', infinitive: 'probuditi se (obudzić się)', pl: 'Oni obudzili się wcześnie.', before: 'Oni', after: 'rano.', answer: 'su se probudili' },
-
-  // odlučiti (zdecydować)
   { id: 523, tense: 'perfekt', infinitive: 'odlučiti (zdecydować)', pl: 'Zdecydowałem się na to.', before: 'Ja', after: 'se na to.', answer: 'sam odlučio' },
   { id: 524, tense: 'perfekt', infinitive: 'odlučiti (zdecydować)', pl: 'Zdecydowałeś się na to.', before: 'Ti', after: 'se na to.', answer: 'si odlučio' },
   { id: 525, tense: 'perfekt', infinitive: 'odlučiti (zdecydować)', pl: 'Ona zdecydowała się na to.', before: 'Ona', after: 'se na to.', answer: 'je odlučila' },
   { id: 526, tense: 'perfekt', infinitive: 'odlučiti (zdecydować)', pl: 'Zdecydowaliśmy się na to.', before: 'Mi', after: 'se na to.', answer: 'smo odlučili' },
   { id: 527, tense: 'perfekt', infinitive: 'odlučiti (zdecydować)', pl: 'Zdecydowaliście się na to.', before: 'Vi', after: 'se na to.', answer: 'ste odlučili' },
   { id: 528, tense: 'perfekt', infinitive: 'odlučiti (zdecydować)', pl: 'Oni zdecydowali się na to.', before: 'Oni', after: 'se na to.', answer: 'su odlučili' },
-
-  // upoznati (poznać)
   { id: 529, tense: 'perfekt', infinitive: 'upoznati (poznać)', pl: 'Poznałem nowych ludzi.', before: 'Ja', after: 'nove ljude.', answer: 'sam upoznao' },
   { id: 530, tense: 'perfekt', infinitive: 'upoznati (poznać)', pl: 'Poznałeś nowych ludzi.', before: 'Ti', after: 'nove ljude.', answer: 'si upoznao' },
   { id: 531, tense: 'perfekt', infinitive: 'upoznati (poznać)', pl: 'Ona poznała nowych ludzi.', before: 'Ona', after: 'nove ljude.', answer: 'je upoznala' },
   { id: 532, tense: 'perfekt', infinitive: 'upoznati (poznać)', pl: 'Poznaliśmy nowych ludzi.', before: 'Mi', after: 'nove ljude.', answer: 'smo upoznali' },
   { id: 533, tense: 'perfekt', infinitive: 'upoznati (poznać)', pl: 'Poznaliście nowych ludzi.', before: 'Vi', after: 'nove ljude.', answer: 'ste upoznali' },
   { id: 534, tense: 'perfekt', infinitive: 'upoznati (poznać)', pl: 'Oni poznali nowych ludzi.', before: 'Oni', after: 'nove ljude.', answer: 'su upoznali' },
-
-  // naručiti (zamówić)
   { id: 535, tense: 'perfekt', infinitive: 'naručiti (zamówić)', pl: 'Zamówiłem pizzę.', before: 'Ja', after: 'pizzu.', answer: 'sam naručio' },
   { id: 536, tense: 'perfekt', infinitive: 'naručiti (zamówić)', pl: 'Zamówiłeś pizzę.', before: 'Ti', after: 'pizzu.', answer: 'si naručio' },
   { id: 537, tense: 'perfekt', infinitive: 'naručiti (zamówić)', pl: 'Ona zamówiła pizzę.', before: 'Ona', after: 'pizzu.', answer: 'je naručila' },
   { id: 538, tense: 'perfekt', infinitive: 'naručiti (zamówić)', pl: 'Zamówiliśmy pizzę.', before: 'Mi', after: 'pizzu.', answer: 'smo naručili' },
   { id: 539, tense: 'perfekt', infinitive: 'naručiti (zamówić)', pl: 'Zamówiliście pizzę.', before: 'Vi', after: 'pizzu.', answer: 'ste naručili' },
   { id: 540, tense: 'perfekt', infinitive: 'naručiti (zamówić)', pl: 'Oni zamówili pizzę.', before: 'Oni', after: 'pizzu.', answer: 'su naručili' },
-
-  // provesti (spędzić)
   { id: 541, tense: 'perfekt', infinitive: 'provesti (spędzić)', pl: 'Spędziłem tydzień na morzu.', before: 'Ja', after: 'tjedan na moru.', answer: 'sam proveo' },
   { id: 542, tense: 'perfekt', infinitive: 'provesti (spędzić)', pl: 'Spędziłeś tydzień na morzu.', before: 'Ti', after: 'tjedan na moru.', answer: 'si proveo' },
   { id: 543, tense: 'perfekt', infinitive: 'provesti (spędzić)', pl: 'Ona spędziła tydzień na morzu.', before: 'Ona', after: 'tjedan na moru.', answer: 'je provela' },
   { id: 544, tense: 'perfekt', infinitive: 'provesti (spędzić)', pl: 'Spędziliśmy tydzień na morzu.', before: 'Mi', after: 'tjedan na moru.', answer: 'smo proveli' },
   { id: 545, tense: 'perfekt', infinitive: 'provesti (spędzić)', pl: 'Spędziliście tydzień na morzu.', before: 'Vi', after: 'tjedan na moru.', answer: 'ste proveli' },
   { id: 546, tense: 'perfekt', infinitive: 'provesti (spędzić)', pl: 'Oni spędzili tydzień na morzu.', before: 'Oni', after: 'tjedan na moru.', answer: 'su proveli' },
-
-  // posjetiti (odwiedzić)
   { id: 547, tense: 'perfekt', infinitive: 'posjetiti (odwiedzić)', pl: 'Odwiedziłem babcię.', before: 'Ja', after: 'baku.', answer: 'sam posjetio' },
   { id: 548, tense: 'perfekt', infinitive: 'posjetiti (odwiedzić)', pl: 'Odwiedziłeś babcię.', before: 'Ti', after: 'baku.', answer: 'si posjetio' },
   { id: 549, tense: 'perfekt', infinitive: 'posjetiti (odwiedzić)', pl: 'Ona odwiedziła babcię.', before: 'Ona', after: 'baku.', answer: 'je posjetila' },
   { id: 550, tense: 'perfekt', infinitive: 'posjetiti (odwiedzić)', pl: 'Odwiedziliśmy babcię.', before: 'Mi', after: 'baku.', answer: 'smo posjetili' },
   { id: 551, tense: 'perfekt', infinitive: 'posjetiti (odwiedzić)', pl: 'Odwiedziliście babcię.', before: 'Vi', after: 'baku.', answer: 'ste posjetili' },
   { id: 552, tense: 'perfekt', infinitive: 'posjetiti (odwiedzić)', pl: 'Oni odwiedzili babcię.', before: 'Oni', after: 'baku.', answer: 'su posjetili' },
-
-  // uspjeti (udać się)
   { id: 553, tense: 'perfekt', infinitive: 'uspjeti (udać się)', pl: 'Udało mi się to zrobić.', before: 'Ja', after: 'to napraviti.', answer: 'sam uspio' },
   { id: 554, tense: 'perfekt', infinitive: 'uspjeti (udać się)', pl: 'Udało ci się to zrobić.', before: 'Ti', after: 'to napraviti.', answer: 'si uspio' },
   { id: 555, tense: 'perfekt', infinitive: 'uspjeti (udać się)', pl: 'Jej udało się to zrobić.', before: 'Ona', after: 'to napraviti.', answer: 'je uspjela' },
   { id: 556, tense: 'perfekt', infinitive: 'uspjeti (udać się)', pl: 'Udało nam się to zrobić.', before: 'Mi', after: 'to napraviti.', answer: 'smo uspjeli' },
   { id: 557, tense: 'perfekt', infinitive: 'uspjeti (udać się)', pl: 'Udało wam się to zrobić.', before: 'Vi', after: 'to napraviti.', answer: 'ste uspjeli' },
   { id: 558, tense: 'perfekt', infinitive: 'uspjeti (udać się)', pl: 'Udało im się to zrobić.', before: 'Oni', after: 'to napraviti.', answer: 'su uspjeli' },
-
-  // naći (znaleźć)
   { id: 667, tense: 'perfekt', infinitive: 'naći (znaleźć)', pl: 'Znalazłem klucze.', before: 'Ja', after: 'ključeve.', answer: 'sam našao' },
   { id: 668, tense: 'perfekt', infinitive: 'naći (znaleźć)', pl: 'Znalazłeś klucze.', before: 'Ti', after: 'ključeve.', answer: 'si našao' },
   { id: 669, tense: 'perfekt', infinitive: 'naći (znaleźć)', pl: 'Ona znalazła klucze.', before: 'Ona', after: 'ključeve.', answer: 'je našla' },
   { id: 670, tense: 'perfekt', infinitive: 'naći (znaleźć)', pl: 'Znaleźliśmy klucze.', before: 'Mi', after: 'ključeve.', answer: 'smo našli' },
   { id: 671, tense: 'perfekt', infinitive: 'naći (znaleźć)', pl: 'Znaleźliście klucze.', before: 'Vi', after: 'ključeve.', answer: 'ste našli' },
   { id: 672, tense: 'perfekt', infinitive: 'naći (znaleźć)', pl: 'Oni znaleźli klucze.', before: 'Oni', after: 'ključeve.', answer: 'su našli' },
-
-  // izaći (wyjść)
   { id: 673, tense: 'perfekt', infinitive: 'izaći (wyjść)', pl: 'Wyszedłem z domu.', before: 'Ja', after: 'iz kuće.', answer: 'sam izašao' },
   { id: 674, tense: 'perfekt', infinitive: 'izaći (wyjść)', pl: 'Wyszedłeś z domu.', before: 'Ti', after: 'iz kuće.', answer: 'si izašao' },
   { id: 675, tense: 'perfekt', infinitive: 'izaći (wyjść)', pl: 'Ona wyszła z domu.', before: 'Ona', after: 'iz kuće.', answer: 'je izašla' },
   { id: 676, tense: 'perfekt', infinitive: 'izaći (wyjść)', pl: 'Wyszliśmy z domu.', before: 'Mi', after: 'iz kuće.', answer: 'smo izašli' },
   { id: 677, tense: 'perfekt', infinitive: 'izaći (wyjść)', pl: 'Wyszliście z domu.', before: 'Vi', after: 'iz kuće.', answer: 'ste izašli' },
   { id: 678, tense: 'perfekt', infinitive: 'izaći (wyjść)', pl: 'Oni wyszli z domu.', before: 'Oni', after: 'iz kuće.', answer: 'su izašli' },
-
-  // ući (wejść)
   { id: 679, tense: 'perfekt', infinitive: 'ući (wejść)', pl: 'Wszedłem do pokoju.', before: 'Ja', after: 'u sobu.', answer: 'sam ušao' },
   { id: 680, tense: 'perfekt', infinitive: 'ući (wejść)', pl: 'Wszedłeś do pokoju.', before: 'Ti', after: 'u sobu.', answer: 'si ušao' },
   { id: 681, tense: 'perfekt', infinitive: 'ući (wejść)', pl: 'Ona weszła do pokoju.', before: 'Ona', after: 'u sobu.', answer: 'je ušla' },
   { id: 682, tense: 'perfekt', infinitive: 'ući (wejść)', pl: 'Weszliśmy do pokoju.', before: 'Mi', after: 'u sobu.', answer: 'smo ušli' },
   { id: 683, tense: 'perfekt', infinitive: 'ući (wejść)', pl: 'Weszliście do pokoju.', before: 'Vi', after: 'u sobu.', answer: 'ste ušli' },
   { id: 684, tense: 'perfekt', infinitive: 'ući (wejść)', pl: 'Oni weszli do pokoju.', before: 'Oni', after: 'u sobu.', answer: 'su ušli' },
-
-  // sresti (spotkać)
   { id: 685, tense: 'perfekt', infinitive: 'sresti (spotkać)', pl: 'Spotkałem starego przyjaciela.', before: 'Ja', after: 'starog prijatelja.', answer: 'sam sreo' },
   { id: 686, tense: 'perfekt', infinitive: 'sresti (spotkać)', pl: 'Spotkałeś starego przyjaciela.', before: 'Ti', after: 'starog prijatelja.', answer: 'si sreo' },
   { id: 687, tense: 'perfekt', infinitive: 'sresti (spotkać)', pl: 'Ona spotkała starego przyjaciela.', before: 'Ona', after: 'starog prijatelja.', answer: 'je srela' },
   { id: 688, tense: 'perfekt', infinitive: 'sresti (spotkać)', pl: 'Spotkaliśmy starego przyjaciela.', before: 'Mi', after: 'starog prijatelja.', answer: 'smo sreli' },
   { id: 689, tense: 'perfekt', infinitive: 'sresti (spotkać)', pl: 'Spotkaliście starego przyjaciela.', before: 'Vi', after: 'starog prijatelja.', answer: 'ste sreli' },
   { id: 690, tense: 'perfekt', infinitive: 'sresti (spotkać)', pl: 'Oni spotkali starego przyjaciela.', before: 'Oni', after: 'starog prijatelja.', answer: 'su sreli' },
-
-  // početi (zacząć)
   { id: 691, tense: 'perfekt', infinitive: 'početi (zacząć)', pl: 'Zacząłem nową pracę.', before: 'Ja', after: 'novi posao.', answer: 'sam počeo' },
   { id: 692, tense: 'perfekt', infinitive: 'početi (zacząć)', pl: 'Zacząłeś nową pracę.', before: 'Ti', after: 'novi posao.', answer: 'si počeo' },
   { id: 693, tense: 'perfekt', infinitive: 'početi (zacząć)', pl: 'Ona zaczęła nową pracę.', before: 'Ona', after: 'novi posao.', answer: 'je počela' },
   { id: 694, tense: 'perfekt', infinitive: 'početi (zacząć)', pl: 'Zaczęliśmy nową pracę.', before: 'Mi', after: 'novi posao.', answer: 'smo počeli' },
   { id: 695, tense: 'perfekt', infinitive: 'početi (zacząć)', pl: 'Zaczęliście nową pracę.', before: 'Vi', after: 'novi posao.', answer: 'ste počeli' },
   { id: 696, tense: 'perfekt', infinitive: 'početi (zacząć)', pl: 'Oni zaczęli nową pracę.', before: 'Oni', after: 'novi posao.', answer: 'su počeli' },
-
-  // prestati (przestać)
   { id: 697, tense: 'perfekt', infinitive: 'prestati (przestać)', pl: 'Przestałem palić.', before: 'Ja', after: 'pušiti.', answer: 'sam prestao' },
   { id: 698, tense: 'perfekt', infinitive: 'prestati (przestać)', pl: 'Przestałeś palić.', before: 'Ti', after: 'pušiti.', answer: 'si prestao' },
   { id: 699, tense: 'perfekt', infinitive: 'prestati (przestać)', pl: 'Ona przestała palić.', before: 'Ona', after: 'pušiti.', answer: 'je prestala' },
   { id: 700, tense: 'perfekt', infinitive: 'prestati (przestać)', pl: 'Przestaliśmy palić.', before: 'Mi', after: 'pušiti.', answer: 'smo prestali' },
   { id: 701, tense: 'perfekt', infinitive: 'prestati (przestać)', pl: 'Przestaliście palić.', before: 'Vi', after: 'pušiti.', answer: 'ste prestali' },
   { id: 702, tense: 'perfekt', infinitive: 'prestati (przestać)', pl: 'Oni przestali palić.', before: 'Oni', after: 'pušiti.', answer: 'su prestali' },
-
-  // ostaviti (zostawić)
   { id: 703, tense: 'perfekt', infinitive: 'ostaviti (zostawić)', pl: 'Zostawiłem telefon w domu.', before: 'Ja', after: 'mobitel kod kuće.', answer: 'sam ostavio' },
   { id: 704, tense: 'perfekt', infinitive: 'ostaviti (zostawić)', pl: 'Zostawiłeś telefon w domu.', before: 'Ti', after: 'mobitel kod kuće.', answer: 'si ostavio' },
   { id: 705, tense: 'perfekt', infinitive: 'ostaviti (zostawić)', pl: 'Ona zostawiła telefon w domu.', before: 'Ona', after: 'mobitel kod kuće.', answer: 'je ostavila' },
   { id: 706, tense: 'perfekt', infinitive: 'ostaviti (zostawić)', pl: 'Zostawiliśmy telefon w domu.', before: 'Mi', after: 'mobitel kod kuće.', answer: 'smo ostavili' },
   { id: 707, tense: 'perfekt', infinitive: 'ostaviti (zostawić)', pl: 'Zostawiliście telefon w domu.', before: 'Vi', after: 'mobitel kod kuće.', answer: 'ste ostavili' },
   { id: 708, tense: 'perfekt', infinitive: 'ostaviti (zostawić)', pl: 'Oni zostawili telefon w domu.', before: 'Oni', after: 'mobitel kod kuće.', answer: 'su ostavili' },
-
-  // pokazati (pokazać)
   { id: 709, tense: 'perfekt', infinitive: 'pokazati (pokazać)', pl: 'Pokazałem mu drogę.', before: 'Ja', after: 'mu put.', answer: 'sam pokazao' },
   { id: 710, tense: 'perfekt', infinitive: 'pokazati (pokazać)', pl: 'Pokazałeś mu drogę.', before: 'Ti', after: 'mu put.', answer: 'si pokazao' },
   { id: 711, tense: 'perfekt', infinitive: 'pokazati (pokazać)', pl: 'Ona pokazała mu drogę.', before: 'Ona', after: 'mu put.', answer: 'je pokazala' },
   { id: 712, tense: 'perfekt', infinitive: 'pokazati (pokazać)', pl: 'Pokazaliśmy mu drogę.', before: 'Mi', after: 'mu put.', answer: 'smo pokazali' },
   { id: 713, tense: 'perfekt', infinitive: 'pokazati (pokazać)', pl: 'Pokazaliście mu drogę.', before: 'Vi', after: 'mu put.', answer: 'ste pokazali' },
   { id: 714, tense: 'perfekt', infinitive: 'pokazati (pokazać)', pl: 'Oni pokazali mu drogę.', before: 'Oni', after: 'mu put.', answer: 'su pokazali' },
-
-  // kazati (rzec / powiedzieć)
   { id: 715, tense: 'perfekt', infinitive: 'kazati (rzec)', pl: 'Powiedziałem mu wszystko.', before: 'Ja', after: 'mu sve.', answer: 'sam kazao' },
   { id: 716, tense: 'perfekt', infinitive: 'kazati (rzec)', pl: 'Powiedziałeś mu wszystko.', before: 'Ti', after: 'mu sve.', answer: 'si kazao' },
   { id: 717, tense: 'perfekt', infinitive: 'kazati (rzec)', pl: 'Ona powiedziała mu wszystko.', before: 'Ona', after: 'mu sve.', answer: 'je kazala' },
   { id: 718, tense: 'perfekt', infinitive: 'kazati (rzec)', pl: 'Powiedzieliśmy mu wszystko.', before: 'Mi', after: 'mu sve.', answer: 'smo kazali' },
   { id: 719, tense: 'perfekt', infinitive: 'kazati (rzec)', pl: 'Powiedzieliście mu wszystko.', before: 'Vi', after: 'mu sve.', answer: 'ste kazali' },
   { id: 720, tense: 'perfekt', infinitive: 'kazati (rzec)', pl: 'Oni powiedzieli mu wszystko.', before: 'Oni', after: 'mu sve.', answer: 'su kazali' },
-
-  // popraviti (naprawić)
   { id: 721, tense: 'perfekt', infinitive: 'popraviti (naprawić)', pl: 'Naprawiłem samochód.', before: 'Ja', after: 'auto.', answer: 'sam popravio' },
   { id: 722, tense: 'perfekt', infinitive: 'popraviti (naprawić)', pl: 'Naprawiłeś samochód.', before: 'Ti', after: 'auto.', answer: 'si popravio' },
   { id: 723, tense: 'perfekt', infinitive: 'popraviti (naprawić)', pl: 'Ona naprawiła samochód.', before: 'Ona', after: 'auto.', answer: 'je popravila' },
   { id: 724, tense: 'perfekt', infinitive: 'popraviti (naprawić)', pl: 'Naprawiliśmy samochód.', before: 'Mi', after: 'auto.', answer: 'smo popravili' },
   { id: 725, tense: 'perfekt', infinitive: 'popraviti (naprawić)', pl: 'Naprawiliście samochód.', before: 'Vi', after: 'auto.', answer: 'ste popravili' },
   { id: 726, tense: 'perfekt', infinitive: 'popraviti (naprawić)', pl: 'Oni naprawili samochód.', before: 'Oni', after: 'auto.', answer: 'su popravili' },
-
-  // riješiti (rozwiązać)
   { id: 727, tense: 'perfekt', infinitive: 'riješiti (rozwiązać)', pl: 'Rozwiązałem problem.', before: 'Ja', after: 'problem.', answer: 'sam riješio' },
   { id: 728, tense: 'perfekt', infinitive: 'riješiti (rozwiązać)', pl: 'Rozwiązałeś problem.', before: 'Ti', after: 'problem.', answer: 'si riješio' },
   { id: 729, tense: 'perfekt', infinitive: 'riješiti (rozwiązać)', pl: 'Ona rozwiązała problem.', before: 'Ona', after: 'problem.', answer: 'je riješila' },
   { id: 730, tense: 'perfekt', infinitive: 'riješiti (rozwiązać)', pl: 'Rozwiązaliśmy problem.', before: 'Mi', after: 'problem.', answer: 'smo riješili' },
   { id: 731, tense: 'perfekt', infinitive: 'riješiti (rozwiązać)', pl: 'Rozwiązaliście problem.', before: 'Vi', after: 'problem.', answer: 'ste riješili' },
   { id: 732, tense: 'perfekt', infinitive: 'riješiti (rozwiązać)', pl: 'Oni rozwiązali problem.', before: 'Oni', after: 'problem.', answer: 'su riješili' },
-
-  // ===== FUTUR I =====
-
-  // putovati (podróżować)
   { id: 151, tense: 'futur', infinitive: 'putovati (podróżować)', pl: 'Będę podróżować do Zagrzebia.', before: 'Ja', after: 'u Zagreb.', answer: 'ću putovati' },
   { id: 152, tense: 'futur', infinitive: 'putovati (podróżować)', pl: 'Będziesz podróżować do Zagrzebia.', before: 'Ti', after: 'u Zagreb.', answer: 'ćeš putovati' },
   { id: 153, tense: 'futur', infinitive: 'putovati (podróżować)', pl: 'On będzie podróżować do Zagrzebia.', before: 'On', after: 'u Zagreb.', answer: 'će putovati' },
   { id: 154, tense: 'futur', infinitive: 'putovati (podróżować)', pl: 'Będziemy podróżować do Zagrzebia.', before: 'Mi', after: 'u Zagreb.', answer: 'ćemo putovati' },
   { id: 155, tense: 'futur', infinitive: 'putovati (podróżować)', pl: 'Będziecie podróżować do Zagrzebia.', before: 'Vi', after: 'u Zagreb.', answer: 'ćete putovati' },
   { id: 156, tense: 'futur', infinitive: 'putovati (podróżować)', pl: 'Oni będą podróżować do Zagrzebia.', before: 'Oni', after: 'u Zagreb.', answer: 'će putovati' },
-
-  // kuhati (gotować)
   { id: 157, tense: 'futur', infinitive: 'kuhati (gotować)', pl: 'Będę gotować kolację.', before: 'Ja', after: 'večeru.', answer: 'ću kuhati' },
   { id: 158, tense: 'futur', infinitive: 'kuhati (gotować)', pl: 'Będziesz gotować kolację.', before: 'Ti', after: 'večeru.', answer: 'ćeš kuhati' },
   { id: 159, tense: 'futur', infinitive: 'kuhati (gotować)', pl: 'Ona będzie gotować kolację.', before: 'Ona', after: 'večeru.', answer: 'će kuhati' },
   { id: 160, tense: 'futur', infinitive: 'kuhati (gotować)', pl: 'Będziemy gotować kolację.', before: 'Mi', after: 'večeru.', answer: 'ćemo kuhati' },
   { id: 161, tense: 'futur', infinitive: 'kuhati (gotować)', pl: 'Będziecie gotować kolację.', before: 'Vi', after: 'večeru.', answer: 'ćete kuhati' },
   { id: 162, tense: 'futur', infinitive: 'kuhati (gotować)', pl: 'Oni będą gotować kolację.', before: 'Oni', after: 'večeru.', answer: 'će kuhati' },
-
-  // stići (dotrzeć)
   { id: 163, tense: 'futur', infinitive: 'stići (dotrzeć)', pl: 'Dotrę na czas.', before: 'Ja', after: 'na vrijeme.', answer: 'ću stići' },
   { id: 164, tense: 'futur', infinitive: 'stići (dotrzeć)', pl: 'Dotrzesz na czas.', before: 'Ti', after: 'na vrijeme.', answer: 'ćeš stići' },
   { id: 165, tense: 'futur', infinitive: 'stići (dotrzeć)', pl: 'On dotrze na czas.', before: 'On', after: 'na vrijeme.', answer: 'će stići' },
   { id: 166, tense: 'futur', infinitive: 'stići (dotrzeć)', pl: 'Dotrzemy na czas.', before: 'Mi', after: 'na vrijeme.', answer: 'ćemo stići' },
   { id: 167, tense: 'futur', infinitive: 'stići (dotrzeć)', pl: 'Dotrzecie na czas.', before: 'Vi', after: 'na vrijeme.', answer: 'ćete stići' },
   { id: 168, tense: 'futur', infinitive: 'stići (dotrzeć)', pl: 'Oni dotrą na czas.', before: 'Oni', after: 'na vrijeme.', answer: 'će stići' },
-
-  // naučiti (nauczyć się)
   { id: 169, tense: 'futur', infinitive: 'naučiti (nauczyć się)', pl: 'Nauczę się szybko.', before: 'Ja', after: 'brzo.', answer: 'ću naučiti' },
   { id: 170, tense: 'futur', infinitive: 'naučiti (nauczyć się)', pl: 'Nauczysz się szybko.', before: 'Ti', after: 'brzo.', answer: 'ćeš naučiti' },
   { id: 171, tense: 'futur', infinitive: 'naučiti (nauczyć się)', pl: 'Ona nauczy się szybko.', before: 'Ona', after: 'brzo.', answer: 'će naučiti' },
   { id: 172, tense: 'futur', infinitive: 'naučiti (nauczyć się)', pl: 'Nauczymy się szybko.', before: 'Mi', after: 'brzo.', answer: 'ćemo naučiti' },
   { id: 173, tense: 'futur', infinitive: 'naučiti (nauczyć się)', pl: 'Nauczycie się szybko.', before: 'Vi', after: 'brzo.', answer: 'ćete naučiti' },
   { id: 174, tense: 'futur', infinitive: 'naučiti (nauczyć się)', pl: 'Oni nauczą się szybko.', before: 'Oni', after: 'brzo.', answer: 'će naučiti' },
-
-  // nazvati (zadzwonić)
   { id: 175, tense: 'futur', infinitive: 'nazvati (zadzwonić)', pl: 'Zadzwonię jutro.', before: 'Ja', after: 'sutra.', answer: 'ću nazvati' },
   { id: 176, tense: 'futur', infinitive: 'nazvati (zadzwonić)', pl: 'Zadzwonisz jutro.', before: 'Ti', after: 'sutra.', answer: 'ćeš nazvati' },
   { id: 177, tense: 'futur', infinitive: 'nazvati (zadzwonić)', pl: 'On zadzwoni jutro.', before: 'On', after: 'sutra.', answer: 'će nazvati' },
   { id: 178, tense: 'futur', infinitive: 'nazvati (zadzwonić)', pl: 'Zadzwonimy jutro.', before: 'Mi', after: 'sutra.', answer: 'ćemo nazvati' },
   { id: 179, tense: 'futur', infinitive: 'nazvati (zadzwonić)', pl: 'Zadzwonicie jutro.', before: 'Vi', after: 'sutra.', answer: 'ćete nazvati' },
   { id: 180, tense: 'futur', infinitive: 'nazvati (zadzwonić)', pl: 'Oni zadzwonią jutro.', before: 'Oni', after: 'sutra.', answer: 'će nazvati' },
-
-  // raditi (pracować)
   { id: 181, tense: 'futur', infinitive: 'raditi (pracować)', pl: 'Będę pracować razem.', before: 'Ja', after: 'zajedno.', answer: 'ću raditi' },
   { id: 182, tense: 'futur', infinitive: 'raditi (pracować)', pl: 'Będziesz pracować razem.', before: 'Ti', after: 'zajedno.', answer: 'ćeš raditi' },
   { id: 183, tense: 'futur', infinitive: 'raditi (pracować)', pl: 'Ona będzie pracować razem.', before: 'Ona', after: 'zajedno.', answer: 'će raditi' },
   { id: 184, tense: 'futur', infinitive: 'raditi (pracować)', pl: 'Będziemy pracować razem.', before: 'Mi', after: 'zajedno.', answer: 'ćemo raditi' },
   { id: 185, tense: 'futur', infinitive: 'raditi (pracować)', pl: 'Będziecie pracować razem.', before: 'Vi', after: 'zajedno.', answer: 'ćete raditi' },
   { id: 186, tense: 'futur', infinitive: 'raditi (pracować)', pl: 'Oni będą pracować razem.', before: 'Oni', after: 'zajedno.', answer: 'će raditi' },
-
-  // vidjeti (zobaczyć)
   { id: 187, tense: 'futur', infinitive: 'vidjeti (zobaczyć)', pl: 'Zobaczę różnicę.', before: 'Ja', after: 'razliku.', answer: 'ću vidjeti' },
   { id: 188, tense: 'futur', infinitive: 'vidjeti (zobaczyć)', pl: 'Zobaczysz różnicę.', before: 'Ti', after: 'razliku.', answer: 'ćeš vidjeti' },
   { id: 189, tense: 'futur', infinitive: 'vidjeti (zobaczyć)', pl: 'On zobaczy różnicę.', before: 'On', after: 'razliku.', answer: 'će vidjeti' },
   { id: 190, tense: 'futur', infinitive: 'vidjeti (zobaczyć)', pl: 'Zobaczymy różnicę.', before: 'Mi', after: 'razliku.', answer: 'ćemo vidjeti' },
   { id: 191, tense: 'futur', infinitive: 'vidjeti (zobaczyć)', pl: 'Zobaczycie różnicę.', before: 'Vi', after: 'razliku.', answer: 'ćete vidjeti' },
   { id: 192, tense: 'futur', infinitive: 'vidjeti (zobaczyć)', pl: 'Oni zobaczą różnicę.', before: 'Oni', after: 'razliku.', answer: 'će vidjeti' },
-
-  // kupiti (kupić)
   { id: 193, tense: 'futur', infinitive: 'kupiti (kupić)', pl: 'Kupię nowy telefon.', before: 'Ja', after: 'novi telefon.', answer: 'ću kupiti' },
   { id: 194, tense: 'futur', infinitive: 'kupiti (kupić)', pl: 'Kupisz nowy telefon.', before: 'Ti', after: 'novi telefon.', answer: 'ćeš kupiti' },
   { id: 195, tense: 'futur', infinitive: 'kupiti (kupić)', pl: 'Ona kupi nowy telefon.', before: 'Ona', after: 'novi telefon.', answer: 'će kupiti' },
   { id: 196, tense: 'futur', infinitive: 'kupiti (kupić)', pl: 'Kupimy nowy telefon.', before: 'Mi', after: 'novi telefon.', answer: 'ćemo kupiti' },
   { id: 197, tense: 'futur', infinitive: 'kupiti (kupić)', pl: 'Kupicie nowy telefon.', before: 'Vi', after: 'novi telefon.', answer: 'ćete kupiti' },
   { id: 198, tense: 'futur', infinitive: 'kupiti (kupić)', pl: 'Oni kupią nowy telefon.', before: 'Oni', after: 'novi telefon.', answer: 'će kupiti' },
-
-  // pisati (pisać)
   { id: 199, tense: 'futur', infinitive: 'pisati (pisać)', pl: 'Będę pisać list.', before: 'Ja', after: 'pismo.', answer: 'ću pisati' },
   { id: 200, tense: 'futur', infinitive: 'pisati (pisać)', pl: 'Będziesz pisać list.', before: 'Ti', after: 'pismo.', answer: 'ćeš pisati' },
   { id: 201, tense: 'futur', infinitive: 'pisati (pisać)', pl: 'On będzie pisać list.', before: 'On', after: 'pismo.', answer: 'će pisati' },
   { id: 202, tense: 'futur', infinitive: 'pisati (pisać)', pl: 'Będziemy pisać list.', before: 'Mi', after: 'pismo.', answer: 'ćemo pisati' },
   { id: 203, tense: 'futur', infinitive: 'pisati (pisać)', pl: 'Będziecie pisać list.', before: 'Vi', after: 'pismo.', answer: 'ćete pisati' },
   { id: 204, tense: 'futur', infinitive: 'pisati (pisać)', pl: 'Oni będą pisać list.', before: 'Oni', after: 'pismo.', answer: 'će pisati' },
-
-  // pitati (zapytać)
   { id: 205, tense: 'futur', infinitive: 'pitati (zapytać)', pl: 'Zapytam nauczyciela.', before: 'Ja', after: 'učitelja.', answer: 'ću pitati' },
   { id: 206, tense: 'futur', infinitive: 'pitati (zapytać)', pl: 'Zapytasz nauczyciela.', before: 'Ti', after: 'učitelja.', answer: 'ćeš pitati' },
   { id: 207, tense: 'futur', infinitive: 'pitati (zapytać)', pl: 'Ona zapyta nauczyciela.', before: 'Ona', after: 'učitelja.', answer: 'će pitati' },
   { id: 208, tense: 'futur', infinitive: 'pitati (zapytać)', pl: 'Zapytamy nauczyciela.', before: 'Mi', after: 'učitelja.', answer: 'ćemo pitati' },
   { id: 209, tense: 'futur', infinitive: 'pitati (zapytać)', pl: 'Zapytacie nauczyciela.', before: 'Vi', after: 'učitelja.', answer: 'ćete pitati' },
   { id: 210, tense: 'futur', infinitive: 'pitati (zapytać)', pl: 'Oni zapytają nauczyciela.', before: 'Oni', after: 'učitelja.', answer: 'će pitati' },
-
-  // otvoriti (otworzyć)
   { id: 361, tense: 'futur', infinitive: 'otvoriti (otworzyć)', pl: 'Otworzę okno.', before: 'Ja', after: 'prozor.', answer: 'ću otvoriti' },
   { id: 362, tense: 'futur', infinitive: 'otvoriti (otworzyć)', pl: 'Otworzysz okno.', before: 'Ti', after: 'prozor.', answer: 'ćeš otvoriti' },
   { id: 363, tense: 'futur', infinitive: 'otvoriti (otworzyć)', pl: 'Ona otworzy okno.', before: 'Ona', after: 'prozor.', answer: 'će otvoriti' },
   { id: 364, tense: 'futur', infinitive: 'otvoriti (otworzyć)', pl: 'Otworzymy okno.', before: 'Mi', after: 'prozor.', answer: 'ćemo otvoriti' },
   { id: 365, tense: 'futur', infinitive: 'otvoriti (otworzyć)', pl: 'Otworzycie okno.', before: 'Vi', after: 'prozor.', answer: 'ćete otvoriti' },
   { id: 366, tense: 'futur', infinitive: 'otvoriti (otworzyć)', pl: 'Oni otworzą okno.', before: 'Oni', after: 'prozor.', answer: 'će otvoriti' },
-
-  // zatvoriti (zamknąć)
   { id: 367, tense: 'futur', infinitive: 'zatvoriti (zamknąć)', pl: 'Zamknę drzwi.', before: 'Ja', after: 'vrata.', answer: 'ću zatvoriti' },
   { id: 368, tense: 'futur', infinitive: 'zatvoriti (zamknąć)', pl: 'Zamkniesz drzwi.', before: 'Ti', after: 'vrata.', answer: 'ćeš zatvoriti' },
   { id: 369, tense: 'futur', infinitive: 'zatvoriti (zamknąć)', pl: 'Ona zamknie drzwi.', before: 'Ona', after: 'vrata.', answer: 'će zatvoriti' },
   { id: 370, tense: 'futur', infinitive: 'zatvoriti (zamknąć)', pl: 'Zamkniemy drzwi.', before: 'Mi', after: 'vrata.', answer: 'ćemo zatvoriti' },
   { id: 371, tense: 'futur', infinitive: 'zatvoriti (zamknąć)', pl: 'Zamkniecie drzwi.', before: 'Vi', after: 'vrata.', answer: 'ćete zatvoriti' },
   { id: 372, tense: 'futur', infinitive: 'zatvoriti (zamknąć)', pl: 'Oni zamkną drzwi.', before: 'Oni', after: 'vrata.', answer: 'će zatvoriti' },
-
-  // poslati (wysłać)
   { id: 373, tense: 'futur', infinitive: 'poslati (wysłać)', pl: 'Wyślę paczkę.', before: 'Ja', after: 'paket.', answer: 'ću poslati' },
   { id: 374, tense: 'futur', infinitive: 'poslati (wysłać)', pl: 'Wyślesz paczkę.', before: 'Ti', after: 'paket.', answer: 'ćeš poslati' },
   { id: 375, tense: 'futur', infinitive: 'poslati (wysłać)', pl: 'Ona wyśle paczkę.', before: 'Ona', after: 'paket.', answer: 'će poslati' },
   { id: 376, tense: 'futur', infinitive: 'poslati (wysłać)', pl: 'Wyślemy paczkę.', before: 'Mi', after: 'paket.', answer: 'ćemo poslati' },
   { id: 377, tense: 'futur', infinitive: 'poslati (wysłać)', pl: 'Wyślecie paczkę.', before: 'Vi', after: 'paket.', answer: 'ćete poslati' },
   { id: 378, tense: 'futur', infinitive: 'poslati (wysłać)', pl: 'Oni wyślą paczkę.', before: 'Oni', after: 'paket.', answer: 'će poslati' },
-
-  // reći (powiedzieć)
   { id: 379, tense: 'futur', infinitive: 'reći (powiedzieć)', pl: 'Powiem prawdę.', before: 'Ja', after: 'istinu.', answer: 'ću reći' },
   { id: 380, tense: 'futur', infinitive: 'reći (powiedzieć)', pl: 'Powiesz prawdę.', before: 'Ti', after: 'istinu.', answer: 'ćeš reći' },
   { id: 381, tense: 'futur', infinitive: 'reći (powiedzieć)', pl: 'Ona powie prawdę.', before: 'Ona', after: 'istinu.', answer: 'će reći' },
   { id: 382, tense: 'futur', infinitive: 'reći (powiedzieć)', pl: 'Powiemy prawdę.', before: 'Mi', after: 'istinu.', answer: 'ćemo reći' },
   { id: 383, tense: 'futur', infinitive: 'reći (powiedzieć)', pl: 'Powiecie prawdę.', before: 'Vi', after: 'istinu.', answer: 'ćete reći' },
   { id: 384, tense: 'futur', infinitive: 'reći (powiedzieć)', pl: 'Oni powiedzą prawdę.', before: 'Oni', after: 'istinu.', answer: 'će reći' },
-
-  // popiti (wypić)
   { id: 385, tense: 'futur', infinitive: 'popiti (wypić)', pl: 'Wypiję kawę.', before: 'Ja', after: 'kavu.', answer: 'ću popiti' },
   { id: 386, tense: 'futur', infinitive: 'popiti (wypić)', pl: 'Wypijesz kawę.', before: 'Ti', after: 'kavu.', answer: 'ćeš popiti' },
   { id: 387, tense: 'futur', infinitive: 'popiti (wypić)', pl: 'Ona wypije kawę.', before: 'Ona', after: 'kavu.', answer: 'će popiti' },
   { id: 388, tense: 'futur', infinitive: 'popiti (wypić)', pl: 'Wypijemy kawę.', before: 'Mi', after: 'kavu.', answer: 'ćemo popiti' },
   { id: 389, tense: 'futur', infinitive: 'popiti (wypić)', pl: 'Wypijecie kawę.', before: 'Vi', after: 'kavu.', answer: 'ćete popiti' },
   { id: 390, tense: 'futur', infinitive: 'popiti (wypić)', pl: 'Oni wypiją kawę.', before: 'Oni', after: 'kavu.', answer: 'će popiti' },
-
-  // pojesti (zjeść)
   { id: 391, tense: 'futur', infinitive: 'pojesti (zjeść)', pl: 'Zjem śniadanie.', before: 'Ja', after: 'doručak.', answer: 'ću pojesti' },
   { id: 392, tense: 'futur', infinitive: 'pojesti (zjeść)', pl: 'Zjesz śniadanie.', before: 'Ti', after: 'doručak.', answer: 'ćeš pojesti' },
   { id: 393, tense: 'futur', infinitive: 'pojesti (zjeść)', pl: 'Ona zje śniadanie.', before: 'Ona', after: 'doručak.', answer: 'će pojesti' },
   { id: 394, tense: 'futur', infinitive: 'pojesti (zjeść)', pl: 'Zjemy śniadanie.', before: 'Mi', after: 'doručak.', answer: 'ćemo pojesti' },
   { id: 395, tense: 'futur', infinitive: 'pojesti (zjeść)', pl: 'Zjecie śniadanie.', before: 'Vi', after: 'doručak.', answer: 'ćete pojesti' },
   { id: 396, tense: 'futur', infinitive: 'pojesti (zjeść)', pl: 'Oni zjedzą śniadanie.', before: 'Oni', after: 'doručak.', answer: 'će pojesti' },
-
-  // platiti (zapłacić)
   { id: 397, tense: 'futur', infinitive: 'platiti (zapłacić)', pl: 'Zapłacę rachunek.', before: 'Ja', after: 'račun.', answer: 'ću platiti' },
   { id: 398, tense: 'futur', infinitive: 'platiti (zapłacić)', pl: 'Zapłacisz rachunek.', before: 'Ti', after: 'račun.', answer: 'ćeš platiti' },
   { id: 399, tense: 'futur', infinitive: 'platiti (zapłacić)', pl: 'Ona zapłaci rachunek.', before: 'Ona', after: 'račun.', answer: 'će platiti' },
   { id: 400, tense: 'futur', infinitive: 'platiti (zapłacić)', pl: 'Zapłacimy rachunek.', before: 'Mi', after: 'račun.', answer: 'ćemo platiti' },
   { id: 401, tense: 'futur', infinitive: 'platiti (zapłacić)', pl: 'Zapłacicie rachunek.', before: 'Vi', after: 'račun.', answer: 'ćete platiti' },
   { id: 402, tense: 'futur', infinitive: 'platiti (zapłacić)', pl: 'Oni zapłacą rachunek.', before: 'Oni', after: 'račun.', answer: 'će platiti' },
-
-  // vratiti se (wrócić)
   { id: 403, tense: 'futur', infinitive: 'vratiti se (wrócić)', pl: 'Wrócę do domu.', before: 'Ja', after: 'kući.', answer: 'ću se vratiti' },
   { id: 404, tense: 'futur', infinitive: 'vratiti se (wrócić)', pl: 'Wrócisz do domu.', before: 'Ti', after: 'kući.', answer: 'ćeš se vratiti' },
   { id: 405, tense: 'futur', infinitive: 'vratiti se (wrócić)', pl: 'Ona wróci do domu.', before: 'Ona', after: 'kući.', answer: 'će se vratiti' },
   { id: 406, tense: 'futur', infinitive: 'vratiti se (wrócić)', pl: 'Wrócimy do domu.', before: 'Mi', after: 'kući.', answer: 'ćemo se vratiti' },
   { id: 407, tense: 'futur', infinitive: 'vratiti se (wrócić)', pl: 'Wrócicie do domu.', before: 'Vi', after: 'kući.', answer: 'ćete se vratiti' },
   { id: 408, tense: 'futur', infinitive: 'vratiti se (wrócić)', pl: 'Oni wrócą do domu.', before: 'Oni', after: 'kući.', answer: 'će se vratiti' },
-
-  // probati (spróbować)
   { id: 409, tense: 'futur', infinitive: 'probati (spróbować)', pl: 'Spróbuję tego dania.', before: 'Ja', after: 'ovo jelo.', answer: 'ću probati' },
   { id: 410, tense: 'futur', infinitive: 'probati (spróbować)', pl: 'Spróbujesz tego dania.', before: 'Ti', after: 'ovo jelo.', answer: 'ćeš probati' },
   { id: 411, tense: 'futur', infinitive: 'probati (spróbować)', pl: 'Ona spróbuje tego dania.', before: 'Ona', after: 'ovo jelo.', answer: 'će probati' },
   { id: 412, tense: 'futur', infinitive: 'probati (spróbować)', pl: 'Spróbujemy tego dania.', before: 'Mi', after: 'ovo jelo.', answer: 'ćemo probati' },
   { id: 413, tense: 'futur', infinitive: 'probati (spróbować)', pl: 'Spróbujecie tego dania.', before: 'Vi', after: 'ovo jelo.', answer: 'ćete probati' },
   { id: 414, tense: 'futur', infinitive: 'probati (spróbować)', pl: 'Oni spróbują tego dania.', before: 'Oni', after: 'ovo jelo.', answer: 'će probati' },
-
-  // završiti (skończyć)
   { id: 415, tense: 'futur', infinitive: 'završiti (skończyć)', pl: 'Skończę pracę.', before: 'Ja', after: 'posao.', answer: 'ću završiti' },
   { id: 416, tense: 'futur', infinitive: 'završiti (skończyć)', pl: 'Skończysz pracę.', before: 'Ti', after: 'posao.', answer: 'ćeš završiti' },
   { id: 417, tense: 'futur', infinitive: 'završiti (skończyć)', pl: 'Ona skończy pracę.', before: 'Ona', after: 'posao.', answer: 'će završiti' },
   { id: 418, tense: 'futur', infinitive: 'završiti (skończyć)', pl: 'Skończymy pracę.', before: 'Mi', after: 'posao.', answer: 'ćemo završiti' },
   { id: 419, tense: 'futur', infinitive: 'završiti (skończyć)', pl: 'Skończycie pracę.', before: 'Vi', after: 'posao.', answer: 'ćete završiti' },
   { id: 420, tense: 'futur', infinitive: 'završiti (skończyć)', pl: 'Oni skończą pracę.', before: 'Oni', after: 'posao.', answer: 'će završiti' },
-
-  // donijeti (przynieść)
   { id: 559, tense: 'futur', infinitive: 'donijeti (przynieść)', pl: 'Przyniosę wino.', before: 'Ja', after: 'vino.', answer: 'ću donijeti' },
   { id: 560, tense: 'futur', infinitive: 'donijeti (przynieść)', pl: 'Przyniesiesz wino.', before: 'Ti', after: 'vino.', answer: 'ćeš donijeti' },
   { id: 561, tense: 'futur', infinitive: 'donijeti (przynieść)', pl: 'Ona przyniesie wino.', before: 'Ona', after: 'vino.', answer: 'će donijeti' },
   { id: 562, tense: 'futur', infinitive: 'donijeti (przynieść)', pl: 'Przyniesiemy wino.', before: 'Mi', after: 'vino.', answer: 'ćemo donijeti' },
   { id: 563, tense: 'futur', infinitive: 'donijeti (przynieść)', pl: 'Przyniesiecie wino.', before: 'Vi', after: 'vino.', answer: 'ćete donijeti' },
   { id: 564, tense: 'futur', infinitive: 'donijeti (przynieść)', pl: 'Oni przyniosą wino.', before: 'Oni', after: 'vino.', answer: 'će donijeti' },
-
-  // pozvati (zaprosić)
   { id: 565, tense: 'futur', infinitive: 'pozvati (zaprosić)', pl: 'Zaproszę przyjaciół.', before: 'Ja', after: 'prijatelje.', answer: 'ću pozvati' },
   { id: 566, tense: 'futur', infinitive: 'pozvati (zaprosić)', pl: 'Zaprosisz przyjaciół.', before: 'Ti', after: 'prijatelje.', answer: 'ćeš pozvati' },
   { id: 567, tense: 'futur', infinitive: 'pozvati (zaprosić)', pl: 'Ona zaprosi przyjaciół.', before: 'Ona', after: 'prijatelje.', answer: 'će pozvati' },
   { id: 568, tense: 'futur', infinitive: 'pozvati (zaprosić)', pl: 'Zaprosimy przyjaciół.', before: 'Mi', after: 'prijatelje.', answer: 'ćemo pozvati' },
   { id: 569, tense: 'futur', infinitive: 'pozvati (zaprosić)', pl: 'Zaprosicie przyjaciół.', before: 'Vi', after: 'prijatelje.', answer: 'ćete pozvati' },
   { id: 570, tense: 'futur', infinitive: 'pozvati (zaprosić)', pl: 'Oni zaproszą przyjaciół.', before: 'Oni', after: 'prijatelje.', answer: 'će pozvati' },
-
-  // promijeniti (zmienić)
   { id: 571, tense: 'futur', infinitive: 'promijeniti (zmienić)', pl: 'Zmienię plan.', before: 'Ja', after: 'plan.', answer: 'ću promijeniti' },
   { id: 572, tense: 'futur', infinitive: 'promijeniti (zmienić)', pl: 'Zmienisz plan.', before: 'Ti', after: 'plan.', answer: 'ćeš promijeniti' },
   { id: 573, tense: 'futur', infinitive: 'promijeniti (zmienić)', pl: 'On zmieni plan.', before: 'On', after: 'plan.', answer: 'će promijeniti' },
   { id: 574, tense: 'futur', infinitive: 'promijeniti (zmienić)', pl: 'Zmienimy plan.', before: 'Mi', after: 'plan.', answer: 'ćemo promijeniti' },
   { id: 575, tense: 'futur', infinitive: 'promijeniti (zmienić)', pl: 'Zmienicie plan.', before: 'Vi', after: 'plan.', answer: 'ćete promijeniti' },
   { id: 576, tense: 'futur', infinitive: 'promijeniti (zmienić)', pl: 'Oni zmienią plan.', before: 'Oni', after: 'plan.', answer: 'će promijeniti' },
-
-  // spremiti (przygotować)
   { id: 577, tense: 'futur', infinitive: 'spremiti (przygotować)', pl: 'Przygotuję stół.', before: 'Ja', after: 'stol.', answer: 'ću spremiti' },
   { id: 578, tense: 'futur', infinitive: 'spremiti (przygotować)', pl: 'Przygotujesz stół.', before: 'Ti', after: 'stol.', answer: 'ćeš spremiti' },
   { id: 579, tense: 'futur', infinitive: 'spremiti (przygotować)', pl: 'Ona przygotuje stół.', before: 'Ona', after: 'stol.', answer: 'će spremiti' },
   { id: 580, tense: 'futur', infinitive: 'spremiti (przygotować)', pl: 'Przygotujemy stół.', before: 'Mi', after: 'stol.', answer: 'ćemo spremiti' },
   { id: 581, tense: 'futur', infinitive: 'spremiti (przygotować)', pl: 'Przygotujecie stół.', before: 'Vi', after: 'stol.', answer: 'ćete spremiti' },
   { id: 582, tense: 'futur', infinitive: 'spremiti (przygotować)', pl: 'Oni przygotują stół.', before: 'Oni', after: 'stol.', answer: 'će spremiti' },
-
-  // ostati (zostać)
   { id: 583, tense: 'futur', infinitive: 'ostati (zostać)', pl: 'Zostanę w domu.', before: 'Ja', after: 'kod kuće.', answer: 'ću ostati' },
   { id: 584, tense: 'futur', infinitive: 'ostati (zostać)', pl: 'Zostaniesz w domu.', before: 'Ti', after: 'kod kuće.', answer: 'ćeš ostati' },
   { id: 585, tense: 'futur', infinitive: 'ostati (zostać)', pl: 'On zostanie w domu.', before: 'On', after: 'kod kuće.', answer: 'će ostati' },
   { id: 586, tense: 'futur', infinitive: 'ostati (zostać)', pl: 'Zostaniemy w domu.', before: 'Mi', after: 'kod kuće.', answer: 'ćemo ostati' },
   { id: 587, tense: 'futur', infinitive: 'ostati (zostać)', pl: 'Zostaniecie w domu.', before: 'Vi', after: 'kod kuće.', answer: 'ćete ostati' },
   { id: 588, tense: 'futur', infinitive: 'ostati (zostać)', pl: 'Oni zostaną w domu.', before: 'Oni', after: 'kod kuće.', answer: 'će ostati' },
-
-  // posjetiti (odwiedzić) [futur]
   { id: 589, tense: 'futur', infinitive: 'posjetiti (odwiedzić)', pl: 'Odwiedzę babcię.', before: 'Ja', after: 'baku.', answer: 'ću posjetiti' },
   { id: 590, tense: 'futur', infinitive: 'posjetiti (odwiedzić)', pl: 'Odwiedzisz babcię.', before: 'Ti', after: 'baku.', answer: 'ćeš posjetiti' },
   { id: 591, tense: 'futur', infinitive: 'posjetiti (odwiedzić)', pl: 'Ona odwiedzi babcię.', before: 'Ona', after: 'baku.', answer: 'će posjetiti' },
   { id: 592, tense: 'futur', infinitive: 'posjetiti (odwiedzić)', pl: 'Odwiedzimy babcię.', before: 'Mi', after: 'baku.', answer: 'ćemo posjetiti' },
   { id: 593, tense: 'futur', infinitive: 'posjetiti (odwiedzić)', pl: 'Odwiedzicie babcię.', before: 'Vi', after: 'baku.', answer: 'ćete posjetiti' },
   { id: 594, tense: 'futur', infinitive: 'posjetiti (odwiedzić)', pl: 'Oni odwiedzą babcię.', before: 'Oni', after: 'baku.', answer: 'će posjetiti' },
-
-  // odmoriti se (odpocząć)
   { id: 595, tense: 'futur', infinitive: 'odmoriti se (odpocząć)', pl: 'Odpocznę jutro.', before: 'Ja', after: 'sutra.', answer: 'ću se odmoriti' },
   { id: 596, tense: 'futur', infinitive: 'odmoriti se (odpocząć)', pl: 'Odpoczniesz jutro.', before: 'Ti', after: 'sutra.', answer: 'ćeš se odmoriti' },
   { id: 597, tense: 'futur', infinitive: 'odmoriti se (odpocząć)', pl: 'Ona odpocznie jutro.', before: 'Ona', after: 'sutra.', answer: 'će se odmoriti' },
   { id: 598, tense: 'futur', infinitive: 'odmoriti se (odpocząć)', pl: 'Odpoczniemy jutro.', before: 'Mi', after: 'sutra.', answer: 'ćemo se odmoriti' },
   { id: 599, tense: 'futur', infinitive: 'odmoriti se (odpocząć)', pl: 'Odpoczniecie jutro.', before: 'Vi', after: 'sutra.', answer: 'ćete se odmoriti' },
   { id: 600, tense: 'futur', infinitive: 'odmoriti se (odpocząć)', pl: 'Oni odpoczną jutro.', before: 'Oni', after: 'sutra.', answer: 'će se odmoriti' },
-
-  // pokušati (spróbować / starać się)
   { id: 733, tense: 'futur', infinitive: 'pokušati (spróbować)', pl: 'Spróbuję jeszcze raz.', before: 'Ja', after: 'još jednom.', answer: 'ću pokušati' },
   { id: 734, tense: 'futur', infinitive: 'pokušati (spróbować)', pl: 'Spróbujesz jeszcze raz.', before: 'Ti', after: 'još jednom.', answer: 'ćeš pokušati' },
   { id: 735, tense: 'futur', infinitive: 'pokušati (spróbować)', pl: 'On spróbuje jeszcze raz.', before: 'On', after: 'još jednom.', answer: 'će pokušati' },
   { id: 736, tense: 'futur', infinitive: 'pokušati (spróbować)', pl: 'Spróbujemy jeszcze raz.', before: 'Mi', after: 'još jednom.', answer: 'ćemo pokušati' },
   { id: 737, tense: 'futur', infinitive: 'pokušati (spróbować)', pl: 'Spróbujecie jeszcze raz.', before: 'Vi', after: 'još jednom.', answer: 'ćete pokušati' },
   { id: 738, tense: 'futur', infinitive: 'pokušati (spróbować)', pl: 'Oni spróbują jeszcze raz.', before: 'Oni', after: 'još jednom.', answer: 'će pokušati' },
-
-  // čestitati (pogratulować)
   { id: 739, tense: 'futur', infinitive: 'čestitati (pogratulować)', pl: 'Pogratuluję ci sukcesu.', before: 'Ja ću ti', after: 'na uspjehu.', answer: 'čestitati' },
   { id: 740, tense: 'futur', infinitive: 'čestitati (pogratulować)', pl: 'Pogratulujesz mi sukcesu.', before: 'Ti ćeš mi', after: 'na uspjehu.', answer: 'čestitati' },
   { id: 741, tense: 'futur', infinitive: 'čestitati (pogratulować)', pl: 'Ona pogratuluje mu sukcesu.', before: 'Ona će mu', after: 'na uspjehu.', answer: 'čestitati' },
   { id: 742, tense: 'futur', infinitive: 'čestitati (pogratulować)', pl: 'Pogratulujemy wam sukcesu.', before: 'Mi ćemo vam', after: 'na uspjehu.', answer: 'čestitati' },
   { id: 743, tense: 'futur', infinitive: 'čestitati (pogratulować)', pl: 'Pogratulujecie nam sukcesu.', before: 'Vi ćete nam', after: 'na uspjehu.', answer: 'čestitati' },
   { id: 744, tense: 'futur', infinitive: 'čestitati (pogratulować)', pl: 'Oni pogratulują jej sukcesu.', before: 'Oni će joj', after: 'na uspjehu.', answer: 'čestitati' },
-
-  // objasniti (wyjaśnić)
   { id: 745, tense: 'futur', infinitive: 'objasniti (wyjaśnić)', pl: 'Wyjaśnię zasady.', before: 'Ja', after: 'pravila.', answer: 'ću objasniti' },
   { id: 746, tense: 'futur', infinitive: 'objasniti (wyjaśnić)', pl: 'Wyjaśnisz zasady.', before: 'Ti', after: 'pravila.', answer: 'ćeš objasniti' },
   { id: 747, tense: 'futur', infinitive: 'objasniti (wyjaśnić)', pl: 'On wyjaśni zasady.', before: 'On', after: 'pravila.', answer: 'će objasniti' },
   { id: 748, tense: 'futur', infinitive: 'objasniti (wyjaśnić)', pl: 'Wyjaśnimy zasady.', before: 'Mi', after: 'pravila.', answer: 'ćemo objasniti' },
   { id: 749, tense: 'futur', infinitive: 'objasniti (wyjaśnić)', pl: 'Wyjaśnicie zasady.', before: 'Vi', after: 'pravila.', answer: 'ćete objasniti' },
   { id: 750, tense: 'futur', infinitive: 'objasniti (wyjaśnić)', pl: 'Oni wyjaśnią zasady.', before: 'Oni', after: 'pravila.', answer: 'će objasniti' },
-
-  // pozdraviti (przywitać / pozdrowić)
   { id: 751, tense: 'futur', infinitive: 'pozdraviti (przywitać)', pl: 'Przywitam gości.', before: 'Ja', after: 'goste.', answer: 'ću pozdraviti' },
   { id: 752, tense: 'futur', infinitive: 'pozdraviti (przywitać)', pl: 'Przywitasz gości.', before: 'Ti', after: 'goste.', answer: 'ćeš pozdraviti' },
   { id: 753, tense: 'futur', infinitive: 'pozdraviti (przywitać)', pl: 'Ona przywita gości.', before: 'Ona', after: 'goste.', answer: 'će pozdraviti' },
   { id: 754, tense: 'futur', infinitive: 'pozdraviti (przywitać)', pl: 'Przywitamy gości.', before: 'Mi', after: 'goste.', answer: 'ćemo pozdraviti' },
   { id: 755, tense: 'futur', infinitive: 'pozdraviti (przywitać)', pl: 'Przywitacie gości.', before: 'Vi', after: 'goste.', answer: 'ćete pozdraviti' },
   { id: 756, tense: 'futur', infinitive: 'pozdraviti (przywitać)', pl: 'Oni przywitają gości.', before: 'Oni', after: 'goste.', answer: 'će pozdraviti' },
-
-  // preseliti se (przeprowadzić się)
   { id: 757, tense: 'futur', infinitive: 'preseliti se (przeprowadzić się)', pl: 'Przeprowadzę się w przyszłym roku.', before: 'Ja', after: 'iduće godine.', answer: 'ću se preseliti' },
   { id: 758, tense: 'futur', infinitive: 'preseliti se (przeprowadzić się)', pl: 'Przeprowadzisz się w przyszłym roku.', before: 'Ti', after: 'iduće godine.', answer: 'ćeš se preseliti' },
   { id: 759, tense: 'futur', infinitive: 'preseliti se (przeprowadzić się)', pl: 'On przeprowadzi się w przyszłym roku.', before: 'On', after: 'iduće godine.', answer: 'će se preseliti' },
   { id: 760, tense: 'futur', infinitive: 'preseliti se (przeprowadzić się)', pl: 'Przeprowadzimy się w przyszłym roku.', before: 'Mi', after: 'iduće godine.', answer: 'ćemo se preseliti' },
   { id: 761, tense: 'futur', infinitive: 'preseliti se (przeprowadzić się)', pl: 'Przeprowadzicie się w przyszłym roku.', before: 'Vi', after: 'iduće godine.', answer: 'ćete se preseliti' },
   { id: 762, tense: 'futur', infinitive: 'preseliti se (przeprowadzić się)', pl: 'Oni przeprowadzą się w przyszłym roku.', before: 'Oni', after: 'iduće godine.', answer: 'će se preseliti' },
-
-  // odgoditi (przełożyć / odłożyć)
   { id: 763, tense: 'futur', infinitive: 'odgoditi (przełożyć)', pl: 'Przełożę spotkanie.', before: 'Ja', after: 'sastanak.', answer: 'ću odgoditi' },
   { id: 764, tense: 'futur', infinitive: 'odgoditi (przełożyć)', pl: 'Przełożysz spotkanie.', before: 'Ti', after: 'sastanak.', answer: 'ćeš odgoditi' },
   { id: 765, tense: 'futur', infinitive: 'odgoditi (przełożyć)', pl: 'Ona przełoży spotkanie.', before: 'Ona', after: 'sastanak.', answer: 'će odgoditi' },
   { id: 766, tense: 'futur', infinitive: 'odgoditi (przełożyć)', pl: 'Przełożymy spotkanie.', before: 'Mi', after: 'sastanak.', answer: 'ćemo odgoditi' },
   { id: 767, tense: 'futur', infinitive: 'odgoditi (przełożyć)', pl: 'Przełożycie spotkanie.', before: 'Vi', after: 'sastanak.', answer: 'ćete odgoditi' },
   { id: 768, tense: 'futur', infinitive: 'odgoditi (przełożyć)', pl: 'Oni przełożą spotkanie.', before: 'Oni', after: 'sastanak.', answer: 'će odgoditi' },
-
-  // potpisati (podpisać)
   { id: 769, tense: 'futur', infinitive: 'potpisati (podpisać)', pl: 'Podpiszę umowę.', before: 'Ja', after: 'ugovor.', answer: 'ću potpisati' },
   { id: 770, tense: 'futur', infinitive: 'potpisati (podpisać)', pl: 'Podpiszesz umowę.', before: 'Ti', after: 'ugovor.', answer: 'ćeš potpisati' },
   { id: 771, tense: 'futur', infinitive: 'potpisati (podpisać)', pl: 'On podpisze umowę.', before: 'On', after: 'ugovor.', answer: 'će potpisati' },
   { id: 772, tense: 'futur', infinitive: 'potpisati (podpisać)', pl: 'Podpiszemy umowę.', before: 'Mi', after: 'ugovor.', answer: 'ćemo potpisati' },
   { id: 773, tense: 'futur', infinitive: 'potpisati (podpisać)', pl: 'Podpiszecie umowę.', before: 'Vi', after: 'ugovor.', answer: 'ćete potpisati' },
   { id: 774, tense: 'futur', infinitive: 'potpisati (podpisać)', pl: 'Oni podpiszą umowę.', before: 'Oni', after: 'ugovor.', answer: 'će potpisati' },
-
-  // rezervirati (zarezerwować)
   { id: 775, tense: 'futur', infinitive: 'rezervirati (zarezerwować)', pl: 'Zarezerwuję stolik.', before: 'Ja', after: 'stol.', answer: 'ću rezervirati' },
   { id: 776, tense: 'futur', infinitive: 'rezervirati (zarezerwować)', pl: 'Zarezerwujesz stolik.', before: 'Ti', after: 'stol.', answer: 'ćeš rezervirati' },
   { id: 777, tense: 'futur', infinitive: 'rezervirati (zarezerwować)', pl: 'Ona zarezerwuje stolik.', before: 'Ona', after: 'stol.', answer: 'će rezervirati' },
   { id: 778, tense: 'futur', infinitive: 'rezervirati (zarezerwować)', pl: 'Zarezerwujemy stolik.', before: 'Mi', after: 'stol.', answer: 'ćemo rezervirati' },
   { id: 779, tense: 'futur', infinitive: 'rezervirati (zarezerwować)', pl: 'Zarezerwujecie stolik.', before: 'Vi', after: 'stol.', answer: 'ćete rezervirati' },
   { id: 780, tense: 'futur', infinitive: 'rezervirati (zarezerwować)', pl: 'Oni zarezerwują stolik.', before: 'Oni', after: 'stol.', answer: 'će rezervirati' },
-
-  // provjeriti (sprawdzić)
   { id: 781, tense: 'futur', infinitive: 'provjeriti (sprawdzić)', pl: 'Sprawdzę e-mail.', before: 'Ja', after: 'email.', answer: 'ću provjeriti' },
   { id: 782, tense: 'futur', infinitive: 'provjeriti (sprawdzić)', pl: 'Sprawdzisz e-mail.', before: 'Ti', after: 'email.', answer: 'ćeš provjeriti' },
   { id: 783, tense: 'futur', infinitive: 'provjeriti (sprawdzić)', pl: 'On sprawdzi e-mail.', before: 'On', after: 'email.', answer: 'će provjeriti' },
   { id: 784, tense: 'futur', infinitive: 'provjeriti (sprawdzić)', pl: 'Sprawdzimy e-mail.', before: 'Mi', after: 'email.', answer: 'ćemo provjeriti' },
   { id: 785, tense: 'futur', infinitive: 'provjeriti (sprawdzić)', pl: 'Sprawdzicie e-mail.', before: 'Vi', after: 'email.', answer: 'ćete provjeriti' },
   { id: 786, tense: 'futur', infinitive: 'provjeriti (sprawdzić)', pl: 'Oni sprawdzą e-mail.', before: 'Oni', after: 'email.', answer: 'će provjeriti' },
-
-  // urediti (urządzić / uporządkować)
   { id: 787, tense: 'futur', infinitive: 'urediti (urządzić)', pl: 'Urządzę pokój.', before: 'Ja', after: 'sobu.', answer: 'ću urediti' },
   { id: 788, tense: 'futur', infinitive: 'urediti (urządzić)', pl: 'Urządzisz pokój.', before: 'Ti', after: 'sobu.', answer: 'ćeš urediti' },
   { id: 789, tense: 'futur', infinitive: 'urediti (urządzić)', pl: 'Ona urządzi pokój.', before: 'Ona', after: 'sobu.', answer: 'će urediti' },
   { id: 790, tense: 'futur', infinitive: 'urediti (urządzić)', pl: 'Urządzimy pokój.', before: 'Mi', after: 'sobu.', answer: 'ćemo urediti' },
   { id: 791, tense: 'futur', infinitive: 'urediti (urządzić)', pl: 'Urządzicie pokój.', before: 'Vi', after: 'sobu.', answer: 'ćete urediti' },
   { id: 792, tense: 'futur', infinitive: 'urediti (urządzić)', pl: 'Oni urządzą pokój.', before: 'Oni', after: 'sobu.', answer: 'će urediti' },
-
-  // koristiti (korzystać / używać)
   { id: 793, tense: 'futur', infinitive: 'koristiti (korzystać)', pl: 'Skorzystam z okazji.', before: 'Ja', after: 'priliku.', answer: 'ću koristiti' },
   { id: 794, tense: 'futur', infinitive: 'koristiti (korzystać)', pl: 'Skorzystasz z okazji.', before: 'Ti', after: 'priliku.', answer: 'ćeš koristiti' },
   { id: 795, tense: 'futur', infinitive: 'koristiti (korzystać)', pl: 'On skorzysta z okazji.', before: 'On', after: 'priliku.', answer: 'će koristiti' },
   { id: 796, tense: 'futur', infinitive: 'koristiti (korzystać)', pl: 'Skorzystamy z okazji.', before: 'Mi', after: 'priliku.', answer: 'ćemo koristiti' },
   { id: 797, tense: 'futur', infinitive: 'koristiti (korzystać)', pl: 'Skorzystacie z okazji.', before: 'Vi', after: 'priliku.', answer: 'ćete koristiti' },
-  { id: 798, tense: 'futur', infinitive: 'koristiti (korzystać)', pl: 'Oni skorzystają z okazji.', before: 'Oni', after: 'priliku.', answer: 'će koristiti' }
+  { id: 798, tense: 'futur', infinitive: 'koristiti (korzystać)', pl: 'Oni skorzystają z okazji.', before: 'Oni', after: 'priliku.', answer: 'će koristiti' },
+  { id: 799, tense: 'prezent', infinitive: 'ljubiti (całować)', pl: 'Całuję dziecko.', before: 'Ja', after: 'dijete.', answer: 'ljubim' },
+  { id: 800, tense: 'prezent', infinitive: 'ljubiti (całować)', pl: 'Całujesz dziecko.', before: 'Ti', after: 'dijete.', answer: 'ljubiš' },
+  { id: 801, tense: 'prezent', infinitive: 'ljubiti (całować)', pl: 'On całuje dziecko.', before: 'On', after: 'dijete.', answer: 'ljubi' },
+  { id: 802, tense: 'prezent', infinitive: 'ljubiti (całować)', pl: 'Całujemy dziecko.', before: 'Mi', after: 'dijete.', answer: 'ljubimo' },
+  { id: 803, tense: 'prezent', infinitive: 'ljubiti (całować)', pl: 'Całujecie dziecko.', before: 'Vi', after: 'dijete.', answer: 'ljubite' },
+  { id: 804, tense: 'prezent', infinitive: 'ljubiti (całować)', pl: 'Oni całują dziecko.', before: 'Oni', after: 'dijete.', answer: 'ljube' },
+  { id: 805, tense: 'prezent', infinitive: 'mrziti (nienawidzić)', pl: 'Nienawidzę kłamstwa.', before: 'Ja', after: 'laž.', answer: 'mrzim' },
+  { id: 806, tense: 'prezent', infinitive: 'mrziti (nienawidzić)', pl: 'Nienawidzisz kłamstwa.', before: 'Ti', after: 'laž.', answer: 'mrziš' },
+  { id: 807, tense: 'prezent', infinitive: 'mrziti (nienawidzić)', pl: 'Ona nienawidzi kłamstwa.', before: 'Ona', after: 'laž.', answer: 'mrzi' },
+  { id: 808, tense: 'prezent', infinitive: 'mrziti (nienawidzić)', pl: 'Nienawidzimy kłamstwa.', before: 'Mi', after: 'laž.', answer: 'mrzimo' },
+  { id: 809, tense: 'prezent', infinitive: 'mrziti (nienawidzić)', pl: 'Nienawidzicie kłamstwa.', before: 'Vi', after: 'laž.', answer: 'mrzite' },
+  { id: 810, tense: 'prezent', infinitive: 'mrziti (nienawidzić)', pl: 'Oni nienawidzą kłamstwa.', before: 'Oni', after: 'laž.', answer: 'mrze' },
+  { id: 811, tense: 'prezent', infinitive: 'sjediti (siedzieć)', pl: 'Siedzę przy stole.', before: 'Ja', after: 'za stolom.', answer: 'sjedim' },
+  { id: 812, tense: 'prezent', infinitive: 'sjediti (siedzieć)', pl: 'Siedzisz przy stole.', before: 'Ti', after: 'za stolom.', answer: 'sjediš' },
+  { id: 813, tense: 'prezent', infinitive: 'sjediti (siedzieć)', pl: 'On siedzi przy stole.', before: 'On', after: 'za stolom.', answer: 'sjedi' },
+  { id: 814, tense: 'prezent', infinitive: 'sjediti (siedzieć)', pl: 'Siedzimy przy stole.', before: 'Mi', after: 'za stolom.', answer: 'sjedimo' },
+  { id: 815, tense: 'prezent', infinitive: 'sjediti (siedzieć)', pl: 'Siedzicie przy stole.', before: 'Vi', after: 'za stolom.', answer: 'sjedite' },
+  { id: 816, tense: 'prezent', infinitive: 'sjediti (siedzieć)', pl: 'Oni siedzą przy stole.', before: 'Oni', after: 'za stolom.', answer: 'sjede' },
+  { id: 817, tense: 'prezent', infinitive: 'stajati (stać)', pl: 'Stoję przed domem.', before: 'Ja', after: 'ispred kuće.', answer: 'stojim' },
+  { id: 818, tense: 'prezent', infinitive: 'stajati (stać)', pl: 'Stoisz przed domem.', before: 'Ti', after: 'ispred kuće.', answer: 'stojiš' },
+  { id: 819, tense: 'prezent', infinitive: 'stajati (stać)', pl: 'Ona stoi przed domem.', before: 'Ona', after: 'ispred kuće.', answer: 'stoji' },
+  { id: 820, tense: 'prezent', infinitive: 'stajati (stać)', pl: 'Stoimy przed domem.', before: 'Mi', after: 'ispred kuće.', answer: 'stojimo' },
+  { id: 821, tense: 'prezent', infinitive: 'stajati (stać)', pl: 'Stoicie przed domem.', before: 'Vi', after: 'ispred kuće.', answer: 'stojite' },
+  { id: 822, tense: 'prezent', infinitive: 'stajati (stać)', pl: 'Oni stoją przed domem.', before: 'Oni', after: 'ispred kuće.', answer: 'stoje' },
+  { id: 823, tense: 'prezent', infinitive: 'ležati (leżeć)', pl: 'Leżę na plaży.', before: 'Ja', after: 'na plaži.', answer: 'ležim' },
+  { id: 824, tense: 'prezent', infinitive: 'ležati (leżeć)', pl: 'Leżysz na plaży.', before: 'Ti', after: 'na plaži.', answer: 'ležiš' },
+  { id: 825, tense: 'prezent', infinitive: 'ležati (leżeć)', pl: 'On leży na plaży.', before: 'On', after: 'na plaži.', answer: 'leži' },
+  { id: 826, tense: 'prezent', infinitive: 'ležati (leżeć)', pl: 'Leżymy na plaży.', before: 'Mi', after: 'na plaži.', answer: 'ležimo' },
+  { id: 827, tense: 'prezent', infinitive: 'ležati (leżeć)', pl: 'Leżycie na plaży.', before: 'Vi', after: 'na plaži.', answer: 'ležite' },
+  { id: 828, tense: 'prezent', infinitive: 'ležati (leżeć)', pl: 'Oni leżą na plaży.', before: 'Oni', after: 'na plaži.', answer: 'leže' },
+  { id: 829, tense: 'prezent', infinitive: 'disati (oddychać)', pl: 'Oddycham głęboko.', before: 'Ja', after: 'duboko.', answer: 'dišem' },
+  { id: 830, tense: 'prezent', infinitive: 'disati (oddychać)', pl: 'Oddychasz głęboko.', before: 'Ti', after: 'duboko.', answer: 'dišeš' },
+  { id: 831, tense: 'prezent', infinitive: 'disati (oddychać)', pl: 'Ona oddycha głęboko.', before: 'Ona', after: 'duboko.', answer: 'diše' },
+  { id: 832, tense: 'prezent', infinitive: 'disati (oddychać)', pl: 'Oddychamy głęboko.', before: 'Mi', after: 'duboko.', answer: 'dišemo' },
+  { id: 833, tense: 'prezent', infinitive: 'disati (oddychać)', pl: 'Oddychacie głęboko.', before: 'Vi', after: 'duboko.', answer: 'dišete' },
+  { id: 834, tense: 'prezent', infinitive: 'disati (oddychać)', pl: 'Oni oddychają głęboko.', before: 'Oni', after: 'duboko.', answer: 'dišu' },
+  { id: 835, tense: 'prezent', infinitive: 'kucati (pukać)', pl: 'Pukam do drzwi.', before: 'Ja', after: 'na vrata.', answer: 'kucam' },
+  { id: 836, tense: 'prezent', infinitive: 'kucati (pukać)', pl: 'Pukasz do drzwi.', before: 'Ti', after: 'na vrata.', answer: 'kucaš' },
+  { id: 837, tense: 'prezent', infinitive: 'kucati (pukać)', pl: 'On puka do drzwi.', before: 'On', after: 'na vrata.', answer: 'kuca' },
+  { id: 838, tense: 'prezent', infinitive: 'kucati (pukać)', pl: 'Pukamy do drzwi.', before: 'Mi', after: 'na vrata.', answer: 'kucamo' },
+  { id: 839, tense: 'prezent', infinitive: 'kucati (pukać)', pl: 'Pukacie do drzwi.', before: 'Vi', after: 'na vrata.', answer: 'kucate' },
+  { id: 840, tense: 'prezent', infinitive: 'kucati (pukać)', pl: 'Oni pukają do drzwi.', before: 'Oni', after: 'na vrata.', answer: 'kucaju' },
+  { id: 841, tense: 'prezent', infinitive: 'vikati (krzyczeć)', pl: 'Krzyczę głośno.', before: 'Ja', after: 'glasno.', answer: 'vičem' },
+  { id: 842, tense: 'prezent', infinitive: 'vikati (krzyczeć)', pl: 'Krzyczysz głośno.', before: 'Ti', after: 'glasno.', answer: 'vičeš' },
+  { id: 843, tense: 'prezent', infinitive: 'vikati (krzyczeć)', pl: 'Ona krzyczy głośno.', before: 'Ona', after: 'glasno.', answer: 'viče' },
+  { id: 844, tense: 'prezent', infinitive: 'vikati (krzyczeć)', pl: 'Krzyczymy głośno.', before: 'Mi', after: 'glasno.', answer: 'vičemo' },
+  { id: 845, tense: 'prezent', infinitive: 'vikati (krzyczeć)', pl: 'Krzyczycie głośno.', before: 'Vi', after: 'glasno.', answer: 'vičete' },
+  { id: 846, tense: 'prezent', infinitive: 'vikati (krzyczeć)', pl: 'Oni krzyczą głośno.', before: 'Oni', after: 'glasno.', answer: 'viču' },
+  { id: 847, tense: 'prezent', infinitive: 'crtati (rysować)', pl: 'Rysuję dom.', before: 'Ja', after: 'kuću.', answer: 'crtam' },
+  { id: 848, tense: 'prezent', infinitive: 'crtati (rysować)', pl: 'Rysujesz dom.', before: 'Ti', after: 'kuću.', answer: 'crtaš' },
+  { id: 849, tense: 'prezent', infinitive: 'crtati (rysować)', pl: 'On rysuje dom.', before: 'On', after: 'kuću.', answer: 'crta' },
+  { id: 850, tense: 'prezent', infinitive: 'crtati (rysować)', pl: 'Rysujemy dom.', before: 'Mi', after: 'kuću.', answer: 'crtamo' },
+  { id: 851, tense: 'prezent', infinitive: 'crtati (rysować)', pl: 'Rysujecie dom.', before: 'Vi', after: 'kuću.', answer: 'crtate' },
+  { id: 852, tense: 'prezent', infinitive: 'crtati (rysować)', pl: 'Oni rysują dom.', before: 'Oni', after: 'kuću.', answer: 'crtaju' },
+  { id: 853, tense: 'prezent', infinitive: 'graditi (budować)', pl: 'Buduję dom.', before: 'Ja', after: 'kuću.', answer: 'gradim' },
+  { id: 854, tense: 'prezent', infinitive: 'graditi (budować)', pl: 'Budujesz dom.', before: 'Ti', after: 'kuću.', answer: 'gradiš' },
+  { id: 855, tense: 'prezent', infinitive: 'graditi (budować)', pl: 'Ona buduje dom.', before: 'Ona', after: 'kuću.', answer: 'gradi' },
+  { id: 856, tense: 'prezent', infinitive: 'graditi (budować)', pl: 'Budujemy dom.', before: 'Mi', after: 'kuću.', answer: 'gradimo' },
+  { id: 857, tense: 'prezent', infinitive: 'graditi (budować)', pl: 'Budujecie dom.', before: 'Vi', after: 'kuću.', answer: 'gradite' },
+  { id: 858, tense: 'prezent', infinitive: 'graditi (budować)', pl: 'Oni budują dom.', before: 'Oni', after: 'kuću.', answer: 'grade' },
+  { id: 859, tense: 'prezent', infinitive: 'čuvati (pilnować)', pl: 'Pilnuję dzieci.', before: 'Ja', after: 'djecu.', answer: 'čuvam' },
+  { id: 860, tense: 'prezent', infinitive: 'čuvati (pilnować)', pl: 'Pilnujesz dzieci.', before: 'Ti', after: 'djecu.', answer: 'čuvaš' },
+  { id: 861, tense: 'prezent', infinitive: 'čuvati (pilnować)', pl: 'On pilnuje dzieci.', before: 'On', after: 'djecu.', answer: 'čuva' },
+  { id: 862, tense: 'prezent', infinitive: 'čuvati (pilnować)', pl: 'Pilnujemy dzieci.', before: 'Mi', after: 'djecu.', answer: 'čuvamo' },
+  { id: 863, tense: 'prezent', infinitive: 'čuvati (pilnować)', pl: 'Pilnujecie dzieci.', before: 'Vi', after: 'djecu.', answer: 'čuvate' },
+  { id: 864, tense: 'prezent', infinitive: 'čuvati (pilnować)', pl: 'Oni pilnują dzieci.', before: 'Oni', after: 'djecu.', answer: 'čuvaju' },
+  { id: 865, tense: 'prezent', infinitive: 'nalaziti se (znajdować się)', pl: 'Znajduję się w mieście.', before: 'Ja se', after: 'u gradu.', answer: 'nalazim' },
+  { id: 866, tense: 'prezent', infinitive: 'nalaziti se (znajdować się)', pl: 'Znajdujesz się w mieście.', before: 'Ti se', after: 'u gradu.', answer: 'nalaziš' },
+  { id: 867, tense: 'prezent', infinitive: 'nalaziti se (znajdować się)', pl: 'Ona znajduje się w mieście.', before: 'Ona se', after: 'u gradu.', answer: 'nalazi' },
+  { id: 868, tense: 'prezent', infinitive: 'nalaziti se (znajdować się)', pl: 'Znajdujemy się w mieście.', before: 'Mi se', after: 'u gradu.', answer: 'nalazimo' },
+  { id: 869, tense: 'prezent', infinitive: 'nalaziti se (znajdować się)', pl: 'Znajdujecie się w mieście.', before: 'Vi se', after: 'u gradu.', answer: 'nalazite' },
+  { id: 870, tense: 'prezent', infinitive: 'nalaziti se (znajdować się)', pl: 'Oni znajdują się w mieście.', before: 'Oni se', after: 'u gradu.', answer: 'nalaze' },
+  { id: 871, tense: 'perfekt', infinitive: 'roditi se (urodzić się)', pl: 'Urodziłem się w Zagrzebiu.', before: 'Ja', after: 'u Zagrebu.', answer: 'sam se rodio' },
+  { id: 872, tense: 'perfekt', infinitive: 'roditi se (urodzić się)', pl: 'Urodziłeś się w Zagrzebiu.', before: 'Ti', after: 'u Zagrebu.', answer: 'si se rodio' },
+  { id: 873, tense: 'perfekt', infinitive: 'roditi se (urodzić się)', pl: 'Ona urodziła się w Zagrzebiu.', before: 'Ona', after: 'u Zagrebu.', answer: 'se rodila' },
+  { id: 874, tense: 'perfekt', infinitive: 'roditi se (urodzić się)', pl: 'Urodziliśmy się w Zagrzebiu.', before: 'Mi', after: 'u Zagrebu.', answer: 'smo se rodili' },
+  { id: 875, tense: 'perfekt', infinitive: 'roditi se (urodzić się)', pl: 'Urodziliście się w Zagrzebiu.', before: 'Vi', after: 'u Zagrebu.', answer: 'ste se rodili' },
+  { id: 876, tense: 'perfekt', infinitive: 'roditi se (urodzić się)', pl: 'Oni urodzili się w Zagrzebiu.', before: 'Oni', after: 'u Zagrebu.', answer: 'su se rodili' },
+  { id: 877, tense: 'perfekt', infinitive: 'vjenčati se (wziąć ślub)', pl: 'Wziąłem ślub w czerwcu.', before: 'Ja', after: 'u lipnju.', answer: 'sam se vjenčao' },
+  { id: 878, tense: 'perfekt', infinitive: 'vjenčati se (wziąć ślub)', pl: 'Wziąłeś ślub w czerwcu.', before: 'Ti', after: 'u lipnju.', answer: 'si se vjenčao' },
+  { id: 879, tense: 'perfekt', infinitive: 'vjenčati se (wziąć ślub)', pl: 'Ona wzięła ślub w czerwcu.', before: 'Ona', after: 'u lipnju.', answer: 'se vjenčala' },
+  { id: 880, tense: 'perfekt', infinitive: 'vjenčati se (wziąć ślub)', pl: 'Wzięliśmy ślub w czerwcu.', before: 'Mi', after: 'u lipnju.', answer: 'smo se vjenčali' },
+  { id: 881, tense: 'perfekt', infinitive: 'vjenčati se (wziąć ślub)', pl: 'Wzięliście ślub w czerwcu.', before: 'Vi', after: 'u lipnju.', answer: 'ste se vjenčali' },
+  { id: 882, tense: 'perfekt', infinitive: 'vjenčati se (wziąć ślub)', pl: 'Oni wzięli ślub w czerwcu.', before: 'Oni', after: 'u lipnju.', answer: 'su se vjenčali' },
+  { id: 883, tense: 'perfekt', infinitive: 'diplomirati (ukończyć studia)', pl: 'Ukończyłem studia w zeszłym roku.', before: 'Ja', after: 'prošle godine.', answer: 'sam diplomirao' },
+  { id: 884, tense: 'perfekt', infinitive: 'diplomirati (ukończyć studia)', pl: 'Ukończyłeś studia w zeszłym roku.', before: 'Ti', after: 'prošle godine.', answer: 'si diplomirao' },
+  { id: 885, tense: 'perfekt', infinitive: 'diplomirati (ukończyć studia)', pl: 'Ona ukończyła studia w zeszłym roku.', before: 'Ona', after: 'prošle godine.', answer: 'je diplomirala' },
+  { id: 886, tense: 'perfekt', infinitive: 'diplomirati (ukończyć studia)', pl: 'Ukończyliśmy studia w zeszłym roku.', before: 'Mi', after: 'prošle godine.', answer: 'smo diplomirali' },
+  { id: 887, tense: 'perfekt', infinitive: 'diplomirati (ukończyć studia)', pl: 'Ukończyliście studia w zeszłym roku.', before: 'Vi', after: 'prošle godine.', answer: 'ste diplomirali' },
+  { id: 888, tense: 'perfekt', infinitive: 'diplomirati (ukończyć studia)', pl: 'Oni ukończyli studia w zeszłym roku.', before: 'Oni', after: 'prošle godine.', answer: 'su diplomirali' },
+  { id: 889, tense: 'perfekt', infinitive: 'zaljubiti se (zakochać się)', pl: 'Zakochałem się w niej.', before: 'Ja', after: 'u nju.', answer: 'sam se zaljubio' },
+  { id: 890, tense: 'perfekt', infinitive: 'zaljubiti se (zakochać się)', pl: 'Zakochałeś się w niej.', before: 'Ti', after: 'u nju.', answer: 'si se zaljubio' },
+  { id: 891, tense: 'perfekt', infinitive: 'zaljubiti se (zakochać się)', pl: 'Ona zakochała się w nim.', before: 'Ona', after: 'u njega.', answer: 'se zaljubila' },
+  { id: 892, tense: 'perfekt', infinitive: 'zaljubiti se (zakochać się)', pl: 'Zakochaliśmy się w tym mieście.', before: 'Mi', after: 'u ovaj grad.', answer: 'smo se zaljubili' },
+  { id: 893, tense: 'perfekt', infinitive: 'zaljubiti se (zakochać się)', pl: 'Zakochaliście się w Chorwacji.', before: 'Vi', after: 'u Hrvatsku.', answer: 'ste se zaljubili' },
+  { id: 894, tense: 'perfekt', infinitive: 'zaljubiti se (zakochać się)', pl: 'Oni zakochali się od razu.', before: 'Oni', after: 'odmah.', answer: 'su se zaljubili' },
+  { id: 895, tense: 'perfekt', infinitive: 'prijaviti se (zgłosić się)', pl: 'Zgłosiłem się na kurs.', before: 'Ja', after: 'na tečaj.', answer: 'sam se prijavio' },
+  { id: 896, tense: 'perfekt', infinitive: 'prijaviti se (zgłosić się)', pl: 'Zgłosiłeś się na kurs.', before: 'Ti', after: 'na tečaj.', answer: 'si se prijavio' },
+  { id: 897, tense: 'perfekt', infinitive: 'prijaviti se (zgłosić się)', pl: 'Ona zgłosiła się na kurs.', before: 'Ona', after: 'na tečaj.', answer: 'se prijavila' },
+  { id: 898, tense: 'perfekt', infinitive: 'prijaviti se (zgłosić się)', pl: 'Zgłosiliśmy się na kurs.', before: 'Mi', after: 'na tečaj.', answer: 'smo se prijavili' },
+  { id: 899, tense: 'perfekt', infinitive: 'prijaviti se (zgłosić się)', pl: 'Zgłosiliście się na kurs.', before: 'Vi', after: 'na tečaj.', answer: 'ste se prijavili' },
+  { id: 900, tense: 'perfekt', infinitive: 'prijaviti se (zgłosić się)', pl: 'Oni zgłosili się na kurs.', before: 'Oni', after: 'na tečaj.', answer: 'su se prijavili' },
+  { id: 901, tense: 'perfekt', infinitive: 'preživjeti (przeżyć)', pl: 'Przeżyłem trudny rok.', before: 'Ja', after: 'tešku godinu.', answer: 'sam preživio' },
+  { id: 902, tense: 'perfekt', infinitive: 'preživjeti (przeżyć)', pl: 'Przeżyłeś trudny rok.', before: 'Ti', after: 'tešku godinu.', answer: 'si preživio' },
+  { id: 903, tense: 'perfekt', infinitive: 'preživjeti (przeżyć)', pl: 'Ona przeżyła trudny rok.', before: 'Ona', after: 'tešku godinu.', answer: 'je preživjela' },
+  { id: 904, tense: 'perfekt', infinitive: 'preživjeti (przeżyć)', pl: 'Przeżyliśmy trudny rok.', before: 'Mi', after: 'tešku godinu.', answer: 'smo preživjeli' },
+  { id: 905, tense: 'perfekt', infinitive: 'preživjeti (przeżyć)', pl: 'Przeżyliście trudny rok.', before: 'Vi', after: 'tešku godinu.', answer: 'ste preživjeli' },
+  { id: 906, tense: 'perfekt', infinitive: 'preživjeti (przeżyć)', pl: 'Oni przeżyli trudny rok.', before: 'Oni', after: 'tešku godinu.', answer: 'su preživjeli' },
+  { id: 907, tense: 'perfekt', infinitive: 'izgraditi (zbudować)', pl: 'Zbudowałem dom.', before: 'Ja', after: 'kuću.', answer: 'sam izgradio' },
+  { id: 908, tense: 'perfekt', infinitive: 'izgraditi (zbudować)', pl: 'Zbudowałeś dom.', before: 'Ti', after: 'kuću.', answer: 'si izgradio' },
+  { id: 909, tense: 'perfekt', infinitive: 'izgraditi (zbudować)', pl: 'Ona zbudowała dom.', before: 'Ona', after: 'kuću.', answer: 'je izgradila' },
+  { id: 910, tense: 'perfekt', infinitive: 'izgraditi (zbudować)', pl: 'Zbudowaliśmy dom.', before: 'Mi', after: 'kuću.', answer: 'smo izgradili' },
+  { id: 911, tense: 'perfekt', infinitive: 'izgraditi (zbudować)', pl: 'Zbudowaliście dom.', before: 'Vi', after: 'kuću.', answer: 'ste izgradili' },
+  { id: 912, tense: 'perfekt', infinitive: 'izgraditi (zbudować)', pl: 'Oni zbudowali dom.', before: 'Oni', after: 'kuću.', answer: 'su izgradili' },
+  { id: 913, tense: 'perfekt', infinitive: 'napisati (napisać)', pl: 'Napisałem książkę.', before: 'Ja', after: 'knjigu.', answer: 'sam napisao' },
+  { id: 914, tense: 'perfekt', infinitive: 'napisati (napisać)', pl: 'Napisałeś książkę.', before: 'Ti', after: 'knjigu.', answer: 'si napisao' },
+  { id: 915, tense: 'perfekt', infinitive: 'napisati (napisać)', pl: 'Ona napisała książkę.', before: 'Ona', after: 'knjigu.', answer: 'je napisala' },
+  { id: 916, tense: 'perfekt', infinitive: 'napisati (napisać)', pl: 'Napisaliśmy książkę.', before: 'Mi', after: 'knjigu.', answer: 'smo napisali' },
+  { id: 917, tense: 'perfekt', infinitive: 'napisati (napisać)', pl: 'Napisaliście książkę.', before: 'Vi', after: 'knjigu.', answer: 'ste napisali' },
+  { id: 918, tense: 'perfekt', infinitive: 'napisati (napisać)', pl: 'Oni napisali książkę.', before: 'Oni', after: 'knjigu.', answer: 'su napisali' },
+  { id: 919, tense: 'perfekt', infinitive: 'snimiti (nagrać)', pl: 'Nagrałem film.', before: 'Ja', after: 'film.', answer: 'sam snimio' },
+  { id: 920, tense: 'perfekt', infinitive: 'snimiti (nagrać)', pl: 'Nagrałeś film.', before: 'Ti', after: 'film.', answer: 'si snimio' },
+  { id: 921, tense: 'perfekt', infinitive: 'snimiti (nagrać)', pl: 'Ona nagrała film.', before: 'Ona', after: 'film.', answer: 'je snimila' },
+  { id: 922, tense: 'perfekt', infinitive: 'snimiti (nagrać)', pl: 'Nagraliśmy film.', before: 'Mi', after: 'film.', answer: 'smo snimili' },
+  { id: 923, tense: 'perfekt', infinitive: 'snimiti (nagrać)', pl: 'Nagraliście film.', before: 'Vi', after: 'film.', answer: 'ste snimili' },
+  { id: 924, tense: 'perfekt', infinitive: 'snimiti (nagrać)', pl: 'Oni nagrali film.', before: 'Oni', after: 'film.', answer: 'su snimili' },
+  { id: 925, tense: 'perfekt', infinitive: 'dobiti (dostać)', pl: 'Dostałem prezent.', before: 'Ja', after: 'poklon.', answer: 'sam dobio' },
+  { id: 926, tense: 'perfekt', infinitive: 'dobiti (dostać)', pl: 'Dostałeś prezent.', before: 'Ti', after: 'poklon.', answer: 'si dobio' },
+  { id: 927, tense: 'perfekt', infinitive: 'dobiti (dostać)', pl: 'Ona dostała prezent.', before: 'Ona', after: 'poklon.', answer: 'je dobila' },
+  { id: 928, tense: 'perfekt', infinitive: 'dobiti (dostać)', pl: 'Dostaliśmy prezent.', before: 'Mi', after: 'poklon.', answer: 'smo dobili' },
+  { id: 929, tense: 'perfekt', infinitive: 'dobiti (dostać)', pl: 'Dostaliście prezent.', before: 'Vi', after: 'poklon.', answer: 'ste dobili' },
+  { id: 930, tense: 'perfekt', infinitive: 'dobiti (dostać)', pl: 'Oni dostali prezent.', before: 'Oni', after: 'poklon.', answer: 'su dobili' },
+  { id: 931, tense: 'perfekt', infinitive: 'posuditi (pożyczyć)', pl: 'Pożyczyłem książkę od przyjaciela.', before: 'Ja', after: 'knjigu od prijatelja.', answer: 'sam posudio' },
+  { id: 932, tense: 'perfekt', infinitive: 'posuditi (pożyczyć)', pl: 'Pożyczyłeś książkę od przyjaciela.', before: 'Ti', after: 'knjigu od prijatelja.', answer: 'si posudio' },
+  { id: 933, tense: 'perfekt', infinitive: 'posuditi (pożyczyć)', pl: 'Ona pożyczyła książkę od przyjaciela.', before: 'Ona', after: 'knjigu od prijatelja.', answer: 'je posudila' },
+  { id: 934, tense: 'perfekt', infinitive: 'posuditi (pożyczyć)', pl: 'Pożyczyliśmy książkę od przyjaciela.', before: 'Mi', after: 'knjigu od prijatelja.', answer: 'smo posudili' },
+  { id: 935, tense: 'perfekt', infinitive: 'posuditi (pożyczyć)', pl: 'Pożyczyliście książkę od przyjaciela.', before: 'Vi', after: 'knjigu od prijatelja.', answer: 'ste posudili' },
+  { id: 936, tense: 'perfekt', infinitive: 'posuditi (pożyczyć)', pl: 'Oni pożyczyli książkę od przyjaciela.', before: 'Oni', after: 'knjigu od prijatelja.', answer: 'su posudili' },
+  { id: 937, tense: 'futur', infinitive: 'dočekati (powitać)', pl: 'Powitam Nowy Rok.', before: 'Ja', after: 'Novu godinu.', answer: 'ću dočekati' },
+  { id: 938, tense: 'futur', infinitive: 'dočekati (powitać)', pl: 'Powitasz Nowy Rok.', before: 'Ti', after: 'Novu godinu.', answer: 'ćeš dočekati' },
+  { id: 939, tense: 'futur', infinitive: 'dočekati (powitać)', pl: 'On powita Nowy Rok.', before: 'On', after: 'Novu godinu.', answer: 'će dočekati' },
+  { id: 940, tense: 'futur', infinitive: 'dočekati (powitać)', pl: 'Powitamy Nowy Rok.', before: 'Mi', after: 'Novu godinu.', answer: 'ćemo dočekati' },
+  { id: 941, tense: 'futur', infinitive: 'dočekati (powitać)', pl: 'Powitacie Nowy Rok.', before: 'Vi', after: 'Novu godinu.', answer: 'ćete dočekati' },
+  { id: 942, tense: 'futur', infinitive: 'dočekati (powitać)', pl: 'Oni powitają Nowy Rok.', before: 'Oni', after: 'Novu godinu.', answer: 'će dočekati' },
+  { id: 943, tense: 'futur', infinitive: 'istražiti (zbadać)', pl: 'Zbadam sprawę.', before: 'Ja', after: 'slučaj.', answer: 'ću istražiti' },
+  { id: 944, tense: 'futur', infinitive: 'istražiti (zbadać)', pl: 'Zbadasz sprawę.', before: 'Ti', after: 'slučaj.', answer: 'ćeš istražiti' },
+  { id: 945, tense: 'futur', infinitive: 'istražiti (zbadać)', pl: 'Ona zbada sprawę.', before: 'Ona', after: 'slučaj.', answer: 'će istražiti' },
+  { id: 946, tense: 'futur', infinitive: 'istražiti (zbadać)', pl: 'Zbadamy sprawę.', before: 'Mi', after: 'slučaj.', answer: 'ćemo istražiti' },
+  { id: 947, tense: 'futur', infinitive: 'istražiti (zbadać)', pl: 'Zbadacie sprawę.', before: 'Vi', after: 'slučaj.', answer: 'ćete istražiti' },
+  { id: 948, tense: 'futur', infinitive: 'istražiti (zbadać)', pl: 'Oni zbadają sprawę.', before: 'Oni', after: 'slučaj.', answer: 'će istražiti' },
+  { id: 949, tense: 'futur', infinitive: 'objaviti (ogłosić)', pl: 'Ogłoszę wyniki.', before: 'Ja', after: 'rezultate.', answer: 'ću objaviti' },
+  { id: 950, tense: 'futur', infinitive: 'objaviti (ogłosić)', pl: 'Ogłosisz wyniki.', before: 'Ti', after: 'rezultate.', answer: 'ćeš objaviti' },
+  { id: 951, tense: 'futur', infinitive: 'objaviti (ogłosić)', pl: 'On ogłosi wyniki.', before: 'On', after: 'rezultate.', answer: 'će objaviti' },
+  { id: 952, tense: 'futur', infinitive: 'objaviti (ogłosić)', pl: 'Ogłosimy wyniki.', before: 'Mi', after: 'rezultate.', answer: 'ćemo objaviti' },
+  { id: 953, tense: 'futur', infinitive: 'objaviti (ogłosić)', pl: 'Ogłosicie wyniki.', before: 'Vi', after: 'rezultate.', answer: 'ćete objaviti' },
+  { id: 954, tense: 'futur', infinitive: 'objaviti (ogłosić)', pl: 'Oni ogłoszą wyniki.', before: 'Oni', after: 'rezultate.', answer: 'će objaviti' },
+  { id: 955, tense: 'futur', infinitive: 'nastaviti (kontynuować)', pl: 'Będę kontynuować pracę.', before: 'Ja', after: 'raditi.', answer: 'ću nastaviti' },
+  { id: 956, tense: 'futur', infinitive: 'nastaviti (kontynuować)', pl: 'Będziesz kontynuować pracę.', before: 'Ti', after: 'raditi.', answer: 'ćeš nastaviti' },
+  { id: 957, tense: 'futur', infinitive: 'nastaviti (kontynuować)', pl: 'Ona będzie kontynuować pracę.', before: 'Ona', after: 'raditi.', answer: 'će nastaviti' },
+  { id: 958, tense: 'futur', infinitive: 'nastaviti (kontynuować)', pl: 'Będziemy kontynuować pracę.', before: 'Mi', after: 'raditi.', answer: 'ćemo nastaviti' },
+  { id: 959, tense: 'futur', infinitive: 'nastaviti (kontynuować)', pl: 'Będziecie kontynuować pracę.', before: 'Vi', after: 'raditi.', answer: 'ćete nastaviti' },
+  { id: 960, tense: 'futur', infinitive: 'nastaviti (kontynuować)', pl: 'Oni będą kontynuować pracę.', before: 'Oni', after: 'raditi.', answer: 'će nastaviti' },
+  { id: 961, tense: 'futur', infinitive: 'uključiti (włączyć)', pl: 'Włączę światło.', before: 'Ja', after: 'svjetlo.', answer: 'ću uključiti' },
+  { id: 962, tense: 'futur', infinitive: 'uključiti (włączyć)', pl: 'Włączysz światło.', before: 'Ti', after: 'svjetlo.', answer: 'ćeš uključiti' },
+  { id: 963, tense: 'futur', infinitive: 'uključiti (włączyć)', pl: 'On włączy światło.', before: 'On', after: 'svjetlo.', answer: 'će uključiti' },
+  { id: 964, tense: 'futur', infinitive: 'uključiti (włączyć)', pl: 'Włączymy światło.', before: 'Mi', after: 'svjetlo.', answer: 'ćemo uključiti' },
+  { id: 965, tense: 'futur', infinitive: 'uključiti (włączyć)', pl: 'Włączycie światło.', before: 'Vi', after: 'svjetlo.', answer: 'ćete uključiti' },
+  { id: 966, tense: 'futur', infinitive: 'uključiti (włączyć)', pl: 'Oni włączą światło.', before: 'Oni', after: 'svjetlo.', answer: 'će uključiti' },
+  { id: 967, tense: 'futur', infinitive: 'isključiti (wyłączyć)', pl: 'Wyłączę telewizor.', before: 'Ja', after: 'televizor.', answer: 'ću isključiti' },
+  { id: 968, tense: 'futur', infinitive: 'isključiti (wyłączyć)', pl: 'Wyłączysz telewizor.', before: 'Ti', after: 'televizor.', answer: 'ćeš isključiti' },
+  { id: 969, tense: 'futur', infinitive: 'isključiti (wyłączyć)', pl: 'Ona wyłączy telewizor.', before: 'Ona', after: 'televizor.', answer: 'će isključiti' },
+  { id: 970, tense: 'futur', infinitive: 'isključiti (wyłączyć)', pl: 'Wyłączymy telewizor.', before: 'Mi', after: 'televizor.', answer: 'ćemo isključiti' },
+  { id: 971, tense: 'futur', infinitive: 'isključiti (wyłączyć)', pl: 'Wyłączycie telewizor.', before: 'Vi', after: 'televizor.', answer: 'ćete isključiti' },
+  { id: 972, tense: 'futur', infinitive: 'isključiti (wyłączyć)', pl: 'Oni wyłączą telewizor.', before: 'Oni', after: 'televizor.', answer: 'će isključiti' },
+  { id: 973, tense: 'futur', infinitive: 'preporučiti (polecić)', pl: 'Polecę restaurację.', before: 'Ja', after: 'restoran.', answer: 'ću preporučiti' },
+  { id: 974, tense: 'futur', infinitive: 'preporučiti (polecić)', pl: 'Polecisz restaurację.', before: 'Ti', after: 'restoran.', answer: 'ćeš preporučiti' },
+  { id: 975, tense: 'futur', infinitive: 'preporučiti (polecić)', pl: 'On poleci restaurację.', before: 'On', after: 'restoran.', answer: 'će preporučiti' },
+  { id: 976, tense: 'futur', infinitive: 'preporučiti (polecić)', pl: 'Polecimy restaurację.', before: 'Mi', after: 'restoran.', answer: 'ćemo preporučiti' },
+  { id: 977, tense: 'futur', infinitive: 'preporučiti (polecić)', pl: 'Polecicie restaurację.', before: 'Vi', after: 'restoran.', answer: 'ćete preporučiti' },
+  { id: 978, tense: 'futur', infinitive: 'preporučiti (polecić)', pl: 'Oni polecą restaurację.', before: 'Oni', after: 'restoran.', answer: 'će preporučiti' },
+  { id: 979, tense: 'futur', infinitive: 'osigurati (zapewnić)', pl: 'Zapewnię pomoc.', before: 'Ja', after: 'pomoć.', answer: 'ću osigurati' },
+  { id: 980, tense: 'futur', infinitive: 'osigurati (zapewnić)', pl: 'Zapewnisz pomoc.', before: 'Ti', after: 'pomoć.', answer: 'ćeš osigurati' },
+  { id: 981, tense: 'futur', infinitive: 'osigurati (zapewnić)', pl: 'Ona zapewni pomoc.', before: 'Ona', after: 'pomoć.', answer: 'će osigurati' },
+  { id: 982, tense: 'futur', infinitive: 'osigurati (zapewnić)', pl: 'Zapewnimy pomoc.', before: 'Mi', after: 'pomoć.', answer: 'ćemo osigurati' },
+  { id: 983, tense: 'futur', infinitive: 'osigurati (zapewnić)', pl: 'Zapewnicie pomoc.', before: 'Vi', after: 'pomoć.', answer: 'ćete osigurati' },
+  { id: 984, tense: 'futur', infinitive: 'osigurati (zapewnić)', pl: 'Oni zapewnią pomoc.', before: 'Oni', after: 'pomoć.', answer: 'će osigurati' },
+  { id: 985, tense: 'futur', infinitive: 'izabrati (wybrać)', pl: 'Wybiorę najlepsze.', before: 'Ja', after: 'najbolje.', answer: 'ću izabrati' },
+  { id: 986, tense: 'futur', infinitive: 'izabrati (wybrać)', pl: 'Wybierzesz najlepsze.', before: 'Ti', after: 'najbolje.', answer: 'ćeš izabrati' },
+  { id: 987, tense: 'futur', infinitive: 'izabrati (wybrać)', pl: 'On wybierze najlepsze.', before: 'On', after: 'najbolje.', answer: 'će izabrati' },
+  { id: 988, tense: 'futur', infinitive: 'izabrati (wybrać)', pl: 'Wybierzemy najlepsze.', before: 'Mi', after: 'najbolje.', answer: 'ćemo izabrati' },
+  { id: 989, tense: 'futur', infinitive: 'izabrati (wybrać)', pl: 'Wybierzecie najlepsze.', before: 'Vi', after: 'najbolje.', answer: 'ćete izabrati' },
+  { id: 990, tense: 'futur', infinitive: 'izabrati (wybrać)', pl: 'Oni wybiorą najlepsze.', before: 'Oni', after: 'najbolje.', answer: 'će izabrati' },
+  { id: 991, tense: 'futur', infinitive: 'doznati (dowiedzieć się)', pl: 'Dowiem się prawdy.', before: 'Ja', after: 'istinu.', answer: 'ću doznati' },
+  { id: 992, tense: 'futur', infinitive: 'doznati (dowiedzieć się)', pl: 'Dowiesz się prawdy.', before: 'Ti', after: 'istinu.', answer: 'ćeš doznati' },
+  { id: 993, tense: 'futur', infinitive: 'doznati (dowiedzieć się)', pl: 'Ona dowie się prawdy.', before: 'Ona', after: 'istinu.', answer: 'će doznati' },
+  { id: 994, tense: 'futur', infinitive: 'doznati (dowiedzieć się)', pl: 'Dowiemy się prawdy.', before: 'Mi', after: 'istinu.', answer: 'ćemo doznati' },
+  { id: 995, tense: 'futur', infinitive: 'doznati (dowiedzieć się)', pl: 'Dowiecie się prawdy.', before: 'Vi', after: 'istinu.', answer: 'ćete doznati' },
+  { id: 996, tense: 'futur', infinitive: 'doznati (dowiedzieć się)', pl: 'Oni dowiedzą się prawdy.', before: 'Oni', after: 'istinu.', answer: 'će doznati' },
+  { id: 997, tense: 'futur', infinitive: 'zaraditi (zarobić)', pl: 'Zarobię pieniądze.', before: 'Ja', after: 'novac.', answer: 'ću zaraditi' },
+  { id: 998, tense: 'futur', infinitive: 'zaraditi (zarobić)', pl: 'Zarobisz pieniądze.', before: 'Ti', after: 'novac.', answer: 'ćeš zaraditi' },
+  { id: 999, tense: 'futur', infinitive: 'zaraditi (zarobić)', pl: 'On zarobi pieniądze.', before: 'On', after: 'novac.', answer: 'će zaraditi' },
+  { id: 1000, tense: 'futur', infinitive: 'zaraditi (zarobić)', pl: 'Zarobimy pieniądze.', before: 'Mi', after: 'novac.', answer: 'ćemo zaraditi' },
+  { id: 1001, tense: 'futur', infinitive: 'zaraditi (zarobić)', pl: 'Zarobicie pieniądze.', before: 'Vi', after: 'novac.', answer: 'ćete zaraditi' },
+  { id: 1002, tense: 'futur', infinitive: 'zaraditi (zarobić)', pl: 'Oni zarobią pieniądze.', before: 'Oni', after: 'novac.', answer: 'će zaraditi' }
 ]
