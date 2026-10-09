@@ -9,6 +9,13 @@
       <div class="category">
         {{ current.category }}
         <span class="mode-badge">{{ exerciseType === 'full' ? 'całe zdanie' : 'luka' }}</span>
+        <span
+          v-if="streak >= 2"
+          :key="streak"
+          class="streak-badge"
+        >
+          🔥 {{ streak }}
+        </span>
       </div>
 
       <div class="hint">
@@ -118,23 +125,20 @@
           {{ checked ? 'Dalej →' : 'Sprawdź' }}
         </button>
       </div>
-
-      <div
-        v-if="checked"
-        class="swipe-hint"
-      >
-        <ArrowUp
-          :size="13"
-          :stroke-width="2"
-        />
-        <span>Swipe up — następne zdanie</span>
-      </div>
     </div>
 
     <WordCounter
       :count="pool.length"
       label="zdań"
     />
+
+    <div class="swipe-hint">
+      <ArrowUp
+        :size="13"
+        :stroke-width="2"
+      />
+      <span>Swipe up — następne zdanie</span>
+    </div>
 
     <div class="keyboard-hints">
       <div class="keyboard-title">
@@ -170,6 +174,8 @@
         </div>
       </div>
     </div>
+
+    <Confetti ref="confettiRef" />
   </div>
 </template>
 
@@ -180,6 +186,7 @@ import { ArrowUp, Keyboard } from 'lucide-vue-next'
 import { sentences } from '../data/sentences.js'
 
 import WordCounter from './WordCounter.vue'
+import Confetti from './Confetti.vue'
 
 const emit = defineEmits(['back'])
 
@@ -197,6 +204,9 @@ const props = defineProps({
     default: null
   }
 })
+
+// Co ile poprawnych odpowiedzi z rzędu odpalamy konfetti
+const STREAK_MILESTONE = 5
 
 function shuffle(array) {
   const shuffled = [...array]
@@ -233,6 +243,9 @@ const checked = ref(false)
 const inputEl = ref(null)
 const revealedCount = ref(0)
 const activeTooltip = ref(null)
+
+const streak = ref(0)
+const confettiRef = ref(null)
 
 let pointerStartY = 0
 let pointerStartX = 0
@@ -311,6 +324,21 @@ const inputWidth = computed(() => {
   return `${length + 2}ch`
 })
 
+// Zlicza serię poprawnych odpowiedzi i odpala konfetti na pełnych
+// wielokrotnościach STREAK_MILESTONE (5, 10, 15...)
+function registerResult(correct) {
+  if (!correct) {
+    streak.value = 0
+    return
+  }
+
+  streak.value++
+
+  if (streak.value % STREAK_MILESTONE === 0) {
+    confettiRef.value?.fire()
+  }
+}
+
 function toggleTooltip(index) {
   activeTooltip.value = activeTooltip.value === index ? null : index
 }
@@ -326,9 +354,11 @@ function revealLetter() {
   userAnswer.value = correctAnswer.value.slice(0, revealedCount.value)
 
   // Jeśli właśnie odsłoniliśmy ostatnią literę, odpowiedź jest już
-  // ze 100% pewnością poprawna — nie ma sensu prosić o "Sprawdź"
+  // poprawna, więc nie ma sensu prosić o "Sprawdź". Ale słowo zostało
+  // w całości podpowiedziane, więc nie liczy się do serii (resetuje ją).
   if (allLettersRevealed.value) {
     checked.value = true
+    streak.value = 0
     return
   }
 
@@ -359,7 +389,9 @@ function handleInputFocus(event) {
 
 function checkAnswer() {
   if (checked.value) return
+
   checked.value = true
+  registerResult(isCorrect.value)
 }
 
 function nextSentence() {
@@ -511,6 +543,40 @@ onUnmounted(() => {
 
   letter-spacing: 0.5px;
   text-transform: none;
+}
+
+.streak-badge {
+  padding: 2px 8px;
+
+  border: 1px solid rgba(201, 168, 76, 0.4);
+  border-radius: 10px;
+
+  background: rgba(201, 168, 76, 0.12);
+  color: #e0c88a;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+  text-transform: none;
+
+  animation: streak-pop 0.35s ease-out;
+}
+
+@keyframes streak-pop {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+
+  60% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .hint {
@@ -775,7 +841,6 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   gap: 6px;
-  margin-top: 16px;
 
   color: #666672;
 
@@ -886,6 +951,12 @@ kbd {
 }
 
 @media (max-width: 500px) {
+  .sentence-wrapper {
+    min-height: 100dvh;
+    justify-content: flex-start;
+    padding-top: 40px;
+  }
+
   .card {
     width: calc(100% - 32px);
     padding: 28px 20px;
