@@ -6,16 +6,24 @@
     @pointerup="handlePointerUp"
   >
     <div class="card">
+      <div
+        class="streak"
+        :class="{ active: streak > 0 }"
+      >
+        <span class="streak-icon">🔥</span>
+        <span class="streak-label">Seria poprawnych:</span>
+        <span
+          :key="streak"
+          class="streak-count"
+          :class="{ pop: streak > 0 }"
+        >
+          {{ streak }}
+        </span>
+      </div>
+
       <div class="category">
         {{ current.category }}
         <span class="mode-badge">{{ exerciseType === 'full' ? 'całe zdanie' : 'luka' }}</span>
-        <span
-          v-if="streak >= 2"
-          :key="streak"
-          class="streak-badge"
-        >
-          🔥 {{ streak }}
-        </span>
       </div>
 
       <div class="hint">
@@ -514,6 +522,76 @@ onUnmounted(() => {
   animation-delay: 0.15s;
 }
 
+.streak {
+  margin-bottom: 18px;
+  padding: 5px 14px;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  border: 1px solid #383842;
+  border-radius: 14px;
+
+  background: #24242c;
+  color: #83838d;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.streak-icon {
+  opacity: 0.45;
+  filter: grayscale(1);
+
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.streak.active {
+  border-color: rgba(201, 168, 76, 0.45);
+  background: rgba(201, 168, 76, 0.12);
+  color: #e0c88a;
+}
+
+.streak.active .streak-icon {
+  opacity: 1;
+  filter: none;
+}
+
+.streak-count {
+  min-width: 14px;
+
+  display: inline-block;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.streak-count.pop {
+  animation: streak-pop 0.35s ease-out;
+}
+
+@keyframes streak-pop {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.4;
+  }
+
+  60% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .category {
   margin-bottom: 20px;
 
@@ -543,40 +621,6 @@ onUnmounted(() => {
 
   letter-spacing: 0.5px;
   text-transform: none;
-}
-
-.streak-badge {
-  padding: 2px 8px;
-
-  border: 1px solid rgba(201, 168, 76, 0.4);
-  border-radius: 10px;
-
-  background: rgba(201, 168, 76, 0.12);
-  color: #e0c88a;
-
-  font-size: 10px;
-  font-weight: 700;
-
-  letter-spacing: 0.5px;
-  text-transform: none;
-
-  animation: streak-pop 0.35s ease-out;
-}
-
-@keyframes streak-pop {
-  0% {
-    transform: scale(0.6);
-    opacity: 0;
-  }
-
-  60% {
-    transform: scale(1.15);
-  }
-
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
 }
 
 .hint {
