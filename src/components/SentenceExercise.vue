@@ -6,24 +6,22 @@
     @pointerup="handlePointerUp"
   >
     <div class="card">
-      <div
-        class="streak"
-        :class="{ active: streak > 0 }"
-      >
-        <span class="streak-icon">🔥</span>
-        <span class="streak-label">Seria poprawnych:</span>
-        <span
-          :key="streak"
-          class="streak-count"
-          :class="{ pop: streak > 0 }"
-        >
-          {{ streak }}
-        </span>
-      </div>
-
       <div class="category">
         {{ current.category }}
         <span class="mode-badge">{{ exerciseType === 'full' ? 'całe zdanie' : 'luka' }}</span>
+
+        <span
+          class="streak"
+          :class="{ active: streak > 0 }"
+          title="Seria poprawnych odpowiedzi"
+        >
+          <span class="streak-icon">🔥</span>
+          <span
+            :key="streak"
+            class="streak-count"
+            :class="{ pop: streak > 0 }"
+          >{{ streak }}</span>
+        </span>
       </div>
 
       <div class="hint">
@@ -183,6 +181,15 @@
       </div>
     </div>
 
+    <div
+      v-if="comboValue"
+      :key="comboKey"
+      class="combo-banner"
+      aria-live="polite"
+    >
+      COMBO x{{ comboValue }}
+    </div>
+
     <Confetti ref="confettiRef" />
   </div>
 </template>
@@ -213,8 +220,9 @@ const props = defineProps({
   }
 })
 
-// Co ile poprawnych odpowiedzi z rzędu odpalamy konfetti
+// Co ile poprawnych odpowiedzi z rzędu pokazujemy COMBO i konfetti
 const STREAK_MILESTONE = 5
+const COMBO_VISIBLE_MS = 1800
 
 function shuffle(array) {
   const shuffled = [...array]
@@ -254,6 +262,12 @@ const activeTooltip = ref(null)
 
 const streak = ref(0)
 const confettiRef = ref(null)
+
+// Napis COMBO: wartość (5, 10, 15...) albo null, gdy ukryty.
+// comboKey wymusza ponowne odtworzenie animacji przy kolejnym combo.
+const comboValue = ref(null)
+const comboKey = ref(0)
+let comboTimer = null
 
 let pointerStartY = 0
 let pointerStartX = 0
@@ -332,8 +346,20 @@ const inputWidth = computed(() => {
   return `${length + 2}ch`
 })
 
-// Zlicza serię poprawnych odpowiedzi i odpala konfetti na pełnych
-// wielokrotnościach STREAK_MILESTONE (5, 10, 15...)
+function showCombo(value) {
+  if (comboTimer) clearTimeout(comboTimer)
+
+  comboValue.value = value
+  comboKey.value++
+
+  comboTimer = setTimeout(() => {
+    comboValue.value = null
+    comboTimer = null
+  }, COMBO_VISIBLE_MS)
+}
+
+// Zlicza serię poprawnych odpowiedzi. Na pełnych wielokrotnościach
+// STREAK_MILESTONE (5, 10, 15...) pokazuje COMBO i odpala konfetti.
 function registerResult(correct) {
   if (!correct) {
     streak.value = 0
@@ -343,6 +369,7 @@ function registerResult(correct) {
   streak.value++
 
   if (streak.value % STREAK_MILESTONE === 0) {
+    showCombo(streak.value)
     confettiRef.value?.fire()
   }
 }
@@ -480,6 +507,11 @@ onMounted(() => {
 
 onUnmounted(() => {
   window.removeEventListener('keydown', handleKeydown)
+
+  if (comboTimer) {
+    clearTimeout(comboTimer)
+    comboTimer = null
+  }
 })
 </script>
 
@@ -522,81 +554,13 @@ onUnmounted(() => {
   animation-delay: 0.15s;
 }
 
-.streak {
-  margin-bottom: 18px;
-  padding: 5px 14px;
-
-  display: flex;
-  align-items: center;
-  gap: 6px;
-
-  border: 1px solid #383842;
-  border-radius: 14px;
-
-  background: #24242c;
-  color: #83838d;
-
-  font-size: 12px;
-  font-weight: 600;
-
-  transition:
-    background 0.3s ease,
-    border-color 0.3s ease,
-    color 0.3s ease;
-}
-
-.streak-icon {
-  opacity: 0.45;
-  filter: grayscale(1);
-
-  transition: opacity 0.3s ease, filter 0.3s ease;
-}
-
-.streak.active {
-  border-color: rgba(201, 168, 76, 0.45);
-  background: rgba(201, 168, 76, 0.12);
-  color: #e0c88a;
-}
-
-.streak.active .streak-icon {
-  opacity: 1;
-  filter: none;
-}
-
-.streak-count {
-  min-width: 14px;
-
-  display: inline-block;
-
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.streak-count.pop {
-  animation: streak-pop 0.35s ease-out;
-}
-
-@keyframes streak-pop {
-  0% {
-    transform: scale(0.6);
-    opacity: 0.4;
-  }
-
-  60% {
-    transform: scale(1.3);
-  }
-
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
 .category {
   margin-bottom: 20px;
 
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 8px;
 
   font-size: 12px;
@@ -621,6 +585,119 @@ onUnmounted(() => {
 
   letter-spacing: 0.5px;
   text-transform: none;
+}
+
+/* Licznik serii: sama ikonka + cyfra, bez ramki i podpisu */
+.streak {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+
+  color: #55555f;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0;
+  text-transform: none;
+
+  transition: color 0.3s ease;
+}
+
+.streak-icon {
+  font-size: 12px;
+
+  opacity: 0.45;
+  filter: grayscale(1);
+
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.streak.active {
+  color: #e0c88a;
+}
+
+.streak.active .streak-icon {
+  opacity: 1;
+  filter: none;
+}
+
+.streak-count {
+  min-width: 8px;
+
+  display: inline-block;
+}
+
+.streak-count.pop {
+  animation: streak-pop 0.35s ease-out;
+}
+
+@keyframes streak-pop {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.4;
+  }
+
+  60% {
+    transform: scale(1.35);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Napis COMBO — wyskakuje na środku ekranu i znika */
+.combo-banner {
+  position: fixed;
+  top: 22%;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  color: #fcd34d;
+
+  font-size: 46px;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 2px;
+  white-space: nowrap;
+
+  text-shadow:
+    0 0 18px rgba(252, 211, 77, 0.55),
+    0 4px 0 rgba(0, 0, 0, 0.35);
+
+  pointer-events: none;
+  z-index: 999;
+
+  animation: combo-pop 1.8s ease-out forwards;
+}
+
+@keyframes combo-pop {
+  0% {
+    transform: translateX(-50%) scale(0.4) rotate(-6deg);
+    opacity: 0;
+  }
+
+  12% {
+    transform: translateX(-50%) scale(1.25) rotate(-3deg);
+    opacity: 1;
+  }
+
+  22% {
+    transform: translateX(-50%) scale(1) rotate(-3deg);
+  }
+
+  75% {
+    transform: translateX(-50%) scale(1) rotate(-3deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(-24px) scale(1) rotate(-3deg);
+    opacity: 0;
+  }
 }
 
 .hint {
@@ -1022,6 +1099,11 @@ kbd {
   .action-button {
     padding: 9px 18px;
     font-size: 13px;
+  }
+
+  .combo-banner {
+    top: 18%;
+    font-size: 34px;
   }
 }
 </style>
