@@ -187,7 +187,7 @@
       class="combo-banner"
       aria-live="polite"
     >
-      <div class="combo-title">Svaka čast!</div>
+      <div class="combo-title">{{ comboTitle }}</div>
       <div class="combo-subtitle">{{ comboValue }} točnih odgovora zaredom!</div>
     </div>
 
@@ -224,6 +224,20 @@ const props = defineProps({
 // Co ile poprawnych odpowiedzi z rzędu pokazujemy gratulacje i konfetti
 const STREAK_MILESTONE = 5
 const COMBO_VISIBLE_MS = 1800
+
+// Napisy gratulacyjne, od najniższego poziomu. Seria 5 -> pierwszy napis,
+// 10 -> drugi itd. Powyżej ostatniego poziomu zostaje ostatni napis.
+const COMBO_TITLES = [
+  'Svaka čast!', // 5
+  'Tako se to radi!', // 10
+  'Fenomenalno!', // 15
+  'Majstorski!' // 20 i więcej
+]
+
+function comboTitleFor(streakValue) {
+  const level = Math.floor(streakValue / STREAK_MILESTONE) - 1
+  return COMBO_TITLES[Math.min(level, COMBO_TITLES.length - 1)]
+}
 
 function shuffle(array) {
   const shuffled = [...array]
@@ -267,6 +281,7 @@ const confettiRef = ref(null)
 // Baner gratulacji: wartość serii (5, 10, 15...) albo null, gdy ukryty.
 // comboKey wymusza ponowne odtworzenie animacji przy kolejnym osiągnięciu.
 const comboValue = ref(null)
+const comboTitle = ref('')
 const comboKey = ref(0)
 let comboTimer = null
 
@@ -351,6 +366,7 @@ function showCombo(value) {
   if (comboTimer) clearTimeout(comboTimer)
 
   comboValue.value = value
+  comboTitle.value = comboTitleFor(value)
   comboKey.value++
 
   comboTimer = setTimeout(() => {
@@ -1126,7 +1142,7 @@ kbd {
   }
 
   .combo-title {
-    font-size: 34px;
+    font-size: 30px;
   }
 
   .combo-subtitle {
