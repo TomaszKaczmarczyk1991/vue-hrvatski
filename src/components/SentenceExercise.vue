@@ -187,7 +187,8 @@
       class="combo-banner"
       aria-live="polite"
     >
-      COMBO x{{ comboValue }}
+      <div class="combo-title">Svaka čast!</div>
+      <div class="combo-subtitle">{{ comboValue }} točnih odgovora zaredom!</div>
     </div>
 
     <Confetti ref="confettiRef" />
@@ -220,7 +221,7 @@ const props = defineProps({
   }
 })
 
-// Co ile poprawnych odpowiedzi z rzędu pokazujemy COMBO i konfetti
+// Co ile poprawnych odpowiedzi z rzędu pokazujemy gratulacje i konfetti
 const STREAK_MILESTONE = 5
 const COMBO_VISIBLE_MS = 1800
 
@@ -263,8 +264,8 @@ const activeTooltip = ref(null)
 const streak = ref(0)
 const confettiRef = ref(null)
 
-// Napis COMBO: wartość (5, 10, 15...) albo null, gdy ukryty.
-// comboKey wymusza ponowne odtworzenie animacji przy kolejnym combo.
+// Baner gratulacji: wartość serii (5, 10, 15...) albo null, gdy ukryty.
+// comboKey wymusza ponowne odtworzenie animacji przy kolejnym osiągnięciu.
 const comboValue = ref(null)
 const comboKey = ref(0)
 let comboTimer = null
@@ -359,7 +360,7 @@ function showCombo(value) {
 }
 
 // Zlicza serię poprawnych odpowiedzi. Na pełnych wielokrotnościach
-// STREAK_MILESTONE (5, 10, 15...) pokazuje COMBO i odpala konfetti.
+// STREAK_MILESTONE (5, 10, 15...) pokazuje baner i odpala konfetti.
 function registerResult(correct) {
   if (!correct) {
     streak.value = 0
@@ -648,7 +649,7 @@ onUnmounted(() => {
   }
 }
 
-/* Napis COMBO — wyskakuje na środku ekranu i znika */
+/* Baner gratulacji — wyskakuje na środku ekranu i znika */
 .combo-banner {
   position: fixed;
   top: 22%;
@@ -656,22 +657,41 @@ onUnmounted(() => {
 
   transform: translateX(-50%);
 
-  color: #fcd34d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
 
-  font-size: 46px;
-  font-weight: 900;
-  font-style: italic;
-  letter-spacing: 2px;
+  text-align: center;
   white-space: nowrap;
-
-  text-shadow:
-    0 0 18px rgba(252, 211, 77, 0.55),
-    0 4px 0 rgba(0, 0, 0, 0.35);
 
   pointer-events: none;
   z-index: 999;
 
   animation: combo-pop 1.8s ease-out forwards;
+}
+
+.combo-title {
+  color: #fcd34d;
+
+  font-size: 46px;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 1px;
+
+  text-shadow:
+    0 0 18px rgba(252, 211, 77, 0.55),
+    0 4px 0 rgba(0, 0, 0, 0.35);
+}
+
+.combo-subtitle {
+  color: #f5f5f7;
+
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 @keyframes combo-pop {
@@ -1103,7 +1123,14 @@ kbd {
 
   .combo-banner {
     top: 18%;
+  }
+
+  .combo-title {
     font-size: 34px;
+  }
+
+  .combo-subtitle {
+    font-size: 15px;
   }
 }
 </style>
