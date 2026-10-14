@@ -62,6 +62,11 @@
         <span v-if="current.after">{{ current.after }}</span>
       </div>
 
+      <CharKeys
+        :disabled="checked"
+        @insert="insertChar"
+      />
+
       <div
         v-if="gradeState"
         class="feedback"
@@ -168,6 +173,7 @@ import { conjugationExercises } from '../data/conjugation.js'
 
 import WordCounter from './WordCounter.vue'
 import Confetti from './Confetti.vue'
+import CharKeys from './CharKeys.vue'
 
 const emit = defineEmits(['back'])
 
@@ -293,6 +299,29 @@ function registerResult(correct) {
     showCombo(streak.value)
     confettiRef.value?.fire()
   }
+}
+
+// Wstawia znak (č ć đ š ž) w miejscu kursora w polu odpowiedzi
+function insertChar(char) {
+  if (checked.value) return
+
+  const el = inputEl.value
+  if (!el) return
+
+  const value = userAnswer.value
+  const start = el.selectionStart ?? value.length
+  const end = el.selectionEnd ?? start
+
+  userAnswer.value = value.slice(0, start) + char + value.slice(end)
+
+  // Po aktualizacji pola przywracamy fokus i ustawiamy kursor tuż za
+  // wstawionym znakiem, żeby można było pisać dalej bez klikania
+  nextTick(() => {
+    el.focus()
+
+    const position = start + char.length
+    el.setSelectionRange?.(position, position)
+  })
 }
 
 function revealLetter() {

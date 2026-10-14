@@ -97,6 +97,11 @@
         ></textarea>
       </div>
 
+      <CharKeys
+        :disabled="checked"
+        @insert="insertChar"
+      />
+
       <div
         v-if="gradeState"
         class="feedback"
@@ -203,6 +208,7 @@ import { sentences } from '../data/sentences.js'
 
 import WordCounter from './WordCounter.vue'
 import Confetti from './Confetti.vue'
+import CharKeys from './CharKeys.vue'
 
 const emit = defineEmits(['back'])
 
@@ -362,6 +368,11 @@ const inputWidth = computed(() => {
   return `${length + 2}ch`
 })
 
+// Pole odpowiedzi renderuje się w v-for (tryb 'gaps'), więc ref bywa tablicą
+function getInputEl() {
+  return Array.isArray(inputEl.value) ? inputEl.value[0] : inputEl.value
+}
+
 function showCombo(value) {
   if (comboTimer) clearTimeout(comboTimer)
 
@@ -399,6 +410,29 @@ function closeTooltip() {
   activeTooltip.value = null
 }
 
+// Wstawia znak (č ć đ š ž) w miejscu kursora w polu odpowiedzi
+function insertChar(char) {
+  if (checked.value) return
+
+  const el = getInputEl()
+  if (!el) return
+
+  const value = userAnswer.value
+  const start = el.selectionStart ?? value.length
+  const end = el.selectionEnd ?? start
+
+  userAnswer.value = value.slice(0, start) + char + value.slice(end)
+
+  // Po aktualizacji pola przywracamy fokus i ustawiamy kursor tuż za
+  // wstawionym znakiem, żeby można było pisać dalej bez klikania
+  nextTick(() => {
+    el.focus()
+
+    const position = start + char.length
+    el.setSelectionRange?.(position, position)
+  })
+}
+
 function revealLetter() {
   if (checked.value || allLettersRevealed.value) return
 
@@ -419,7 +453,7 @@ function revealLetter() {
 
 function focusInput() {
   nextTick(() => {
-    const el = Array.isArray(inputEl.value) ? inputEl.value[0] : inputEl.value
+    const el = getInputEl()
     el?.focus()
 
     const len = el?.value?.length ?? 0
