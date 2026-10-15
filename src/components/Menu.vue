@@ -43,94 +43,116 @@
         </button>
       </div>
 
-      <div
-        v-if="category === 'sentences'"
-        class="exercise-type-tabs"
-      >
-        <button
-          class="exercise-type-button"
-          :class="{ active: exerciseType === 'gaps' }"
-          @click="exerciseType = 'gaps'"
+      <!-- Slot o stałej wysokości: w Zdaniach przełącznik trybu,
+           w pozostałych zakładkach krótki podpis -->
+      <div class="mode-slot">
+        <Transition
+          name="swap"
+          mode="out-in"
         >
-          Uzupełnij lukę
-        </button>
+          <div
+            v-if="category === 'sentences'"
+            key="sentences"
+            class="exercise-type-tabs"
+          >
+            <button
+              class="exercise-type-button"
+              :class="{ active: exerciseType === 'gaps' }"
+              @click="exerciseType = 'gaps'"
+            >
+              Uzupełnij lukę
+            </button>
 
-        <button
-          class="exercise-type-button"
-          :class="{ active: exerciseType === 'full' }"
-          @click="exerciseType = 'full'"
-        >
-          Całe zdanie
-        </button>
+            <button
+              class="exercise-type-button"
+              :class="{ active: exerciseType === 'full' }"
+              @click="exerciseType = 'full'"
+            >
+              Całe zdanie
+            </button>
+          </div>
+
+          <p
+            v-else
+            :key="category"
+            class="mode-caption"
+          >
+            {{ caption }}
+          </p>
+        </Transition>
       </div>
 
-      <div
-        v-if="category === 'dictionary'"
-        class="options"
-      >
-        <button
-          class="option-button"
-          aria-label="Otwórz słownik"
-          @click="choose()"
+      <!-- Slot na przyciski o stałej wysokości (miejsce na dwa przyciski) -->
+      <div class="options">
+        <Transition
+          name="swap"
+          mode="out-in"
         >
-          <span>📖</span>
-          <span>Otwórz słownik</span>
-        </button>
-      </div>
+          <div
+            :key="optionsKey"
+            class="options-inner"
+          >
+            <template v-if="category === 'dictionary'">
+              <button
+                class="option-button"
+                aria-label="Otwórz słownik"
+                @click="choose()"
+              >
+                <span>📖</span>
+                <span>Otwórz słownik</span>
+              </button>
+            </template>
 
-      <div
-        v-else-if="category === 'grammar'"
-        class="options"
-      >
-        <button
-          class="option-button"
-          aria-label="Otwórz zasady gramatyczne"
-          @click="chooseGrammar()"
-        >
-          <span>📚</span>
-          <span>Zasady</span>
-        </button>
+            <template v-else-if="category === 'grammar'">
+              <button
+                class="option-button"
+                aria-label="Otwórz zasady gramatyczne"
+                @click="chooseGrammar()"
+              >
+                <span>📚</span>
+                <span>Zasady</span>
+              </button>
 
-        <button
-          class="option-button"
-          aria-label="Ćwicz odmianę czasowników"
-          @click="chooseConjugation()"
-        >
-          <span>✍️</span>
-          <span>Odmiana czasowników</span>
-        </button>
-      </div>
+              <button
+                class="option-button"
+                aria-label="Ćwicz odmianę czasowników"
+                @click="chooseConjugation()"
+              >
+                <span>✍️</span>
+                <span>Odmiana czasowników</span>
+              </button>
+            </template>
 
-      <div
-        v-else
-        class="options"
-      >
-        <button
-          class="option-button"
-          :aria-label="ariaLabel('hr-pl')"
-          @click="choose('hr-pl')"
-        >
-          <span>🇭🇷</span>
-          <span>HR → PL</span>
-          <span>🇵🇱</span>
-        </button>
+            <template v-else>
+              <button
+                class="option-button"
+                :aria-label="ariaLabel('hr-pl')"
+                @click="choose('hr-pl')"
+              >
+                <span>🇭🇷</span>
+                <span>HR → PL</span>
+                <span>🇵🇱</span>
+              </button>
 
-        <button
-          class="option-button"
-          :aria-label="ariaLabel('pl-hr')"
-          @click="choose('pl-hr')"
-        >
-          <span>🇵🇱</span>
-          <span>PL → HR</span>
-          <span>🇭🇷</span>
-        </button>
+              <button
+                class="option-button"
+                :aria-label="ariaLabel('pl-hr')"
+                @click="choose('pl-hr')"
+              >
+                <span>🇵🇱</span>
+                <span>PL → HR</span>
+                <span>🇭🇷</span>
+              </button>
+            </template>
+          </div>
+        </Transition>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { onMounted, onUnmounted, ref } from 'vue'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
 
 import Welcome from './Welcome.vue'
 import MainImage from './MainImage.vue'
@@ -141,6 +163,23 @@ const emit = defineEmits(['select'])
 const category = ref('flashcards')
 const exerciseType = ref('gaps')
 const skipIntro = ref(false)
+
+// Podpisy pod zakładkami (w Zdaniach w tym miejscu jest przełącznik trybu)
+const captions = {
+  flashcards: 'Wybierz kierunek tłumaczenia',
+  grammar: 'Zasady i ćwiczenia z odmiany',
+  dictionary: 'Wyszukaj słówko po HR lub PL'
+}
+
+const caption = computed(() => captions[category.value] ?? '')
+
+// Słówka i Zdania mają te same przyciski kierunku, więc przy przełączaniu
+// między nimi nie odtwarzamy animacji — zmienia się tylko etykieta
+const optionsKey = computed(() => {
+  if (category.value === 'dictionary') return 'dictionary'
+  if (category.value === 'grammar') return 'grammar'
+  return 'direction'
+})
 
 function choose(direction) {
   if (category.value === 'dictionary') {
@@ -199,6 +238,8 @@ onUnmounted(() => {
 .menu {
   position: relative;
   width: min(680px, calc(100vw - 32px));
+  max-width: 100%;
+  min-width: 0;
   min-height: 560px;
 
   display: flex;
@@ -211,11 +252,15 @@ onUnmounted(() => {
   cursor: pointer;
 }
 
+/* min-width: 0 i max-width: 100% — kontener nie może się rozszerzyć
+   ponad szerokość karty, nawet gdy któryś element w środku jest szeroki */
 .content {
   position: relative;
   z-index: 1;
 
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
   min-height: 560px;
   padding: 50px 30px;
 
@@ -231,7 +276,9 @@ onUnmounted(() => {
 
 /* Zakładki główne: na desktopie jeden rząd, Słownik na samym końcu */
 .category-tabs {
-  max-width: 100%;
+  width: 100%;
+  max-width: 440px;
+  min-width: 0;
 
   display: flex;
   flex-wrap: nowrap;
@@ -275,17 +322,28 @@ onUnmounted(() => {
   border-color: rgba(255, 255, 255, 0.3);
 }
 
-.exercise-type-tabs {
-  max-width: 100%;
+/* Slot trybu: stała wysokość niezależnie od zawartości */
+.mode-slot {
+  width: 100%;
+  min-width: 0;
+  height: 30px;
 
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  gap: 6px;
 
   opacity: 0;
   animation: options-in 0.7s ease forwards;
   animation-delay: 3.05s;
+}
+
+.exercise-type-tabs {
+  max-width: 100%;
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 6px;
 }
 
 .exercise-type-button {
@@ -300,6 +358,7 @@ onUnmounted(() => {
   font-family: Inter, system-ui, sans-serif;
   font-size: 11px;
   font-weight: 600;
+  white-space: nowrap;
 
   cursor: pointer;
 
@@ -319,16 +378,47 @@ onUnmounted(() => {
   border-color: rgba(255, 255, 255, 0.25);
 }
 
-.options {
+.mode-caption {
   max-width: 100%;
+  margin: 0;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  color: #83838d;
+
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Slot na przyciski: zawsze miejsce na dwa przyciski, przyciski
+   przyklejone do góry, więc pierwszy z nich nigdy się nie przesuwa */
+.options {
+  width: 100%;
+  min-width: 0;
+  min-height: 116px;
 
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  align-items: center;
+  justify-content: flex-start;
 
   opacity: 0;
   animation: options-in 0.7s ease forwards;
   animation-delay: 3.2s;
+}
+
+.options-inner {
+  max-width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
 }
 
 .option-button {
@@ -373,6 +463,17 @@ onUnmounted(() => {
   transform: scale(0.98);
 }
 
+/* Krótkie zanikanie przy zmianie zakładki, bez żadnego przesuwania */
+.swap-enter-active,
+.swap-leave-active {
+  transition: opacity 0.14s ease;
+}
+
+.swap-enter-from,
+.swap-leave-to {
+  opacity: 0;
+}
+
 @keyframes options-in {
   from {
     opacity: 0;
@@ -392,7 +493,7 @@ onUnmounted(() => {
 .menu.skip-intro :deep(.version),
 .menu.skip-intro :deep(.description),
 .menu.skip-intro .category-tabs,
-.menu.skip-intro .exercise-type-tabs,
+.menu.skip-intro .mode-slot,
 .menu.skip-intro .options {
   opacity: 1 !important;
   animation: none !important;
@@ -416,10 +517,9 @@ onUnmounted(() => {
     padding: 40px 20px;
   }
 
-  /* Na telefonie zakładki układają się w siatkę 2x2 i nigdy nie
-     wychodzą poza kartę: każda zajmuje równą połowę szerokości */
+  /* Na telefonie zakładki układają się w siatkę 2x2: każda zajmuje
+     równą połowę szerokości i nie może wyjść poza kartę */
   .category-tabs {
-    width: 100%;
     max-width: 300px;
 
     display: grid;
@@ -439,10 +539,21 @@ onUnmounted(() => {
     font-size: 13px;
   }
 
+  .options {
+    min-height: 112px;
+  }
+
   .option-button {
     width: 230px;
     height: 50px;
     font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .swap-enter-active,
+  .swap-leave-active {
+    transition: none;
   }
 }
 </style>
