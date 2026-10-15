@@ -5,6 +5,11 @@
     @pointerup="handlePointerUp"
   >
     <div class="card">
+      <CharKeys
+        :disabled="checked"
+        @insert="insertChar"
+      />
+
       <div class="tense-tabs">
         <button
           v-for="t in tenseOptions"
@@ -61,11 +66,6 @@
 
         <span v-if="current.after">{{ current.after }}</span>
       </div>
-
-      <CharKeys
-        :disabled="checked"
-        @insert="insertChar"
-      />
 
       <div
         v-if="gradeState"
@@ -484,9 +484,11 @@ onUnmounted(() => {
 }
 
 .card {
+  position: relative;
+
   width: 460px;
   min-height: 260px;
-  padding: 36px;
+  padding: 44px 36px 36px;
 
   display: flex;
   flex-direction: column;
@@ -958,7 +960,7 @@ kbd {
 
   .card {
     width: calc(100% - 32px);
-    padding: 28px 20px;
+    padding: 52px 20px 28px;
   }
 
   .prompt {

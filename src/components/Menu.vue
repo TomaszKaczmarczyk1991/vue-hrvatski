@@ -15,7 +15,7 @@
           :class="{ active: category === 'flashcards' }"
           @click="category = 'flashcards'"
         >
-          Fiszki
+          Słówka
         </button>
 
         <button
@@ -28,18 +28,18 @@
 
         <button
           class="tab-button"
-          :class="{ active: category === 'dictionary' }"
-          @click="category = 'dictionary'"
-        >
-          Słownik
-        </button>
-
-        <button
-          class="tab-button"
           :class="{ active: category === 'grammar' }"
           @click="category = 'grammar'"
         >
           Gramatyka
+        </button>
+
+        <button
+          class="tab-button"
+          :class="{ active: category === 'dictionary' }"
+          @click="category = 'dictionary'"
+        >
+          Słownik
         </button>
       </div>
 
@@ -88,7 +88,7 @@
           @click="chooseGrammar()"
         >
           <span>📚</span>
-          <span>Zasady gramatyki</span>
+          <span>Zasady</span>
         </button>
 
         <button
@@ -97,7 +97,7 @@
           @click="chooseConjugation()"
         >
           <span>✍️</span>
-          <span>Odmień czasowniki</span>
+          <span>Odmiana czasowników</span>
         </button>
       </div>
 
@@ -137,6 +137,7 @@ import MainImage from './MainImage.vue'
 
 const emit = defineEmits(['select'])
 
+// Wewnętrzna nazwa 'flashcards' zostaje, zmieniła się tylko etykieta w UI
 const category = ref('flashcards')
 const exerciseType = ref('gaps')
 const skipIntro = ref(false)
@@ -228,9 +229,12 @@ onUnmounted(() => {
   cursor: default;
 }
 
+/* Zakładki główne: na desktopie jeden rząd, Słownik na samym końcu */
 .category-tabs {
+  max-width: 100%;
+
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   gap: 8px;
 
@@ -240,6 +244,7 @@ onUnmounted(() => {
 }
 
 .tab-button {
+  flex: 0 0 auto;
   padding: 8px 16px;
 
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -271,7 +276,11 @@ onUnmounted(() => {
 }
 
 .exercise-type-tabs {
+  max-width: 100%;
+
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 6px;
 
   opacity: 0;
@@ -311,6 +320,8 @@ onUnmounted(() => {
 }
 
 .options {
+  max-width: 100%;
+
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -322,6 +333,7 @@ onUnmounted(() => {
 
 .option-button {
   width: 240px;
+  max-width: 100%;
   height: 52px;
 
   display: flex;
@@ -404,9 +416,27 @@ onUnmounted(() => {
     padding: 40px 20px;
   }
 
+  /* Na telefonie zakładki układają się w siatkę 2x2 i nigdy nie
+     wychodzą poza kartę: każda zajmuje równą połowę szerokości */
+  .category-tabs {
+    width: 100%;
+    max-width: 300px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
   .tab-button {
-    padding: 7px 14px;
-    font-size: 12px;
+    width: 100%;
+    min-width: 0;
+    padding: 10px 12px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    font-size: 13px;
   }
 
   .option-button {
