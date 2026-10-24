@@ -9,38 +9,40 @@
     <div class="content">
       <Welcome />
 
-      <div class="category-tabs">
-        <button
-          class="tab-button"
-          :class="{ active: category === 'flashcards' }"
-          @click="category = 'flashcards'"
-        >
-          Słówka
-        </button>
+      <div class="tabs-frame">
+        <div class="category-tabs">
+          <button
+            class="tab-button"
+            :class="{ active: category === 'flashcards' }"
+            @click="category = 'flashcards'"
+          >
+            Słówka
+          </button>
 
-        <button
-          class="tab-button"
-          :class="{ active: category === 'sentences' }"
-          @click="category = 'sentences'"
-        >
-          Zdania
-        </button>
+          <button
+            class="tab-button"
+            :class="{ active: category === 'sentences' }"
+            @click="category = 'sentences'"
+          >
+            Zdania
+          </button>
 
-        <button
-          class="tab-button"
-          :class="{ active: category === 'grammar' }"
-          @click="category = 'grammar'"
-        >
-          Gramatyka
-        </button>
+          <button
+            class="tab-button"
+            :class="{ active: category === 'grammar' }"
+            @click="category = 'grammar'"
+          >
+            Gramatyka
+          </button>
 
-        <button
-          class="tab-button"
-          :class="{ active: category === 'dictionary' }"
-          @click="category = 'dictionary'"
-        >
-          Słownik
-        </button>
+          <button
+            class="tab-button"
+            :class="{ active: category === 'dictionary' }"
+            @click="category = 'dictionary'"
+          >
+            Słownik
+          </button>
+        </div>
       </div>
 
       <!-- Slot o stałej wysokości: w Zdaniach przełącznik trybu,
@@ -252,8 +254,11 @@ onUnmounted(() => {
   cursor: pointer;
 }
 
-/* min-width: 0 i max-width: 100% — kontener nie może się rozszerzyć
-   ponad szerokość karty, nawet gdy któryś element w środku jest szeroki */
+/* Widoczne "pole" to zdjęcie z MainImage.vue (na desktopie zajmuje 80%
+   karty, margines 10% z każdej strony; na telefonie 92%, margines 4%).
+   Zawartość ma poziomy padding równy marginesowi zdjęcia plus zapas,
+   więc zawsze mieści się w obrębie zdjęcia.
+   Odstępy pionowe i między sekcjami skalują się z szerokością ekranu. */
 .content {
   position: relative;
   z-index: 1;
@@ -262,37 +267,50 @@ onUnmounted(() => {
   max-width: 100%;
   min-width: 0;
   min-height: 560px;
-  padding: 50px 30px;
+  padding: clamp(28px, 8vw, 50px) calc(10% + 16px);
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  gap: 20px;
+  gap: clamp(12px, 3.5vw, 20px);
 
   cursor: default;
 }
 
-/* Zakładki główne: na desktopie jeden rząd, Słownik na samym końcu */
-.category-tabs {
+/* Ramka zakładek jest kontenerem: rozmiary czcionki, paddingi i odstępy
+   zakładek liczone są względem jej szerokości (jednostki cqw), więc
+   cały rząd skaluje się płynnie i zawsze mieści się w zdjęciu */
+.tabs-frame {
   width: 100%;
-  max-width: 440px;
   min-width: 0;
 
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  gap: 8px;
+  container-type: inline-size;
 
   opacity: 0;
   animation: options-in 0.7s ease forwards;
   animation-delay: 2.9s;
 }
 
+.category-tabs {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+
+  gap: 8px;
+  gap: clamp(3px, 1.4cqw, 8px);
+}
+
 .tab-button {
-  flex: 0 0 auto;
+  flex: 0 1 auto;
+  min-width: 0;
   padding: 8px 16px;
+  padding: 8px clamp(4px, 2.6cqw, 16px);
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 20px;
@@ -301,7 +319,8 @@ onUnmounted(() => {
   color: #aaaab4;
 
   font-family: Inter, system-ui, sans-serif;
-  font-size: 13px;
+  font-size: 12px;
+  font-size: clamp(9px, 4.2cqw, 13px);
   font-weight: 600;
 
   cursor: pointer;
@@ -347,7 +366,7 @@ onUnmounted(() => {
 }
 
 .exercise-type-button {
-  padding: 5px 14px;
+  padding: 5px clamp(8px, 3.4vw, 14px);
 
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 16px;
@@ -356,7 +375,7 @@ onUnmounted(() => {
   color: #83838d;
 
   font-family: Inter, system-ui, sans-serif;
-  font-size: 11px;
+  font-size: clamp(9.5px, 3vw, 11px);
   font-weight: 600;
   white-space: nowrap;
 
@@ -378,6 +397,7 @@ onUnmounted(() => {
   border-color: rgba(255, 255, 255, 0.25);
 }
 
+/* Podpis pod zakładkami: biały, z cieniem, żeby był czytelny na zdjęciu */
 .mode-caption {
   max-width: 100%;
   margin: 0;
@@ -386,21 +406,25 @@ onUnmounted(() => {
   text-overflow: ellipsis;
   white-space: nowrap;
 
-  color: #83838d;
+  color: #ffffff;
 
-  font-size: 12px;
+  font-size: clamp(10px, 3.2vw, 12px);
   font-weight: 500;
   text-align: center;
 
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.75);
 }
 
 /* Slot na przyciski: zawsze miejsce na dwa przyciski, przyciski
-   przyklejone do góry, więc pierwszy z nich nigdy się nie przesuwa */
+   przyklejone do góry, więc pierwszy z nich nigdy się nie przesuwa.
+   Wysokość przycisku skaluje się z szerokością ekranu. */
 .options {
+  --btn-h: clamp(42px, 12vw, 52px);
+  --btn-gap: 12px;
+
   width: 100%;
   min-width: 0;
-  min-height: 116px;
+  min-height: calc(var(--btn-h) * 2 + var(--btn-gap));
 
   display: flex;
   flex-direction: column;
@@ -413,23 +437,26 @@ onUnmounted(() => {
 }
 
 .options-inner {
-  max-width: 100%;
+  width: min(240px, 100%);
 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 12px;
+  align-items: stretch;
+  gap: var(--btn-gap);
 }
 
 .option-button {
-  width: 240px;
-  max-width: 100%;
-  height: 52px;
+  width: 100%;
+  min-width: 0;
+  height: var(--btn-h);
 
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 14px;
+  gap: clamp(8px, 3vw, 14px);
+
+  overflow: hidden;
+  white-space: nowrap;
 
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 14px;
@@ -440,7 +467,7 @@ onUnmounted(() => {
   color: #fff;
 
   font-family: Inter, system-ui, sans-serif;
-  font-size: 15px;
+  font-size: clamp(12px, 3.8vw, 15px);
   font-weight: 700;
   letter-spacing: 0.4px;
 
@@ -492,7 +519,7 @@ onUnmounted(() => {
 .menu.skip-intro :deep(h1),
 .menu.skip-intro :deep(.version),
 .menu.skip-intro :deep(.description),
-.menu.skip-intro .category-tabs,
+.menu.skip-intro .tabs-frame,
 .menu.skip-intro .mode-slot,
 .menu.skip-intro .options {
   opacity: 1 !important;
@@ -512,41 +539,15 @@ onUnmounted(() => {
     border-radius: 20px;
   }
 
+  /* Na telefonie zdjęcie jest większe (margines 4%), więc padding
+     poziomy zawartości też jest mniejszy */
   .content {
     min-height: 540px;
-    padding: 40px 20px;
+    padding-inline: calc(4% + 14px);
   }
 
-  /* Na telefonie zakładki układają się w siatkę 2x2: każda zajmuje
-     równą połowę szerokości i nie może wyjść poza kartę */
-  .category-tabs {
-    max-width: 300px;
-
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px;
-  }
-
-  .tab-button {
-    width: 100%;
-    min-width: 0;
-    padding: 10px 12px;
-
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-
-    font-size: 13px;
-  }
-
-  .options {
-    min-height: 112px;
-  }
-
-  .option-button {
-    width: 230px;
-    height: 50px;
-    font-size: 14px;
+  .mode-slot {
+    height: 28px;
   }
 }
 

@@ -11,15 +11,20 @@ const backgroundImage = `url(${mainImage})`
 </script>
 
 <style scoped>
+/* Margines zdjęcia względem karty: 10% z każdej strony na desktopie,
+   4% na telefonie (więcej miejsca na zawartość). Menu.vue używa tych
+   samych wartości do wyliczenia paddingu zawartości, więc zawartość
+   zawsze mieści się w obrębie zdjęcia.
+   Rodzic może nadpisać margines zmiennymi --frame-inset-x / --frame-inset-y. */
 .main-image {
   position: absolute;
   z-index: 0;
 
-  width: 80%;
-  height: 80%;
+  top: var(--frame-inset-y, 10%);
+  left: var(--frame-inset-x, 10%);
 
-  top: 10%;
-  left: 10%;
+  width: calc(100% - var(--frame-inset-x, 10%) * 2);
+  height: calc(100% - var(--frame-inset-y, 10%) * 2);
 
   background-image: v-bind(backgroundImage);
   background-size: cover;
@@ -52,6 +57,18 @@ const backgroundImage = `url(${mainImage})`
 
   to {
     opacity: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .main-image {
+    top: var(--frame-inset-y, 4%);
+    left: var(--frame-inset-x, 4%);
+
+    width: calc(100% - var(--frame-inset-x, 4%) * 2);
+    height: calc(100% - var(--frame-inset-y, 4%) * 2);
+
+    border-radius: 20px;
   }
 }
 </style>

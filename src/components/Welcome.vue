@@ -2,7 +2,7 @@
   <div class="welcome">
     <div class="brand">
       <p class="intro">
-        Dobrodošli u
+        Bok! Dobrodošli u
       </p>
 
       <h1>
@@ -26,8 +26,15 @@ const version = import.meta.env.VITE_APP_VERSION ?? '—'
 </script>
 
 <style scoped>
+/* Kontener: rozmiary tekstów liczone są względem jego szerokości
+   (jednostki cqw), więc nagłówek i opisy skalują się płynnie razem
+   z ekranem i nie wychodzą poza zdjęcie. Na szerokich ekranach działają
+   wartości maksymalne (64px / 24px / 18px), jak wcześniej. */
 .welcome {
+  width: 100%;
   max-width: 460px;
+
+  container-type: inline-size;
 
   text-align: center;
   color: #ffffff;
@@ -45,31 +52,38 @@ const version = import.meta.env.VITE_APP_VERSION ?? '—'
   margin: 0 0 2px;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 24px;
+  font-size: clamp(14px, 5.2cqw, 24px);
   font-weight: 500;
 }
 
 h1 {
+  max-width: 100%;
   margin: 0;
   color: #eeeeee;
   font-family: "Brush Script MT", "Segoe Script", cursive;
-  font-size: 64px;
+  font-size: 52px;
+  font-size: clamp(30px, 14cqw, 64px);
   font-weight: 600;
   line-height: 1.05;
   letter-spacing: 0;
+  overflow-wrap: anywhere;
 }
 
 .version {
   margin-top: 2px;
   font-family: "JetBrains Mono", monospace;
   font-size: 13px;
+  font-size: clamp(11px, 2.9cqw, 13px);
   font-weight: 600;
   color: #eeeeee;
 }
 
 .description {
   margin: 22px 0 0;
+  margin-top: clamp(12px, 4.8cqw, 22px);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 18px;
+  font-size: clamp(11px, 3.9cqw, 18px);
   line-height: 1.5;
   color: #eeeeee;
 }
@@ -111,30 +125,6 @@ h1 {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@media (max-width: 500px) {
-  .welcome {
-    width: 100%;
-    max-width: 340px;
-  }
-
-  .intro {
-    font-size: 14px;
-  }
-
-  h1 {
-    font-size: 52px;
-  }
-
-  .version {
-    font-size: 11px;
-  }
-
-  .description {
-    margin-top: 18px;
-    font-size: 12px;
   }
 }
 </style>
