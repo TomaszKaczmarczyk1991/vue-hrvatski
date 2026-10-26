@@ -48,21 +48,33 @@
       <div class="prompt">
         <span v-if="current.before">{{ current.before }}</span>
 
-        <input
-          ref="inputEl"
-          v-model="userAnswer"
-          class="blank-input"
-          :class="{
-            correct: gradeState === 'correct',
-            incorrect: gradeState === 'incorrect'
-          }"
-          :style="{ width: inputWidth }"
-          :disabled="checked"
-          type="text"
-          autocomplete="off"
-          spellcheck="false"
-          @focus="handleInputFocus"
-        />
+        <span class="blank-wrap">
+          <input
+            ref="inputEl"
+            v-model="userAnswer"
+            class="blank-input"
+            :class="{
+              correct: gradeState === 'correct',
+              incorrect: gradeState === 'incorrect',
+              hinting: hint
+            }"
+            :style="{ width: inputWidth }"
+            :disabled="checked"
+            :readonly="hintBusy"
+            type="text"
+            autocomplete="off"
+            spellcheck="false"
+            @focus="handleInputFocus"
+          />
+
+          <span
+            v-if="hint"
+            class="blank-input blank-overlay"
+            aria-hidden="true"
+          >
+            <HintText v-bind="hint" />
+          </span>
+        </span>
 
         <span v-if="current.after">{{ current.after }}</span>
       </div>
@@ -88,8 +100,8 @@
         <button
           v-if="!checked"
           class="action-button hint-button"
-          :disabled="allLettersRevealed"
-          @click="revealLetter"
+          :disabled="!canHint"
+          @click="revealHint"
         >
           💡 Podpowiedz literę
         </button>
@@ -174,6 +186,8 @@ import { conjugationExercises } from '../data/conjugation.js'
 import WordCounter from './WordCounter.vue'
 import Confetti from './Confetti.vue'
 import CharKeys from './CharKeys.vue'
+import HintText from './HintText.vue'
+import { useHintLetter } from '../composables/useHintLetter.js'
 
 const emit = defineEmits(['back'])
 
@@ -231,7 +245,6 @@ const current = ref(deck[currentIndex])
 const userAnswer = ref('')
 const checked = ref(false)
 const inputEl = ref(null)
-const revealedCount = ref(0)
 
 const streak = ref(0)
 const confettiRef = ref(null)
@@ -258,13 +271,33 @@ const isCorrect = computed(() =>
   normalize(userAnswer.value) === normalize(current.value.answer)
 )
 
-const allLettersRevealed = computed(() =>
-  revealedCount.value >= current.value.answer.length
-)
-
 const gradeState = computed(() => {
   if (!checked.value) return null
   return isCorrect.value ? 'correct' : 'incorrect'
+})
+
+const correctAnswer = computed(() => current.value.answer)
+
+// Podpowiedź litery: zachowuje poprawny początek wpisanego tekstu, błędne
+// litery pokazuje na czerwono i usuwa, a następną literę ujawnia efektem
+// fade-in (szczegóły w composables/useHintLetter.js)
+const {
+  hint,
+  busy: hintBusy,
+  canHint,
+  revealHint,
+  finishHint
+} = useHintLetter({
+  userAnswer,
+  correctAnswer,
+  locked: checked,
+  // Podpowiedź dokończyła całą formę: sprawdzamy ją automatycznie,
+  // ale taka odpowiedź nie liczy się do serii
+  onComplete: () => {
+    checked.value = true
+    streak.value = 0
+  },
+  onSettled: () => focusInput()
 })
 
 const inputWidth = computed(() => {
@@ -303,7 +336,7 @@ function registerResult(correct) {
 
 // Wstawia znak (č ć đ š ž) w miejscu kursora w polu odpowiedzi
 function insertChar(char) {
-  if (checked.value) return
+  if (checked.value || hintBusy.value) return
 
   const el = inputEl.value
   if (!el) return
@@ -322,24 +355,6 @@ function insertChar(char) {
     const position = start + char.length
     el.setSelectionRange?.(position, position)
   })
-}
-
-function revealLetter() {
-  if (checked.value || allLettersRevealed.value) return
-
-  revealedCount.value++
-  userAnswer.value = current.value.answer.slice(0, revealedCount.value)
-
-  // Jeśli odsłoniliśmy ostatnią literę, odpowiedź jest już poprawna,
-  // więc nie ma sensu prosić o "Sprawdź". Ale forma została w całości
-  // podpowiedziana, więc nie liczy się do serii (resetuje ją).
-  if (allLettersRevealed.value) {
-    checked.value = true
-    streak.value = 0
-    return
-  }
-
-  focusInput()
 }
 
 function focusInput() {
@@ -362,6 +377,9 @@ function handleInputFocus(event) {
 }
 
 function checkAnswer() {
+  // Trwający efekt podpowiedzi kończymy od razu
+  finishHint()
+
   if (checked.value) return
 
   checked.value = true
@@ -369,12 +387,13 @@ function checkAnswer() {
 }
 
 function resetDeck() {
+  finishHint()
+
   deck = shuffle(pool.value)
   currentIndex = 0
   current.value = deck[currentIndex]
   userAnswer.value = ''
   checked.value = false
-  revealedCount.value = 0
   focusInput()
 }
 
@@ -384,6 +403,8 @@ function selectTense(value) {
 }
 
 function nextExercise() {
+  finishHint()
+
   currentIndex++
 
   if (currentIndex >= deck.length) {
@@ -402,7 +423,6 @@ function nextExercise() {
   current.value = deck[currentIndex]
   userAnswer.value = ''
   checked.value = false
-  revealedCount.value = 0
 
   focusInput()
 }
@@ -448,7 +468,7 @@ function handleKeydown(event) {
   // Cmd (Mac) / Ctrl (Windows) — Podpowiedz literę
   if (event.key === 'Meta' || event.key === 'Control') {
     event.preventDefault()
-    revealLetter()
+    revealHint()
   }
 }
 
@@ -725,7 +745,7 @@ onUnmounted(() => {
   min-width: 70px;
   max-width: 100%;
   padding: 4px 10px;
-  margin: 0 2px;
+  margin: 0;
 
   background: #24242c;
   border: none;
@@ -755,6 +775,42 @@ onUnmounted(() => {
 .blank-input.incorrect {
   border-bottom-color: #f87171;
   color: #f87171;
+}
+
+/* Podpowiedź litery: nakładka z kolorowymi fragmentami tekstu leży dokładnie
+   na polu (ta sama czcionka i marginesy), a tekst pola jest na ten czas
+   przezroczysty */
+.blank-wrap {
+  position: relative;
+
+  display: inline-flex;
+
+  max-width: 100%;
+  margin: 0 2px;
+}
+
+.blank-input.hinting {
+  color: transparent;
+  caret-color: transparent;
+}
+
+.blank-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  margin: 0;
+
+  overflow: hidden;
+  pointer-events: none;
+  white-space: pre;
+
+  background: transparent;
+  border-bottom-color: transparent;
 }
 
 .feedback {

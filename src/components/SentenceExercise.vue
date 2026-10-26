@@ -45,22 +45,36 @@
             v-if="item.type === 'space'"
           >&nbsp;</span>
 
-          <input
+          <span
             v-else-if="item.type === 'blank'"
-            ref="inputEl"
-            v-model="userAnswer"
-            class="blank-input"
-            :class="{
-              correct: gradeState === 'correct',
-              incorrect: gradeState === 'incorrect'
-            }"
-            :style="{ width: inputWidth }"
-            :disabled="checked"
-            type="text"
-            autocomplete="off"
-            spellcheck="false"
-            @focus="handleInputFocus"
-          />
+            class="blank-wrap"
+          >
+            <input
+              ref="inputEl"
+              v-model="userAnswer"
+              class="blank-input"
+              :class="{
+                correct: gradeState === 'correct',
+                incorrect: gradeState === 'incorrect',
+                hinting: hint
+              }"
+              :style="{ width: inputWidth }"
+              :disabled="checked"
+              :readonly="hintBusy"
+              type="text"
+              autocomplete="off"
+              spellcheck="false"
+              @focus="handleInputFocus"
+            />
+
+            <span
+              v-if="hint"
+              class="blank-input blank-overlay"
+              aria-hidden="true"
+            >
+              <HintText v-bind="hint" />
+            </span>
+          </span>
 
           <span
             v-else
@@ -85,21 +99,33 @@
         v-else
         class="prompt full-mode"
       >
-        <textarea
-          ref="inputEl"
-          v-model="userAnswer"
-          class="full-input"
-          :class="{
-            correct: gradeState === 'correct',
-            incorrect: gradeState === 'incorrect'
-          }"
-          :disabled="checked"
-          rows="2"
-          placeholder="Napisz całe zdanie..."
-          autocomplete="off"
-          spellcheck="false"
-          @focus="handleInputFocus"
-        ></textarea>
+        <div class="full-wrap">
+          <textarea
+            ref="inputEl"
+            v-model="userAnswer"
+            class="full-input"
+            :class="{
+              correct: gradeState === 'correct',
+              incorrect: gradeState === 'incorrect',
+              hinting: hint
+            }"
+            :disabled="checked"
+            :readonly="hintBusy"
+            rows="2"
+            placeholder="Napisz całe zdanie..."
+            autocomplete="off"
+            spellcheck="false"
+            @focus="handleInputFocus"
+          ></textarea>
+
+          <div
+            v-if="hint"
+            class="full-input full-overlay"
+            aria-hidden="true"
+          >
+            <HintText v-bind="hint" />
+          </div>
+        </div>
       </div>
 
       <div
@@ -123,8 +149,8 @@
         <button
           v-if="!checked"
           class="action-button hint-button"
-          :disabled="allLettersRevealed"
-          @click="revealLetter"
+          :disabled="!canHint"
+          @click="revealHint"
         >
           💡 Podpowiedz literę
         </button>
@@ -209,6 +235,8 @@ import { sentences } from '../data/sentences.js'
 import WordCounter from './WordCounter.vue'
 import Confetti from './Confetti.vue'
 import CharKeys from './CharKeys.vue'
+import HintText from './HintText.vue'
+import { useHintLetter } from '../composables/useHintLetter.js'
 
 const emit = defineEmits(['back'])
 
@@ -278,7 +306,6 @@ const current = ref(deck[currentIndex])
 const userAnswer = ref('')
 const checked = ref(false)
 const inputEl = ref(null)
-const revealedCount = ref(0)
 const activeTooltip = ref(null)
 
 const streak = ref(0)
@@ -352,13 +379,31 @@ const isCorrect = computed(() =>
   normalize(userAnswer.value) === normalize(correctAnswer.value)
 )
 
-const allLettersRevealed = computed(() =>
-  revealedCount.value >= correctAnswer.value.length
-)
-
 const gradeState = computed(() => {
   if (!checked.value) return null
   return isCorrect.value ? 'correct' : 'incorrect'
+})
+
+// Podpowiedź litery: zachowuje poprawny początek wpisanego tekstu, błędne
+// litery pokazuje na czerwono i usuwa, a następną literę ujawnia efektem
+// fade-in (szczegóły w composables/useHintLetter.js)
+const {
+  hint,
+  busy: hintBusy,
+  canHint,
+  revealHint,
+  finishHint
+} = useHintLetter({
+  userAnswer,
+  correctAnswer,
+  locked: checked,
+  // Podpowiedź dokończyła całą odpowiedź: sprawdzamy ją automatycznie,
+  // ale taka odpowiedź nie liczy się do serii
+  onComplete: () => {
+    checked.value = true
+    streak.value = 0
+  },
+  onSettled: () => focusInput()
 })
 
 // Szerokość pola (tryb 'gaps') rośnie wraz z wpisywanym tekstem,
@@ -412,7 +457,7 @@ function closeTooltip() {
 
 // Wstawia znak (č ć đ š ž) w miejscu kursora w polu odpowiedzi
 function insertChar(char) {
-  if (checked.value) return
+  if (checked.value || hintBusy.value) return
 
   const el = getInputEl()
   if (!el) return
@@ -431,24 +476,6 @@ function insertChar(char) {
     const position = start + char.length
     el.setSelectionRange?.(position, position)
   })
-}
-
-function revealLetter() {
-  if (checked.value || allLettersRevealed.value) return
-
-  revealedCount.value++
-  userAnswer.value = correctAnswer.value.slice(0, revealedCount.value)
-
-  // Jeśli właśnie odsłoniliśmy ostatnią literę, odpowiedź jest już
-  // poprawna, więc nie ma sensu prosić o "Sprawdź". Ale słowo zostało
-  // w całości podpowiedziane, więc nie liczy się do serii (resetuje ją).
-  if (allLettersRevealed.value) {
-    checked.value = true
-    streak.value = 0
-    return
-  }
-
-  focusInput()
 }
 
 function focusInput() {
@@ -474,6 +501,9 @@ function handleInputFocus(event) {
 }
 
 function checkAnswer() {
+  // Trwający efekt podpowiedzi kończymy od razu
+  finishHint()
+
   if (checked.value) return
 
   checked.value = true
@@ -481,6 +511,8 @@ function checkAnswer() {
 }
 
 function nextSentence() {
+  finishHint()
+
   currentIndex++
 
   if (currentIndex >= deck.length) {
@@ -499,7 +531,6 @@ function nextSentence() {
   current.value = deck[currentIndex]
   userAnswer.value = ''
   checked.value = false
-  revealedCount.value = 0
   activeTooltip.value = null
 
   focusInput()
@@ -547,7 +578,7 @@ function handleKeydown(event) {
   // Cmd (Mac) / Ctrl (Windows) — Podpowiedz literę
   if (event.key === 'Meta' || event.key === 'Control') {
     event.preventDefault()
-    revealLetter()
+    revealHint()
   }
 }
 
@@ -876,7 +907,7 @@ onUnmounted(() => {
   min-width: 60px;
   max-width: 100%;
   padding: 4px 10px;
-  margin: 0 2px;
+  margin: 0;
 
   background: #24242c;
   border: none;
@@ -947,6 +978,70 @@ onUnmounted(() => {
 .full-input.incorrect {
   border-color: #f87171;
   color: #f87171;
+}
+
+/* Podpowiedź litery: nakładka z kolorowymi fragmentami tekstu leży dokładnie
+   na polu (ta sama czcionka i marginesy), a tekst pola jest na ten czas
+   przezroczysty */
+.blank-wrap {
+  position: relative;
+
+  display: inline-flex;
+
+  max-width: 100%;
+  margin: 0 2px;
+}
+
+.blank-input.hinting {
+  color: transparent;
+  caret-color: transparent;
+}
+
+.blank-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  margin: 0;
+
+  overflow: hidden;
+  pointer-events: none;
+  white-space: pre;
+
+  background: transparent;
+  border-bottom-color: transparent;
+}
+
+.full-wrap {
+  position: relative;
+
+  width: 100%;
+}
+
+.full-input.hinting {
+  color: transparent;
+  caret-color: transparent;
+}
+
+.full-input.hinting::placeholder {
+  color: transparent;
+}
+
+.full-overlay {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+  overflow-wrap: break-word;
+  pointer-events: none;
+  white-space: pre-wrap;
+
+  background: transparent;
+  border-color: transparent;
 }
 
 .feedback {

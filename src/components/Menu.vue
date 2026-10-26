@@ -312,11 +312,13 @@ onUnmounted(() => {
   text-overflow: ellipsis;
   white-space: nowrap;
 
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 20px;
 
-  background: transparent;
-  color: #aaaab4;
+  background: rgba(20, 20, 24, 0.4);
+  backdrop-filter: blur(6px);
+  color: #ffffff;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
 
   font-family: Inter, system-ui, sans-serif;
   font-size: 12px;
@@ -331,14 +333,29 @@ onUnmounted(() => {
     color 0.2s ease;
 }
 
+/* Aktywna zakładka: pełne białe tło i ciemny tekst, wyraźnie odróżnia się
+   od nieaktywnych (białe na ciemnym). Grubość czcionki bez zmian,
+   żeby przyciski się nie przesuwały. */
 .tab-button.active {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.3);
-  color: #fff;
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #15151a;
+  text-shadow: none;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
 }
 
-.tab-button:hover {
-  border-color: rgba(255, 255, 255, 0.3);
+.tab-button:hover:not(.active) {
+  background: rgba(30, 30, 36, 0.6);
+  border-color: rgba(255, 255, 255, 0.75);
+}
+
+.tab-button {
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 /* Slot trybu: stała wysokość niezależnie od zawartości */
@@ -368,11 +385,13 @@ onUnmounted(() => {
 .exercise-type-button {
   padding: 5px clamp(8px, 3.4vw, 14px);
 
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 16px;
 
-  background: transparent;
-  color: #83838d;
+  background: rgba(20, 20, 24, 0.4);
+  backdrop-filter: blur(6px);
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
 
   font-family: Inter, system-ui, sans-serif;
   font-size: clamp(9.5px, 3vw, 11px);
@@ -387,14 +406,16 @@ onUnmounted(() => {
     color 0.2s ease;
 }
 
+/* Aktywny tryb: białe obramowanie, jaśniejsze tło i biały tekst */
 .exercise-type-button.active {
-  background: rgba(184, 184, 255, 0.12);
-  border-color: rgba(184, 184, 255, 0.4);
-  color: #d4d4ff;
+  background: rgba(255, 255, 255, 0.24);
+  border-color: #ffffff;
+  color: #ffffff;
 }
 
-.exercise-type-button:hover {
-  border-color: rgba(255, 255, 255, 0.25);
+.exercise-type-button:hover:not(.active) {
+  background: rgba(30, 30, 36, 0.6);
+  border-color: rgba(255, 255, 255, 0.7);
 }
 
 /* Podpis pod zakładkami: biały, z cieniem, żeby był czytelny na zdjęciu */
