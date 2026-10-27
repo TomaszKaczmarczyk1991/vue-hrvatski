@@ -149,7 +149,6 @@
         <button
           v-if="!checked"
           class="action-button hint-button"
-          :disabled="!canHint"
           @click="revealHint"
         >
           💡 Podpowiedz literę
@@ -390,7 +389,6 @@ const gradeState = computed(() => {
 const {
   hint,
   busy: hintBusy,
-  canHint,
   revealHint,
   finishHint
 } = useHintLetter({

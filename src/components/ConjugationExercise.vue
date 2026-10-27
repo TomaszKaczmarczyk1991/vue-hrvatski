@@ -100,7 +100,6 @@
         <button
           v-if="!checked"
           class="action-button hint-button"
-          :disabled="!canHint"
           @click="revealHint"
         >
           💡 Podpowiedz literę
@@ -284,7 +283,6 @@ const correctAnswer = computed(() => current.value.answer)
 const {
   hint,
   busy: hintBusy,
-  canHint,
   revealHint,
   finishHint
 } = useHintLetter({

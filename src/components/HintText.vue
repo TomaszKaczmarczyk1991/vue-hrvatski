@@ -47,12 +47,12 @@ const props = defineProps({
   // czas dwóch mignięć łącznie (ms)
   flashMs: {
     type: Number,
-    default: 400
+    default: 1200
   },
   // czas pojawiania się litery (ms)
   fadeMs: {
     type: Number,
-    default: 520
+    default: 700
   }
 })
 
@@ -92,14 +92,18 @@ const fadeStyle = computed(() => ({
   animation-fill-mode: both;
 }
 
+/* Jedno mignięcie: kolor narasta, utrzymuje się chwilę, wraca do normalnego
+   i robi krótką przerwę przed kolejnym mignięciem */
 @keyframes hint-flash-ok {
   0%,
+  82%,
   100% {
     color: #f5f5f7;
     text-shadow: none;
   }
 
-  45% {
+  22%,
+  58% {
     color: #4ade80;
     text-shadow: 0 0 12px rgba(74, 222, 128, 0.55);
   }
@@ -107,12 +111,14 @@ const fadeStyle = computed(() => ({
 
 @keyframes hint-flash-bad {
   0%,
+  82%,
   100% {
     color: #f5f5f7;
     text-shadow: none;
   }
 
-  45% {
+  22%,
+  58% {
     color: #f87171;
     text-shadow: 0 0 12px rgba(248, 113, 113, 0.55);
   }

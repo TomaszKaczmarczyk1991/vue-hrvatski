@@ -1,9 +1,9 @@
 import { computed, onUnmounted, ref } from 'vue'
 
 // Czasy trwania efektów (ms)
-const FLASH_MS = 400 // dwa szybkie mignięcia (2 x 200 ms)
-const REMOVE_MS = 180 // krótka pauza po zniknięciu błędnych liter
-const FADE_MS = 520 // pojawianie się podpowiedzianej litery
+const FLASH_MS = 1200 // dwa mignięcia (2 x 600 ms)
+const REMOVE_MS = 300 // pauza po zniknięciu błędnych liter
+const FADE_MS = 700 // pojawianie się podpowiedzianej litery
 
 // Długość wspólnego początku wpisanego tekstu i poprawnej odpowiedzi
 // (bez rozróżniania wielkości liter, ale z rozróżnianiem znaków
@@ -70,9 +70,7 @@ export function useHintLetter({
     )
   })
 
-  const canHint = computed(
-    () => !locked.value && !busy.value && !isComplete.value
-  )
+  const canHint = computed(() => !locked.value && !busy.value)
 
   function later(fn, ms) {
     timers.push(setTimeout(fn, ms))
@@ -124,6 +122,10 @@ export function useHintLetter({
 
   function revealHint() {
     if (!canHint.value) return
+
+    // Całe słowo wpisane poprawnie: podpowiedź nic nie robi i niczego nie
+    // zdradza (przycisk wygląda tak samo jak zawsze, nie ma żadnego efektu)
+    if (isComplete.value) return
 
     const target = correctAnswer.value
     const typed = userAnswer.value
