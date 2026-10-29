@@ -7,6 +7,8 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
+
 import { words } from '../data/words.js'
 
 const props = defineProps({
@@ -20,7 +22,9 @@ const props = defineProps({
   }
 })
 
-const displayCount = props.count ?? words.length
+// computed zamiast zwykłej stałej: licznik odświeża się, gdy rodzic zmieni
+// wartość (np. po przełączeniu czasu w ćwiczeniu odmiany czasowników)
+const displayCount = computed(() => props.count ?? words.length)
 </script>
 
 <style scoped>
