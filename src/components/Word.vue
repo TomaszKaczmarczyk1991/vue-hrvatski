@@ -40,11 +40,11 @@
     <!-- Mobile -->
     <div class="interaction-hints">
       <div class="hint">
-        <ArrowUp
+        <ArrowUpDown
           :size="15"
           :stroke-width="1.8"
         />
-        <span>Swipe up — następne słowo</span>
+        <span>Swipe up / down — następne / poprzednie</span>
       </div>
 
       <div class="hint">
@@ -68,6 +68,11 @@
 
       <div class="keyboard-shortcuts">
         <div class="shortcut">
+          <kbd>←</kbd>
+          <span>Poprzednie</span>
+        </div>
+
+        <div class="shortcut">
           <kbd>→</kbd>
           <span>Następne</span>
         </div>
@@ -89,7 +94,7 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue'
 import {
-  ArrowUp,
+  ArrowUpDown,
   Keyboard,
   MousePointerClick
 } from 'lucide-vue-next'
@@ -110,6 +115,9 @@ const props = defineProps({
     default: null
   }
 })
+
+// Ile ostatnich słówek pamiętamy do cofania
+const MAX_HISTORY = 200
 
 function shuffle(array) {
   const shuffled = [...array]
@@ -132,21 +140,29 @@ const pool = props.categories && props.categories.length
 
 const activeWords = pool.length ? pool : words
 
+// Talia jest tasowana raz na starcie (i ponownie dopiero po przejściu
+// przez wszystkie słówka); deckIndex wskazuje, które słówko losujemy dalej
 let deck = shuffle(activeWords)
-let currentIndex = 0
+let deckIndex = 0
 
-const currentWord = ref(deck[currentIndex])
+const currentWord = ref(deck[deckIndex])
 const showTranslation = ref(false)
+
+// Historia obejrzanych słówek pozwala cofać się swipe'em w dół. Po
+// cofnięciu swipe w górę prowadzi z powrotem po tych samych słówkach,
+// a dopiero na końcu historii losujemy nowe z talii.
+let history = [currentWord.value]
+let historyPos = 0
 
 let pointerStartY = 0
 let pointerStartX = 0
 let pointerMoved = false
 
-function getNextWord() {
-  currentIndex++
+function drawFromDeck() {
+  deckIndex++
 
-  if (currentIndex >= deck.length) {
-    const lastWord = currentWord.value
+  if (deckIndex >= deck.length) {
+    const lastWord = history[history.length - 1]
 
     do {
       deck = shuffle(activeWords)
@@ -155,11 +171,44 @@ function getNextWord() {
       deck[0].id === lastWord.id
     )
 
-    currentIndex = 0
+    deckIndex = 0
   }
 
-  currentWord.value = deck[currentIndex]
+  return deck[deckIndex]
+}
+
+function showWord(word) {
+  currentWord.value = word
   showTranslation.value = false
+}
+
+function getNextWord() {
+  // Wcześniej cofnęliśmy się: wracamy po tych samych słówkach
+  if (historyPos < history.length - 1) {
+    historyPos++
+    showWord(history[historyPos])
+    return
+  }
+
+  const word = drawFromDeck()
+
+  history.push(word)
+
+  if (history.length > MAX_HISTORY) {
+    history.shift()
+  }
+
+  historyPos = history.length - 1
+
+  showWord(word)
+}
+
+function getPreviousWord() {
+  // Pierwsze zapamiętane słówko: nie ma do czego wracać
+  if (historyPos === 0) return
+
+  historyPos--
+  showWord(history[historyPos])
 }
 
 function handlePointerDown(event) {
@@ -176,9 +225,15 @@ function handlePointerUp(event) {
     pointerMoved = true
   }
 
-  // Swipe up
+  // Swipe up: następne słówko
   if (deltaY > 70 && deltaY > deltaX) {
     getNextWord()
+    return
+  }
+
+  // Swipe down: poprzednie słówko
+  if (deltaY < -70 && -deltaY > deltaX) {
+    getPreviousWord()
   }
 }
 
@@ -197,6 +252,12 @@ function handleKeydown(event) {
   if (event.key === 'ArrowRight') {
     event.preventDefault()
     getNextWord()
+  }
+
+  // Poprzednie słowo
+  if (event.key === 'ArrowLeft') {
+    event.preventDefault()
+    getPreviousWord()
   }
 
   // Tłumaczenie
