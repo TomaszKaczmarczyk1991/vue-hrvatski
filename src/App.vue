@@ -35,6 +35,13 @@
       @back="goBackToMenu"
     />
 
+    <WordTypingExercise
+      v-else-if="stage === 'exercise' && directionInfo.type === 'wordtyping'"
+      :mode="directionInfo.direction"
+      :categories="categories"
+      @back="goBackToMenu"
+    />
+
     <Word
       v-else-if="stage === 'exercise'"
       :mode="directionInfo.direction"
@@ -54,6 +61,7 @@ import { ref } from 'vue'
 
 import Menu from './components/Menu.vue'
 import Word from './components/Word.vue'
+import WordTypingExercise from './components/WordTypingExercise.vue'
 import SentenceExercise from './components/SentenceExercise.vue'
 import Dictionary from './components/Dictionary.vue'
 import Grammar from './components/Grammar.vue'
@@ -62,7 +70,7 @@ import CategoryPicker from './components/CategoryPicker.vue'
 import BackButton from './components/BackButton.vue'
 
 const stage = ref('menu') // 'menu' | 'dictionary' | 'grammar' | 'conjugation' | 'categories' | 'exercise'
-const directionInfo = ref(null) // { type: 'flashcards'|'sentences', direction, exerciseType? }
+const directionInfo = ref(null) // { type: 'flashcards'|'wordtyping'|'sentences', direction, exerciseType? }
 const categories = ref(null)
 
 function selectMode(payload) {
@@ -81,6 +89,7 @@ function selectMode(payload) {
     return
   }
 
+  // Fiszki, wpisywanie słówek i zdania: najpierw wybór kategorii
   directionInfo.value = payload
   stage.value = 'categories'
 }
