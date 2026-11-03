@@ -74,6 +74,28 @@
             </button>
           </div>
 
+          <div
+            v-else-if="category === 'flashcards'"
+            key="flashcards"
+            class="exercise-type-tabs"
+          >
+            <button
+              class="exercise-type-button"
+              :class="{ active: wordMode === 'cards' }"
+              @click="wordMode = 'cards'"
+            >
+              Fiszki
+            </button>
+
+            <button
+              class="exercise-type-button"
+              :class="{ active: wordMode === 'typing' }"
+              @click="wordMode = 'typing'"
+            >
+              Wpisz słowo
+            </button>
+          </div>
+
           <p
             v-else
             :key="category"
@@ -164,11 +186,12 @@ const emit = defineEmits(['select'])
 // Wewnętrzna nazwa 'flashcards' zostaje, zmieniła się tylko etykieta w UI
 const category = ref('flashcards')
 const exerciseType = ref('gaps')
+const wordMode = ref('cards') // 'cards' (fiszki) | 'typing' (wpisywanie słowa)
 const skipIntro = ref(false)
 
-// Podpisy pod zakładkami (w Zdaniach w tym miejscu jest przełącznik trybu)
+// Podpisy pod zakładkami (w Słówkach i Zdaniach w tym miejscu jest
+// przełącznik trybu)
 const captions = {
-  flashcards: 'Wybierz kierunek tłumaczenia',
   grammar: 'Zasady i ćwiczenia z odmiany',
   dictionary: 'Wyszukaj słówko po HR lub PL'
 }
@@ -198,7 +221,10 @@ function choose(direction) {
     return
   }
 
-  emit('select', { type: 'flashcards', direction })
+  emit('select', {
+    type: wordMode.value === 'typing' ? 'wordtyping' : 'flashcards',
+    direction
+  })
 }
 
 function chooseGrammar() {
@@ -214,6 +240,8 @@ function ariaLabel(direction) {
 
   if (category.value === 'sentences') {
     action = exerciseType.value === 'full' ? 'Napisz zdanie' : 'Uzupełnij lukę'
+  } else if (category.value === 'flashcards' && wordMode.value === 'typing') {
+    action = 'Wpisz tłumaczenie'
   }
 
   return direction === 'hr-pl'
