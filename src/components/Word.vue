@@ -119,6 +119,11 @@ const props = defineProps({
 // Ile ostatnich słówek pamiętamy do cofania
 const MAX_HISTORY = 200
 
+// Dotknięcie z ruchem do 24 px nadal jest tapnięciem (palec zawsze trochę
+// drży); swipe zaczyna się dopiero od 70 px
+const TAP_SLOP = 24
+const SWIPE_DISTANCE = 70
+
 function shuffle(array) {
   const shuffled = [...array]
 
@@ -156,7 +161,10 @@ let historyPos = 0
 
 let pointerStartY = 0
 let pointerStartX = 0
-let pointerMoved = false
+let pointerStartedOnCard = false
+
+// Czy ostatnie dotknięcie było tapnięciem (mały ruch), a nie przeciągnięciem
+let gestureWasTap = true
 
 function drawFromDeck() {
   deckIndex++
@@ -214,37 +222,42 @@ function getPreviousWord() {
 function handlePointerDown(event) {
   pointerStartY = event.clientY
   pointerStartX = event.clientX
-  pointerMoved = false
+  pointerStartedOnCard = Boolean(event.target.closest?.('.card'))
+  gestureWasTap = true
 }
 
 function handlePointerUp(event) {
-  const deltaY = pointerStartY - event.clientY
-  const deltaX = Math.abs(pointerStartX - event.clientX)
+  const deltaY = event.clientY - pointerStartY // dodatnie: palec w dół
+  const deltaX = Math.abs(event.clientX - pointerStartX)
 
-  if (Math.abs(deltaY) > 10 || deltaX > 10) {
-    pointerMoved = true
-  }
+  gestureWasTap = Math.abs(deltaY) <= TAP_SLOP && deltaX <= TAP_SLOP
 
   // Swipe up: następne słówko
-  if (deltaY > 70 && deltaY > deltaX) {
+  if (-deltaY > SWIPE_DISTANCE && -deltaY > deltaX) {
     getNextWord()
     return
   }
 
   // Swipe down: poprzednie słówko
-  if (deltaY < -70 && -deltaY > deltaX) {
+  if (deltaY > SWIPE_DISTANCE && deltaY > deltaX) {
     getPreviousWord()
+    return
+  }
+
+  // Tapnięcie na karcie: odsłaniamy tłumaczenie od razu przy puszczeniu
+  // palca, bez czekania na zdarzenie click (przeglądarka potrafi je
+  // pominąć lub opóźnić, gdy palec choć trochę się przesunął)
+  if (gestureWasTap && pointerStartedOnCard) {
+    showTranslation.value = true
   }
 }
 
 function handleCardClick() {
-  // Nie pokazuj tłumaczenia po wykonaniu swipe
-  if (pointerMoved) {
-    pointerMoved = false
-    return
+  // Ścieżka zapasowa (np. technologie asystujące bez zdarzeń pointer).
+  // Po przeciągnięciu tłumaczenia nie odsłaniamy.
+  if (gestureWasTap) {
+    showTranslation.value = true
   }
-
-  showTranslation.value = true
 }
 
 function handleKeydown(event) {
@@ -316,6 +329,7 @@ onUnmounted(() => {
   text-align: center;
   user-select: none;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 
   opacity: 0;
   animation: card-in 0.8s ease-out forwards;
