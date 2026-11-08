@@ -2759,5 +2759,107 @@ export const sentences = [
     { hr: 'Hvala', pl: 'Dziękuję' },
     { hr: ',', pl: ',', punct: true },
     { hr: 'i tebi.', pl: 'nawzajem.', blank: true }
+  ]},
+  
+  { id: 621, category: 'podstawy', tokens: [
+    { hr: 'Ne čujem te', pl: 'Nie słyszę cię', blank: true },
+    { hr: 'dobro.', pl: 'dobrze.' }
+  ]},
+
+  { id: 622, category: 'podstawy', tokens: [
+    { hr: 'Samo malo', pl: 'Chwileczkę' },
+    { hr: ',', pl: ',', punct: true },
+    { hr: 'molim te.', pl: 'proszę.', blank: true }
+  ]},
+
+  { id: 623, category: 'podstawy', tokens: [
+    { hr: 'Nemam', pl: 'Nie mam', blank: true },
+    { hr: 'vremena.', pl: 'czasu.' }
+  ]},
+
+  { id: 624, category: 'podstawy', tokens: [
+    { hr: 'Imam', pl: 'Mam', blank: true },
+    { hr: 'pitanje.', pl: 'pytanie.' }
+  ]},
+
+  { id: 625, category: 'podstawy', tokens: [
+    { hr: 'Što', pl: 'Co', blank: true },
+    { hr: 'to znači?', pl: 'to znaczy?' }
+  ]},
+
+  { id: 626, category: 'podstawy', tokens: [
+    { hr: 'Ne mogu', pl: 'Nie mogę', blank: true },
+    { hr: 'sada.', pl: 'teraz.' }
+  ]},
+
+  { id: 627, category: 'podstawy', tokens: [
+    { hr: 'Sve je', pl: 'Wszystko' },
+    { hr: 'jasno.', pl: 'jasne.', blank: true }
+  ]},
+
+  { id: 628, category: 'podstawy', tokens: [
+    { hr: 'Gdje', pl: 'Gdzie', blank: true },
+    { hr: 'si?', pl: 'jesteś?' }
+  ]},
+
+  { id: 629, category: 'podstawy', tokens: [
+    { hr: 'Evo', pl: 'Oto' },
+    { hr: ',', pl: ',', punct: true },
+    { hr: 'izvolite.', pl: 'proszę.', blank: true }
+  ]},
+
+  { id: 630, category: 'podstawy', tokens: [
+    { hr: 'Idem', pl: 'Idę', blank: true },
+    { hr: 'kući.', pl: 'do domu.' }
+  ]},
+
+  { id: 631, category: 'podstawy', tokens: [
+    { hr: 'Što', pl: 'Co' },
+    { hr: 'radiš?', pl: 'robisz?', blank: true }
+  ]},
+
+  { id: 632, category: 'podstawy', tokens: [
+    { hr: 'Sutra', pl: 'Jutro', blank: true },
+    { hr: 'radim.', pl: 'pracuję.' }
+  ]},
+
+  { id: 633, category: 'podstawy', tokens: [
+    { hr: 'Danas je', pl: 'Dzisiaj jest' },
+    { hr: 'dobar dan.', pl: 'dobry dzień.', blank: true }
+  ]},
+
+  { id: 634, category: 'podstawy', tokens: [
+    { hr: 'Moje ime je', pl: 'Mam na imię', blank: true },
+    { hr: 'Marko.', pl: 'Marko.' }
+  ]},
+
+  { id: 635, category: 'podstawy', tokens: [
+    { hr: 'Hvala', pl: 'Dziękuję', blank: true },
+    { hr: 'na pozivu.', pl: 'za zaproszenie.' }
+  ]},
+
+  { id: 636, category: 'podstawy', tokens: [
+    { hr: 'Ispričavam se', pl: 'Przepraszam', blank: true },
+    { hr: 'zbog kašnjenja.', pl: 'za spóźnienie.' }
+  ]},
+
+  { id: 637, category: 'podstawy', tokens: [
+    { hr: 'Možeš li', pl: 'Możesz' },
+    { hr: 'mi pomoći?', pl: 'mi pomóc?', blank: true }
+  ]},
+
+  { id: 638, category: 'podstawy', tokens: [
+    { hr: 'Idemo', pl: 'Idziemy', blank: true },
+    { hr: 'zajedno.', pl: 'razem.' }
+  ]},
+
+  { id: 639, category: 'podstawy', tokens: [
+    { hr: 'Ovo je', pl: 'To jest' },
+    { hr: 'moj prijatelj.', pl: 'mój przyjaciel.', blank: true }
+  ]},
+
+  { id: 640, category: 'podstawy', tokens: [
+    { hr: 'Možda', pl: 'Może', blank: true },
+    { hr: 'kasnije.', pl: 'później.' }
   ]}
 ]
