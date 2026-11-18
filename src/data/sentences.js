@@ -8,7 +8,7 @@ export const sentences = [
   { id: 2, category: 'powitania', tokens: [
     { hr: 'Dobar dan', pl: 'Dzień dobry' },
     { hr: ',', pl: ',', punct: true },
-    { hr: 'drago mi je', pl: 'miło mi je' },
+    { hr: 'drago mi je', pl: 'miło mi,' },
     { hr: 'što smo se upoznali.', pl: 'że się poznaliśmy.', blank: true }
   ]},
   { id: 3, category: 'powitania', tokens: [
@@ -262,13 +262,8 @@ export const sentences = [
     { hr: 'Gdje je', pl: 'Gdzie jest', blank: true },
     { hr: 'WC?', pl: 'WC?' }
   ]},
-  { id: 52, category: 'pytania', tokens: [
-    { hr: 'Kako se', pl: 'Jak to się' },
-    { hr: 'kaže', pl: 'mówi', blank: true },
-    { hr: 'ovo?', pl: 'to?' }
-  ]},
   { id: 53, category: 'pytania', tokens: [
-    { hr: 'Govorite li', pl: 'Czy mówi pan/pani', blank: true },
+    { hr: 'Govorite li', pl: 'Czy mówi pan', blank: true },
     { hr: 'engleski?', pl: 'po angielsku?' }
   ]},
   { id: 54, category: 'pytania', tokens: [
@@ -276,8 +271,8 @@ export const sentences = [
     { hr: 'ne dolaziš?', pl: 'nie przychodzisz?' }
   ]},
   { id: 55, category: 'pytania', tokens: [
-    { hr: 'Tko je', pl: 'Kto jest', blank: true },
-    { hr: 'ovo?', pl: 'to?' }
+    { hr: 'Tko', pl: 'Kto', blank: true },
+    { hr: 'je ovo?', pl: 'to jest?' }
   ]},
   { id: 56, category: 'liczby', tokens: [
     { hr: 'Trebam', pl: 'Potrzebuję', blank: true },
@@ -363,9 +358,10 @@ export const sentences = [
     { hr: 'meso.', pl: 'mięsa.', blank: true }
   ]},
   { id: 75, category: 'jedzenie', tokens: [
-    { hr: 'Voda', pl: 'Woda' },
-    { hr: 'bez', pl: 'bez' },
-    { hr: 'plina, molim.', pl: 'gazu, proszę.', blank: true }
+    { hr: 'Voda bez', pl: 'Woda bez' },
+    { hr: 'plina', pl: 'gazu', blank: true },
+    { hr: ',', pl: ',', punct: true },
+    { hr: 'molim.', pl: 'proszę.' }
   ]},
   { id: 76, category: 'dom', tokens: [
     { hr: 'Gdje', pl: 'Gdzie' },
@@ -378,7 +374,9 @@ export const sentences = [
   ]},
   { id: 78, category: 'dom', tokens: [
     { hr: 'Zatvori', pl: 'Zamknij', blank: true },
-    { hr: 'vrata, molim.', pl: 'drzwi, proszę.' }
+    { hr: 'vrata', pl: 'drzwi' },
+    { hr: ',', pl: ',', punct: true },
+    { hr: 'molim.', pl: 'proszę.' }
   ]},
   { id: 79, category: 'dom', tokens: [
     { hr: 'Otvori', pl: 'Otwórz' },
@@ -397,7 +395,7 @@ export const sentences = [
     { hr: 'kasni.', pl: 'się spóźnia.', blank: true }
   ]},
   { id: 83, category: 'transport', tokens: [
-    { hr: 'Idem', pl: 'Idę / jadę', blank: true },
+    { hr: 'Idem', pl: 'Idę', blank: true },
     { hr: 'kući.', pl: 'do domu.' }
   ]},
   { id: 84, category: 'transport', tokens: [
@@ -414,7 +412,8 @@ export const sentences = [
   ]},
   { id: 87, category: 'codzienne', tokens: [
     { hr: 'Naravno', pl: 'Oczywiście', blank: true },
-    { hr: '!', pl: '!', punct: true }
+    { hr: ',', pl: ',', punct: true },
+    { hr: 's veseljem!', pl: 'z przyjemnością!' }
   ]},
   { id: 88, category: 'codzienne', tokens: [
     { hr: 'Nisam', pl: 'Nie jestem', blank: true },
@@ -427,10 +426,6 @@ export const sentences = [
   { id: 90, category: 'codzienne', tokens: [
     { hr: 'Ne', pl: 'Nie' },
     { hr: 'brini.', pl: 'martw się.', blank: true }
-  ]},
-  { id: 91, category: 'codzienne', tokens: [
-    { hr: 'Šteta', pl: 'Szkoda', blank: true },
-    { hr: '.', pl: '.', punct: true }
   ]},
   { id: 92, category: 'codzienne', tokens: [
     { hr: 'Sve je', pl: 'Wszystko jest' },
@@ -446,11 +441,12 @@ export const sentences = [
   ]},
   { id: 95, category: 'towarzyskie', tokens: [
     { hr: 'Živjeli', pl: 'Na zdrowie', blank: true },
-    { hr: '!', pl: '!', punct: true }
+    { hr: ',', pl: ',', punct: true },
+    { hr: 'prijatelji!', pl: 'przyjaciele!' }
   ]},
   { id: 96, category: 'towarzyskie', tokens: [
     { hr: 'Dobar tek', pl: 'Smacznego', blank: true },
-    { hr: '!', pl: '!', punct: true }
+    { hr: 'svima!', pl: 'wszystkim!' }
   ]},
   { id: 97, category: 'towarzyskie', tokens: [
     { hr: 'Sretan', pl: 'Szczęśliwej', blank: true },
@@ -463,27 +459,6 @@ export const sentences = [
   { id: 99, category: 'uczucia', tokens: [
     { hr: 'Volim', pl: 'Kocham', blank: true },
     { hr: 'te.', pl: 'cię.' }
-  ]},
-  { id: 100, category: 'codzienne', tokens: [
-    { hr: 'Vidimo se', pl: 'Do zobaczenia', blank: true },
-    { hr: 'uskoro.', pl: 'wkrótce.' }
-  ]},
-  { id: 101, category: 'powitania', tokens: [
-    { hr: 'Kako si', pl: 'Jak się masz', blank: true },
-    { hr: 'danas?', pl: 'dzisiaj?' }
-  ]},
-  { id: 102, category: 'powitania', tokens: [
-    { hr: 'Vidimo se', pl: 'Do zobaczenia' },
-    { hr: 'večeras.', pl: 'wieczorem.', blank: true }
-  ]},
-  { id: 103, category: 'powitania', tokens: [
-    { hr: 'Drago mi je', pl: 'Cieszę się' },
-    { hr: 'da si', pl: 'że' },
-    { hr: 'došao.', pl: 'przyszedłeś.', blank: true }
-  ]},
-  { id: 104, category: 'powitania', tokens: [
-    { hr: 'Čujemo se', pl: 'Usłyszymy się', blank: true },
-    { hr: 'kasnije.', pl: 'później.' }
   ]},
   { id: 105, category: 'powitania', tokens: [
     { hr: 'Ugodan', pl: 'Miłego', blank: true },
@@ -533,12 +508,8 @@ export const sentences = [
     { hr: 'molim.', pl: 'proszę.' }
   ]},
   { id: 115, category: 'restauracja', tokens: [
-    { hr: 'Možemo li dobiti', pl: 'Czy możemy prosić o', blank: true },
-    { hr: 'račun?', pl: 'rachunek?' }
-  ]},
-  { id: 116, category: 'zakupy', tokens: [
-    { hr: 'Koliko', pl: 'Ile', blank: true },
-    { hr: 'ovo košta?', pl: 'to kosztuje?' }
+    { hr: 'Ima li', pl: 'Czy są' },
+    { hr: 'vegetarijanskih jela?', pl: 'dania wegetariańskie?', blank: true }
   ]},
   { id: 117, category: 'zakupy', tokens: [
     { hr: 'Imate li ovo', pl: 'Czy macie to' },
@@ -561,12 +532,11 @@ export const sentences = [
   ]},
   { id: 121, category: 'czas', tokens: [
     { hr: 'Vidimo se', pl: 'Widzimy się' },
-    { hr: 'u šest', pl: 'o szóstej', blank: true },
-    { hr: 'sati.', pl: '.' }
+    { hr: 'u šest sati.', pl: 'o szóstej.', blank: true }
   ]},
   { id: 122, category: 'czas', tokens: [
     { hr: 'Kasnim', pl: 'Spóźnię się', blank: true },
-    { hr: 'deset minuta.', pl: 'dziesięć minut.' }
+    { hr: 'deset minuta.', pl: 'o dziesięć minut.' }
   ]},
   { id: 123, category: 'czas', tokens: [
     { hr: 'Nemam', pl: 'Nie mam', blank: true },
@@ -606,16 +576,8 @@ export const sentences = [
     { hr: 'blizu nas.', pl: 'blisko nas.' }
   ]},
   { id: 131, category: 'uczucia', tokens: [
-    { hr: 'Sretan sam', pl: 'Cieszę się', blank: true },
+    { hr: 'Sretan sam', pl: 'Cieszę się,', blank: true },
     { hr: 'što si ovdje.', pl: 'że tu jesteś.' }
-  ]},
-  { id: 132, category: 'uczucia', tokens: [
-    { hr: 'Ne osjećam se', pl: 'Nie czuję się' },
-    { hr: 'baš dobro.', pl: 'najlepiej.', blank: true }
-  ]},
-  { id: 133, category: 'uczucia', tokens: [
-    { hr: 'Jako sam', pl: 'Jestem bardzo', blank: true },
-    { hr: 'umoran danas.', pl: 'zmęczony dzisiaj.' }
   ]},
   { id: 134, category: 'uczucia', tokens: [
     { hr: 'Drago mi je', pl: 'Cieszę się', blank: true },
@@ -640,22 +602,9 @@ export const sentences = [
     { hr: 'hladno.', pl: 'zimno.' }
   ]},
   { id: 139, category: 'pogoda', tokens: [
-    { hr: 'Nadam se', pl: 'Mam nadzieję', blank: true },
+    { hr: 'Nadam se', pl: 'Mam nadzieję,', blank: true },
     { hr: 'da će sutra biti', pl: 'że jutro będzie' },
     { hr: 'sunčano.', pl: 'słonecznie.' }
-  ]},
-  { id: 140, category: 'pogoda', tokens: [
-    { hr: 'Puše', pl: 'Wieje', blank: true },
-    { hr: 'jak vjetar.', pl: 'silny wiatr.' }
-  ]},
-  { id: 141, category: 'podroze', tokens: [
-    { hr: 'Gdje mogu', pl: 'Gdzie mogę' },
-    { hr: 'kupiti', pl: 'kupić', blank: true },
-    { hr: 'kartu?', pl: 'bilet?' }
-  ]},
-  { id: 142, category: 'podroze', tokens: [
-    { hr: 'Koliko traje', pl: 'Jak długo trwa', blank: true },
-    { hr: 'put do Splita?', pl: 'podróż do Splitu?' }
   ]},
   { id: 143, category: 'podroze', tokens: [
     { hr: 'Želim', pl: 'Chcę', blank: true },
@@ -680,10 +629,6 @@ export const sentences = [
     { hr: 'završiti', pl: 'skończyć', blank: true },
     { hr: 'ovaj posao danas.', pl: 'tę pracę dzisiaj.' }
   ]},
-  { id: 148, category: 'praca', tokens: [
-    { hr: 'Imamo', pl: 'Mamy', blank: true },
-    { hr: 'sastanak u deset.', pl: 'spotkanie o dziesiątej.' }
-  ]},
   { id: 149, category: 'praca', tokens: [
     { hr: 'Radim ovdje', pl: 'Pracuję tutaj' },
     { hr: 'već tri', pl: 'od trzech', blank: true },
@@ -706,10 +651,6 @@ export const sentences = [
   { id: 153, category: 'dom', tokens: [
     { hr: 'Kuhinja je', pl: 'Kuchnia jest' },
     { hr: 'odmah desno.', pl: 'od razu po prawej.', blank: true }
-  ]},
-  { id: 154, category: 'dom', tokens: [
-    { hr: 'Gdje je', pl: 'Gdzie jest' },
-    { hr: 'kupaonica?', pl: 'łazienka?', blank: true }
   ]},
   { id: 155, category: 'dom', tokens: [
     { hr: 'Moram', pl: 'Muszę' },
@@ -745,10 +686,6 @@ export const sentences = [
     { hr: 'Što ćemo', pl: 'Co' },
     { hr: 'danas', pl: 'dzisiaj', blank: true },
     { hr: 'kuhati?', pl: 'ugotujemy?' }
-  ]},
-  { id: 162, category: 'jedzenie', tokens: [
-    { hr: 'Stvarno sam', pl: 'Naprawdę jestem' },
-    { hr: 'gladan.', pl: 'głodny.', blank: true }
   ]},
   { id: 163, category: 'jedzenie', tokens: [
     { hr: 'Ovo je jako', pl: 'To jest bardzo' },
@@ -823,21 +760,10 @@ export const sentences = [
     { hr: 'jednu', pl: 'jedną', blank: true },
     { hr: 'čašu.', pl: 'szklankę.' }
   ]},
-  { id: 179, category: 'pice', tokens: [
-    { hr: 'Donesi mi', pl: 'Przynieś mi', blank: true },
-    { hr: 'malo vode', pl: 'trochę wody' },
-    { hr: ',', pl: ',', punct: true },
-    { hr: 'molim te.', pl: 'proszę.' }
-  ]},
   { id: 180, category: 'pice', tokens: [
     { hr: 'Hoćeš', pl: 'Chcesz' },
     { hr: 'kavu', pl: 'kawę', blank: true },
     { hr: 'ili čaj?', pl: 'czy herbatę?' }
-  ]},
-  { id: 181, category: 'zdrowie', tokens: [
-    { hr: 'Od jučer se', pl: 'Od wczoraj' },
-    { hr: 'ne osjećam se', pl: 'nie czuję się', blank: true },
-    { hr: 'dobro.', pl: 'dobrze.' }
   ]},
   { id: 182, category: 'zdrowie', tokens: [
     { hr: 'Boli me', pl: 'Boli mnie' },
@@ -846,11 +772,6 @@ export const sentences = [
   { id: 183, category: 'zdrowie', tokens: [
     { hr: 'Imam', pl: 'Mam', blank: true },
     { hr: 'temperaturu.', pl: 'gorączkę.' }
-  ]},
-  { id: 184, category: 'zdrowie', tokens: [
-    { hr: 'Moram', pl: 'Muszę' },
-    { hr: 'otići', pl: 'iść', blank: true },
-    { hr: 'liječniku.', pl: 'do lekarza.' }
   ]},
   { id: 185, category: 'zdrowie', tokens: [
     { hr: 'Imate li nešto', pl: 'Czy mają państwo coś' },
@@ -867,7 +788,7 @@ export const sentences = [
   ]},
   { id: 188, category: 'zdrowie', tokens: [
     { hr: 'Odavno me', pl: 'Od dawna' },
-    { hr: 'boli', pl: 'bolą mnie', blank: true },
+    { hr: 'bole', pl: 'bolą mnie', blank: true },
     { hr: 'leđa.', pl: 'plecy.' }
   ]},
   { id: 189, category: 'zdrowie', tokens: [
@@ -888,9 +809,9 @@ export const sentences = [
     { hr: 'kartu za autobus?', pl: 'bilet autobusowy?' }
   ]},
   { id: 193, category: 'transport', tokens: [
-    { hr: 'Je li ovaj autobus', pl: 'Czy ten autobus' },
-    { hr: 'ide', pl: 'jedzie', blank: true },
-    { hr: 'u centar?', pl: 'do centrum?' }
+    { hr: 'Ide li', pl: 'Czy' },
+    { hr: 'ovaj autobus', pl: 'ten autobus' },
+    { hr: 'u centar?', pl: 'jedzie do centrum?', blank: true }
   ]},
   { id: 194, category: 'transport', tokens: [
     { hr: 'Gdje trebam', pl: 'Gdzie muszę' },
@@ -913,10 +834,6 @@ export const sentences = [
     { hr: 'Možete li me', pl: 'Czy może mnie pan/pani' },
     { hr: 'ostaviti', pl: 'wysadzić', blank: true },
     { hr: 'ovdje?', pl: 'tutaj?' }
-  ]},
-  { id: 199, category: 'transport', tokens: [
-    { hr: 'Trebam', pl: 'Potrzebuję', blank: true },
-    { hr: 'taksi do zračne luke.', pl: 'taksówki na lotnisko.' }
   ]},
   { id: 200, category: 'transport', tokens: [
     { hr: 'Koliko košta', pl: 'Ile kosztuje', blank: true },
@@ -1089,10 +1006,6 @@ export const sentences = [
     { hr: 'Ovdje negdje bi trebala biti', pl: 'Gdzieś tutaj powinna być' },
     { hr: 'pošta.', pl: 'poczta.', blank: true }
   ]},
-  { id: 239, category: 'miasto', tokens: [
-    { hr: 'Koliko je udaljena', pl: 'Jak daleko jest', blank: true },
-    { hr: 'plaža?', pl: 'plaża?' }
-  ]},
   { id: 240, category: 'miasto', tokens: [
     { hr: 'Ne mogu', pl: 'Nie mogę' },
     { hr: 'pronaći', pl: 'znaleźć', blank: true },
@@ -1103,7 +1016,7 @@ export const sentences = [
     { hr: 'internet.', pl: 'internet.' }
   ]},
   { id: 242, category: 'problemy', tokens: [
-    { hr: 'Ne znam', pl: 'Nie wiem', blank: true },
+    { hr: 'Ne znam', pl: 'Nie wiem,', blank: true },
     { hr: 'što se dogodilo.', pl: 'co się stało.' }
   ]},
   { id: 243, category: 'problemy', tokens: [
@@ -1112,7 +1025,7 @@ export const sentences = [
     { hr: 's ovim?', pl: 'z tym?' }
   ]},
   { id: 244, category: 'problemy', tokens: [
-    { hr: 'Mislim', pl: 'Myślę', blank: true },
+    { hr: 'Mislim', pl: 'Myślę,', blank: true },
     { hr: 'da je ovo pogrešno.', pl: 'że to jest nieprawidłowe.' }
   ]},
   { id: 245, category: 'problemy', tokens: [
@@ -1241,10 +1154,6 @@ export const sentences = [
     { hr: 'Nemam', pl: 'Nie mam', blank: true },
     { hr: 'signala ovdje.', pl: 'tu zasięgu.' }
   ]},
-  { id: 272, category: 'internet_telefon', tokens: [
-    { hr: 'Baterija mi je', pl: 'Bateria mi się', blank: true },
-    { hr: 'na nuli.', pl: 'skończyła.' }
-  ]},
   { id: 273, category: 'internet_telefon', tokens: [
     { hr: 'Pošalji mi', pl: 'Wyślij mi', blank: true },
     { hr: 'link', pl: 'link' },
@@ -1259,10 +1168,6 @@ export const sentences = [
     { hr: 'Ne mogu se', pl: 'Nie mogę się' },
     { hr: 'spojiti', pl: 'połączyć', blank: true },
     { hr: 'na wifi.', pl: 'z wifi.' }
-  ]},
-  { id: 276, category: 'internet_telefon', tokens: [
-    { hr: 'Piši mi', pl: 'Napisz mi', blank: true },
-    { hr: 'kad stigneš doma.', pl: 'kiedy dotrzesz do domu.' }
   ]},
   { id: 277, category: 'internet_telefon', tokens: [
     { hr: 'Aplikacija mi', pl: 'Aplikacja mi się' },
@@ -1342,10 +1247,6 @@ export const sentences = [
   { id: 293, category: 'szkola', tokens: [
     { hr: 'Dobio sam', pl: 'Dostałem', blank: true },
     { hr: 'dobru ocjenu.', pl: 'dobrą ocenę.' }
-  ]},
-  { id: 294, category: 'szkola', tokens: [
-    { hr: 'Zaboravio sam', pl: 'Zapomniałem', blank: true },
-    { hr: 'knjigu kod kuće.', pl: 'książki w domu.' }
   ]},
   { id: 295, category: 'szkola', tokens: [
     { hr: 'Predavanje', pl: 'Wykład' },
@@ -1517,7 +1418,7 @@ export const sentences = [
     { hr: 'ne vjerujem!', pl: 'nie wierzę!' }
   ]},
   { id: 332, category: 'small_talk', tokens: [
-    { hr: 'Nema šanse', pl: 'Nie ma szans', blank: true },
+    { hr: 'Nema šanse', pl: 'Nie ma szans,', blank: true },
     { hr: 'da to uspije.', pl: 'żeby to się udało.' }
   ]},
   { id: 333, category: 'small_talk', tokens: [
@@ -1545,28 +1446,20 @@ export const sentences = [
     { hr: 'pravo.', pl: 'rację.' }
   ]},
   { id: 338, category: 'small_talk', tokens: [
-    { hr: 'Nije me', pl: 'Nie obchodzi mnie', blank: true },
+    { hr: 'Nije me', pl: 'Nie obchodzi mnie,', blank: true },
     { hr: 'briga što misle drugi.', pl: 'co myślą inni.' }
   ]},
   { id: 339, category: 'small_talk', tokens: [
-    { hr: 'Šteta', pl: 'Szkoda', blank: true },
+    { hr: 'Šteta', pl: 'Szkoda,', blank: true },
     { hr: 'što nisi došao.', pl: 'że nie przyszedłeś.' }
   ]},
   { id: 340, category: 'small_talk', tokens: [
     { hr: 'Baš me', pl: 'Naprawdę mnie', blank: true },
     { hr: 'zanima kako će to završiti.', pl: 'ciekawi, jak to się skończy.' }
   ]},
-  { id: 341, category: 'plany', tokens: [
-    { hr: 'Što', pl: 'Co', blank: true },
-    { hr: 'planiraš za vikend?', pl: 'planujesz na weekend?' }
-  ]},
   { id: 342, category: 'plany', tokens: [
     { hr: 'Planiramo', pl: 'Planujemy', blank: true },
     { hr: 'selidbu iduće godine.', pl: 'przeprowadzkę w przyszłym roku.' }
-  ]},
-  { id: 343, category: 'plany', tokens: [
-    { hr: 'Još nemam', pl: 'Jeszcze nie mam', blank: true },
-    { hr: 'nikakve planove.', pl: 'żadnych planów.' }
   ]},
   { id: 344, category: 'plany', tokens: [
     { hr: 'Idući mjesec', pl: 'W przyszłym miesiącu' },
@@ -1582,10 +1475,6 @@ export const sentences = [
     { hr: 'Razmišljam', pl: 'Myślę', blank: true },
     { hr: 'o promjeni posla.', pl: 'o zmianie pracy.' }
   ]},
-  { id: 347, category: 'plany', tokens: [
-    { hr: 'Nadam se', pl: 'Mam nadzieję', blank: true },
-    { hr: 'da će sve biti u redu.', pl: 'że wszystko będzie dobrze.' }
-  ]},
   { id: 348, category: 'plany', tokens: [
     { hr: 'Odgodili smo', pl: 'Przełożyliśmy', blank: true },
     { hr: 'put za sljedeći tjedan.', pl: 'wyjazd na przyszły tydzień.' }
@@ -1593,10 +1482,6 @@ export const sentences = [
   { id: 349, category: 'plany', tokens: [
     { hr: 'Konačno smo', pl: 'W końcu' },
     { hr: 'odlučili.', pl: 'zdecydowaliśmy.', blank: true }
-  ]},
-  { id: 350, category: 'plany', tokens: [
-    { hr: 'Vidjet ćemo', pl: 'Zobaczymy', blank: true },
-    { hr: 'što će biti.', pl: 'co będzie.' }
   ]},
   { id: 351, category: 'prawda_klamstwo', tokens: [
     { hr: 'Reci mi', pl: 'Powiedz mi', blank: true },
@@ -1634,7 +1519,7 @@ export const sentences = [
     { hr: 'istinu.', pl: 'prawdę.' }
   ]},
   { id: 359, category: 'prawda_klamstwo', tokens: [
-    { hr: 'Sumnjam', pl: 'Wątpię', blank: true },
+    { hr: 'Sumnjam', pl: 'Wątpię,', blank: true },
     { hr: 'da je to točno.', pl: 'że to prawda.' }
   ]},
   { id: 360, category: 'prawda_klamstwo', tokens: [
@@ -1891,7 +1776,7 @@ export const sentences = [
     { hr: 'prošli mjesec.', pl: 'w zeszłym miesiącu.' }
   ]},
   { id: 417, category: 'randki', tokens: [
-    { hr: 'On mi je', pl: 'On jest mi' },
+    { hr: 'On mi je', pl: 'On jest dla mnie' },
     { hr: 'zapravo jako', pl: 'naprawdę' },
     { hr: 'drag.', pl: 'bliski.', blank: true }
   ]},
@@ -1905,7 +1790,7 @@ export const sentences = [
   ]},
   { id: 420, category: 'randki', tokens: [
     { hr: 'Nemoj mi', pl: 'Nie', blank: true },
-    { hr: 'slomiti srce.', pl: 'złam mi serca.' }
+    { hr: 'slomiti srce.', pl: 'łam mi serca.' }
   ]},
   { id: 421, category: 'ubrania', tokens: [
     { hr: 'Ova majica mi je', pl: 'Ta koszulka jest na mnie' },
@@ -2032,10 +1917,6 @@ export const sentences = [
     { hr: 'konzolu', pl: 'na konsoli', blank: true },
     { hr: 'ili računalo?', pl: 'czy na komputerze?' }
   ]},
-  { id: 451, category: 'kariera', tokens: [
-    { hr: 'Tražim', pl: 'Szukam', blank: true },
-    { hr: 'posao već mjesecima.', pl: 'pracy od miesięcy.' }
-  ]},
   { id: 452, category: 'kariera', tokens: [
     { hr: 'Poslao sam', pl: 'Wysłałem', blank: true },
     { hr: 'prijavu jučer.', pl: 'zgłoszenie wczoraj.' }
@@ -2160,7 +2041,7 @@ export const sentences = [
     { hr: 'talent za to.', pl: 'do tego talent.' }
   ]},
   { id: 480, category: 'komplementy', tokens: [
-    { hr: 'Hvala ti', pl: 'Dziękuję', blank: true },
+    { hr: 'Hvala ti', pl: 'Dziękuję,', blank: true },
     { hr: 'što si takav kakav jesi.', pl: 'że jesteś taki, jaki jesteś.' }
   ]},
   { id: 481, category: 'stres', tokens: [
@@ -2184,10 +2065,6 @@ export const sentences = [
     { hr: 'Ne stignem', pl: 'Nie zdążę', blank: true },
     { hr: 'sve obaviti.', pl: 'wszystkiego zrobić.' }
   ]},
-  { id: 486, category: 'stres', tokens: [
-    { hr: 'Trebam', pl: 'Potrzebuję', blank: true },
-    { hr: 'malo vremena za sebe.', pl: 'trochę czasu dla siebie.' }
-  ]},
   { id: 487, category: 'stres', tokens: [
     { hr: 'Osjećam se', pl: 'Czuję się', blank: true },
     { hr: 'preopterećeno poslom.', pl: 'przytłoczony pracą.' }
@@ -2199,10 +2076,6 @@ export const sentences = [
   { id: 489, category: 'stres', tokens: [
     { hr: 'Sve će biti', pl: 'Jutro wszystko będzie', blank: true },
     { hr: 'lakše sutra.', pl: 'łatwiejsze.' }
-  ]},
-  { id: 490, category: 'stres', tokens: [
-    { hr: 'Ne brini se', pl: 'Nie martw się', blank: true },
-    { hr: 'toliko.', pl: 'tak bardzo.' }
   ]},
   { id: 491, category: 'hobby', tokens: [
     { hr: 'Slikam', pl: 'Maluję', blank: true },
@@ -2250,12 +2123,12 @@ export const sentences = [
     { hr: 'bilo koji dan.', pl: 'każdy dzień.' }
   ]},
   { id: 502, category: 'rozmowa', tokens: [
-    { hr: 'Tako', pl: 'Na to', blank: true },
+    { hr: 'Tako', pl: 'Tak to', blank: true },
     { hr: 'izgleda.', pl: 'wygląda.' }
   ]},
   { id: 503, category: 'rozmowa', tokens: [
-    { hr: 'Lijepo se', pl: 'Miło się', blank: true },
-    { hr: 'provedi!', pl: 'baw!' }
+    { hr: 'Lijepo se', pl: 'Baw się', blank: true },
+    { hr: 'provedi!', pl: 'dobrze!' }
   ]},
   { id: 504, category: 'rozmowa', tokens: [
     { hr: 'Lakše je', pl: 'Łatwiej', blank: true },
@@ -2266,24 +2139,16 @@ export const sentences = [
     { hr: 'što kasnim.', pl: 'za spóźnienie.' }
   ]},
   { id: 506, category: 'rozmowa', tokens: [
-    { hr: 'I', pl: 'Najwyższy' },
-    { hr: 'vrijeme je!', pl: 'czas!', blank: true }
+    { hr: 'Krajnje', pl: 'Najwyższy', blank: true },
+    { hr: 'je vrijeme!', pl: 'czas!' }
   ]},
   { id: 507, category: 'rozmowa', tokens: [
     { hr: 'Sami smo', pl: 'Jesteśmy tu', blank: true },
     { hr: 'ovdje.', pl: 'sami.' }
   ]},
-  { id: 508, category: 'rozmowa', tokens: [
-    { hr: 'Kužim', pl: 'Kapuję', blank: true },
-    { hr: '.', pl: '.', punct: true }
-  ]},
   { id: 509, category: 'rozmowa', tokens: [
     { hr: 'Ne kužim', pl: 'Nie bardzo', blank: true },
     { hr: 'baš.', pl: 'kapuję.' }
-  ]},
-  { id: 510, category: 'rozmowa', tokens: [
-    { hr: 'Nema', pl: 'Nie ma', blank: true },
-    { hr: 'frke.', pl: 'sprawy.' }
   ]},
   { id: 511, category: 'rozmowa', tokens: [
     { hr: 'Kako', pl: 'Jak', blank: true },
@@ -2305,10 +2170,6 @@ export const sentences = [
     { hr: 'Daj mi', pl: 'Daj mi', blank: true },
     { hr: 'minutu.', pl: 'chwilę.' }
   ]},
-  { id: 516, category: 'rozmowa', tokens: [
-    { hr: 'Samo', pl: 'Tylko', blank: true },
-    { hr: 'trenutak.', pl: 'chwileczkę.' }
-  ]},
   { id: 517, category: 'rozmowa', tokens: [
     { hr: 'Nemam', pl: 'Nie mam', blank: true },
     { hr: 'pojma.', pl: 'pojęcia.' }
@@ -2316,10 +2177,6 @@ export const sentences = [
   { id: 518, category: 'rozmowa', tokens: [
     { hr: 'To mi nikako', pl: 'To mi w ogóle' },
     { hr: 'ne ide.', pl: 'nie wychodzi.', blank: true }
-  ]},
-  { id: 519, category: 'rozmowa', tokens: [
-    { hr: 'Nije', pl: 'Nieźle', blank: true },
-    { hr: 'loše.', pl: '.' }
   ]},
   { id: 520, category: 'rozmowa', tokens: [
     { hr: 'Moglo bi biti', pl: 'Mogłoby być', blank: true },
@@ -2332,10 +2189,6 @@ export const sentences = [
   { id: 522, category: 'rozmowa', tokens: [
     { hr: 'Pusti me', pl: 'Zostaw mnie', blank: true },
     { hr: 'na miru.', pl: 'w spokoju.' }
-  ]},
-  { id: 523, category: 'rozmowa', tokens: [
-    { hr: 'Ma', pl: 'Daj', blank: true },
-    { hr: 'pusti.', pl: 'spokój.' }
   ]},
   { id: 524, category: 'rozmowa', tokens: [
     { hr: 'Dosta mi je', pl: 'Mam tego', blank: true },
@@ -2366,15 +2219,15 @@ export const sentences = [
     { hr: 'nemoj!', pl: 'nie powiesz!' }
   ]},
   { id: 531, category: 'rozmowa', tokens: [
-    { hr: 'Šalim', pl: 'Żartuję', blank: true },
-    { hr: 'se.', pl: '.' }
+    { hr: 'Šalim se', pl: 'Żartuję', blank: true },
+    { hr: '.', pl: '.', punct: true }
   ]},
   { id: 532, category: 'rozmowa', tokens: [
     { hr: 'Ne', pl: 'Nie', blank: true },
     { hr: 'šalim se.', pl: 'żartuję.' }
   ]},
   { id: 533, category: 'rozmowa', tokens: [
-    { hr: 'To je', pl: 'To' },
+    { hr: 'To je', pl: 'To jest' },
     { hr: 'druga priča.', pl: 'inna sprawa.', blank: true }
   ]},
   { id: 534, category: 'rozmowa', tokens: [
@@ -2395,16 +2248,12 @@ export const sentences = [
     { hr: 'stižemo.', pl: 'już dojeżdżamy.' }
   ]},
   { id: 538, category: 'rozmowa', tokens: [
-    { hr: 'Samo', pl: 'Śmiało', blank: true },
-    { hr: 'naprijed!', pl: '!' }
+    { hr: 'Samo naprijed', pl: 'Śmiało', blank: true },
+    { hr: '!', pl: '!', punct: true }
   ]},
   { id: 539, category: 'rozmowa', tokens: [
     { hr: 'Drži', pl: 'Trzymaj', blank: true },
     { hr: 'se!', pl: 'się!' }
-  ]},
-  { id: 540, category: 'rozmowa', tokens: [
-    { hr: 'Nije', pl: 'Nie ma się', blank: true },
-    { hr: 'za brigu.', pl: 'co martwić.' }
   ]},
   { id: 541, category: 'rozmowa', tokens: [
     { hr: 'Sve je', pl: 'Wszystko jest' },
@@ -2423,7 +2272,7 @@ export const sentences = [
     { hr: 'ti kažeš.', pl: 'sobie chcesz.' }
   ]},
   { id: 545, category: 'rozmowa', tokens: [
-    { hr: 'Meni je', pl: 'Mi jest', blank: true },
+    { hr: 'Meni je', pl: 'Jest mi', blank: true },
     { hr: 'svejedno.', pl: 'wszystko jedno.' }
   ]},
   { id: 546, category: 'rozmowa', tokens: [
@@ -2436,10 +2285,6 @@ export const sentences = [
   ]},
   { id: 548, category: 'rozmowa', tokens: [
     { hr: 'Dogovoreno', pl: 'Zgoda', blank: true },
-    { hr: '!', pl: '!', punct: true }
-  ]},
-  { id: 549, category: 'rozmowa', tokens: [
-    { hr: 'Važi', pl: 'Zgoda', blank: true },
     { hr: '!', pl: '!', punct: true }
   ]},
   { id: 550, category: 'rozmowa', tokens: [
@@ -2472,7 +2317,7 @@ export const sentences = [
     { hr: 'vidiš, uvijek je tako.', pl: 'widzisz, zawsze tak jest.' }
   ]},
   { id: 557, category: 'zycie', tokens: [
-    { hr: 'Znaš', pl: 'Wiesz', blank: true },
+    { hr: 'Znaš', pl: 'Wiesz,', blank: true },
     { hr: 'kako je to.', pl: 'jak to jest.' }
   ]},
   { id: 558, category: 'zycie', tokens: [
@@ -2495,7 +2340,7 @@ export const sentences = [
     { hr: 'ne bi dogodilo.', pl: 'nie przydarzyło.' }
   ]},
   { id: 562, category: 'zycie', tokens: [
-    { hr: 'Uvijek je tako', pl: 'Zawsze tak jest' },
+    { hr: 'Uvijek je tako', pl: 'Zawsze tak jest,' },
     { hr: 'kad', pl: 'kiedy', blank: true },
     { hr: 'najmanje očekuješ.', pl: 'najmniej się spodziewasz.' }
   ]},
@@ -2511,12 +2356,8 @@ export const sentences = [
     { hr: 'Nemoj', pl: 'Nie', blank: true },
     { hr: 'odmah suditi.', pl: 'oceniaj od razu.' }
   ]},
-  { id: 566, category: 'zycie', tokens: [
-    { hr: 'To se', pl: 'Łatwo tak', blank: true },
-    { hr: 'lako kaže.', pl: 'powiedzieć.' }
-  ]},
   { id: 567, category: 'zycie', tokens: [
-    { hr: 'Znam', pl: 'Wiem', blank: true },
+    { hr: 'Znam', pl: 'Wiem,', blank: true },
     { hr: 'da zvuči čudno.', pl: 'że to brzmi dziwnie.' }
   ]},
   { id: 568, category: 'zycie', tokens: [
@@ -2526,10 +2367,6 @@ export const sentences = [
   { id: 569, category: 'zycie', tokens: [
     { hr: 'Nema tu', pl: 'Nie ma tu', blank: true },
     { hr: 'puno za razmišljati.', pl: 'wiele do myślenia.' }
-  ]},
-  { id: 570, category: 'zycie', tokens: [
-    { hr: 'To nikoga ne', pl: 'To nikogo nie', blank: true },
-    { hr: 'iznenađuje.', pl: 'dziwi.' }
   ]},
   { id: 571, category: 'zycie', tokens: [
     { hr: 'Uvijek nešto', pl: 'Zawsze coś', blank: true },
@@ -2557,7 +2394,7 @@ export const sentences = [
     { hr: 'za jedan dan.', pl: 'na jeden dzień.' }
   ]},
   { id: 577, category: 'zycie', tokens: [
-    { hr: 'Nadam se', pl: 'Mam nadzieję', blank: true },
+    { hr: 'Nadam se', pl: 'Mam nadzieję,', blank: true },
     { hr: 'da sam u pravu.', pl: 'że mam rację.' }
   ]},
   { id: 578, category: 'zycie', tokens: [
@@ -2605,10 +2442,6 @@ export const sentences = [
     { hr: 'To nije', pl: 'To nie', blank: true },
     { hr: 'moj posao.', pl: 'moja sprawa.' }
   ]},
-  { id: 589, category: 'zycie', tokens: [
-    { hr: 'Neka bude', pl: 'Niech będzie', blank: true },
-    { hr: 'kako želiš.', pl: 'jak chcesz.' }
-  ]},
   { id: 590, category: 'zycie', tokens: [
     { hr: 'Ne moraš mi', pl: 'Nie musisz mi', blank: true },
     { hr: 'ništa objašnjavati.', pl: 'niczego tłumaczyć.' }
@@ -2624,10 +2457,6 @@ export const sentences = [
   { id: 593, category: 'zycie', tokens: [
     { hr: 'Nisam', pl: 'Nie jestem', blank: true },
     { hr: 'navikao na ovakve stvari.', pl: 'przyzwyczajony do takich rzeczy.' }
-  ]},
-  { id: 594, category: 'zycie', tokens: [
-    { hr: 'Katkad je najbolje', pl: 'Czasami najlepiej', blank: true },
-    { hr: 'ne reagirati.', pl: 'nie reagować.' }
   ]},
   { id: 595, category: 'zycie', tokens: [
     { hr: 'To baš i nije', pl: 'To wcale nie był', blank: true },
@@ -2648,7 +2477,7 @@ export const sentences = [
     { hr: 'sve biti gotovo.', pl: 'wszystko będzie skończone.' }
   ]},
   { id: 599, category: 'zycie', tokens: [
-    { hr: 'Hvala Bogu', pl: 'Dzięki Bogu', blank: true },
+    { hr: 'Hvala Bogu', pl: 'Dzięki Bogu,', blank: true },
     { hr: 'da je gotovo.', pl: 'że już koniec.' }
   ]},
   { id: 600, category: 'zycie', tokens: [
@@ -2660,164 +2489,100 @@ export const sentences = [
     { hr: 'već', pl: 'już' },
     { hr: 'ići.', pl: 'iść.' }
   ]},
-
   { id: 602, category: 'podstawy', tokens: [
     { hr: 'Što', pl: 'Co' },
     { hr: 'znači', pl: 'znaczy', blank: true },
     { hr: 'ova riječ?', pl: 'to słowo?' }
   ]},
-
   { id: 603, category: 'podstawy', tokens: [
     { hr: 'Možeš li', pl: 'Możesz' },
     { hr: 'to', pl: 'to' },
     { hr: 'napisati?', pl: 'napisać?', blank: true }
   ]},
-
   { id: 604, category: 'podstawy', tokens: [
     { hr: 'Je li to', pl: 'Czy to' },
     { hr: 'točno?', pl: 'się zgadza?', blank: true }
   ]},
-
   { id: 605, category: 'podstawy', tokens: [
     { hr: 'Ispravi me', pl: 'Popraw mnie', blank: true },
     { hr: ',', pl: ',', punct: true },
     { hr: 'molim te.', pl: 'proszę.' }
   ]},
-
   { id: 606, category: 'podstawy', tokens: [
     { hr: 'Učim', pl: 'Uczę się', blank: true },
     { hr: 'hrvatski.', pl: 'chorwackiego.' }
   ]},
-
   { id: 607, category: 'podstawy', tokens: [
     { hr: 'Govorim', pl: 'Mówię', blank: true },
     { hr: 'poljski.', pl: 'po polsku.' }
   ]},
-
   { id: 608, category: 'podstawy', tokens: [
     { hr: 'Razumijem', pl: 'Rozumiem', blank: true },
     { hr: 'te.', pl: 'cię.' }
   ]},
-
-  { id: 636, category: 'podstawy', tokens: [
-    { hr: 'Hrvatski je', pl: 'Chorwacki jest' },
-    { hr: 'težak', pl: 'trudny', blank: true },
-    { hr: ',', pl: ',', punct: true },
-    { hr: 'ali lijep.', pl: 'ale piękny.' }
-  ]},
-
-  { id: 637, category: 'podstawy', tokens: [
-    { hr: 'Često', pl: 'Często' },
-    { hr: 'zaboravljam', pl: 'zapominam', blank: true },
-    { hr: 'riječi.', pl: 'słowa.' }
-  ]},
-
-  // --- uprzejmość i życzenia ---
-
   { id: 609, category: 'podstawy', tokens: [
     { hr: 'Oprostite', pl: 'Przepraszam' },
     { hr: ',', pl: ',', punct: true },
     { hr: 'smijem li', pl: 'czy mogę' },
     { hr: 'proći?', pl: 'przejść?', blank: true }
   ]},
-
   { id: 610, category: 'podstawy', tokens: [
     { hr: 'Ovo je', pl: 'To jest' },
     { hr: 'za tebe.', pl: 'dla ciebie.', blank: true }
   ]},
-
   { id: 611, category: 'podstawy', tokens: [
     { hr: 'Čestitam', pl: 'Gratuluję', blank: true },
     { hr: 'na uspjehu.', pl: 'sukcesu.' }
   ]},
-
   { id: 612, category: 'podstawy', tokens: [
     { hr: 'Hvala', pl: 'Dziękuję', blank: true },
     { hr: 'na pozivu.', pl: 'za zaproszenie.' }
   ]},
-
   { id: 613, category: 'podstawy', tokens: [
     { hr: 'Hvala', pl: 'Dziękuję' },
     { hr: ',', pl: ',', punct: true },
     { hr: 'i tebi.', pl: 'nawzajem.', blank: true }
   ]},
-
   { id: 614, category: 'podstawy', tokens: [
     { hr: 'Evo', pl: 'Oto' },
     { hr: ',', pl: ',', punct: true },
     { hr: 'izvolite.', pl: 'proszę.', blank: true }
   ]},
-
   { id: 615, category: 'podstawy', tokens: [
     { hr: 'Da', pl: 'Tak' },
     { hr: ',', pl: ',', punct: true },
     { hr: 'molim.', pl: 'poproszę.', blank: true }
   ]},
-
   { id: 616, category: 'podstawy', tokens: [
     { hr: 'Ne', pl: 'Nie' },
     { hr: ',', pl: ',', punct: true },
     { hr: 'hvala.', pl: 'dziękuję.', blank: true }
   ]},
-
-  { id: 631, category: 'podstawy', tokens: [
-    { hr: 'Dobro jutro', pl: 'Dzień dobry', blank: true },
-    { hr: 'svima!', pl: 'wszystkim!' }
-  ]},
-
-  { id: 632, category: 'podstawy', tokens: [
-    { hr: 'Dobro došli', pl: 'Witamy', blank: true },
-    { hr: 'u Hrvatsku!', pl: 'w Chorwacji!' }
-  ]},
-
-  { id: 633, category: 'podstawy', tokens: [
-    { hr: 'Sretno', pl: 'Powodzenia', blank: true },
-    { hr: 'na ispitu!', pl: 'na egzaminie!' }
-  ]},
-
-  { id: 634, category: 'podstawy', tokens: [
-    { hr: 'Pozdravi', pl: 'Pozdrów', blank: true },
-    { hr: 'svoju obitelj.', pl: 'swoją rodzinę.' }
-  ]},
-
-  { id: 635, category: 'podstawy', tokens: [
-    { hr: 'Smetam li', pl: 'Czy przeszkadzam', blank: true },
-    { hr: 'ti?', pl: 'ci?' }
-  ]},
-
-  // --- rozmowa, poznawanie się ---
-
   { id: 617, category: 'podstawy', tokens: [
     { hr: 'Slažem se', pl: 'Zgadzam się', blank: true },
     { hr: 's tobom.', pl: 'z tobą.' }
   ]},
-
   { id: 618, category: 'podstawy', tokens: [
     { hr: 'Možda', pl: 'Może', blank: true },
     { hr: 'kasnije.', pl: 'później.' }
   ]},
-
   { id: 619, category: 'podstawy', tokens: [
     { hr: 'Ja sam', pl: 'Jestem' },
     { hr: 'iz Poljske.', pl: 'z Polski.', blank: true }
   ]},
-
   { id: 620, category: 'podstawy', tokens: [
     { hr: 'Koliko', pl: 'Ile', blank: true },
     { hr: 'imaš godina?', pl: 'masz lat?' }
   ]},
-
   { id: 621, category: 'podstawy', tokens: [
     { hr: 'Čime', pl: 'Czym' },
     { hr: 'se baviš?', pl: 'się zajmujesz?', blank: true }
   ]},
-
   { id: 622, category: 'podstawy', tokens: [
     { hr: 'Prvi put', pl: 'Pierwszy raz', blank: true },
     { hr: 'sam', pl: 'jestem' },
     { hr: 'u Hrvatskoj.', pl: 'w Chorwacji.' }
   ]},
-
   { id: 623, category: 'podstawy', tokens: [
     { hr: 'Dobro sam', pl: 'Mam się dobrze', blank: true },
     { hr: ',', pl: ',', punct: true },
@@ -2825,57 +2590,191 @@ export const sentences = [
     { hr: ',', pl: ',', punct: true },
     { hr: 'a ti?', pl: 'a ty?' }
   ]},
-
+  { id: 624, category: 'podstawy', tokens: [
+    { hr: 'Imam', pl: 'Mam', blank: true },
+    { hr: 'pitanje.', pl: 'pytanie.' }
+  ]},
+  { id: 625, category: 'podstawy', tokens: [
+    { hr: 'Mogu li', pl: 'Czy mogę' },
+    { hr: 'ući?', pl: 'wejść?', blank: true }
+  ]},
+  { id: 626, category: 'podstawy', tokens: [
+    { hr: 'Imaš li', pl: 'Masz' },
+    { hr: 'vremena?', pl: 'czas?', blank: true }
+  ]},
+  { id: 627, category: 'podstawy', tokens: [
+    { hr: 'Gdje', pl: 'Gdzie', blank: true },
+    { hr: 'si?', pl: 'jesteś?' }
+  ]},
   { id: 628, category: 'podstawy', tokens: [
     { hr: 'Ovo je', pl: 'To jest' },
     { hr: 'moj prijatelj.', pl: 'mój przyjaciel.', blank: true }
   ]},
-
+  { id: 629, category: 'podstawy', tokens: [
+    { hr: 'Daj mi', pl: 'Daj mi' },
+    { hr: 'svoj broj telefona.', pl: 'swój numer telefonu.', blank: true }
+  ]},
+  { id: 630, category: 'podstawy', tokens: [
+    { hr: 'Pričekaj me', pl: 'Poczekaj na mnie', blank: true },
+    { hr: 'ovdje.', pl: 'tutaj.' }
+  ]},
+  { id: 631, category: 'powitania', tokens: [
+    { hr: 'Dobro jutro', pl: 'Dzień dobry', blank: true },
+    { hr: 'svima!', pl: 'wszystkim!' }
+  ]},
+  { id: 632, category: 'powitania', tokens: [
+    { hr: 'Dobro došli', pl: 'Witamy', blank: true },
+    { hr: 'u Hrvatsku!', pl: 'w Chorwacji!' }
+  ]},
+  { id: 633, category: 'podstawy', tokens: [
+    { hr: 'Sretno', pl: 'Powodzenia', blank: true },
+    { hr: 'na ispitu!', pl: 'na egzaminie!' }
+  ]},
+  { id: 634, category: 'podstawy', tokens: [
+    { hr: 'Pozdravi', pl: 'Pozdrów', blank: true },
+    { hr: 'svoju obitelj.', pl: 'swoją rodzinę.' }
+  ]},
+  { id: 635, category: 'podstawy', tokens: [
+    { hr: 'Smetam li', pl: 'Czy przeszkadzam', blank: true },
+    { hr: 'ti?', pl: 'ci?' }
+  ]},
+  { id: 636, category: 'podstawy', tokens: [
+    { hr: 'Hrvatski je', pl: 'Chorwacki jest' },
+    { hr: 'težak', pl: 'trudny', blank: true },
+    { hr: ',', pl: ',', punct: true },
+    { hr: 'ali lijep.', pl: 'ale piękny.' }
+  ]},
+  { id: 637, category: 'podstawy', tokens: [
+    { hr: 'Često', pl: 'Często' },
+    { hr: 'zaboravljam', pl: 'zapominam', blank: true },
+    { hr: 'riječi.', pl: 'słowa.' }
+  ]},
   { id: 638, category: 'podstawy', tokens: [
     { hr: 'Što', pl: 'Co' },
     { hr: 'ima novo?', pl: 'nowego?', blank: true }
   ]},
-
   { id: 639, category: 'podstawy', tokens: [
     { hr: 'Što', pl: 'Czego', blank: true },
     { hr: 'želiš?', pl: 'chcesz?' }
   ]},
-
   { id: 640, category: 'podstawy', tokens: [
     { hr: 'Koji je', pl: 'Jaki jest' },
     { hr: 'danas', pl: 'dzisiaj' },
     { hr: 'dan?', pl: 'dzień?', blank: true }
   ]},
-
-  // --- krótkie prośby i pytania ---
-
-  { id: 624, category: 'podstawy', tokens: [
-    { hr: 'Imam', pl: 'Mam', blank: true },
-    { hr: 'pitanje.', pl: 'pytanie.' }
+  { id: 641, category: 'pytania', tokens: [
+    { hr: 'Kada', pl: 'Kiedy', blank: true },
+    { hr: 'počinje film?', pl: 'zaczyna się film?' }
   ]},
-
-  { id: 625, category: 'podstawy', tokens: [
-    { hr: 'Mogu li', pl: 'Czy mogę' },
-    { hr: 'ući?', pl: 'wejść?', blank: true }
+  { id: 642, category: 'pytania', tokens: [
+    { hr: 'Čiji', pl: 'Czyj', blank: true },
+    { hr: 'je ovo', pl: 'to jest' },
+    { hr: 'telefon?', pl: 'telefon?' }
   ]},
-
-  { id: 626, category: 'podstawy', tokens: [
-    { hr: 'Imaš li', pl: 'Masz' },
-    { hr: 'vremena?', pl: 'czas?', blank: true }
+  { id: 643, category: 'pytania', tokens: [
+    { hr: 'Koja je', pl: 'Jaki jest' },
+    { hr: 'tvoja adresa?', pl: 'twój adres?', blank: true }
   ]},
-
-  { id: 627, category: 'podstawy', tokens: [
-    { hr: 'Gdje', pl: 'Gdzie', blank: true },
-    { hr: 'si?', pl: 'jesteś?' }
+  { id: 644, category: 'pytania', tokens: [
+    { hr: 'Kako', pl: 'Jak', blank: true },
+    { hr: 'to funkcionira?', pl: 'to działa?' }
   ]},
-
-  { id: 629, category: 'podstawy', tokens: [
-    { hr: 'Daj mi', pl: 'Daj mi' },
-    { hr: 'svoj broj telefona.', pl: 'swój numer telefonu.', blank: true }
+  { id: 645, category: 'pytania', tokens: [
+    { hr: 'S kim', pl: 'Z kim' },
+    { hr: 'razgovaraš?', pl: 'rozmawiasz?', blank: true }
   ]},
-
-  { id: 630, category: 'podstawy', tokens: [
-    { hr: 'Pričekaj me', pl: 'Poczekaj na mnie', blank: true },
-    { hr: 'ovdje.', pl: 'tutaj.' }
+  { id: 646, category: 'pytania', tokens: [
+    { hr: 'Čemu', pl: 'Do czego', blank: true },
+    { hr: 'to služi?', pl: 'to służy?' }
+  ]},
+  { id: 647, category: 'plany', tokens: [
+    { hr: 'Želim', pl: 'Chcę', blank: true },
+    { hr: 'naučiti svirati gitaru.', pl: 'nauczyć się grać na gitarze.' }
+  ]},
+  { id: 648, category: 'plany', tokens: [
+    { hr: 'Sljedeći tjedan', pl: 'W przyszłym tygodniu' },
+    { hr: 'počinjem', pl: 'zaczynam', blank: true },
+    { hr: 'novi posao.', pl: 'nową pracę.' }
+  ]},
+  { id: 649, category: 'plany', tokens: [
+    { hr: 'Večeras', pl: 'Dziś wieczorem' },
+    { hr: 'ću skuhati', pl: 'ugotuję', blank: true },
+    { hr: 'večeru.', pl: 'kolację.' }
+  ]},
+  { id: 650, category: 'plany', tokens: [
+    { hr: 'Ako bude', pl: 'Jeśli będzie' },
+    { hr: 'lijepo vrijeme', pl: 'ładna pogoda' },
+    { hr: ',', pl: ',', punct: true },
+    { hr: 'idemo', pl: 'idziemy', blank: true },
+    { hr: 'na plažu.', pl: 'na plażę.' }
+  ]},
+  { id: 651, category: 'towarzyskie', tokens: [
+    { hr: 'Sretna', pl: 'Szczęśliwego', blank: true },
+    { hr: 'Nova godina!', pl: 'Nowego Roku!' }
+  ]},
+  { id: 652, category: 'towarzyskie', tokens: [
+    { hr: 'Sretan Božić', pl: 'Wesołych Świąt', blank: true },
+    { hr: 'tebi i obitelji!', pl: 'tobie i rodzinie!' }
+  ]},
+  { id: 653, category: 'towarzyskie', tokens: [
+    { hr: 'Brzo', pl: 'Szybkiego powrotu', blank: true },
+    { hr: 'ozdravi!', pl: 'do zdrowia!' }
+  ]},
+  { id: 654, category: 'towarzyskie', tokens: [
+    { hr: 'Čuvaj', pl: 'Uważaj', blank: true },
+    { hr: 'se!', pl: 'na siebie!' }
+  ]},
+  { id: 655, category: 'towarzyskie', tokens: [
+    { hr: 'Osjećaj se', pl: 'Czuj się', blank: true },
+    { hr: 'kao kod kuće.', pl: 'jak u siebie w domu.' }
+  ]},
+  { id: 656, category: 'towarzyskie', tokens: [
+    { hr: 'Uživaj', pl: 'Ciesz się', blank: true },
+    { hr: 'u odmoru!', pl: 'urlopem!' }
+  ]},
+  { id: 657, category: 'liczby', tokens: [
+    { hr: 'Koliko je', pl: 'Ile to jest' },
+    { hr: 'dva plus dva?', pl: 'dwa plus dwa?', blank: true }
+  ]},
+  { id: 658, category: 'liczby', tokens: [
+    { hr: 'Imam', pl: 'Mam' },
+    { hr: 'troje djece.', pl: 'troje dzieci.', blank: true }
+  ]},
+  { id: 659, category: 'liczby', tokens: [
+    { hr: 'Treba mi', pl: 'Potrzebuję', blank: true },
+    { hr: 'pet eura.', pl: 'pięciu euro.' }
+  ]},
+  { id: 660, category: 'liczby', tokens: [
+    { hr: 'Živim', pl: 'Mieszkam' },
+    { hr: 'na trećem katu.', pl: 'na trzecim piętrze.', blank: true }
+  ]},
+  { id: 661, category: 'liczby', tokens: [
+    { hr: 'Bilo je', pl: 'Było' },
+    { hr: 'oko sto', pl: 'około stu', blank: true },
+    { hr: 'ljudi.', pl: 'osób.' }
+  ]},
+  { id: 662, category: 'kierunki', tokens: [
+    { hr: 'Prijeđi', pl: 'Przejdź', blank: true },
+    { hr: 'preko mosta.', pl: 'przez most.' }
+  ]},
+  { id: 663, category: 'kierunki', tokens: [
+    { hr: 'Zgrada je', pl: 'Budynek jest' },
+    { hr: 'preko puta.', pl: 'naprzeciwko.', blank: true }
+  ]},
+  { id: 664, category: 'kierunki', tokens: [
+    { hr: 'Banka je', pl: 'Bank jest' },
+    { hr: 'pored', pl: 'obok', blank: true },
+    { hr: 'pošte.', pl: 'poczty.' }
+  ]},
+  { id: 665, category: 'kierunki', tokens: [
+    { hr: 'Idi', pl: 'Idź' },
+    { hr: 'do kraja', pl: 'do końca', blank: true },
+    { hr: 'ulice.', pl: 'ulicy.' }
+  ]},
+  { id: 666, category: 'kierunki', tokens: [
+    { hr: 'Zagreb je', pl: 'Zagrzeb jest' },
+    { hr: 'na sjeveru', pl: 'na północy', blank: true },
+    { hr: ',', pl: ',', punct: true },
+    { hr: 'a more na jugu.', pl: 'a morze na południu.' }
   ]}
 ]
