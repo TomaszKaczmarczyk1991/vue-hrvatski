@@ -2776,5 +2776,189 @@ export const sentences = [
     { hr: 'na sjeveru', pl: 'na północy', blank: true },
     { hr: ',', pl: ',', punct: true },
     { hr: 'a more na jugu.', pl: 'a morze na południu.' }
+  ]},
+  { id: 667, category: 'przedmioty', tokens: [
+    { hr: 'Możeš li mi', pl: 'Możesz mi' },
+    { hr: 'donijeti', pl: 'przynieść' },
+    { hr: 'još jednu', pl: 'jeszcze jedną' },
+    { hr: 'žlicu?', pl: 'łyżkę?', blank: true }
+  ]},
+  { id: 668, category: 'przedmioty', tokens: [
+    { hr: 'Ova vilica', pl: 'Ten widelec' },
+    { hr: 'je', pl: 'jest' },
+    { hr: 'prljava.', pl: 'brudny.', blank: true }
+  ]},
+  { id: 669, category: 'przedmioty', tokens: [
+    { hr: 'Nož', pl: 'Nóż', blank: true },
+    { hr: 'je na stolu.', pl: 'jest na stole.' }
+  ]},
+  { id: 670, category: 'przedmioty', tokens: [
+    { hr: 'Ovaj tanjur', pl: 'Ten talerz' },
+    { hr: 'je', pl: 'jest' },
+    { hr: 'napuknut.', pl: 'pęknięty.', blank: true }
+  ]},
+  { id: 671, category: 'przedmioty', tokens: [
+    { hr: 'Gdje mogu', pl: 'Gdzie mogę' },
+    { hr: 'kupiti', pl: 'kupić' },
+    { hr: 'toaletni papir?', pl: 'papier toaletowy?', blank: true }
+  ]},
+  { id: 672, category: 'przedmioty', tokens: [
+    { hr: 'U kupaonici', pl: 'W łazience' },
+    { hr: 'nema', pl: 'nie ma' },
+    { hr: 'toaletnog papira.', pl: 'papieru toaletowego.', blank: true }
+  ]},
+  { id: 673, category: 'przedmioty', tokens: [
+    { hr: 'Trebam', pl: 'Potrzebuję' },
+    { hr: 'novu četkicu', pl: 'nowej szczoteczki', blank: true },
+    { hr: 'za zube.', pl: 'do zębów.' }
+  ]},
+  { id: 674, category: 'przedmioty', tokens: [
+    { hr: 'Sapun', pl: 'Mydło', blank: true },
+    { hr: 'je na umivaoniku.', pl: 'jest na umywalce.' }
+  ]},
+  { id: 675, category: 'przedmioty', tokens: [
+    { hr: 'Ručnik je', pl: 'Ręcznik jest' },
+    { hr: 'još', pl: 'jeszcze' },
+    { hr: 'mokar.', pl: 'mokry.', blank: true }
+  ]},
+  { id: 676, category: 'przedmioty', tokens: [
+    { hr: 'Ponesi', pl: 'Weź' },
+    { hr: 'kišobran', pl: 'parasol', blank: true },
+    { hr: ',', pl: ',', punct: true },
+    { hr: 'padat će kiša.', pl: 'będzie padać deszcz.' }
+  ]},
+  { id: 677, category: 'przedmioty', tokens: [
+    { hr: 'Trebaju mi', pl: 'Potrzebuję', blank: true },
+    { hr: 'škare', pl: 'nożyczek,' },
+    { hr: 'da otvorim paket.', pl: 'żeby otworzyć paczkę.' }
+  ]},
+  { id: 678, category: 'przedmioty', tokens: [
+    { hr: 'Imaš li', pl: 'Masz' },
+    { hr: 'otvarač', pl: 'otwieracz', blank: true },
+    { hr: 'za konzerve?', pl: 'do konserw?' }
+  ]},
+  { id: 679, category: 'przedmioty', tokens: [
+    { hr: 'Ostavi', pl: 'Zostaw' },
+    { hr: 'prljavo suđe', pl: 'brudne naczynia' },
+    { hr: 'u sudoperu.', pl: 'w zlewie.', blank: true }
+  ]},
+  { id: 680, category: 'przedmioty', tokens: [
+    { hr: 'Moja šalica', pl: 'Moja filiżanka' },
+    { hr: 'je', pl: 'jest' },
+    { hr: 'prazna.', pl: 'pusta.', blank: true }
+  ]},
+  { id: 681, category: 'przedmioty', tokens: [
+    { hr: 'Stavi', pl: 'Włóż' },
+    { hr: 'bocu', pl: 'butelkę', blank: true },
+    { hr: 'u hladnjak.', pl: 'do lodówki.' }
+  ]},
+  { id: 682, category: 'kierunki', tokens: [
+    { hr: 'Skreni', pl: 'Skręć' },
+    { hr: 'desno', pl: 'w prawo', blank: true },
+    { hr: 'kod crkve.', pl: 'przy kościele.' }
+  ]},
+  { id: 683, category: 'kierunki', tokens: [
+    { hr: 'Druga ulica', pl: 'Druga ulica' },
+    { hr: 'lijevo.', pl: 'w lewo.', blank: true }
+  ]},
+  { id: 684, category: 'kierunki', tokens: [
+    { hr: 'Vratite se', pl: 'Proszę wrócić', blank: true },
+    { hr: 'do semafora.', pl: 'do świateł.' }
+  ]},
+  { id: 685, category: 'kierunki', tokens: [
+    { hr: 'Prijeđi', pl: 'Przejdź', blank: true },
+    { hr: 'cestu', pl: 'przez ulicę' },
+    { hr: 'na pješačkom prijelazu.', pl: 'na przejściu dla pieszych.' }
+  ]},
+  { id: 686, category: 'kierunki', tokens: [
+    { hr: 'Na kružnom toku', pl: 'Na rondzie' },
+    { hr: 'skrenite', pl: 'zjedźcie', blank: true },
+    { hr: 'na drugi izlaz.', pl: 'drugim zjazdem.' }
+  ]},
+  { id: 687, category: 'kierunki', tokens: [
+    { hr: 'Hotel je', pl: 'Hotel jest' },
+    { hr: 'ispred', pl: 'przed', blank: true },
+    { hr: 'kolodvora.', pl: 'dworcem.' }
+  ]},
+  { id: 688, category: 'kierunki', tokens: [
+    { hr: 'Muzej je', pl: 'Muzeum jest' },
+    { hr: 'između', pl: 'między', blank: true },
+    { hr: 'banke i pošte.', pl: 'bankiem a pocztą.' }
+  ]},
+  { id: 689, category: 'kierunki', tokens: [
+    { hr: 'Samo ravno', pl: 'Cały czas prosto', blank: true },
+    { hr: ',', pl: ',', punct: true },
+    { hr: 'ne možeš promašiti.', pl: 'nie możesz się pomylić.' }
+  ]},
+  { id: 690, category: 'kierunki', tokens: [
+    { hr: 'Idite', pl: 'Idźcie' },
+    { hr: 'pješice', pl: 'pieszo', blank: true },
+    { hr: ',', pl: ',', punct: true },
+    { hr: 'nije daleko.', pl: 'to niedaleko.' }
+  ]},
+  { id: 691, category: 'podroze', tokens: [
+    { hr: 'Jedna karta', pl: 'Jeden bilet', blank: true },
+    { hr: 'do Zagreba', pl: 'do Zagrzebia' },
+    { hr: ',', pl: ',', punct: true },
+    { hr: 'molim.', pl: 'proszę.' }
+  ]},
+  { id: 692, category: 'podroze', tokens: [
+    { hr: 'S kojeg perona', pl: 'Z którego peronu', blank: true },
+    { hr: 'polazi vlak?', pl: 'odjeżdża pociąg?' }
+  ]},
+  { id: 693, category: 'podroze', tokens: [
+    { hr: 'Gdje je', pl: 'Gdzie jest' },
+    { hr: 'turistički ured?', pl: 'biuro informacji turystycznej?', blank: true }
+  ]},
+  { id: 694, category: 'podroze', tokens: [
+    { hr: 'Imate li', pl: 'Czy macie' },
+    { hr: 'kartu grada?', pl: 'mapę miasta?', blank: true }
+  ]},
+  { id: 695, category: 'podroze', tokens: [
+    { hr: 'Što', pl: 'Co' },
+    { hr: 'vrijedi', pl: 'warto', blank: true },
+    { hr: 'pogledati', pl: 'zobaczyć' },
+    { hr: 'u gradu?', pl: 'w mieście?' }
+  ]},
+  { id: 696, category: 'powitania', tokens: [
+    { hr: 'Doviđenja', pl: 'Do widzenia' },
+    { hr: ',', pl: ',', punct: true },
+    { hr: 'bilo mi je drago.', pl: 'miło było poznać.', blank: true }
+  ]},
+  { id: 697, category: 'powitania', tokens: [
+    { hr: 'Zdravo', pl: 'Cześć' },
+    { hr: ',', pl: ',', punct: true },
+    { hr: 'dugo se', pl: 'dawno się', blank: true },
+    { hr: 'nismo vidjeli!', pl: 'nie widzieliśmy!' }
+  ]},
+  { id: 698, category: 'codzienne', tokens: [
+    { hr: 'Možeš računati', pl: 'Możesz liczyć', blank: true },
+    { hr: 'na mene.', pl: 'na mnie.' }
+  ]},
+  { id: 699, category: 'codzienne', tokens: [
+    { hr: 'Točno', pl: 'Dokładnie', blank: true },
+    { hr: 'tako.', pl: 'tak.' }
+  ]},
+  { id: 700, category: 'codzienne', tokens: [
+    { hr: 'Nemoj', pl: 'Nie', blank: true },
+    { hr: 'to zaboraviti.', pl: 'zapomnij o tym.' }
+  ]},
+  { id: 701, category: 'internet_telefon', tokens: [
+    { hr: 'Utišaj', pl: 'Wycisz', blank: true },
+    { hr: 'zvuk telefona.', pl: 'dźwięk telefonu.' }
+  ]},
+  { id: 702, category: 'internet_telefon', tokens: [
+    { hr: 'Napravi', pl: 'Zrób', blank: true },
+    { hr: 'snimku zaslona.', pl: 'zrzut ekranu.' }
+  ]},
+  { id: 703, category: 'stres', tokens: [
+    { hr: 'Idem', pl: 'Idę' },
+    { hr: 'malo prošetati', pl: 'się przejść,', blank: true },
+    { hr: 'da se smirim.', pl: 'żeby się uspokoić.' }
+  ]},
+  { id: 704, category: 'stres', tokens: [
+    { hr: 'Ne mogu', pl: 'Nie mogę' },
+    { hr: 'spavati', pl: 'spać', blank: true },
+    { hr: 'od brige.', pl: 'z powodu zmartwień.' }
   ]}
 ]
