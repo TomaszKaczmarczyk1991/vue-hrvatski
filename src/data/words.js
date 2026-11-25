@@ -624,12 +624,6 @@ export const words = [
     "category": "jedzenie"
   },
   {
-    "id": 105,
-    "hr": "biber",
-    "pl": "pieprz",
-    "category": "jedzenie"
-  },
-  {
     "id": 106,
     "hr": "ulje",
     "pl": "oliwa / olej",
@@ -776,7 +770,7 @@ export const words = [
   {
     "id": 130,
     "hr": "janjetina",
-    "pl": "jagniecina",
+    "pl": "jagnięcina",
     "category": "jedzenie"
   },
   {
@@ -788,7 +782,7 @@ export const words = [
   {
     "id": 132,
     "hr": "škampi",
-    "pl": "krewetki / krewetki królewskie",
+    "pl": "langustynki (szkampi)",
     "category": "jedzenie"
   },
   {
@@ -900,50 +894,20 @@ export const words = [
     "category": "jedzenie"
   },
   {
-    "id": 151,
-    "hr": "slatko",
-    "pl": "słodkie",
-    "category": "jedzenie"
-  },
-  {
-    "id": 152,
-    "hr": "slano",
-    "pl": "słone",
-    "category": "jedzenie"
-  },
-  {
-    "id": 153,
-    "hr": "kiselo",
-    "pl": "kwaśne",
-    "category": "jedzenie"
-  },
-  {
     "id": 154,
     "hr": "gorko",
     "pl": "gorzkie",
     "category": "jedzenie"
   },
   {
-    "id": 155,
-    "hr": "ljuto",
-    "pl": "ostre / pikantne",
-    "category": "jedzenie"
-  },
-  {
-    "id": 156,
-    "hr": "ukusno",
-    "pl": "smaczne",
-    "category": "jedzenie"
-  },
-  {
     "id": 157,
-    "hr": "gladno",
+    "hr": "gladan",
     "pl": "głodny",
     "category": "jedzenie"
   },
   {
     "id": 158,
-    "hr": "žedno",
+    "hr": "žedan",
     "pl": "spragniony",
     "category": "jedzenie"
   },
@@ -969,7 +933,7 @@ export const words = [
     "id": 162,
     "hr": "supermarket",
     "pl": "supermarket",
-    "category": "jedzenie"
+    "category": "miejsca_i_budynki"
   },
   {
     "id": 163,
@@ -1046,7 +1010,7 @@ export const words = [
   {
     "id": 175,
     "hr": "peći",
-    "pl": "piec / smażyć",
+    "pl": "piec / opiekać",
     "category": "jedzenie"
   },
   {
@@ -1308,30 +1272,6 @@ export const words = [
     "category": "napoje"
   },
   {
-    "id": 219,
-    "hr": "hladno",
-    "pl": "zimne",
-    "category": "napoje"
-  },
-  {
-    "id": 220,
-    "hr": "toplo",
-    "pl": "ciepłe",
-    "category": "napoje"
-  },
-  {
-    "id": 221,
-    "hr": "vruće",
-    "pl": "gorące",
-    "category": "napoje"
-  },
-  {
-    "id": 222,
-    "hr": "bez alkohola",
-    "pl": "bezalkoholowe",
-    "category": "napoje"
-  },
-  {
     "id": 223,
     "hr": "žeđ",
     "pl": "pragnienie",
@@ -1483,19 +1423,13 @@ export const words = [
   },
   {
     "id": 248,
-    "hr": " medica",
+    "hr": "medica",
     "pl": "miód pitny / likier miodowy",
     "category": "napoje"
   },
   {
-    "id": 249,
-    "hr": "bura",
-    "pl": "bura (woda destylowana lub potocznie czysta woda)",
-    "category": "napoje"
-  },
-  {
     "id": 250,
-    "hr": "istoči",
+    "hr": "natoči",
     "pl": "nalej",
     "category": "napoje"
   },
@@ -1686,12 +1620,6 @@ export const words = [
     "category": "podroz"
   },
   {
-    "id": 282,
-    "hr": "plan",
-    "pl": "mapa / plan",
-    "category": "podroz"
-  },
-  {
     "id": 283,
     "hr": "suvenir",
     "pl": "pamiątka",
@@ -1707,7 +1635,7 @@ export const words = [
     "id": 285,
     "hr": "novac",
     "pl": "pieniądze",
-    "category": "podroz"
+    "category": "pieniadze"
   },
   {
     "id": 286,
@@ -1785,12 +1713,6 @@ export const words = [
     "id": 298,
     "hr": "val",
     "pl": "fala",
-    "category": "podroz"
-  },
-  {
-    "id": 299,
-    "hr": "hlad",
-    "pl": "cień",
     "category": "podroz"
   },
   {
@@ -2655,37 +2577,37 @@ export const words = [
     "id": 443,
     "hr": "bijel",
     "pl": "biały",
-    "category": "przymiotniki"
+    "category": "kolory"
   },
   {
     "id": 444,
     "hr": "crn",
     "pl": "czarny",
-    "category": "przymiotniki"
+    "category": "kolory"
   },
   {
     "id": 445,
     "hr": "crven",
     "pl": "czerwony",
-    "category": "przymiotniki"
+    "category": "kolory"
   },
   {
     "id": 446,
     "hr": "plav",
     "pl": "niebieski",
-    "category": "przymiotniki"
+    "category": "kolory"
   },
   {
     "id": 447,
     "hr": "zelen",
     "pl": "zielony",
-    "category": "przymiotniki"
+    "category": "kolory"
   },
   {
     "id": 448,
     "hr": "žut",
     "pl": "żółty",
-    "category": "przymiotniki"
+    "category": "kolory"
   },
   {
     "id": 449,
@@ -2847,12 +2769,6 @@ export const words = [
     "id": 475,
     "hr": "spavaća soba",
     "pl": "sypialnia",
-    "category": "miejsca_i_budynki"
-  },
-  {
-    "id": 476,
-    "hr": "balkan",
-    "pl": "balkon",
     "category": "miejsca_i_budynki"
   },
   {
@@ -3246,24 +3162,6 @@ export const words = [
     "category": "podstawy"
   },
   {
-    "id": 542,
-    "hr": "ja ne razumijem",
-    "pl": "ja nie rozumiem",
-    "category": "podstawy"
-  },
-  {
-    "id": 543,
-    "hr": "možete li ponoviti",
-    "pl": "czy może Pan/Pani powtórzyć",
-    "category": "podstawy"
-  },
-  {
-    "id": 544,
-    "hr": "govorite li sporije",
-    "pl": "czy mówi Pan/Pani wolniej",
-    "category": "podstawy"
-  },
-  {
     "id": 545,
     "hr": "naravno da ne",
     "pl": "oczywiście, że nie",
@@ -3344,7 +3242,7 @@ export const words = [
   {
     "id": 558,
     "hr": "dagnje",
-    "pl": "małże / omułki",
+    "pl": "omułki",
     "category": "jedzenie"
   },
   {
@@ -3507,12 +3405,6 @@ export const words = [
     "id": 585,
     "hr": "bankomat",
     "pl": "bankomat",
-    "category": "podroz"
-  },
-  {
-    "id": 586,
-    "hr": "kamping",
-    "pl": "kemping",
     "category": "podroz"
   },
   {
@@ -3824,7 +3716,7 @@ export const words = [
   {
     "id": 638,
     "hr": "pozvati",
-    "pl": "zabrać / zawołać / zaprosić",
+    "pl": "zaprosić / zawołać",
     "category": "czasowniki"
   },
   {
@@ -3982,12 +3874,6 @@ export const words = [
     "hr": "spreman",
     "pl": "gotowy",
     "category": "przymiotniki"
-  },
-  {
-    "id": 665,
-    "hr": "kći",
-    "pl": "córka",
-    "category": "ludzie_dom"
   },
   {
     "id": 666,
@@ -4333,7 +4219,7 @@ export const words = [
   },
   {
     "id": 723,
-    "hr": "ranac / ozljeda",
+    "hr": "rana / ozljeda",
     "pl": "rana / kontuzja",
     "category": "zdrowie_bezpieczenstwo"
   },
@@ -4341,12 +4227,6 @@ export const words = [
     "id": 724,
     "hr": "spašavatelj",
     "pl": "ratownik",
-    "category": "zdrowie_bezpieczenstwo"
-  },
-  {
-    "id": 725,
-    "hr": "izgubljeno",
-    "pl": "zgubione / zguba",
     "category": "zdrowie_bezpieczenstwo"
   },
   {
@@ -4464,12 +4344,6 @@ export const words = [
     "category": "jedzenie"
   },
   {
-    "id": 745,
-    "hr": "ubrus",
-    "pl": "serwetka",
-    "category": "jedzenie"
-  },
-  {
     "id": 746,
     "hr": "pecivo",
     "pl": "bułka / pieczywo",
@@ -4485,19 +4359,13 @@ export const words = [
     "id": 748,
     "hr": "gotovina",
     "pl": "gotówka",
-    "category": "jedzenie"
+    "category": "pieniadze"
   },
   {
     "id": 749,
     "hr": "kartica",
     "pl": "karta (płatnicza)",
-    "category": "jedzenie"
-  },
-  {
-    "id": 750,
-    "hr": "trgovina / dućan",
-    "pl": "sklep",
-    "category": "miejsca_i_budynki"
+    "category": "pieniadze"
   },
   {
     "id": 751,
@@ -4534,12 +4402,6 @@ export const words = [
     "hr": "odjava",
     "pl": "wymeldowanie (check-out)",
     "category": "podroz"
-  },
-  {
-    "id": 757,
-    "hr": "naplatna rampa",
-    "pl": "punkt poboru opłat",
-    "category": "transport"
   },
   {
     "id": 758,
@@ -4596,22 +4458,10 @@ export const words = [
     "category": "czasowniki"
   },
   {
-    "id": 767,
-    "hr": "lak",
-    "pl": "lekki / łatwy",
-    "category": "przymiotniki"
-  },
-  {
     "id": 768,
     "hr": "važan",
     "pl": "ważny",
     "category": "przymiotniki"
-  },
-  {
-    "id": 769,
-    "hr": "djeda",
-    "pl": "dziadek",
-    "category": "ludzie_dom"
   },
   {
     "id": 770,
@@ -4662,93 +4512,45 @@ export const words = [
     "category": "kolory"
   },
   {
-    "id": 778,
-    "hr": "bijela",
-    "pl": "biały",
-    "category": "kolory"
-  },
-  {
-    "id": 779,
-    "hr": "crna",
-    "pl": "czarny",
-    "category": "kolory"
-  },
-  {
-    "id": 780,
-    "hr": "crvena",
-    "pl": "czerwony",
-    "category": "kolory"
-  },
-  {
-    "id": 781,
-    "hr": "plava",
-    "pl": "niebieski",
-    "category": "kolory"
-  },
-  {
-    "id": 782,
-    "hr": "žuta",
-    "pl": "żółty",
-    "category": "kolory"
-  },
-  {
-    "id": 783,
-    "hr": "zelena",
-    "pl": "zielony",
-    "category": "kolory"
-  },
-  {
     "id": 784,
-    "hr": "smeđa",
+    "hr": "smeđ",
     "pl": "brązowy",
     "category": "kolory"
   },
   {
     "id": 785,
-    "hr": "siva",
+    "hr": "siv",
     "pl": "szary",
     "category": "kolory"
   },
   {
     "id": 786,
-    "hr": "narančasta",
+    "hr": "narančast",
     "pl": "pomarańczowy",
     "category": "kolory"
   },
   {
     "id": 787,
-    "hr": "ružičasta",
+    "hr": "ružičast",
     "pl": "różowy",
     "category": "kolory"
   },
   {
     "id": 788,
-    "hr": "ljubičasta",
+    "hr": "ljubičast",
     "pl": "fioletowy",
     "category": "kolory"
   },
   {
     "id": 789,
-    "hr": "zlatna",
+    "hr": "zlatan",
     "pl": "złoty",
     "category": "kolory"
   },
   {
     "id": 790,
-    "hr": "srebrna",
+    "hr": "srebrn",
     "pl": "srebrny",
-    "category": "kolory"
-  },
-  {
-    "id": 791,
-    "hr": "svijetlo",
-    "pl": "jasny",
-    "category": "kolory"
-  },
-  {
-    "id": 792,
-    "hr": "tamno",
-    "pl": "ciemny",
     "category": "kolory"
   },
   {
@@ -5618,7 +5420,7 @@ export const words = [
   {
     "id": 937,
     "hr": "stanica",
-    "pl": "komórka",
+    "pl": "komórka (biologiczna)",
     "category": "anatomia_ludzka"
   },
   {
@@ -5714,7 +5516,7 @@ export const words = [
   {
     "id": 953,
     "hr": "kosti zapešća",
-    "pl": "śródręcze",
+    "pl": "kości nadgarstka",
     "category": "anatomia_ludzka"
   },
   {
@@ -5756,7 +5558,7 @@ export const words = [
   {
     "id": 960,
     "hr": "nadlaktica",
-    "pl": "ramiowe (kość/ramię górne)",
+    "pl": "ramię (od barku do łokcia)",
     "category": "anatomia_ludzka"
   },
   {
@@ -5946,15 +5748,9 @@ export const words = [
     "category": "anatomia_ludzka"
   },
   {
-    "id": 992,
-    "hr": "stka",
-    "pl": "talia (skrócona potoczna forma)",
-    "category": "anatomia_ludzka"
-  },
-  {
     "id": 993,
     "hr": "zglob prsta",
-    "pl": "kostka u ręki / staw palca",
+    "pl": "staw palca",
     "category": "anatomia_ludzka"
   },
   {
@@ -5988,155 +5784,142 @@ export const words = [
     "category": "anatomia_ludzka"
   },
   {
-    "id": 999,
-    "hr": "bora smijalica",
-    "pl": "zmarszczka od uśmiechu",
-    "category": "anatomia_ludzka"
-  },
-  {
     "id": 1000,
     "hr": "žig",
-    "pl": "znamię / pieczęć",
+    "pl": "pieczęć / stempel",
     "category": "anatomia_ludzka"
   },
-  // KRAJE
   {
-    id: 1001,
-    hr: "Hrvatska",
-    pl: "Chorwacja",
-    category: "kraje"
+    "id": 1001,
+    "hr": "Hrvatska",
+    "pl": "Chorwacja",
+    "category": "kraje"
   },
   {
-    id: 1002,
-    hr: "Njemačka",
-    pl: "Niemcy",
-    category: "kraje"
+    "id": 1002,
+    "hr": "Njemačka",
+    "pl": "Niemcy",
+    "category": "kraje"
   },
   {
-    id: 1003,
-    hr: "Poljska",
-    pl: "Polska",
-    category: "kraje"
+    "id": 1003,
+    "hr": "Poljska",
+    "pl": "Polska",
+    "category": "kraje"
   },
   {
-    id: 1004,
-    hr: "Italija",
-    pl: "Włochy",
-    category: "kraje"
+    "id": 1004,
+    "hr": "Italija",
+    "pl": "Włochy",
+    "category": "kraje"
   },
   {
-    id: 1005,
-    hr: "Francuska",
-    pl: "Francja",
-    category: "kraje"
-  },
-
-  // MIESZKAŃCY
-  {
-    id: 1006,
-    hr: "Hrvat",
-    pl: "Chorwat",
-    category: "mieszkancy"
+    "id": 1005,
+    "hr": "Francuska",
+    "pl": "Francja",
+    "category": "kraje"
   },
   {
-    id: 1007,
-    hr: "Nijemac",
-    pl: "Niemiec",
-    category: "mieszkancy"
+    "id": 1006,
+    "hr": "Hrvat",
+    "pl": "Chorwat",
+    "category": "mieszkancy"
   },
   {
-    id: 1008,
-    hr: "Poljak",
-    pl: "Polak",
-    category: "mieszkancy"
+    "id": 1007,
+    "hr": "Nijemac",
+    "pl": "Niemiec",
+    "category": "mieszkancy"
   },
   {
-    id: 1009,
-    hr: "Talijan",
-    pl: "Włoch",
-    category: "mieszkancy"
+    "id": 1008,
+    "hr": "Poljak",
+    "pl": "Polak",
+    "category": "mieszkancy"
   },
   {
-    id: 1010,
-    hr: "Francuz",
-    pl: "Francuz",
-    category: "mieszkancy"
-  },
-
-  // PRZYMIOTNIKI
-  {
-    id: 1011,
-    hr: "hrvatski",
-    pl: "chorwacki",
-    category: "przymiotniki"
+    "id": 1009,
+    "hr": "Talijan",
+    "pl": "Włoch",
+    "category": "mieszkancy"
   },
   {
-    id: 1012,
-    hr: "njemački",
-    pl: "niemiecki",
-    category: "przymiotniki"
+    "id": 1010,
+    "hr": "Francuz",
+    "pl": "Francuz",
+    "category": "mieszkancy"
   },
   {
-    id: 1013,
-    hr: "poljski",
-    pl: "polski",
-    category: "przymiotniki"
+    "id": 1011,
+    "hr": "hrvatski",
+    "pl": "chorwacki",
+    "category": "przymiotniki"
   },
   {
-    id: 1014,
-    hr: "talijanski",
-    pl: "włoski",
-    category: "przymiotniki"
+    "id": 1012,
+    "hr": "njemački",
+    "pl": "niemiecki",
+    "category": "przymiotniki"
   },
   {
-    id: 1015,
-    hr: "francuski",
-    pl: "francuski",
-    category: "przymiotniki"
-  },
-
-  // KONTYNENTY
-  {
-    id: 1016,
-    hr: "Europa",
-    pl: "Europa",
-    category: "kontynenty"
+    "id": 1013,
+    "hr": "poljski",
+    "pl": "polski",
+    "category": "przymiotniki"
   },
   {
-    id: 1017,
-    hr: "Azija",
-    pl: "Azja",
-    category: "kontynenty"
+    "id": 1014,
+    "hr": "talijanski",
+    "pl": "włoski",
+    "category": "przymiotniki"
   },
   {
-    id: 1018,
-    hr: "Afrika",
-    pl: "Afryka",
-    category: "kontynenty"
+    "id": 1015,
+    "hr": "francuski",
+    "pl": "francuski",
+    "category": "przymiotniki"
   },
   {
-    id: 1019,
-    hr: "Sjeverna Amerika",
-    pl: "Ameryka Północna",
-    category: "kontynenty"
+    "id": 1016,
+    "hr": "Europa",
+    "pl": "Europa",
+    "category": "kontynenty"
   },
   {
-    id: 1020,
-    hr: "Južna Amerika",
-    pl: "Ameryka Południowa",
-    category: "kontynenty"
+    "id": 1017,
+    "hr": "Azija",
+    "pl": "Azja",
+    "category": "kontynenty"
   },
   {
-    id: 1021,
-    hr: "Australija i Oceanija",
-    pl: "Australia i Oceania",
-    category: "kontynenty"
+    "id": 1018,
+    "hr": "Afrika",
+    "pl": "Afryka",
+    "category": "kontynenty"
   },
   {
-    id: 1022,
-    hr: "Antarktika",
-    pl: "Antarktyda",
-    category: "kontynenty"
+    "id": 1019,
+    "hr": "Sjeverna Amerika",
+    "pl": "Ameryka Północna",
+    "category": "kontynenty"
+  },
+  {
+    "id": 1020,
+    "hr": "Južna Amerika",
+    "pl": "Ameryka Południowa",
+    "category": "kontynenty"
+  },
+  {
+    "id": 1021,
+    "hr": "Australija i Oceanija",
+    "pl": "Australia i Oceania",
+    "category": "kontynenty"
+  },
+  {
+    "id": 1022,
+    "hr": "Antarktika",
+    "pl": "Antarktyda",
+    "category": "kontynenty"
   },
   {
     "id": 1023,
@@ -6211,12 +5994,6 @@ export const words = [
     "category": "miejsca_i_budynki"
   },
   {
-    "id": 1035,
-    "hr": "vidikovac",
-    "pl": "punkt widokowy",
-    "category": "miejsca_i_budynki"
-  },
-  {
     "id": 1036,
     "hr": "šetnica",
     "pl": "promenada",
@@ -6273,7 +6050,7 @@ export const words = [
   {
     "id": 1045,
     "hr": "stanica",
-    "pl": "przystanek",
+    "pl": "przystanek / stacja",
     "category": "miejsca_i_budynki"
   },
   {
@@ -6290,7 +6067,7 @@ export const words = [
   },
   {
     "id": 1048,
-    "hr": "abmormalan",
+    "hr": "abnormalan",
     "pl": "anormalny",
     "category": "przymiotniki"
   },
@@ -6307,48 +6084,36 @@ export const words = [
     "category": "rzeczowniki"
   },
   {
-  "id": 1049,
-  "hr": "administracija",
-  "pl": "administracja",
-  "category": "rzeczowniki"
+    "id": 1051,
+    "hr": "adresa",
+    "pl": "adres",
+    "category": "rzeczowniki"
   },
   {
-  "id": 1050,
-  "hr": "adrenalin",
-  "pl": "adrenalina",
-  "category": "rzeczowniki"
+    "id": 1052,
+    "hr": "adresat",
+    "pl": "adresat",
+    "category": "rzeczowniki"
   },
   {
-  "id": 1051,
-  "hr": "adresa",
-  "pl": "adres",
-  "category": "rzeczowniki"
+    "id": 1053,
+    "hr": "adresirati",
+    "pl": "zaadresować",
+    "category": "czasowniki"
   },
   {
-  "id": 1052,
-  "hr": "adresat",
-  "pl": "adresat",
-  "category": "rzeczowniki"
+    "id": 1054,
+    "hr": "advokat",
+    "pl": "adwokat",
+    "category": "rzeczowniki"
   },
   {
-  "id": 1053,
-  "hr": "adresirati",
-  "pl": "zaadresować",
-  "category": "czasowniki"
+    "id": 1055,
+    "hr": "aerodinamika",
+    "pl": "aerodynamika",
+    "category": "rzeczowniki"
   },
   {
-  "id": 1054,
-  "hr": "advokat",
-  "pl": "adwokat",
-  "category": "rzeczowniki"
-  },
-  {
-  "id": 1055,
-  "hr": "aerodinamika",
-  "pl": "aerodynamika",
-  "category": "rzeczowniki"
-  },
-    {
     "id": 1056,
     "hr": "afrodizijak",
     "pl": "afrodyzjak",
@@ -6433,12 +6198,6 @@ export const words = [
     "category": "rzeczowniki"
   },
   {
-    "id": 1070,
-    "hr": "akustičan",
-    "pl": "akustyczny",
-    "category": "przymiotniki"
-  },
-  {
     "id": 1071,
     "hr": "akvarij",
     "pl": "akwarium",
@@ -6484,12 +6243,6 @@ export const words = [
     "id": 1078,
     "hr": "ambicija",
     "pl": "ambicja",
-    "category": "rzeczowniki"
-  },
-  {
-    "id": 1079,
-    "hr": "ambulanta",
-    "pl": "przychodnia",
     "category": "rzeczowniki"
   },
   {
@@ -6546,7 +6299,7 @@ export const words = [
     "pl": "anulować",
     "category": "czasowniki"
   },
-    {
+  {
     "id": 1089,
     "hr": "apetit",
     "pl": "apetyt",
@@ -6556,12 +6309,6 @@ export const words = [
     "id": 1090,
     "hr": "aplikacija",
     "pl": "aplikacja",
-    "category": "rzeczowniki"
-  },
-  {
-    "id": 1091,
-    "hr": "apoteka",
-    "pl": "apteka",
     "category": "rzeczowniki"
   },
   {
@@ -6575,12 +6322,6 @@ export const words = [
     "hr": "apsolutno",
     "pl": "absolutnie",
     "category": "przysłówki"
-  },
-  {
-    "id": 1094,
-    "hr": "aprobacija",
-    "pl": "aprobacja",
-    "category": "rzeczowniki"
   },
   {
     "id": 1095,
@@ -6603,7 +6344,7 @@ export const words = [
   {
     "id": 1098,
     "hr": "aranžman",
-    "pl": "aranżacja",
+    "pl": "aranżacja / pakiet (np. wycieczkowy)",
     "category": "rzeczowniki"
   },
   {
@@ -6775,12 +6516,6 @@ export const words = [
     "category": "rzeczowniki"
   },
   {
-    "id": 1127,
-    "hr": "autocesta",
-    "pl": "autostrada",
-    "category": "rzeczowniki"
-  },
-  {
     "id": 1128,
     "hr": "autogram",
     "pl": "autograf",
@@ -6801,13 +6536,7 @@ export const words = [
   {
     "id": 1131,
     "hr": "avans",
-    "pl": "awans",
-    "category": "rzeczowniki"
-  },
-  {
-    "id": 1132,
-    "hr": "avion",
-    "pl": "samolot",
+    "pl": "zaliczka",
     "category": "rzeczowniki"
   },
   {
@@ -6860,7 +6589,7 @@ export const words = [
   },
   {
     "id": 1141,
-    "hr": "baget(a)",
+    "hr": "bageta",
     "pl": "bagietka",
     "category": "rzeczowniki"
   },
@@ -6902,7 +6631,7 @@ export const words = [
   },
   {
     "id": 1148,
-    "hr": "balancan",
+    "hr": "patlidžan",
     "pl": "bakłażan",
     "category": "rzeczowniki"
   },
@@ -6929,12 +6658,6 @@ export const words = [
     "hr": "balkanski",
     "pl": "bałkański",
     "category": "przymiotniki"
-  },
-  {
-    "id": 1153,
-    "hr": "balkon",
-    "pl": "balkon",
-    "category": "rzeczowniki"
   },
   {
     "id": 1154,
@@ -6985,26 +6708,14 @@ export const words = [
     "category": "przymiotniki"
   },
   {
-    "id": 1162,
-    "hr": "banka",
-    "pl": "bank",
-    "category": "rzeczowniki"
-  },
-  {
     "id": 1163,
     "hr": "banknota",
     "pl": "banknot",
     "category": "rzeczowniki"
   },
   {
-    "id": 1164,
-    "hr": "bankomat",
-    "pl": "bankomat",
-    "category": "rzeczowniki"
-  },
-  {
     "id": 1165,
-    "hr": "bankovan",
+    "hr": "bankovni",
     "pl": "bankowy",
     "category": "przymiotniki"
   },
@@ -7125,7 +6836,7 @@ export const words = [
   {
     "id": 1185,
     "hr": "batina",
-    "pl": "bat",
+    "pl": "kij / pałka",
     "category": "rzeczowniki"
   },
   {
@@ -7167,13 +6878,7 @@ export const words = [
   {
     "id": 1192,
     "hr": "bedem",
-    "pl": "skarpa",
-    "category": "rzeczowniki"
-  },
-  {
-    "id": 1193,
-    "hr": "benzin",
-    "pl": "benzyna",
+    "pl": "wał obronny / mur",
     "category": "rzeczowniki"
   },
   {
@@ -7221,7 +6926,7 @@ export const words = [
   {
     "id": 1201,
     "hr": "besmislen",
-    "pl": "bezmyślny",
+    "pl": "bezsensowny",
     "category": "przymiotniki"
   },
   {
@@ -7292,7 +6997,7 @@ export const words = [
   },
   {
     "id": 1213,
-    "hr": "beštia",
+    "hr": "beštija",
     "pl": "bestia",
     "category": "rzeczowniki"
   },
@@ -7311,14 +7016,14 @@ export const words = [
   {
     "id": 1216,
     "hr": "bez",
-    "pl": "bez",
-    "category": "rzeczowniki"
+    "pl": "bez (przyimek)",
+    "category": "przyimki"
   },
   {
     "id": 1217,
     "hr": "bez djece",
-    "pl": "bezdzietny",
-    "category": "przymiotniki"
+    "pl": "bez dzieci",
+    "category": "wyrażenia"
   },
   {
     "id": 1218,
@@ -7327,16 +7032,10 @@ export const words = [
     "category": "przymiotniki"
   },
   {
-    "id": 1219,
-    "hr": "bez dovoda",
-    "pl": "bezprzewodowy",
-    "category": "przymiotniki"
-  },
-  {
     "id": 1220,
     "hr": "bez konflikata",
-    "pl": "bezkonfliktowy",
-    "category": "przymiotniki"
+    "pl": "bez konfliktów",
+    "category": "wyrażenia"
   },
   {
     "id": 1221,
@@ -7346,26 +7045,20 @@ export const words = [
   },
   {
     "id": 1222,
-    "hr": "bez kuće/doma",
+    "hr": "beskućnik",
     "pl": "bezdomny",
-    "category": "przymiotniki"
+    "category": "rzeczowniki"
   },
   {
     "id": 1223,
     "hr": "bez masti",
-    "pl": "beztłuszczowy",
-    "category": "przymiotniki"
+    "pl": "bez tłuszczu",
+    "category": "wyrażenia"
   },
   {
     "id": 1224,
     "hr": "bez milosti",
     "pl": "bez litości",
-    "category": "wyrażenia"
-  },
-  {
-    "id": 1225,
-    "hr": "bez njihanja",
-    "pl": "bez wahania",
     "category": "wyrażenia"
   },
   {
@@ -7389,8 +7082,8 @@ export const words = [
   {
     "id": 1229,
     "hr": "bez posade",
-    "pl": "bezzałogowy",
-    "category": "przymiotniki"
+    "pl": "bez załogi",
+    "category": "wyrażenia"
   },
   {
     "id": 1230,
@@ -7423,12 +7116,6 @@ export const words = [
     "category": "wyrażenia"
   },
   {
-    "id": 1235,
-    "hr": "bez termina",
-    "pl": "bezterminowy",
-    "category": "przymiotniki"
-  },
-  {
     "id": 1236,
     "hr": "bez veze",
     "pl": "bez sensu",
@@ -7449,7 +7136,7 @@ export const words = [
   {
     "id": 1239,
     "hr": "bezbojan",
-    "pl": "bezbarwny, bezbolesny",
+    "pl": "bezbarwny",
     "category": "przymiotniki"
   },
   {
@@ -7501,16 +7188,10 @@ export const words = [
     "category": "przymiotniki"
   },
   {
-    "id": 1248,
-    "hr": "bezkazne",
-    "pl": "bezkarnie",
-    "category": "przysłówki"
-  },
-  {
     "id": 1249,
-    "hr": "bezkonkurencije",
-    "pl": "bezkonkurencyjny",
-    "category": "przymiotniki"
+    "hr": "bez konkurencije",
+    "pl": "bez konkurencji",
+    "category": "wyrażenia"
   },
   {
     "id": 1250,
@@ -7548,5 +7229,1024 @@ export const words = [
     "pl": "beznadzieja",
     "category": "rzeczowniki"
   },
-
+  {
+    "id": 1256,
+    "hr": "toaletni papir",
+    "pl": "papier toaletowy",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1257,
+    "hr": "papirnati ručnik",
+    "pl": "ręcznik papierowy",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1258,
+    "hr": "papirnate maramice",
+    "pl": "chusteczki higieniczne",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1259,
+    "hr": "sapun",
+    "pl": "mydło",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1260,
+    "hr": "šampon",
+    "pl": "szampon",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1261,
+    "hr": "zubna pasta",
+    "pl": "pasta do zębów",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1262,
+    "hr": "četkica za zube",
+    "pl": "szczoteczka do zębów",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1263,
+    "hr": "češalj",
+    "pl": "grzebień",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1264,
+    "hr": "deodorans",
+    "pl": "dezodorant",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1265,
+    "hr": "prašak za rublje",
+    "pl": "proszek do prania",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1266,
+    "hr": "sredstvo za pranje posuđa",
+    "pl": "płyn do mycia naczyń",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1267,
+    "hr": "spužva",
+    "pl": "gąbka",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1268,
+    "hr": "metla",
+    "pl": "miotła",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1269,
+    "hr": "kanta za smeće",
+    "pl": "kosz na śmieci",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1270,
+    "hr": "vreća za smeće",
+    "pl": "worek na śmieci",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1271,
+    "hr": "usisavač",
+    "pl": "odkurzacz",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1272,
+    "hr": "perilica rublja",
+    "pl": "pralka",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1273,
+    "hr": "perilica posuđa",
+    "pl": "zmywarka",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1274,
+    "hr": "glačalo",
+    "pl": "żelazko",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1275,
+    "hr": "žarulja",
+    "pl": "żarówka",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1276,
+    "hr": "svijeća",
+    "pl": "świeca",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1277,
+    "hr": "upaljač",
+    "pl": "zapalniczka",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1278,
+    "hr": "šibice",
+    "pl": "zapałki",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1279,
+    "hr": "škare",
+    "pl": "nożyczki",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1280,
+    "hr": "čekić",
+    "pl": "młotek",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1281,
+    "hr": "odvijač",
+    "pl": "śrubokręt",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1282,
+    "hr": "lonac",
+    "pl": "garnek",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1283,
+    "hr": "tava",
+    "pl": "patelnia",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1284,
+    "hr": "kuhača",
+    "pl": "łyżka do gotowania (warzecha)",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1285,
+    "hr": "vadičep",
+    "pl": "korkociąg",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1286,
+    "hr": "otvarač za konzerve",
+    "pl": "otwieracz do konserw",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1287,
+    "hr": "zdjela",
+    "pl": "miska",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1288,
+    "hr": "poklopac",
+    "pl": "pokrywka",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1289,
+    "hr": "pladanj",
+    "pl": "taca",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1290,
+    "hr": "mikrovalna pećnica",
+    "pl": "mikrofalówka",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1291,
+    "hr": "pećnica",
+    "pl": "piekarnik",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1292,
+    "hr": "slavina",
+    "pl": "kran",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1293,
+    "hr": "umivaonik",
+    "pl": "umywalka",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1294,
+    "hr": "tuš",
+    "pl": "prysznic",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1295,
+    "hr": "kada za kupanje",
+    "pl": "wanna",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1296,
+    "hr": "WC školjka",
+    "pl": "muszla klozetowa",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1297,
+    "hr": "sudoper",
+    "pl": "zlew",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1298,
+    "hr": "kutija",
+    "pl": "pudełko",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1299,
+    "hr": "vreća",
+    "pl": "worek",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1300,
+    "hr": "kanta",
+    "pl": "wiadro",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1301,
+    "hr": "ljestve",
+    "pl": "drabina",
+    "category": "przedmioty"
+  },
+  {
+    "id": 1302,
+    "hr": "mobitel",
+    "pl": "telefon komórkowy",
+    "category": "technologia"
+  },
+  {
+    "id": 1303,
+    "hr": "broj telefona",
+    "pl": "numer telefonu",
+    "category": "technologia"
+  },
+  {
+    "id": 1304,
+    "hr": "računalo",
+    "pl": "komputer",
+    "category": "technologia"
+  },
+  {
+    "id": 1305,
+    "hr": "prijenosno računalo",
+    "pl": "laptop",
+    "category": "technologia"
+  },
+  {
+    "id": 1306,
+    "hr": "tipkovnica",
+    "pl": "klawiatura",
+    "category": "technologia"
+  },
+  {
+    "id": 1307,
+    "hr": "miš",
+    "pl": "mysz (komputerowa)",
+    "category": "technologia"
+  },
+  {
+    "id": 1308,
+    "hr": "zaslon",
+    "pl": "ekran",
+    "category": "technologia"
+  },
+  {
+    "id": 1309,
+    "hr": "slušalice",
+    "pl": "słuchawki",
+    "category": "technologia"
+  },
+  {
+    "id": 1310,
+    "hr": "kabel",
+    "pl": "kabel",
+    "category": "technologia"
+  },
+  {
+    "id": 1311,
+    "hr": "internet",
+    "pl": "internet",
+    "category": "technologia"
+  },
+  {
+    "id": 1312,
+    "hr": "e-pošta",
+    "pl": "e-mail / poczta elektroniczna",
+    "category": "technologia"
+  },
+  {
+    "id": 1313,
+    "hr": "poruka",
+    "pl": "wiadomość",
+    "category": "technologia"
+  },
+  {
+    "id": 1314,
+    "hr": "lozinka",
+    "pl": "hasło",
+    "category": "technologia"
+  },
+  {
+    "id": 1315,
+    "hr": "fotografija",
+    "pl": "zdjęcie / fotografia",
+    "category": "technologia"
+  },
+  {
+    "id": 1316,
+    "hr": "olovka",
+    "pl": "ołówek",
+    "category": "biuro_poczta"
+  },
+  {
+    "id": 1317,
+    "hr": "kemijska olovka",
+    "pl": "długopis",
+    "category": "biuro_poczta"
+  },
+  {
+    "id": 1318,
+    "hr": "papir",
+    "pl": "papier",
+    "category": "biuro_poczta"
+  },
+  {
+    "id": 1319,
+    "hr": "bilježnica",
+    "pl": "zeszyt",
+    "category": "biuro_poczta"
+  },
+  {
+    "id": 1320,
+    "hr": "knjiga",
+    "pl": "książka",
+    "category": "biuro_poczta"
+  },
+  {
+    "id": 1321,
+    "hr": "novine",
+    "pl": "gazeta",
+    "category": "biuro_poczta"
+  },
+  {
+    "id": 1322,
+    "hr": "časopis",
+    "pl": "czasopismo / magazyn",
+    "category": "biuro_poczta"
+  },
+  {
+    "id": 1323,
+    "hr": "pismo",
+    "pl": "list",
+    "category": "biuro_poczta"
+  },
+  {
+    "id": 1324,
+    "hr": "omotnica",
+    "pl": "koperta",
+    "category": "biuro_poczta"
+  },
+  {
+    "id": 1325,
+    "hr": "paket",
+    "pl": "paczka",
+    "category": "biuro_poczta"
+  },
+  {
+    "id": 1326,
+    "hr": "poštanska marka",
+    "pl": "znaczek pocztowy",
+    "category": "biuro_poczta"
+  },
+  {
+    "id": 1327,
+    "hr": "dokument",
+    "pl": "dokument",
+    "category": "biuro_poczta"
+  },
+  {
+    "id": 1328,
+    "hr": "osobna iskaznica",
+    "pl": "dowód osobisty",
+    "category": "biuro_poczta"
+  },
+  {
+    "id": 1329,
+    "hr": "obrazac",
+    "pl": "formularz",
+    "category": "biuro_poczta"
+  },
+  {
+    "id": 1330,
+    "hr": "potpis",
+    "pl": "podpis",
+    "category": "biuro_poczta"
+  },
+  {
+    "id": 1331,
+    "hr": "kusur",
+    "pl": "reszta (z płatności)",
+    "category": "pieniadze"
+  },
+  {
+    "id": 1332,
+    "hr": "plaća",
+    "pl": "pensja / wynagrodzenie",
+    "category": "pieniadze"
+  },
+  {
+    "id": 1333,
+    "hr": "porez",
+    "pl": "podatek",
+    "category": "pieniadze"
+  },
+  {
+    "id": 1334,
+    "hr": "kredit",
+    "pl": "kredyt",
+    "category": "pieniadze"
+  },
+  {
+    "id": 1335,
+    "hr": "štednja",
+    "pl": "oszczędności",
+    "category": "pieniadze"
+  },
+  {
+    "id": 1336,
+    "hr": "lijevo",
+    "pl": "w lewo / po lewej",
+    "category": "kierunki"
+  },
+  {
+    "id": 1337,
+    "hr": "desno",
+    "pl": "w prawo / po prawej",
+    "category": "kierunki"
+  },
+  {
+    "id": 1338,
+    "hr": "ravno",
+    "pl": "prosto",
+    "category": "kierunki"
+  },
+  {
+    "id": 1339,
+    "hr": "naprijed",
+    "pl": "naprzód / do przodu",
+    "category": "kierunki"
+  },
+  {
+    "id": 1340,
+    "hr": "natrag",
+    "pl": "z powrotem / do tyłu",
+    "category": "kierunki"
+  },
+  {
+    "id": 1341,
+    "hr": "sjever",
+    "pl": "północ (strona świata)",
+    "category": "kierunki"
+  },
+  {
+    "id": 1342,
+    "hr": "jug",
+    "pl": "południe (strona świata)",
+    "category": "kierunki"
+  },
+  {
+    "id": 1343,
+    "hr": "istok",
+    "pl": "wschód (strona świata)",
+    "category": "kierunki"
+  },
+  {
+    "id": 1344,
+    "hr": "zapad",
+    "pl": "zachód (strona świata)",
+    "category": "kierunki"
+  },
+  {
+    "id": 1345,
+    "hr": "ugao",
+    "pl": "róg (ulicy)",
+    "category": "kierunki"
+  },
+  {
+    "id": 1346,
+    "hr": "semafor",
+    "pl": "sygnalizacja świetlna / światła",
+    "category": "kierunki"
+  },
+  {
+    "id": 1347,
+    "hr": "pješački prijelaz",
+    "pl": "przejście dla pieszych",
+    "category": "kierunki"
+  },
+  {
+    "id": 1348,
+    "hr": "preko puta",
+    "pl": "naprzeciwko",
+    "category": "kierunki"
+  },
+  {
+    "id": 1349,
+    "hr": "pored",
+    "pl": "obok",
+    "category": "kierunki"
+  },
+  {
+    "id": 1350,
+    "hr": "iza",
+    "pl": "za (z tyłu)",
+    "category": "kierunki"
+  },
+  {
+    "id": 1351,
+    "hr": "ispred",
+    "pl": "przed",
+    "category": "kierunki"
+  },
+  {
+    "id": 1352,
+    "hr": "između",
+    "pl": "między",
+    "category": "kierunki"
+  },
+  {
+    "id": 1353,
+    "hr": "pješice",
+    "pl": "pieszo",
+    "category": "kierunki"
+  },
+  {
+    "id": 1354,
+    "hr": "stajati",
+    "pl": "stać",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1355,
+    "hr": "sjediti",
+    "pl": "siedzieć",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1356,
+    "hr": "ležati",
+    "pl": "leżeć",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1357,
+    "hr": "hodati",
+    "pl": "chodzić",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1358,
+    "hr": "trčati",
+    "pl": "biegać",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1359,
+    "hr": "učiti",
+    "pl": "uczyć się / uczyć",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1360,
+    "hr": "početi",
+    "pl": "zacząć",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1361,
+    "hr": "završiti",
+    "pl": "skończyć",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1362,
+    "hr": "nastaviti",
+    "pl": "kontynuować",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1363,
+    "hr": "prestati",
+    "pl": "przestać",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1364,
+    "hr": "sviđati se",
+    "pl": "podobać się",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1365,
+    "hr": "brinuti se",
+    "pl": "martwić się",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1366,
+    "hr": "bojati se",
+    "pl": "bać się",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1367,
+    "hr": "probuditi se",
+    "pl": "obudzić się",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1368,
+    "hr": "ustati",
+    "pl": "wstać",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1369,
+    "hr": "oprati",
+    "pl": "umyć / wyprać",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1370,
+    "hr": "čistiti",
+    "pl": "czyścić / sprzątać",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1371,
+    "hr": "rezati",
+    "pl": "kroić / ciąć",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1372,
+    "hr": "miješati",
+    "pl": "mieszać",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1373,
+    "hr": "pospremiti",
+    "pl": "posprzątać",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1374,
+    "hr": "posuditi",
+    "pl": "pożyczyć",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1375,
+    "hr": "izgubiti",
+    "pl": "zgubić / przegrać",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1376,
+    "hr": "popraviti",
+    "pl": "naprawić",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1377,
+    "hr": "slomiti",
+    "pl": "złamać",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1378,
+    "hr": "ostati",
+    "pl": "zostać",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1379,
+    "hr": "stići",
+    "pl": "dotrzeć / zdążyć",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1380,
+    "hr": "zakasniti",
+    "pl": "spóźnić się",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1381,
+    "hr": "objasniti",
+    "pl": "wyjaśnić",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1382,
+    "hr": "sjetiti se",
+    "pl": "przypomnieć sobie",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1383,
+    "hr": "odlučiti",
+    "pl": "zdecydować",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1384,
+    "hr": "izabrati",
+    "pl": "wybrać",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1385,
+    "hr": "dogovoriti se",
+    "pl": "umówić się / dogadać się",
+    "category": "czasowniki"
+  },
+  {
+    "id": 1386,
+    "hr": "još",
+    "pl": "jeszcze / nadal",
+    "category": "przysłówki"
+  },
+  {
+    "id": 1387,
+    "hr": "već",
+    "pl": "już",
+    "category": "przysłówki"
+  },
+  {
+    "id": 1388,
+    "hr": "samo",
+    "pl": "tylko",
+    "category": "przysłówki"
+  },
+  {
+    "id": 1389,
+    "hr": "opet",
+    "pl": "znowu",
+    "category": "przysłówki"
+  },
+  {
+    "id": 1390,
+    "hr": "zajedno",
+    "pl": "razem",
+    "category": "przysłówki"
+  },
+  {
+    "id": 1391,
+    "hr": "negdje",
+    "pl": "gdzieś",
+    "category": "przysłówki"
+  },
+  {
+    "id": 1392,
+    "hr": "nigdje",
+    "pl": "nigdzie",
+    "category": "przysłówki"
+  },
+  {
+    "id": 1393,
+    "hr": "svugdje",
+    "pl": "wszędzie",
+    "category": "przysłówki"
+  },
+  {
+    "id": 1394,
+    "hr": "vani",
+    "pl": "na zewnątrz / na dworze",
+    "category": "przysłówki"
+  },
+  {
+    "id": 1395,
+    "hr": "unutra",
+    "pl": "w środku",
+    "category": "przysłówki"
+  },
+  {
+    "id": 1396,
+    "hr": "gore",
+    "pl": "na górze / w górę",
+    "category": "przysłówki"
+  },
+  {
+    "id": 1397,
+    "hr": "dolje",
+    "pl": "na dole / w dół",
+    "category": "przysłówki"
+  },
+  {
+    "id": 1398,
+    "hr": "previše",
+    "pl": "za dużo",
+    "category": "przysłówki"
+  },
+  {
+    "id": 1399,
+    "hr": "dovoljno",
+    "pl": "wystarczająco",
+    "category": "przysłówki"
+  },
+  {
+    "id": 1400,
+    "hr": "skoro",
+    "pl": "prawie / wkrótce",
+    "category": "przysłówki"
+  },
+  {
+    "id": 1401,
+    "hr": "odjednom",
+    "pl": "nagle",
+    "category": "przysłówki"
+  },
+  {
+    "id": 1402,
+    "hr": "brzo",
+    "pl": "szybko",
+    "category": "przysłówki"
+  },
+  {
+    "id": 1403,
+    "hr": "ipak",
+    "pl": "jednak",
+    "category": "przysłówki"
+  },
+  {
+    "id": 1404,
+    "hr": "i",
+    "pl": "i",
+    "category": "spójniki"
+  },
+  {
+    "id": 1405,
+    "hr": "ili",
+    "pl": "lub / albo",
+    "category": "spójniki"
+  },
+  {
+    "id": 1406,
+    "hr": "jer",
+    "pl": "ponieważ",
+    "category": "spójniki"
+  },
+  {
+    "id": 1407,
+    "hr": "ako",
+    "pl": "jeśli",
+    "category": "spójniki"
+  },
+  {
+    "id": 1408,
+    "hr": "zato",
+    "pl": "dlatego",
+    "category": "spójniki"
+  },
+  {
+    "id": 1409,
+    "hr": "dakle",
+    "pl": "więc",
+    "category": "spójniki"
+  },
+  {
+    "id": 1410,
+    "hr": "iako",
+    "pl": "chociaż",
+    "category": "spójniki"
+  },
+  {
+    "id": 1411,
+    "hr": "u",
+    "pl": "w / do",
+    "category": "przyimki"
+  },
+  {
+    "id": 1412,
+    "hr": "na",
+    "pl": "na",
+    "category": "przyimki"
+  },
+  {
+    "id": 1413,
+    "hr": "iz",
+    "pl": "z (skądś)",
+    "category": "przyimki"
+  },
+  {
+    "id": 1414,
+    "hr": "od",
+    "pl": "od",
+    "category": "przyimki"
+  },
+  {
+    "id": 1415,
+    "hr": "do",
+    "pl": "do",
+    "category": "przyimki"
+  },
+  {
+    "id": 1416,
+    "hr": "za",
+    "pl": "dla / za",
+    "category": "przyimki"
+  },
+  {
+    "id": 1417,
+    "hr": "s",
+    "pl": "z (razem z)",
+    "category": "przyimki"
+  },
+  {
+    "id": 1418,
+    "hr": "kod",
+    "pl": "u / przy",
+    "category": "przyimki"
+  },
+  {
+    "id": 1419,
+    "hr": "prema",
+    "pl": "ku / według",
+    "category": "przyimki"
+  },
+  {
+    "id": 1420,
+    "hr": "kroz",
+    "pl": "przez (wnętrze)",
+    "category": "przyimki"
+  },
+  {
+    "id": 1421,
+    "hr": "preko",
+    "pl": "przez (nad / na drugą stronę)",
+    "category": "przyimki"
+  },
+  {
+    "id": 1422,
+    "hr": "poslije",
+    "pl": "po (czasowo)",
+    "category": "przyimki"
+  },
+  {
+    "id": 1423,
+    "hr": "zbog",
+    "pl": "z powodu",
+    "category": "przyimki"
+  },
+  {
+    "id": 1424,
+    "hr": "protiv",
+    "pl": "przeciwko",
+    "category": "przyimki"
+  },
+  {
+    "id": 1425,
+    "hr": "osim",
+    "pl": "oprócz / poza",
+    "category": "przyimki"
+  }
 ]
