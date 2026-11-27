@@ -8248,5 +8248,641 @@ export const words = [
     "hr": "osim",
     "pl": "oprócz / poza",
     "category": "przyimki"
+  },
+  {
+    "id": 1426,
+    "hr": "sukob",
+    "pl": "konflikt",
+    "category": "konflikt"
+  },
+  {
+    "id": 1427,
+    "hr": "svađa",
+    "pl": "kłótnia",
+    "category": "konflikt"
+  },
+  {
+    "id": 1428,
+    "hr": "svađati se",
+    "pl": "kłócić się",
+    "category": "konflikt"
+  },
+  {
+    "id": 1429,
+    "hr": "nesporazum",
+    "pl": "nieporozumienie",
+    "category": "konflikt"
+  },
+  {
+    "id": 1430,
+    "hr": "rasprava",
+    "pl": "dyskusja / debata",
+    "category": "konflikt"
+  },
+  {
+    "id": 1431,
+    "hr": "raspravljati",
+    "pl": "dyskutować",
+    "category": "konflikt"
+  },
+  {
+    "id": 1432,
+    "hr": "argument",
+    "pl": "argument",
+    "category": "konflikt"
+  },
+  {
+    "id": 1433,
+    "hr": "mišljenje",
+    "pl": "opinia",
+    "category": "konflikt"
+  },
+  {
+    "id": 1434,
+    "hr": "stav",
+    "pl": "stanowisko / postawa",
+    "category": "konflikt"
+  },
+  {
+    "id": 1435,
+    "hr": "optužiti",
+    "pl": "oskarżyć",
+    "category": "konflikt"
+  },
+  {
+    "id": 1436,
+    "hr": "optužba",
+    "pl": "oskarżenie",
+    "category": "konflikt"
+  },
+  {
+    "id": 1437,
+    "hr": "kriviti",
+    "pl": "obwiniać",
+    "category": "konflikt"
+  },
+  {
+    "id": 1438,
+    "hr": "krivnja",
+    "pl": "wina",
+    "category": "konflikt"
+  },
+  {
+    "id": 1439,
+    "hr": "odgovornost",
+    "pl": "odpowiedzialność",
+    "category": "konflikt"
+  },
+  {
+    "id": 1440,
+    "hr": "prigovor",
+    "pl": "zarzut / sprzeciw",
+    "category": "konflikt"
+  },
+  {
+    "id": 1441,
+    "hr": "pritužba",
+    "pl": "skarga",
+    "category": "konflikt"
+  },
+  {
+    "id": 1442,
+    "hr": "žalba",
+    "pl": "zażalenie / odwołanie",
+    "category": "konflikt"
+  },
+  {
+    "id": 1443,
+    "hr": "žaliti se",
+    "pl": "skarżyć się",
+    "category": "konflikt"
+  },
+  {
+    "id": 1444,
+    "hr": "vikati",
+    "pl": "krzyczeć",
+    "category": "konflikt"
+  },
+  {
+    "id": 1445,
+    "hr": "prijetiti",
+    "pl": "grozić",
+    "category": "konflikt"
+  },
+  {
+    "id": 1446,
+    "hr": "prijetnja",
+    "pl": "groźba",
+    "category": "konflikt"
+  },
+  {
+    "id": 1447,
+    "hr": "vrijeđati",
+    "pl": "obrażać",
+    "category": "konflikt"
+  },
+  {
+    "id": 1448,
+    "hr": "uvreda",
+    "pl": "obraza",
+    "category": "konflikt"
+  },
+  {
+    "id": 1449,
+    "hr": "uvrijeđen",
+    "pl": "obrażony",
+    "category": "konflikt"
+  },
+  {
+    "id": 1450,
+    "hr": "ljutnja",
+    "pl": "złość",
+    "category": "konflikt"
+  },
+  {
+    "id": 1451,
+    "hr": "bijes",
+    "pl": "wściekłość",
+    "category": "konflikt"
+  },
+  {
+    "id": 1452,
+    "hr": "nervozan",
+    "pl": "zdenerwowany",
+    "category": "konflikt"
+  },
+  {
+    "id": 1453,
+    "hr": "razočaran",
+    "pl": "rozczarowany",
+    "category": "konflikt"
+  },
+  {
+    "id": 1454,
+    "hr": "grub",
+    "pl": "niegrzeczny / chamski",
+    "category": "konflikt"
+  },
+  {
+    "id": 1455,
+    "hr": "pristojan",
+    "pl": "uprzejmy / kulturalny",
+    "category": "konflikt"
+  },
+  {
+    "id": 1456,
+    "hr": "nepristojan",
+    "pl": "nieuprzejmy",
+    "category": "konflikt"
+  },
+  {
+    "id": 1457,
+    "hr": "smiriti se",
+    "pl": "uspokoić się",
+    "category": "konflikt"
+  },
+  {
+    "id": 1458,
+    "hr": "miran",
+    "pl": "spokojny",
+    "category": "konflikt"
+  },
+  {
+    "id": 1459,
+    "hr": "strpljiv",
+    "pl": "cierpliwy",
+    "category": "konflikt"
+  },
+  {
+    "id": 1460,
+    "hr": "strpljenje",
+    "pl": "cierpliwość",
+    "category": "konflikt"
+  },
+  {
+    "id": 1461,
+    "hr": "isprika",
+    "pl": "przeprosiny",
+    "category": "konflikt"
+  },
+  {
+    "id": 1462,
+    "hr": "oprostiti",
+    "pl": "wybaczyć",
+    "category": "konflikt"
+  },
+  {
+    "id": 1463,
+    "hr": "pomiriti se",
+    "pl": "pogodzić się",
+    "category": "konflikt"
+  },
+  {
+    "id": 1464,
+    "hr": "pomirenje",
+    "pl": "pojednanie",
+    "category": "konflikt"
+  },
+  {
+    "id": 1465,
+    "hr": "lagati",
+    "pl": "kłamać",
+    "category": "konflikt"
+  },
+  {
+    "id": 1466,
+    "hr": "laž",
+    "pl": "kłamstwo",
+    "category": "konflikt"
+  },
+  {
+    "id": 1467,
+    "hr": "varati",
+    "pl": "oszukiwać",
+    "category": "konflikt"
+  },
+  {
+    "id": 1468,
+    "hr": "prijevara",
+    "pl": "oszustwo",
+    "category": "konflikt"
+  },
+  {
+    "id": 1469,
+    "hr": "povjerenje",
+    "pl": "zaufanie",
+    "category": "konflikt"
+  },
+  {
+    "id": 1470,
+    "hr": "sumnjati",
+    "pl": "wątpić / podejrzewać",
+    "category": "konflikt"
+  },
+  {
+    "id": 1471,
+    "hr": "poštovati",
+    "pl": "szanować",
+    "category": "konflikt"
+  },
+  {
+    "id": 1472,
+    "hr": "poštovanje",
+    "pl": "szacunek",
+    "category": "konflikt"
+  },
+  {
+    "id": 1473,
+    "hr": "ignorirati",
+    "pl": "ignorować",
+    "category": "konflikt"
+  },
+  {
+    "id": 1474,
+    "hr": "susjeda",
+    "pl": "sąsiadka",
+    "category": "konflikt"
+  },
+  {
+    "id": 1475,
+    "hr": "buka",
+    "pl": "hałas",
+    "category": "konflikt"
+  },
+  {
+    "id": 1476,
+    "hr": "galama",
+    "pl": "wrzawa / harmider",
+    "category": "konflikt"
+  },
+  {
+    "id": 1477,
+    "hr": "tišina",
+    "pl": "cisza",
+    "category": "konflikt"
+  },
+  {
+    "id": 1478,
+    "hr": "mir",
+    "pl": "spokój / pokój (brak wojny)",
+    "category": "konflikt"
+  },
+  {
+    "id": 1479,
+    "hr": "noćni mir",
+    "pl": "cisza nocna",
+    "category": "konflikt"
+  },
+  {
+    "id": 1480,
+    "hr": "smetati",
+    "pl": "przeszkadzać",
+    "category": "konflikt"
+  },
+  {
+    "id": 1481,
+    "hr": "kućni red",
+    "pl": "regulamin domowy",
+    "category": "konflikt"
+  },
+  {
+    "id": 1482,
+    "hr": "ograda",
+    "pl": "płot / ogrodzenie",
+    "category": "konflikt"
+  },
+  {
+    "id": 1483,
+    "hr": "granica",
+    "pl": "granica",
+    "category": "konflikt"
+  },
+  {
+    "id": 1484,
+    "hr": "zajednički",
+    "pl": "wspólny",
+    "category": "konflikt"
+  },
+  {
+    "id": 1485,
+    "hr": "stanar",
+    "pl": "lokator / mieszkaniec",
+    "category": "konflikt"
+  },
+  {
+    "id": 1486,
+    "hr": "vlasnik",
+    "pl": "właściciel",
+    "category": "konflikt"
+  },
+  {
+    "id": 1487,
+    "hr": "najmodavac",
+    "pl": "wynajmujący",
+    "category": "konflikt"
+  },
+  {
+    "id": 1488,
+    "hr": "najmoprimac",
+    "pl": "najemca",
+    "category": "konflikt"
+  },
+  {
+    "id": 1489,
+    "hr": "najamnina",
+    "pl": "czynsz",
+    "category": "konflikt"
+  },
+  {
+    "id": 1490,
+    "hr": "upravitelj zgrade",
+    "pl": "zarządca budynku",
+    "category": "konflikt"
+  },
+  {
+    "id": 1491,
+    "hr": "prijaviti",
+    "pl": "zgłosić (np. policji)",
+    "category": "konflikt"
+  },
+  {
+    "id": 1492,
+    "hr": "šteta",
+    "pl": "szkoda / strata",
+    "category": "konflikt"
+  },
+  {
+    "id": 1493,
+    "hr": "odšteta",
+    "pl": "odszkodowanie",
+    "category": "konflikt"
+  },
+  {
+    "id": 1494,
+    "hr": "svjedok",
+    "pl": "świadek",
+    "category": "konflikt"
+  },
+  {
+    "id": 1495,
+    "hr": "dokaz",
+    "pl": "dowód",
+    "category": "konflikt"
+  },
+  {
+    "id": 1496,
+    "hr": "sud",
+    "pl": "sąd",
+    "category": "konflikt"
+  },
+  {
+    "id": 1497,
+    "hr": "tužiti",
+    "pl": "pozwać",
+    "category": "konflikt"
+  },
+  {
+    "id": 1498,
+    "hr": "pregovori",
+    "pl": "negocjacje",
+    "category": "konflikt"
+  },
+  {
+    "id": 1499,
+    "hr": "pregovarati",
+    "pl": "negocjować",
+    "category": "konflikt"
+  },
+  {
+    "id": 1500,
+    "hr": "prijedlog",
+    "pl": "propozycja",
+    "category": "konflikt"
+  },
+  {
+    "id": 1501,
+    "hr": "predložiti",
+    "pl": "zaproponować",
+    "category": "konflikt"
+  },
+  {
+    "id": 1502,
+    "hr": "protuponuda",
+    "pl": "kontroferta",
+    "category": "konflikt"
+  },
+  {
+    "id": 1503,
+    "hr": "uvjet",
+    "pl": "warunek",
+    "category": "konflikt"
+  },
+  {
+    "id": 1504,
+    "hr": "dogovor",
+    "pl": "ustalenie / umowa (ustna)",
+    "category": "konflikt"
+  },
+  {
+    "id": 1505,
+    "hr": "ugovor",
+    "pl": "umowa (pisemna) / kontrakt",
+    "category": "konflikt"
+  },
+  {
+    "id": 1506,
+    "hr": "sporazum",
+    "pl": "porozumienie / układ",
+    "category": "konflikt"
+  },
+  {
+    "id": 1507,
+    "hr": "kompromis",
+    "pl": "kompromis",
+    "category": "konflikt"
+  },
+  {
+    "id": 1508,
+    "hr": "ustupak",
+    "pl": "ustępstwo",
+    "category": "konflikt"
+  },
+  {
+    "id": 1509,
+    "hr": "popustiti",
+    "pl": "ustąpić",
+    "category": "konflikt"
+  },
+  {
+    "id": 1510,
+    "hr": "pristati",
+    "pl": "zgodzić się (na coś)",
+    "category": "konflikt"
+  },
+  {
+    "id": 1511,
+    "hr": "prihvatiti",
+    "pl": "zaakceptować",
+    "category": "konflikt"
+  },
+  {
+    "id": 1512,
+    "hr": "odbiti",
+    "pl": "odrzucić",
+    "category": "konflikt"
+  },
+  {
+    "id": 1513,
+    "hr": "zahtjev",
+    "pl": "żądanie / wniosek",
+    "category": "konflikt"
+  },
+  {
+    "id": 1514,
+    "hr": "zahtijevati",
+    "pl": "żądać",
+    "category": "konflikt"
+  },
+  {
+    "id": 1515,
+    "hr": "inzistirati",
+    "pl": "nalegać",
+    "category": "konflikt"
+  },
+  {
+    "id": 1516,
+    "hr": "tvrdoglav",
+    "pl": "uparty",
+    "category": "konflikt"
+  },
+  {
+    "id": 1517,
+    "hr": "pošten",
+    "pl": "uczciwy",
+    "category": "konflikt"
+  },
+  {
+    "id": 1518,
+    "hr": "nepošten",
+    "pl": "nieuczciwy",
+    "category": "konflikt"
+  },
+  {
+    "id": 1519,
+    "hr": "obećanje",
+    "pl": "obietnica",
+    "category": "konflikt"
+  },
+  {
+    "id": 1520,
+    "hr": "obećati",
+    "pl": "obiecać",
+    "category": "konflikt"
+  },
+  {
+    "id": 1521,
+    "hr": "prekršiti",
+    "pl": "naruszyć (umowę, przepisy)",
+    "category": "konflikt"
+  },
+  {
+    "id": 1522,
+    "hr": "posrednik",
+    "pl": "pośrednik / mediator",
+    "category": "konflikt"
+  },
+  {
+    "id": 1523,
+    "hr": "rješenje",
+    "pl": "rozwiązanie",
+    "category": "konflikt"
+  },
+  {
+    "id": 1524,
+    "hr": "problem",
+    "pl": "problem",
+    "category": "konflikt"
+  },
+  {
+    "id": 1525,
+    "hr": "imaš pravo",
+    "pl": "masz rację",
+    "category": "konflikt"
+  },
+  {
+    "id": 1526,
+    "hr": "nije moja krivnja",
+    "pl": "to nie moja wina",
+    "category": "konflikt"
+  },
+  {
+    "id": 1527,
+    "hr": "nađimo kompromis",
+    "pl": "znajdźmy kompromis",
+    "category": "konflikt"
+  },
+  {
+    "id": 1528,
+    "hr": "ostanimo mirni",
+    "pl": "zachowajmy spokój",
+    "category": "konflikt"
+  },
+  {
+    "id": 1529,
+    "hr": "ne vičite",
+    "pl": "proszę nie krzyczeć",
+    "category": "konflikt"
+  },
+  {
+    "id": 1530,
+    "hr": "zadnja ponuda",
+    "pl": "ostateczna oferta",
+    "category": "konflikt"
+  },
+  {
+    "id": 1531,
+    "hr": "dogovoreno",
+    "pl": "ustalone / umowa stoi",
+    "category": "konflikt"
   }
 ]
